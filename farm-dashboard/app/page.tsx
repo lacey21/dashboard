@@ -1,10 +1,5 @@
-import { readFile } from 'fs/promises';
-import path from 'path';
-import DashboardClient from '@/components/DashboardClient';
+import HomePage from "@/components/HomePage";
 
-export default async function DashboardPage() {
-  const filePath = path.join(process.cwd(), 'public', 'dashboard_data.json');
-  const data = JSON.parse(await readFile(filePath, 'utf-8'));
-
-  return <DashboardClient initialData={data} />;
+export default function Page() {
+  return <HomePage />;
 }

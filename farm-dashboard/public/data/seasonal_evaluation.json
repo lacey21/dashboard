@@ -1,0 +1,1354 @@
+{
+  "financials": {
+    "totalRevenue": 238044.0,
+    "totalCost": 166390.0,
+    "precisionSpend": 18646.0,
+    "precisionBenefit": 47034.0,
+    "avgYield": 6.62,
+    "controlYield": 6.4,
+    "meanRoiPct": 42.8,
+    "benefitPerDollar": 2.52
+  },
+  "spendReturnByTreatment": [
+    {
+      "treatment": "Control",
+      "avg_cost": 1355.1807567065762,
+      "avg_revenue": 1935.639185354898
+    },
+    {
+      "treatment": "High Light",
+      "avg_cost": 1446.3012220698567,
+      "avg_revenue": 2284.9967143192453
+    },
+    {
+      "treatment": "High N",
+      "avg_cost": 1528.7366191992612,
+      "avg_revenue": 2179.2933735213805
+    },
+    {
+      "treatment": "Integrated Pest",
+      "avg_cost": 1437.2198016993818,
+      "avg_revenue": 1992.5469386180755
+    },
+    {
+      "treatment": "Low N",
+      "avg_cost": 1267.8271130010464,
+      "avg_revenue": 1839.18686889681
+    },
+    {
+      "treatment": "Reduced Pest",
+      "avg_cost": 1295.7340160209676,
+      "avg_revenue": 1694.73517961464
+    },
+    {
+      "treatment": "Shade",
+      "avg_cost": 1268.440173324267,
+      "avg_revenue": 1647.6479572133878
+    }
+  ],
+  "controlRevenueBaseline": 1935.6391853548982,
+  "costOverTime": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "precision": 0.0,
+      "routine": 795.970683182892,
+      "total": 795.970683182892,
+      "plant_stress_index": 0.4131023670923121
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "precision": 0.0,
+      "routine": 2473.6664773159187,
+      "total": 2473.6664773159187,
+      "plant_stress_index": 0.40993300578948594
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "precision": 1012.8762240080466,
+      "routine": 19935.99500582959,
+      "total": 20948.871229831657,
+      "plant_stress_index": 0.5517574899632718
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "precision": 1149.6912089403759,
+      "routine": 15591.82167992345,
+      "total": 16741.512888866753,
+      "plant_stress_index": 0.503670500071526
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "precision": 539.1112083789785,
+      "routine": 14955.220083948772,
+      "total": 15494.331292329734,
+      "plant_stress_index": 0.5096051878436471
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "precision": 1315.56191402081,
+      "routine": 22077.05417866084,
+      "total": 23392.616092687225,
+      "plant_stress_index": 0.5508744382205457
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "precision": 1140.3575983423805,
+      "routine": 17992.777493399666,
+      "total": 19133.1350917787,
+      "plant_stress_index": 0.5309056841619451
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "precision": 1785.8049756683613,
+      "routine": 29685.318545402002,
+      "total": 31471.12352108523,
+      "plant_stress_index": 0.6279630288825607
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "precision": 1274.020506202916,
+      "routine": 25295.30112679068,
+      "total": 26569.32163298801,
+      "plant_stress_index": 0.5757353727404021
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "precision": 1040.2933845469508,
+      "routine": 18893.492008745532,
+      "total": 19933.785393301812,
+      "plant_stress_index": 0.5409384614014597
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "precision": 1556.6538768262908,
+      "routine": 23576.516270372984,
+      "total": 25133.17014716249,
+      "plant_stress_index": 0.5507611393259311
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "precision": 811.9437460532906,
+      "routine": 15109.79575069974,
+      "total": 15921.739496755694,
+      "plant_stress_index": 0.5090084900638118
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "precision": 1060.9666286228112,
+      "routine": 19623.580218709627,
+      "total": 20684.54684733311,
+      "plant_stress_index": 0.5412562333357173
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "precision": 1008.9262765476498,
+      "routine": 19176.91579356035,
+      "total": 20185.842070095412,
+      "plant_stress_index": 0.5320970277243856
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "precision": 329.6085051671704,
+      "routine": 7894.854982614743,
+      "total": 8224.463487781913,
+      "plant_stress_index": 0.42264242497876875
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "precision": 621.6404383124246,
+      "routine": 10095.692285012496,
+      "total": 10717.33272332621,
+      "plant_stress_index": 0.4634281232362848
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "precision": 217.60110418588818,
+      "routine": 5725.347388855446,
+      "total": 5942.948493039244,
+      "plant_stress_index": 0.39242469195889973
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "precision": 390.50315056582065,
+      "routine": 9245.341502974152,
+      "total": 9635.844653539973,
+      "plant_stress_index": 0.41928526921818043
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "precision": 145.26835768774004,
+      "routine": 15813.813623382592,
+      "total": 15959.08198107033,
+      "plant_stress_index": 0.4969440679819724
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "precision": 0.0,
+      "routine": 5343.890388066517,
+      "total": 5343.890388066517,
+      "plant_stress_index": 0.3722413083368295
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "precision": 365.4696235230308,
+      "routine": 8651.08163275858,
+      "total": 9016.551256279023,
+      "plant_stress_index": 0.43713413724128153
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "precision": 59.569023568981606,
+      "routine": 5682.735599031307,
+      "total": 5742.304622601778,
+      "plant_stress_index": 0.38801303649052443
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "precision": 314.02005794454357,
+      "routine": 5901.389887089734,
+      "total": 6215.409945029626,
+      "plant_stress_index": 0.3912082113913023
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "precision": 574.2795502477225,
+      "routine": 16257.793175800734,
+      "total": 16832.072725998394,
+      "plant_stress_index": 0.5156003250939011
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "precision": 120.73252775445178,
+      "routine": 3750.6867912327934,
+      "total": 3871.419318991557,
+      "plant_stress_index": 0.37130427784276876
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "precision": 482.07248243867963,
+      "routine": 7804.265472777495,
+      "total": 8286.337955207193,
+      "plant_stress_index": 0.4278815321911669
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "precision": 196.78001399488937,
+      "routine": 6841.950813466346,
+      "total": 7038.73082746065,
+      "plant_stress_index": 0.4027103252482363
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "precision": 154.5025689017021,
+      "routine": 6456.479836048826,
+      "total": 6610.982404950528,
+      "plant_stress_index": 0.3834243967885089
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "precision": 914.4369437779299,
+      "routine": 19071.799427134414,
+      "total": 19986.236370905994,
+      "plant_stress_index": 0.5271522943043584
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "precision": 63.77916246516375,
+      "routine": 3277.4716108506154,
+      "total": 3341.250773315779,
+      "plant_stress_index": 0.38594997830839967
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "precision": 0.0,
+      "routine": 2405.3491535689927,
+      "total": 2405.3491535689927,
+      "plant_stress_index": 0.4109371606012084
+    }
+  ],
+  "scatterPlots": [
+    {
+      "plot_id": "P0001",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1001.82425085303,
+      "yield": 4.15652718979129,
+      "avgStress": 0.5171712848963778
+    },
+    {
+      "plot_id": "P0002",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1186.55929436841,
+      "yield": 4.37932800911927,
+      "avgStress": 0.5529639167390134
+    },
+    {
+      "plot_id": "P0003",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1364.43367525647,
+      "yield": 5.37275515677355,
+      "avgStress": 0.5572994153460135
+    },
+    {
+      "plot_id": "P0004",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1260.63423677625,
+      "yield": 9.74638465147957,
+      "avgStress": 0.4312378281192342
+    },
+    {
+      "plot_id": "P0005",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1747.24569304474,
+      "yield": 10.2721385397839,
+      "avgStress": 0.4460104654942413
+    },
+    {
+      "plot_id": "P0006",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1476.06682385753,
+      "yield": 5.74626227475435,
+      "avgStress": 0.4509254679933827
+    },
+    {
+      "plot_id": "P0007",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1045.09083179206,
+      "yield": 4.61812181217741,
+      "avgStress": 0.48469719092158675
+    },
+    {
+      "plot_id": "P0008",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1702.62077685153,
+      "yield": 5.67517133224618,
+      "avgStress": 0.43353365374945135
+    },
+    {
+      "plot_id": "P0009",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1802.24850917026,
+      "yield": 5.16004272930051,
+      "avgStress": 0.4353686374333783
+    },
+    {
+      "plot_id": "P0010",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1944.77406513291,
+      "yield": 5.20656653030462,
+      "avgStress": 0.44766099191947034
+    },
+    {
+      "plot_id": "P0011",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1125.37884097216,
+      "yield": 4.65830039120227,
+      "avgStress": 0.5482209667957748
+    },
+    {
+      "plot_id": "P0012",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1701.36352507052,
+      "yield": 4.08444175608863,
+      "avgStress": 0.48867173152375654
+    },
+    {
+      "plot_id": "P0013",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1801.3579252863,
+      "yield": 6.215299662461,
+      "avgStress": 0.41727844183970764
+    },
+    {
+      "plot_id": "P0014",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1329.59511348904,
+      "yield": 5.09734619489553,
+      "avgStress": 0.4170339201515027
+    },
+    {
+      "plot_id": "P0015",
+      "crop": "Pepper",
+      "treatment": "Low N",
+      "totalCost": 1166.37064480867,
+      "yield": 6.77516165179568,
+      "avgStress": 0.5176488314613841
+    },
+    {
+      "plot_id": "P0016",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1504.79103271079,
+      "yield": 5.48179267431187,
+      "avgStress": 0.44151402774855436
+    },
+    {
+      "plot_id": "P0017",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 1795.96518672511,
+      "yield": 10.1892198477773,
+      "avgStress": 0.5380510439124545
+    },
+    {
+      "plot_id": "P0018",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 1107.28371199257,
+      "yield": 4.75401835172491,
+      "avgStress": 0.536904983405888
+    },
+    {
+      "plot_id": "P0019",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1192.62369384091,
+      "yield": 9.44292308611805,
+      "avgStress": 0.42909659930451277
+    },
+    {
+      "plot_id": "P0020",
+      "crop": "Pepper",
+      "treatment": "High Light",
+      "totalCost": 1280.36699835541,
+      "yield": 7.3526614759353,
+      "avgStress": 0.4093079884348721
+    },
+    {
+      "plot_id": "P0021",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1479.56368479962,
+      "yield": 8.39551734108012,
+      "avgStress": 0.4520347202224965
+    },
+    {
+      "plot_id": "P0022",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1401.11384078819,
+      "yield": 5.89675286493524,
+      "avgStress": 0.4444288533162832
+    },
+    {
+      "plot_id": "P0023",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1343.33262990461,
+      "yield": 6.32497823681437,
+      "avgStress": 0.44712523621067696
+    },
+    {
+      "plot_id": "P0024",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1212.57647284518,
+      "yield": 6.02608407595902,
+      "avgStress": 0.42845114899581016
+    },
+    {
+      "plot_id": "P0025",
+      "crop": "Pepper",
+      "treatment": "Shade",
+      "totalCost": 1094.54248170105,
+      "yield": 6.43286178658735,
+      "avgStress": 0.5515317961113851
+    },
+    {
+      "plot_id": "P0026",
+      "crop": "Cucumber",
+      "treatment": "Control",
+      "totalCost": 1373.39943072563,
+      "yield": 7.41241326413087,
+      "avgStress": 0.48178412854394437
+    },
+    {
+      "plot_id": "P0027",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1379.22717529196,
+      "yield": 5.36914133623583,
+      "avgStress": 0.5543372380600196
+    },
+    {
+      "plot_id": "P0028",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1629.74980727619,
+      "yield": 5.99441837318317,
+      "avgStress": 0.436300525603876
+    },
+    {
+      "plot_id": "P0029",
+      "crop": "Pepper",
+      "treatment": "Reduced Pest",
+      "totalCost": 1229.93101892691,
+      "yield": 6.93057250674636,
+      "avgStress": 0.5486741124563896
+    },
+    {
+      "plot_id": "P0030",
+      "crop": "Cucumber",
+      "treatment": "High N",
+      "totalCost": 1716.10457259503,
+      "yield": 8.10306858769739,
+      "avgStress": 0.44005782623898804
+    },
+    {
+      "plot_id": "P0031",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1459.48017865353,
+      "yield": 5.28293987670345,
+      "avgStress": 0.4072378825404548
+    },
+    {
+      "plot_id": "P0032",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1323.63849371156,
+      "yield": 8.89186068270573,
+      "avgStress": 0.4250004412547292
+    },
+    {
+      "plot_id": "P0033",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1210.1592669897,
+      "yield": 6.23573757569269,
+      "avgStress": 0.40729993986104956
+    },
+    {
+      "plot_id": "P0034",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1647.12557605637,
+      "yield": 4.19677366798889,
+      "avgStress": 0.4125023447117752
+    },
+    {
+      "plot_id": "P0035",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1498.19114467737,
+      "yield": 4.77791159248861,
+      "avgStress": 0.49069242650058975
+    },
+    {
+      "plot_id": "P0036",
+      "crop": "Cucumber",
+      "treatment": "Integrated Pest",
+      "totalCost": 1085.84570445419,
+      "yield": 8.1236280418048,
+      "avgStress": 0.43777897066686217
+    },
+    {
+      "plot_id": "P0037",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1744.5328961263,
+      "yield": 9.51592871076764,
+      "avgStress": 0.48307371148975053
+    },
+    {
+      "plot_id": "P0038",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1182.22716173764,
+      "yield": 6.55699674190709,
+      "avgStress": 0.4092454339651025
+    },
+    {
+      "plot_id": "P0039",
+      "crop": "Tomato",
+      "treatment": "High Light",
+      "totalCost": 1578.64637958376,
+      "yield": 10.4959942655711,
+      "avgStress": 0.4141433176257092
+    },
+    {
+      "plot_id": "P0040",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1052.62238267427,
+      "yield": 8.82508714434094,
+      "avgStress": 0.48763396740549053
+    },
+    {
+      "plot_id": "P0041",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 962.419146569065,
+      "yield": 9.70687653473349,
+      "avgStress": 0.5356061672754446
+    },
+    {
+      "plot_id": "P0042",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1379.25228582993,
+      "yield": 8.24303980984818,
+      "avgStress": 0.4812363743382824
+    },
+    {
+      "plot_id": "P0043",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1183.88645144328,
+      "yield": 6.35796311601322,
+      "avgStress": 0.41355853384886515
+    },
+    {
+      "plot_id": "P0044",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1178.40415262091,
+      "yield": 4.90611480510236,
+      "avgStress": 0.49764072241367113
+    },
+    {
+      "plot_id": "P0045",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1772.849142805,
+      "yield": 9.22574451000777,
+      "avgStress": 0.43326833244860663
+    },
+    {
+      "plot_id": "P0046",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1798.07081354933,
+      "yield": 9.33656393974068,
+      "avgStress": 0.4476103012441494
+    },
+    {
+      "plot_id": "P0047",
+      "crop": "Pepper",
+      "treatment": "Low N",
+      "totalCost": 1169.54035798296,
+      "yield": 6.13818320342778,
+      "avgStress": 0.5214213795971558
+    },
+    {
+      "plot_id": "P0048",
+      "crop": "Cucumber",
+      "treatment": "Shade",
+      "totalCost": 1581.65932557388,
+      "yield": 6.66432904645803,
+      "avgStress": 0.5478967850796557
+    },
+    {
+      "plot_id": "P0049",
+      "crop": "Pepper",
+      "treatment": "Low N",
+      "totalCost": 1430.21182112803,
+      "yield": 7.54894596838875,
+      "avgStress": 0.5116143784765266
+    },
+    {
+      "plot_id": "P0050",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1288.47577742953,
+      "yield": 5.06909131127164,
+      "avgStress": 0.41304105383768747
+    },
+    {
+      "plot_id": "P0051",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1153.05384686107,
+      "yield": 9.73956464589418,
+      "avgStress": 0.44554437352559967
+    },
+    {
+      "plot_id": "P0052",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1253.96777645861,
+      "yield": 4.61682993735138,
+      "avgStress": 0.5548804211910219
+    },
+    {
+      "plot_id": "P0053",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1826.22673227954,
+      "yield": 5.51696327364384,
+      "avgStress": 0.41062335740880973
+    },
+    {
+      "plot_id": "P0054",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1515.89512477391,
+      "yield": 9.66320751717163,
+      "avgStress": 0.4324991955157099
+    },
+    {
+      "plot_id": "P0055",
+      "crop": "Cucumber",
+      "treatment": "High N",
+      "totalCost": 1318.00420463082,
+      "yield": 7.81106228508603,
+      "avgStress": 0.44664695557270956
+    },
+    {
+      "plot_id": "P0056",
+      "crop": "Tomato",
+      "treatment": "Low N",
+      "totalCost": 1505.66278512929,
+      "yield": 8.19995549972153,
+      "avgStress": 0.5205901075004876
+    },
+    {
+      "plot_id": "P0057",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1187.39580482474,
+      "yield": 4.08270369875723,
+      "avgStress": 0.5534408570145828
+    },
+    {
+      "plot_id": "P0058",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 1356.38717955957,
+      "yield": 4.25709523204905,
+      "avgStress": 0.5344832376335483
+    },
+    {
+      "plot_id": "P0059",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1670.31176944328,
+      "yield": 5.62978409986553,
+      "avgStress": 0.4168393070477826
+    },
+    {
+      "plot_id": "P0060",
+      "crop": "Tomato",
+      "treatment": "Shade",
+      "totalCost": 1428.63418569406,
+      "yield": 8.87062581041753,
+      "avgStress": 0.56044605076139
+    },
+    {
+      "plot_id": "P0061",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1067.89211210216,
+      "yield": 4.42414951539242,
+      "avgStress": 0.5154125071884108
+    },
+    {
+      "plot_id": "P0062",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1465.18005547533,
+      "yield": 5.01483097657373,
+      "avgStress": 0.43182618571032705
+    },
+    {
+      "plot_id": "P0063",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1347.19802043584,
+      "yield": 5.31011030240641,
+      "avgStress": 0.41228666226532307
+    },
+    {
+      "plot_id": "P0064",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1290.24920257172,
+      "yield": 4.47361615525666,
+      "avgStress": 0.5145306135007455
+    },
+    {
+      "plot_id": "P0065",
+      "crop": "Tomato",
+      "treatment": "High Light",
+      "totalCost": 1739.56527667788,
+      "yield": 9.03823815058503,
+      "avgStress": 0.41349121112163995
+    },
+    {
+      "plot_id": "P0066",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 1386.48889523497,
+      "yield": 5.96906481922215,
+      "avgStress": 0.5320062409594434
+    },
+    {
+      "plot_id": "P0067",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 999.289790564784,
+      "yield": 4.86339993253448,
+      "avgStress": 0.5644103144368876
+    },
+    {
+      "plot_id": "P0068",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1237.21848068263,
+      "yield": 5.07298298368118,
+      "avgStress": 0.41075367954081066
+    },
+    {
+      "plot_id": "P0069",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 916.175122387755,
+      "yield": 9.17830305692391,
+      "avgStress": 0.48991620265864466
+    },
+    {
+      "plot_id": "P0070",
+      "crop": "Tomato",
+      "treatment": "Low N",
+      "totalCost": 1126.35871935314,
+      "yield": 8.28692563643056,
+      "avgStress": 0.5223640511384182
+    },
+    {
+      "plot_id": "P0071",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1589.75637440284,
+      "yield": 5.37301753997519,
+      "avgStress": 0.41154618476335936
+    },
+    {
+      "plot_id": "P0072",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 1157.37517708141,
+      "yield": 5.36837829894747,
+      "avgStress": 0.5326171314688668
+    },
+    {
+      "plot_id": "P0073",
+      "crop": "Pepper",
+      "treatment": "High N",
+      "totalCost": 1499.46280663379,
+      "yield": 7.59177869518472,
+      "avgStress": 0.4461905168077106
+    },
+    {
+      "plot_id": "P0074",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1569.62522871503,
+      "yield": 10.5417144775448,
+      "avgStress": 0.4338918250733985
+    },
+    {
+      "plot_id": "P0075",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1583.71413340538,
+      "yield": 10.6523456693694,
+      "avgStress": 0.43102897470342677
+    },
+    {
+      "plot_id": "P0076",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1103.46549905154,
+      "yield": 4.60068477554143,
+      "avgStress": 0.5077639558363405
+    },
+    {
+      "plot_id": "P0077",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1773.9141502032,
+      "yield": 5.10015084531989,
+      "avgStress": 0.4472712282959619
+    },
+    {
+      "plot_id": "P0078",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1553.10745844802,
+      "yield": 4.80975850115321,
+      "avgStress": 0.5078880329849745
+    },
+    {
+      "plot_id": "P0079",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1580.03819582499,
+      "yield": 5.57700592737299,
+      "avgStress": 0.40860879374708964
+    },
+    {
+      "plot_id": "P0080",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1393.05486157874,
+      "yield": 4.55946686453308,
+      "avgStress": 0.4829187161037638
+    },
+    {
+      "plot_id": "P0081",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1722.15822196837,
+      "yield": 5.12771482705914,
+      "avgStress": 0.4102159217225237
+    },
+    {
+      "plot_id": "P0082",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 1425.52907474473,
+      "yield": 5.63796423225251,
+      "avgStress": 0.5367998118926952
+    },
+    {
+      "plot_id": "P0083",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1364.04035816685,
+      "yield": 9.98508060824446,
+      "avgStress": 0.49855498174919033
+    },
+    {
+      "plot_id": "P0084",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1646.45782240506,
+      "yield": 4.8640994909725,
+      "avgStress": 0.4785893760810037
+    },
+    {
+      "plot_id": "P0085",
+      "crop": "Cucumber",
+      "treatment": "Integrated Pest",
+      "totalCost": 1035.47552400273,
+      "yield": 7.6362208734028,
+      "avgStress": 0.42906080384863426
+    },
+    {
+      "plot_id": "P0086",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1357.38583509548,
+      "yield": 5.32997727602549,
+      "avgStress": 0.4158185450590715
+    },
+    {
+      "plot_id": "P0087",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1276.34255718505,
+      "yield": 4.00292118401797,
+      "avgStress": 0.5612582345719209
+    },
+    {
+      "plot_id": "P0088",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1632.75474947447,
+      "yield": 5.33627693812642,
+      "avgStress": 0.41722440205108224
+    },
+    {
+      "plot_id": "P0089",
+      "crop": "Cucumber",
+      "treatment": "High N",
+      "totalCost": 1158.3635829437,
+      "yield": 8.35346648488065,
+      "avgStress": 0.44346988907870744
+    },
+    {
+      "plot_id": "P0090",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1370.16941042309,
+      "yield": 5.30119422304639,
+      "avgStress": 0.4256123989263794
+    },
+    {
+      "plot_id": "P0091",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1382.00123144346,
+      "yield": 6.09074655823696,
+      "avgStress": 0.4350513802220519
+    },
+    {
+      "plot_id": "P0092",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1475.24750619481,
+      "yield": 9.81053281933226,
+      "avgStress": 0.44748507612655647
+    },
+    {
+      "plot_id": "P0093",
+      "crop": "Cucumber",
+      "treatment": "Reduced Pest",
+      "totalCost": 1569.36320186474,
+      "yield": 8.01367171640053,
+      "avgStress": 0.5382577303707472
+    },
+    {
+      "plot_id": "P0094",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1276.80241833325,
+      "yield": 4.6607454805543,
+      "avgStress": 0.5198940500732443
+    },
+    {
+      "plot_id": "P0095",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1670.67665333804,
+      "yield": 6.18939942393621,
+      "avgStress": 0.45381200604867994
+    },
+    {
+      "plot_id": "P0096",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1489.90833090042,
+      "yield": 8.89659263867606,
+      "avgStress": 0.42847558053441215
+    },
+    {
+      "plot_id": "P0097",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 919.710775428193,
+      "yield": 5.31784519581986,
+      "avgStress": 0.4179238909072203
+    },
+    {
+      "plot_id": "P0098",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1454.8002248198,
+      "yield": 4.04578679459189,
+      "avgStress": 0.5115534934180856
+    },
+    {
+      "plot_id": "P0099",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1114.61102032749,
+      "yield": 5.99576410420701,
+      "avgStress": 0.42318338295430724
+    },
+    {
+      "plot_id": "P0100",
+      "crop": "Pepper",
+      "treatment": "Integrated Pest",
+      "totalCost": 1860.25190717602,
+      "yield": 7.46519337377381,
+      "avgStress": 0.4291253682189296
+    },
+    {
+      "plot_id": "P0101",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1799.55634732111,
+      "yield": 5.04053944419204,
+      "avgStress": 0.4283158346890428
+    },
+    {
+      "plot_id": "P0102",
+      "crop": "Tomato",
+      "treatment": "High Light",
+      "totalCost": 1253.36937666146,
+      "yield": 10.8948679909821,
+      "avgStress": 0.41008093005513735
+    },
+    {
+      "plot_id": "P0103",
+      "crop": "Cucumber",
+      "treatment": "High Light",
+      "totalCost": 1647.19442429808,
+      "yield": 8.07164244261645,
+      "avgStress": 0.41372277409853786
+    },
+    {
+      "plot_id": "P0104",
+      "crop": "Pepper",
+      "treatment": "Low N",
+      "totalCost": 1228.68507104434,
+      "yield": 5.34497372803098,
+      "avgStress": 0.5150496458982049
+    },
+    {
+      "plot_id": "P0105",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1112.19855295319,
+      "yield": 4.43127729709829,
+      "avgStress": 0.5482582614257209
+    },
+    {
+      "plot_id": "P0106",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 1500.09279237111,
+      "yield": 4.81601230596465,
+      "avgStress": 0.5505858455379158
+    },
+    {
+      "plot_id": "P0107",
+      "crop": "Cucumber",
+      "treatment": "Reduced Pest",
+      "totalCost": 1243.29548526824,
+      "yield": 7.58436479104376,
+      "avgStress": 0.5330000092185738
+    },
+    {
+      "plot_id": "P0108",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 1190.29030364207,
+      "yield": 10.6293123599203,
+      "avgStress": 0.5336960180216668
+    },
+    {
+      "plot_id": "P0109",
+      "crop": "Cucumber",
+      "treatment": "Integrated Pest",
+      "totalCost": 1030.519766475,
+      "yield": 8.53823199046797,
+      "avgStress": 0.42670309972642645
+    },
+    {
+      "plot_id": "P0110",
+      "crop": "Cucumber",
+      "treatment": "Low N",
+      "totalCost": 1374.6090163887,
+      "yield": 8.1637676632337,
+      "avgStress": 0.5154012092571901
+    },
+    {
+      "plot_id": "P0111",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1529.66834676524,
+      "yield": 5.83153126585457,
+      "avgStress": 0.47848441806189373
+    },
+    {
+      "plot_id": "P0112",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1540.56064527118,
+      "yield": 3.98852919297875,
+      "avgStress": 0.4867814466363885
+    },
+    {
+      "plot_id": "P0113",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1552.16280913678,
+      "yield": 5.27334483600091,
+      "avgStress": 0.4059510258830219
+    },
+    {
+      "plot_id": "P0114",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1445.75954912345,
+      "yield": 7.99290858787629,
+      "avgStress": 0.43241403609738
+    },
+    {
+      "plot_id": "P0115",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1087.9921904204,
+      "yield": 4.96216195845582,
+      "avgStress": 0.42837613092655313
+    },
+    {
+      "plot_id": "P0116",
+      "crop": "Cucumber",
+      "treatment": "High Light",
+      "totalCost": 1452.84888265439,
+      "yield": 8.91906255347023,
+      "avgStress": 0.4089798874213558
+    },
+    {
+      "plot_id": "P0117",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 1397.94387643636,
+      "yield": 8.76407334243634,
+      "avgStress": 0.5324723279925219
+    },
+    {
+      "plot_id": "P0118",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 1394.9705970953,
+      "yield": 4.76798693722029,
+      "avgStress": 0.533435187820996
+    },
+    {
+      "plot_id": "P0119",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 964.897544506827,
+      "yield": 5.19568050051582,
+      "avgStress": 0.48388542983573785
+    },
+    {
+      "plot_id": "P0120",
+      "crop": "Strawberry",
+      "treatment": "Reduced Pest",
+      "totalCost": 923.033369152502,
+      "yield": 5.6223899007142,
+      "avgStress": 0.5311228331843671
+    }
+  ],
+  "yieldBenchmark": [
+    {
+      "crop": "Cucumber",
+      "avgYield": 7.95,
+      "benchmark": 75,
+      "aboveBenchmark": false
+    },
+    {
+      "crop": "Pepper",
+      "avgYield": 6.84,
+      "benchmark": 18,
+      "aboveBenchmark": false
+    },
+    {
+      "crop": "Strawberry",
+      "avgYield": 5.16,
+      "benchmark": 8,
+      "aboveBenchmark": false
+    },
+    {
+      "crop": "Tomato",
+      "avgYield": 9.43,
+      "benchmark": 65,
+      "aboveBenchmark": false
+    }
+  ],
+  "yieldModel": {
+    "featureNames": [
+      "daily_fertilizer_cost",
+      "daily_energy_cost",
+      "daily_water_cost",
+      "daily_pesticide_cost",
+      "plant_density_plants_m2",
+      "precision_action_rate",
+      "avg_action_delay_days"
+    ],
+    "coefficients": [
+      0.0462651255595399,
+      -0.15789159691436389,
+      -0.34607960698257,
+      -0.37004184906025456,
+      -0.0011424162898581386,
+      1.7611264690291526,
+      -2.5808517518198313
+    ],
+    "intercept": 8.972529604016454,
+    "defaults": {
+      "daily_fertilizer_cost": 1.9308202253662783,
+      "daily_energy_cost": 1.4771670478410583,
+      "daily_water_cost": 1.4175916190290114,
+      "daily_pesticide_cost": 1.1123018863761152,
+      "plant_density_plants_m2": 16.262083333333333,
+      "precision_action_rate": 0.09306529246829505,
+      "avg_action_delay_days": 0.5623226029297307
+    },
+    "bounds": {
+      "daily_fertilizer_cost": [
+        0,
+        50
+      ],
+      "daily_energy_cost": [
+        0,
+        100
+      ],
+      "daily_water_cost": [
+        0,
+        30
+      ],
+      "daily_pesticide_cost": [
+        0,
+        40
+      ],
+      "plant_density_plants_m2": [
+        8.17,
+        23.94
+      ],
+      "precision_action_rate": [
+        0,
+        1
+      ],
+      "avg_action_delay_days": [
+        0,
+        5
+      ]
+    },
+    "currentSeasonAvgYield": 6.62,
+    "avgMarketPricePerKg": 4.5
+  },
+  "monthlyRevenueCurve": [
+    {
+      "month": 2,
+      "revenue": 20474.96887168868
+    },
+    {
+      "month": 3,
+      "revenue": 125003.90167168852
+    },
+    {
+      "month": 4,
+      "revenue": 155062.35950478513
+    },
+    {
+      "month": 5,
+      "revenue": 95393.45566524977
+    },
+    {
+      "month": 6,
+      "revenue": 55327.02522165501
+    },
+    {
+      "month": 7,
+      "revenue": 55587.80033831294
+    },
+    {
+      "month": 8,
+      "revenue": 62978.412597381415
+    },
+    {
+      "month": 9,
+      "revenue": 8221.306724737447
+    }
+  ],
+  "precisionBenefitPerSeason": 392.0
+}
