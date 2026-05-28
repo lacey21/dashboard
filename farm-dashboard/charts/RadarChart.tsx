@@ -17,21 +17,36 @@ const LABELS: Record<string, string> = {
   energyIntensity: "Energy",
   waterEfficiency: "Water",
   chemicalLoad: "Chemicals",
-  stressManagement: "Stress",
-  precisionAdoption: "Precision",
+  carbonEmissions: "Carbon",
+  naturalDisasterRisk: "Disaster Risk",
+  roi: "ROI",
 };
 
 export function SustainabilityRadar({
   subscores,
   controlBaseline,
+  roi,
 }: {
   subscores: Subscores;
   controlBaseline: Subscores;
+  roi?: number;
 }) {
-  const data = Object.keys(subscores).map((key) => ({
+  // Normalize ROI (0-100%) to a 0-100 score
+  const roiScore = Math.min(100, (roi ?? 0) / 1.0);
+  
+  // Build data array with ROI if available
+  const farmData: Record<string, number> = { ...subscores };
+  const controlData: Record<string, number> = { ...controlBaseline };
+  
+  if (roi !== undefined && roi > 0) {
+    farmData.roi = roiScore;
+    controlData.roi = 50; // Use 50 as baseline for ROI comparison
+  }
+  
+  const data = Object.keys(farmData).map((key) => ({
     subject: LABELS[key] ?? key,
-    farm: subscores[key],
-    control: controlBaseline[key] ?? 0,
+    farm: farmData[key],
+    control: controlData[key] ?? 0,
   }));
 
   return (
