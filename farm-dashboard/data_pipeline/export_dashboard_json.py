@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data" / "clean"
@@ -589,12 +589,38 @@ def export_seasonal(
         "precision_action_rate",
         "avg_action_delay_days",
     ]
-    X = model_df[feature_cols].values
+    # Polynomial + interaction terms layered on top of the linear base. The client
+    # evaluates these via the same dot-product, so coefficients stay portable.
+    # Squared terms capture diminishing returns on input spend; interactions
+    # capture "you need water to make fertilizer work" type effects.
+    yield_terms: list[dict] = [{"type": "linear", "feature": f} for f in feature_cols]
+    yield_terms += [
+        {"type": "poly", "feature": "daily_fertilizer_cost", "power": 2},
+        {"type": "poly", "feature": "daily_energy_cost", "power": 2},
+        {"type": "poly", "feature": "daily_water_cost", "power": 2},
+        {"type": "poly", "feature": "plant_density_plants_m2", "power": 2},
+        {"type": "interact", "features": ["daily_fertilizer_cost", "daily_water_cost"]},
+        {"type": "interact", "features": ["plant_density_plants_m2", "daily_energy_cost"]},
+        {"type": "interact", "features": ["precision_action_rate", "avg_action_delay_days"]},
+    ]
+
+    def _term_vector(df: pd.DataFrame, term: dict) -> np.ndarray:
+        if term["type"] == "linear":
+            return df[term["feature"]].to_numpy(dtype=float)
+        if term["type"] == "poly":
+            return df[term["feature"]].to_numpy(dtype=float) ** term["power"]
+        if term["type"] == "interact":
+            a, b = term["features"]
+            return df[a].to_numpy(dtype=float) * df[b].to_numpy(dtype=float)
+        raise ValueError(f"unknown term type: {term['type']}")
+
+    X = np.column_stack([_term_vector(model_df, t) for t in yield_terms])
     y = model_df["season_yield_kg_m2"].values
     gb = GradientBoostingRegressor(n_estimators=80, random_state=42, max_depth=4)
-    gb.fit(X, y)
-    # Export simple linear surrogate for client-side prediction
-    lr = LinearRegression()
+    gb.fit(model_df[feature_cols].values, y)
+    # Ridge keeps the expanded feature set from overfitting the small plot sample
+    # while preserving the linear export format (intercept + per-term coefficient).
+    lr = Ridge(alpha=1.0)
     lr.fit(X, y)
 
     density_min = float(model_df["plant_density_plants_m2"].min())
@@ -661,6 +687,7 @@ def export_seasonal(
         "yieldBenchmark": yield_benchmark,
         "yieldModel": {
             "featureNames": feature_cols,
+            "terms": yield_terms,
             "coefficients": lr.coef_.tolist(),
             "intercept": float(lr.intercept_),
             "defaults": defaults,

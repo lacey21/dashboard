@@ -3,8 +3,14 @@
 import { useMemo, useState } from "react";
 import { COLORS } from "@/constants/colors";
 
+type ModelTerm =
+  | { type: "linear"; feature: string }
+  | { type: "poly"; feature: string; power: number }
+  | { type: "interact"; features: [string, string] };
+
 type YieldModel = {
   featureNames: string[];
+  terms?: ModelTerm[];
   coefficients: number[];
   intercept: number;
   defaults: Record<string, number>;
@@ -28,12 +34,17 @@ function predict(
   model: YieldModel,
 ): number {
   let y = model.intercept;
-  model.featureNames.forEach((name, i) => {
-    const val =
-      name === "precision_action_rate"
-        ? features[name] / 100
-        : features[name];
-    y += model.coefficients[i] * val;
+  const terms: ModelTerm[] =
+    model.terms ?? model.featureNames.map((feature) => ({ type: "linear", feature }));
+  terms.forEach((term, i) => {
+    const c = model.coefficients[i];
+    if (term.type === "linear") {
+      y += c * features[term.feature];
+    } else if (term.type === "poly") {
+      y += c * Math.pow(features[term.feature], term.power);
+    } else {
+      y += c * features[term.features[0]] * features[term.features[1]];
+    }
   });
   return Math.max(0, y);
 }
