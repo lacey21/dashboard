@@ -77,7 +77,7 @@ export function StickyDashboardHeader({
             className="ml-auto flex shrink-0 items-center gap-0.5 overflow-hidden transition-all duration-500 ease-out sm:gap-1"
             style={{
               opacity: p,
-              maxWidth: p > 0.02 ? "min(50%, 280px)" : 0,
+              maxWidth: p > 0.02 ? "min(65%, 420px)" : 0,
               transform: `translateX(${(1 - p) * 12}px)`,
               pointerEvents: p > 0.35 ? "auto" : "none",
             }}
