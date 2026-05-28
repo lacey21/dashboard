@@ -32,8 +32,13 @@ type HomeData = {
   };
 };
 
+type SustainData = {
+  overallScore: number;
+};
+
 export default function HomePage() {
   const { data, loading, error } = useData<HomeData>("home.json");
+  const { data: susData } = useData<SustainData>("sustainability.json");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [slideIndex, setSlideIndex] = useState(0);
   const [kpiSectionRef, kpiProgress] = useKpiScrollProgress(40);
@@ -58,7 +63,7 @@ export default function HomePage() {
           id: "sustainability",
           title: "How resilient is this operation?",
           audience: "Long-term planning and risk management",
-          stat: `Sustainability score: ${data.nav.sustainabilityScore}/100`,
+          stat: `Sustainability score: ${susData?.overallScore}/100`,
           content: <SustainabilityPage embedded />,
         },
       ]
