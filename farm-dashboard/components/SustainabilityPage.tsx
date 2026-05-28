@@ -16,18 +16,92 @@ type SustainData = {
   strongestScore: number;
   farm: { farmName: string; region: string; climateZone: string; primaryCrop: string };
   benchmarks: { energyPerKg: number; waterPerKg: number };
+  carbonEmissionsKgCO2e: number;
+  carbonKgPerKgYield: number;
+  carbonEmissionsScore: number;
   risks: { id: string; icon: string; title: string; level: "critical" | "warning" | "healthy"; oneliner: string }[];
   controlBaseline: Record<string, number>;
+};
+
+type SeasonalData = {
+  financials: {
+    meanRoiPct: number;
+  };
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
   energyIntensity: "Energy intensity",
   waterEfficiency: "Water efficiency",
-  chemicalLoad: "Chemical load",
+  chemicalLoad: "Total Chemical load",
+  carbonEmissions: "Carbon emissions",
+  naturalDisasterRisk: "Natural disaster risk",
 };
+
+// ─── Metric pill displayed below the big score ───────────────────────────────
+
+function MetricPill({
+  label,
+  value,
+  unit,
+  score,
+  tooltip,
+}: {
+  label: string;
+  value: string;
+  unit: string;
+  score: number;
+  tooltip: string;
+}) {
+  const color = scoreColor(score);
+  return (
+    <div
+      title={tooltip}
+      className="flex flex-col items-center gap-1 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
+    >
+      <p className="text-xs font-medium uppercase tracking-wide text-sage-500">{label}</p>
+      <p className="text-2xl font-bold leading-none" style={{ color }}>
+        {score}
+      </p>
+      <p className="text-xs text-sage-600">
+        {value}&nbsp;{unit}
+      </p>
+    </div>
+  );
+}
+
+// ─── Carbon pill (slightly different — shows raw CO₂e value prominently) ─────
+
+function CarbonPill({
+  totalKgCO2e,
+  kgPerKgYield,
+  score,
+}: {
+  totalKgCO2e: number;
+  kgPerKgYield: number;
+  score: number;
+}) {
+  const color = scoreColor(score);
+  return (
+    <div
+      title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. Emission factor source: Environment and Climate Change Canada.`}
+      className="flex flex-col items-center gap-1 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
+    >
+      <p className="text-xs font-medium uppercase tracking-wide text-sage-500">Carbon emissions</p>
+      <p className="text-2xl font-bold leading-none" style={{ color }}>
+        {score}
+      </p>
+      <p className="text-xs text-sage-600">
+        {kgPerKgYield.toFixed(3)}&nbsp;kg CO₂e/kg
+      </p>
+    </div>
+  );
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function SustainabilityPage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<SustainData>("sustainability.json");
+  const { data: seasonalData } = useData<SeasonalData>("seasonal_evaluation.json");
   const [showBreakdown, setShowBreakdown] = useState(false);
 
   if (loading || !data) {
@@ -48,9 +122,13 @@ Farm: ${data.farm.farmName}, ${data.farm.region}, ${data.farm.climateZone}
 Primary crop: ${data.farm.primaryCrop}
 Overall sustainability score: ${data.overallScore}/100
 Weakest sub-score: ${data.weakestCategory} (${data.weakestScore}/100)
-Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)`;
+Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)
+Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg yield`;
 
   const dynamicSentence = `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
+
+  // Filter risks to only show warning and critical
+  const filteredRisks = data.risks.filter((r) => r.level !== "healthy");
 
   const Wrapper = embedded ? "div" : "main";
   const wrapClass = embedded ? "" : "mx-auto max-w-7xl px-6 py-8";
@@ -62,6 +140,7 @@ Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)`;
       </h2>
       <p className="mt-1 text-sage-700">Here&apos;s how resilient and future-proof this operation is.</p>
 
+      {/* ── Big score ────────────────────────────────────────────────── */}
       <div className="mt-10 text-center">
         <button
           type="button"
@@ -76,7 +155,39 @@ Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)`;
           </p>
           <p className="text-lg text-sage-700">Overall Sustainability Score · {scoreLabel}</p>
         </button>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-sage-700">{dynamicSentence}</p>
+
+        {/* ── NEW: four metric pills ───────────────────────────────── */}
+        <div className="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
+          <MetricPill
+            label="Water efficiency"
+            score={data.subscores.waterEfficiency}
+            value={data.benchmarks.waterPerKg.toFixed(1)}
+            unit="L/kg"
+            tooltip="Water consumed per kg of yield. Lower L/kg → higher score."
+          />
+          <MetricPill
+            label="Energy intensity"
+            score={data.subscores.energyIntensity}
+            value={data.benchmarks.energyPerKg.toFixed(2)}
+            unit="kWh/kg"
+            tooltip="Energy consumed per kg of yield. Lower kWh/kg → higher score."
+          />
+          <MetricPill
+            label="Total Chemical Load"
+            score={data.subscores.chemicalLoad}
+            value={(data.subscores.chemicalLoad).toFixed(0)}
+            unit="/100"
+            tooltip="Pesticide input intensity per m² of growing area. Scored relative to fleet range."
+          />
+          <CarbonPill
+            totalKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
+            kgPerKgYield={data.carbonKgPerKgYield ?? 0}
+            score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}
+          />
+        </div>
+        {/* ──────────────────────────────────────────────────────────── */}
+
+        <p className="mx-auto mt-4 max-w-xl text-sm text-sage-700">{dynamicSentence}</p>
         <GeminiInsight prompt={farmPrompt} autoRun label="farm recommendations" />
         <button
           type="button"
@@ -87,20 +198,23 @@ Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)`;
         </button>
       </div>
 
+      {/* ── Breakdown ────────────────────────────────────────────────── */}
       {showBreakdown && (
         <>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {(["energyIntensity", "waterEfficiency", "chemicalLoad"] as const).map((key) => (
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {(["energyIntensity", "waterEfficiency", "chemicalLoad", "carbonEmissions"] as const).map((key) => (
               <CategoryCard
                 key={key}
                 title={CATEGORY_LABELS[key]}
-                score={data.subscores[key]}
+                score={data.subscores[key] ?? 0}
                 caption={
                   key === "energyIntensity"
                     ? "How efficiently this farm converts energy spending into crop output"
                     : key === "waterEfficiency"
                       ? "How well irrigation is matched to crop needs"
-                      : "How much chemical input this operation relies on"
+                      : key === "chemicalLoad"
+                        ? "How much chemical input this operation relies on relative to the fleet"
+                        : "Carbon footprint per kg of yield based on BC grid emission factors"
                 }
                 farm={data.farm}
                 riskName={CATEGORY_LABELS[key]}
@@ -110,51 +224,68 @@ Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)`;
 
           <div className="mt-6 space-y-2 text-sm">
             <div className="flex justify-between rounded border border-sage-100 bg-white px-4 py-3">
-              <span>Stress management</span>
-              <span className="font-bold">{data.subscores.stressManagement}/100</span>
+              <span>Natural disaster risk</span>
+              <span className="font-bold">{data.subscores.naturalDisasterRisk}/100</span>
             </div>
             <div className="flex justify-between rounded border border-sage-100 bg-white px-4 py-3">
-              <span>Precision adoption</span>
-              <span className="font-bold">{data.subscores.precisionAdoption}/100</span>
+              <span>
+                Carbon footprint
+                <span className="ml-2 text-xs text-sage-500">
+                  (total: {(data.carbonEmissionsKgCO2e ?? 0).toLocaleString()} kg CO₂e · {(data.carbonKgPerKgYield ?? 0).toFixed(3)} kg CO₂e/kg)
+                </span>
+              </span>
+              <span className="font-bold">{(data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0)}/100</span>
             </div>
           </div>
 
           <section className="mt-10">
             <h2 className="mb-4 font-semibold text-sage-900">All dimensions vs control</h2>
-            <SustainabilityRadar subscores={data.subscores} controlBaseline={data.controlBaseline} />
+            <p className="mb-4 text-sm text-sage-700">
+              This radar compares your farm's sustainability metrics against your control plots. ROI measures financial return relative to cost—higher ROI means more profit per dollar spent.
+            </p>
+            <SustainabilityRadar 
+              subscores={data.subscores} 
+              controlBaseline={data.controlBaseline}
+              roi={seasonalData?.financials?.meanRoiPct ?? 0}
+            />
           </section>
         </>
       )}
 
-      <section className="mt-12">
-        <h2 className="mb-4 font-semibold text-sage-900">Risk watchlist</h2>
-        <p className="mb-6 text-sm text-sage-700">
-          Tap any card for three AI-generated actions tailored to your sensor and scouting data.
-        </p>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {data.risks.map((risk) => (
-            <RiskCard
-              key={risk.id}
-              icon={risk.icon}
-              title={risk.title}
-              level={risk.level}
-              oneliner={risk.oneliner}
-              geminiPrompt={`You are an agricultural sustainability advisor for a BC greenhouse farm.
-Give exactly 3 specific, actionable recommendations to reduce ${risk.title} risk.
+      {/* ── Risk watchlist ───────────────────────────────────────────── */}
+      {filteredRisks.length > 0 && (
+        <section className="mt-12">
+          <h2 className="mb-4 font-semibold text-sage-900">Risk watchlist</h2>
+          <p className="mb-6 text-sm text-sage-700">
+            Tap any card for AI-generated actions tailored to your sensor and scouting data.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {filteredRisks.map((risk) => (
+              <RiskCard
+                key={risk.id}
+                icon={risk.icon}
+                title={risk.title}
+                level={risk.level}
+                oneliner={risk.oneliner}
+                geminiPrompt={`You are an agricultural sustainability advisor for a BC greenhouse farm.
+Give exactly 3 specific, actionable recommendations to mitigate ${risk.title}.
 Be practical and specific to their situation. Plain English, no jargon.
 Each recommendation is 1-2 sentences.
 
 Farm: ${data.farm.farmName}, ${data.farm.region}, ${data.farm.climateZone}
 Primary crop: ${data.farm.primaryCrop}
 Risk level: ${risk.level}
-Key signals: ${risk.oneliner}`}
-            />
-          ))}
-        </div>
-      </section>
+Current situation: ${risk.oneliner}`}
+              />
+            ))}
+          </div>
+        </section>
+      )}
     </Wrapper>
   );
 }
+
+// ─── CategoryCard (unchanged) ─────────────────────────────────────────────────
 
 function CategoryCard({
   title,
