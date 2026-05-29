@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useData } from "@/hooks/useData";
 import { useFarm } from "@/contexts/FarmContext";
+import { useChat } from "@/contexts/ChatContext";
 import { KPICard } from "@/components/KPICard";
 import { GeminiInsight } from "@/components/GeminiInsight";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
@@ -35,6 +36,7 @@ export default function HomePage() {
   const { data, loading, error } = useData<HomeData>("home.json");
   const { data: susData } = useData<SustainData>("sustainability.json");
   const { selected } = useFarm();
+  const { openChat } = useChat();
 
   // Live headline stat per use case, keyed by the shared use-case id.
   const stats: Record<string, string> = data
@@ -122,9 +124,33 @@ Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
                 prompt={overviewPrompt}
                 autoRun
                 label="overview summary"
-                headerLabel="AI overview"
+                headerLabel="GreenLeaf AI overview"
                 showRegenerate={false}
-                errorFallback="AI overview not available"
+                errorFallback="GreenLeaf AI overview not available"
+                footer={
+                  <button
+                    type="button"
+                    onClick={openChat}
+                    className="group flex w-full items-center justify-between gap-3 rounded-lg border border-sage-300 bg-sage-50 px-4 py-3 text-left transition hover:border-sage-400 hover:bg-sage-100"
+                  >
+                    <span className="flex items-center gap-3">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage-600 text-white">
+                        <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4" aria-hidden="true">
+                          <path d="M8 1.5l1.4 3.6L13 6.5l-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4L8 1.5z" />
+                        </svg>
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-sm font-semibold text-sage-900">Ask GreenLeaf AI</span>
+                        <span className="block text-xs text-sage-600">
+                          Get answers from your farm data, with links to the right page
+                        </span>
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-sm font-semibold text-sage-700 group-hover:text-sage-900">
+                      Open →
+                    </span>
+                  </button>
+                }
               />
             </section>
           )}

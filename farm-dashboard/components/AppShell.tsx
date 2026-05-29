@@ -4,6 +4,7 @@ import { type ReactNode, useState } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { BrandMark } from "@/components/BrandMark";
 import { UseCaseHeader } from "@/components/UseCaseHeader";
+import { ChatOverlay } from "@/components/ChatOverlay";
 
 export function AppShell({ children }: { children: ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -65,6 +66,9 @@ export function AppShell({ children }: { children: ReactNode }) {
 
         <main className="flex-1">{children}</main>
       </div>
+
+      {/* Global AI chat slide-over (opened from the sidebar's "Ask AI" button) */}
+      <ChatOverlay />
     </div>
   );
 }
