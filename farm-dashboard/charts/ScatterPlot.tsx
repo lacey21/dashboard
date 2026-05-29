@@ -74,14 +74,15 @@ export function ScatterPlot({ data }: { data: Point[] }) {
           </Scatter>
         </ScatterChart>
       </ResponsiveContainer>
-      <div className="pointer-events-none absolute inset-0 grid grid-cols-2 grid-rows-2 text-xs text-sage-500">
-        <span className="p-2">Underinvested</span>
-        <span className="p-2 text-right">Inefficient</span>
-        <span className="p-2">Optimal</span>
-        <span className="p-2 text-right">Efficient</span>
+      {/* Inset so labels clear the Y-axis ticks (left) and X-axis (bottom); pills keep them legible over gridlines */}
+      <div className="pointer-events-none absolute bottom-11 left-[68px] right-6 top-5 grid grid-cols-2 grid-rows-2 text-[11px] font-medium uppercase tracking-wide text-sage-500">
+        <span className="self-start justify-self-start rounded bg-white/80 px-1.5 py-0.5">Underinvested</span>
+        <span className="self-start justify-self-end rounded bg-white/80 px-1.5 py-0.5">Inefficient</span>
+        <span className="self-end justify-self-start rounded bg-white/80 px-1.5 py-0.5">Optimal</span>
+        <span className="self-end justify-self-end rounded bg-white/80 px-1.5 py-0.5">Efficient</span>
       </div>
-      <p className="mt-2 text-sm text-sage-700">
-        Bottom-left is where you want to be. Top-right needs a different strategy.
+      <p className="mt-3 rounded-lg border-l-4 border-sage-600 bg-sage-50 px-3 py-2 text-sm font-medium text-sage-900">
+        Bottom-left is where you want to be — low stress, low cost. Top-right needs a different strategy.
       </p>
     </div>
   );
