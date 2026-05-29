@@ -1,0 +1,686 @@
+{
+  "financials": {
+    "totalRevenue": 57161.0,
+    "totalCost": 41243.0,
+    "precisionSpend": 3857.0,
+    "precisionBenefit": 10479.0,
+    "avgYield": 9.43,
+    "controlYield": 9.15,
+    "meanRoiPct": 38.1,
+    "benefitPerDollar": 2.72
+  },
+  "spendReturnByTreatment": [
+    {
+      "treatment": "Control",
+      "avg_cost": 1291.324609037021,
+      "avg_revenue": 1807.6751262113999
+    },
+    {
+      "treatment": "High Light",
+      "avg_cost": 1523.8603443077,
+      "avg_revenue": 2168.9973305302333
+    },
+    {
+      "treatment": "High N",
+      "avg_cost": 1530.6363088899138,
+      "avg_revenue": 2193.142945495876
+    },
+    {
+      "treatment": "Integrated Pest",
+      "avg_cost": 1461.6275482279898,
+      "avg_revenue": 1976.68243044871
+    },
+    {
+      "treatment": "Low N",
+      "avg_cost": 1316.010752241215,
+      "avg_revenue": 1857.146702473
+    },
+    {
+      "treatment": "Reduced Pest",
+      "avg_cost": 1336.6546283431512,
+      "avg_revenue": 1753.2181936622223
+    },
+    {
+      "treatment": "Shade",
+      "avg_cost": 1428.63418569406,
+      "avg_revenue": 2132.84781740126
+    }
+  ],
+  "controlRevenueBaseline": 1807.6751262113999,
+  "costOverTime": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "precision": 0.0,
+      "routine": 181.8243637586342,
+      "total": 181.8243637586342,
+      "plant_stress_index": 0.414114544509239
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "precision": 0.0,
+      "routine": 470.8041512536021,
+      "total": 470.8041512536021,
+      "plant_stress_index": 0.4018857615602533
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "precision": 385.30553293782197,
+      "routine": 4419.287773685262,
+      "total": 4804.593306624622,
+      "plant_stress_index": 0.5480924219750396
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "precision": 169.6390314128684,
+      "routine": 3523.082190266123,
+      "total": 3692.7212216789912,
+      "plant_stress_index": 0.5019595303471601
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "precision": 223.09980694799762,
+      "routine": 3396.228594912805,
+      "total": 3619.328401860803,
+      "plant_stress_index": 0.5044028824369927
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "precision": 111.38465341395192,
+      "routine": 4944.2222600346,
+      "total": 5055.606913447531,
+      "plant_stress_index": 0.5506998588255999
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "precision": 486.3287228778495,
+      "routine": 3953.039209212172,
+      "total": 4439.367932090022,
+      "plant_stress_index": 0.5230094016807318
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "precision": 224.61039357223143,
+      "routine": 6793.1700463298275,
+      "total": 7017.780439899329,
+      "plant_stress_index": 0.6254171167770455
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "precision": 328.9160280072528,
+      "routine": 5667.850214462799,
+      "total": 5996.766242468285,
+      "plant_stress_index": 0.5728971723115293
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "precision": 314.55538359156947,
+      "routine": 4821.602193243831,
+      "total": 5136.157576839793,
+      "plant_stress_index": 0.544728160216118
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "precision": 296.49781022901203,
+      "routine": 5264.8543264720265,
+      "total": 5561.352136701039,
+      "plant_stress_index": 0.544224633241039
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "precision": 173.49602830616465,
+      "routine": 3368.8446395374963,
+      "total": 3542.340667843661,
+      "plant_stress_index": 0.5026765950107893
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "precision": 181.4218688214417,
+      "routine": 4345.135525143565,
+      "total": 4526.557393965007,
+      "plant_stress_index": 0.5430786961811285
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "precision": 178.85246567388035,
+      "routine": 4595.610523191221,
+      "total": 4774.462988860747,
+      "plant_stress_index": 0.5283277777905047
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "precision": 114.29253267292549,
+      "routine": 1829.3948852905219,
+      "total": 1943.6874179634472,
+      "plant_stress_index": 0.4145665745208203
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "precision": 50.03078108711365,
+      "routine": 1810.9494251382162,
+      "total": 1860.98020622533,
+      "plant_stress_index": 0.4629398656861423
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "precision": 76.2708374,
+      "routine": 1478.8463934365718,
+      "total": 1555.1172308344815,
+      "plant_stress_index": 0.3879209158583838
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "precision": 0.0,
+      "routine": 2289.2237286308523,
+      "total": 2289.2237286308523,
+      "plant_stress_index": 0.41054221227106064
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "precision": 0.0,
+      "routine": 3442.4831939030305,
+      "total": 3442.4831939030305,
+      "plant_stress_index": 0.48736292065978437
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "precision": 0.0,
+      "routine": 1779.8538557431434,
+      "total": 1779.8538557431434,
+      "plant_stress_index": 0.3685105886628933
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "precision": 0.0,
+      "routine": 2252.867384983163,
+      "total": 2252.867384983163,
+      "plant_stress_index": 0.43094402675542337
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "precision": 0.0,
+      "routine": 1780.7213933763787,
+      "total": 1780.7213933763787,
+      "plant_stress_index": 0.38559706066168986
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "precision": 64.24036681200369,
+      "routine": 1174.9383965020409,
+      "total": 1239.1787633140445,
+      "plant_stress_index": 0.38383235741151067
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "precision": 114.59669929537924,
+      "routine": 4245.5904062600885,
+      "total": 4360.187105500669,
+      "plant_stress_index": 0.5096508991141532
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "precision": 44.47725636,
+      "routine": 944.1484655810037,
+      "total": 988.6257219453156,
+      "plant_stress_index": 0.37145206990726287
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "precision": 46.18086719147698,
+      "routine": 1458.7886124758093,
+      "total": 1504.9694796672861,
+      "plant_stress_index": 0.4186606145952965
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "precision": 53.07222062488936,
+      "routine": 1447.990692838891,
+      "total": 1501.0629134620906,
+      "plant_stress_index": 0.40136653534354483
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "precision": 93.1396514468023,
+      "routine": 1333.0253109569646,
+      "total": 1426.164962403767,
+      "plant_stress_index": 0.37603612664160974
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "precision": 126.34092321889747,
+      "routine": 4777.822940962804,
+      "total": 4904.163864183666,
+      "plant_stress_index": 0.5214859518363307
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "precision": 0.0,
+      "routine": 552.0423360761463,
+      "total": 552.0423360761463,
+      "plant_stress_index": 0.37604645182536656
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "precision": 0.0,
+      "routine": 474.1622078136699,
+      "total": 474.1622078136699,
+      "plant_stress_index": 0.401956962250695
+    }
+  ],
+  "scatterPlots": [
+    {
+      "plot_id": "P0004",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1260.63423677625,
+      "yield": 9.74638465147957,
+      "avgStress": 0.4312378281192342
+    },
+    {
+      "plot_id": "P0005",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1747.24569304474,
+      "yield": 10.2721385397839,
+      "avgStress": 0.4460104654942413
+    },
+    {
+      "plot_id": "P0017",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 1795.96518672511,
+      "yield": 10.1892198477773,
+      "avgStress": 0.5380510439124545
+    },
+    {
+      "plot_id": "P0019",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1192.62369384091,
+      "yield": 9.44292308611805,
+      "avgStress": 0.42909659930451277
+    },
+    {
+      "plot_id": "P0021",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1479.56368479962,
+      "yield": 8.39551734108012,
+      "avgStress": 0.4520347202224965
+    },
+    {
+      "plot_id": "P0032",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1323.63849371156,
+      "yield": 8.89186068270573,
+      "avgStress": 0.4250004412547292
+    },
+    {
+      "plot_id": "P0037",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1744.5328961263,
+      "yield": 9.51592871076764,
+      "avgStress": 0.48307371148975053
+    },
+    {
+      "plot_id": "P0039",
+      "crop": "Tomato",
+      "treatment": "High Light",
+      "totalCost": 1578.64637958376,
+      "yield": 10.4959942655711,
+      "avgStress": 0.4141433176257092
+    },
+    {
+      "plot_id": "P0040",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1052.62238267427,
+      "yield": 8.82508714434094,
+      "avgStress": 0.48763396740549053
+    },
+    {
+      "plot_id": "P0041",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 962.419146569065,
+      "yield": 9.70687653473349,
+      "avgStress": 0.5356061672754446
+    },
+    {
+      "plot_id": "P0042",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1379.25228582993,
+      "yield": 8.24303980984818,
+      "avgStress": 0.4812363743382824
+    },
+    {
+      "plot_id": "P0045",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1772.849142805,
+      "yield": 9.22574451000777,
+      "avgStress": 0.43326833244860663
+    },
+    {
+      "plot_id": "P0046",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1798.07081354933,
+      "yield": 9.33656393974068,
+      "avgStress": 0.4476103012441494
+    },
+    {
+      "plot_id": "P0051",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1153.05384686107,
+      "yield": 9.73956464589418,
+      "avgStress": 0.44554437352559967
+    },
+    {
+      "plot_id": "P0054",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1515.89512477391,
+      "yield": 9.66320751717163,
+      "avgStress": 0.4324991955157099
+    },
+    {
+      "plot_id": "P0056",
+      "crop": "Tomato",
+      "treatment": "Low N",
+      "totalCost": 1505.66278512929,
+      "yield": 8.19995549972153,
+      "avgStress": 0.5205901075004876
+    },
+    {
+      "plot_id": "P0060",
+      "crop": "Tomato",
+      "treatment": "Shade",
+      "totalCost": 1428.63418569406,
+      "yield": 8.87062581041753,
+      "avgStress": 0.56044605076139
+    },
+    {
+      "plot_id": "P0065",
+      "crop": "Tomato",
+      "treatment": "High Light",
+      "totalCost": 1739.56527667788,
+      "yield": 9.03823815058503,
+      "avgStress": 0.41349121112163995
+    },
+    {
+      "plot_id": "P0069",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 916.175122387755,
+      "yield": 9.17830305692391,
+      "avgStress": 0.48991620265864466
+    },
+    {
+      "plot_id": "P0070",
+      "crop": "Tomato",
+      "treatment": "Low N",
+      "totalCost": 1126.35871935314,
+      "yield": 8.28692563643056,
+      "avgStress": 0.5223640511384182
+    },
+    {
+      "plot_id": "P0074",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1569.62522871503,
+      "yield": 10.5417144775448,
+      "avgStress": 0.4338918250733985
+    },
+    {
+      "plot_id": "P0075",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1583.71413340538,
+      "yield": 10.6523456693694,
+      "avgStress": 0.43102897470342677
+    },
+    {
+      "plot_id": "P0083",
+      "crop": "Tomato",
+      "treatment": "Control",
+      "totalCost": 1364.04035816685,
+      "yield": 9.98508060824446,
+      "avgStress": 0.49855498174919033
+    },
+    {
+      "plot_id": "P0092",
+      "crop": "Tomato",
+      "treatment": "High N",
+      "totalCost": 1475.24750619481,
+      "yield": 9.81053281933226,
+      "avgStress": 0.44748507612655647
+    },
+    {
+      "plot_id": "P0096",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1489.90833090042,
+      "yield": 8.89659263867606,
+      "avgStress": 0.42847558053441215
+    },
+    {
+      "plot_id": "P0102",
+      "crop": "Tomato",
+      "treatment": "High Light",
+      "totalCost": 1253.36937666146,
+      "yield": 10.8948679909821,
+      "avgStress": 0.41008093005513735
+    },
+    {
+      "plot_id": "P0108",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 1190.29030364207,
+      "yield": 10.6293123599203,
+      "avgStress": 0.5336960180216668
+    },
+    {
+      "plot_id": "P0114",
+      "crop": "Tomato",
+      "treatment": "Integrated Pest",
+      "totalCost": 1445.75954912345,
+      "yield": 7.99290858787629,
+      "avgStress": 0.43241403609738
+    },
+    {
+      "plot_id": "P0117",
+      "crop": "Tomato",
+      "treatment": "Reduced Pest",
+      "totalCost": 1397.94387643636,
+      "yield": 8.76407334243634,
+      "avgStress": 0.5324723279925219
+    }
+  ],
+  "yieldBenchmark": [
+    {
+      "crop": "Tomato",
+      "avgYield": 9.43,
+      "benchmark": 65,
+      "aboveBenchmark": false
+    }
+  ],
+  "yieldModel": {
+    "featureNames": [
+      "daily_fertilizer_cost",
+      "daily_energy_cost",
+      "daily_water_cost",
+      "daily_pesticide_cost",
+      "plant_density_plants_m2",
+      "precision_action_rate",
+      "avg_action_delay_days"
+    ],
+    "terms": [
+      {
+        "type": "linear",
+        "feature": "daily_fertilizer_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "daily_energy_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "daily_water_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "daily_pesticide_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "plant_density_plants_m2"
+      },
+      {
+        "type": "linear",
+        "feature": "precision_action_rate"
+      },
+      {
+        "type": "linear",
+        "feature": "avg_action_delay_days"
+      },
+      {
+        "type": "poly",
+        "feature": "daily_fertilizer_cost",
+        "power": 2
+      },
+      {
+        "type": "poly",
+        "feature": "daily_energy_cost",
+        "power": 2
+      },
+      {
+        "type": "poly",
+        "feature": "daily_water_cost",
+        "power": 2
+      },
+      {
+        "type": "poly",
+        "feature": "plant_density_plants_m2",
+        "power": 2
+      },
+      {
+        "type": "interact",
+        "features": [
+          "daily_fertilizer_cost",
+          "daily_water_cost"
+        ]
+      },
+      {
+        "type": "interact",
+        "features": [
+          "plant_density_plants_m2",
+          "daily_energy_cost"
+        ]
+      },
+      {
+        "type": "interact",
+        "features": [
+          "precision_action_rate",
+          "avg_action_delay_days"
+        ]
+      }
+    ],
+    "coefficients": [
+      -0.7792542478044179,
+      0.462056718052076,
+      0.06365603904666974,
+      -0.4046689133468384,
+      0.2751691265631484,
+      0.323033350114613,
+      -1.6588863835805432,
+      0.1697372963009424,
+      -0.10760341088867278,
+      -0.27851928985443486,
+      -0.007743865511875804,
+      0.18605133543178434,
+      -0.014658615527069912,
+      -0.04339307011091425
+    ],
+    "intercept": 6.628721846230785,
+    "defaults": {
+      "daily_fertilizer_cost": 1.9854886081546592,
+      "daily_energy_cost": 1.3901686898758658,
+      "daily_water_cost": 1.2444970742940695,
+      "daily_pesticide_cost": 1.1234237573536237,
+      "plant_density_plants_m2": 16.44,
+      "precision_action_rate": 0.10737406978936048,
+      "avg_action_delay_days": 0.5212983793436987
+    },
+    "bounds": {
+      "daily_fertilizer_cost": [
+        0,
+        50
+      ],
+      "daily_energy_cost": [
+        0,
+        100
+      ],
+      "daily_water_cost": [
+        0,
+        30
+      ],
+      "daily_pesticide_cost": [
+        0,
+        40
+      ],
+      "plant_density_plants_m2": [
+        8.69,
+        23.67
+      ],
+      "precision_action_rate": [
+        0,
+        1
+      ],
+      "avg_action_delay_days": [
+        0,
+        5
+      ]
+    },
+    "currentSeasonAvgYield": 9.43,
+    "avgMarketPricePerKg": 4.5
+  },
+  "monthlyRevenueCurve": [
+    {
+      "month": 2,
+      "revenue": 4071.56074180257
+    },
+    {
+      "month": 3,
+      "revenue": 27455.87630915598
+    },
+    {
+      "month": 4,
+      "revenue": 34502.61965605296
+    },
+    {
+      "month": 5,
+      "revenue": 20526.92147878403
+    },
+    {
+      "month": 6,
+      "revenue": 12936.066435004672
+    },
+    {
+      "month": 7,
+      "revenue": 13691.73482450449
+    },
+    {
+      "month": 8,
+      "revenue": 13836.252644952065
+    },
+    {
+      "month": 9,
+      "revenue": 1422.2700744092417
+    }
+  ],
+  "precisionBenefitPerSeason": 361.0
+}

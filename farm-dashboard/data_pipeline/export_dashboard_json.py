@@ -10,7 +10,6 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import Ridge
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -24,6 +23,101 @@ YIELD_BENCHMARKS = {
     "Pepper": 18,
     "Strawberry": 8,
 }
+
+# Feature set + term expansion for the yield what-if model. Defined at module
+# level so the model can be trained once on the full fleet and reused for every
+# per-farm scope — small farms (2-3 plots) cannot fit a stable model on their
+# own, so they share the fleet coefficients with farm-specific starting points.
+YIELD_FEATURE_COLS = [
+    "daily_fertilizer_cost",
+    "daily_energy_cost",
+    "daily_water_cost",
+    "daily_pesticide_cost",
+    "plant_density_plants_m2",
+    "precision_action_rate",
+    "avg_action_delay_days",
+]
+# Polynomial + interaction terms layered on top of the linear base. The client
+# evaluates these via the same dot-product, so coefficients stay portable.
+# Squared terms capture diminishing returns on input spend; interactions
+# capture "you need water to make fertilizer work" type effects.
+YIELD_TERMS: list[dict] = [{"type": "linear", "feature": f} for f in YIELD_FEATURE_COLS] + [
+    {"type": "poly", "feature": "daily_fertilizer_cost", "power": 2},
+    {"type": "poly", "feature": "daily_energy_cost", "power": 2},
+    {"type": "poly", "feature": "daily_water_cost", "power": 2},
+    {"type": "poly", "feature": "plant_density_plants_m2", "power": 2},
+    {"type": "interact", "features": ["daily_fertilizer_cost", "daily_water_cost"]},
+    {"type": "interact", "features": ["plant_density_plants_m2", "daily_energy_cost"]},
+    {"type": "interact", "features": ["precision_action_rate", "avg_action_delay_days"]},
+]
+
+
+def _term_vector(df: pd.DataFrame, term: dict) -> np.ndarray:
+    if term["type"] == "linear":
+        return df[term["feature"]].to_numpy(dtype=float)
+    if term["type"] == "poly":
+        return df[term["feature"]].to_numpy(dtype=float) ** term["power"]
+    if term["type"] == "interact":
+        a, b = term["features"]
+        return df[a].to_numpy(dtype=float) * df[b].to_numpy(dtype=float)
+    raise ValueError(f"unknown term type: {term['type']}")
+
+
+def build_model_df(
+    season: pd.DataFrame,
+    costs: pd.DataFrame,
+    sensor: pd.DataFrame,
+    meta: pd.DataFrame,
+) -> pd.DataFrame:
+    """Per-plot feature frame used both to train the model and to derive the
+    per-scope simulator defaults/bounds."""
+    plot_features = (
+        costs.groupby("plot_id")
+        .agg(
+            daily_fertilizer_cost=("daily_fertilizer_cost", "mean"),
+            daily_energy_cost=("daily_energy_cost", "mean"),
+            daily_water_cost=("daily_water_cost", "mean"),
+            daily_pesticide_cost=("daily_pesticide_cost", "mean"),
+        )
+        .reset_index()
+    )
+    plot_features = plot_features.merge(
+        meta[["plot_id", "plant_density_plants_m2"]], on="plot_id"
+    )
+    precision_rate = costs.groupby("plot_id").agg(
+        precision_actions=("daily_precision_actions_count", "sum"),
+        total_actions=("daily_total_actions_count", "sum"),
+    ).reset_index()
+    precision_rate["precision_action_rate"] = (
+        precision_rate["precision_actions"] / precision_rate["total_actions"].clip(lower=1)
+    )
+    delays = (
+        sensor[sensor["alert_flag"] == 1]
+        .groupby("plot_id")["action_delay_days"]
+        .mean()
+        .reset_index()
+        .rename(columns={"action_delay_days": "avg_action_delay_days"})
+    )
+    model_df = season.merge(plot_features, on="plot_id").merge(
+        precision_rate[["plot_id", "precision_action_rate"]], on="plot_id"
+    ).merge(delays, on="plot_id", how="left")
+    model_df["avg_action_delay_days"] = model_df["avg_action_delay_days"].fillna(0)
+    return model_df
+
+
+def fit_yield_model(model_df: pd.DataFrame) -> dict:
+    """Train the Ridge yield model once on the full fleet. Ridge keeps the
+    expanded feature set from overfitting the small plot sample while preserving
+    the linear export format (intercept + per-term coefficient)."""
+    X = np.column_stack([_term_vector(model_df, t) for t in YIELD_TERMS])
+    y = model_df["season_yield_kg_m2"].values
+    lr = Ridge(alpha=1.0)
+    lr.fit(X, y)
+    return {
+        "terms": YIELD_TERMS,
+        "coefficients": lr.coef_.tolist(),
+        "intercept": float(lr.intercept_),
+    }
 
 
 def get_oneliner(alert_type: str, action_delay: float, stress_index: float) -> str:
@@ -112,7 +206,11 @@ def export_home(
     season_t = season.merge(meta[["plot_id", "treatment"]], on="plot_id")
     control_roi = season_t[season_t["treatment"] == "Control"]["season_roi"].mean()
     mean_roi = season["season_roi"].mean()
-    roi_vs_baseline = round((mean_roi - control_roi) / abs(control_roi) * 100, 1) if control_roi else 0
+    roi_vs_baseline = (
+        round((mean_roi - control_roi) / abs(control_roi) * 100, 1)
+        if pd.notna(control_roi) and control_roi
+        else 0
+    )
 
     precision_rate = costs["daily_precision_actions_count"].sum() / max(
         costs["daily_total_actions_count"].sum(), 1
@@ -412,6 +510,7 @@ def export_seasonal(
     season: pd.DataFrame,
     meta: pd.DataFrame,
     prices: pd.DataFrame,
+    yield_model: dict,
 ) -> dict:
     merged = season.merge(meta, on="plot_id")
     total_revenue = float(season["season_revenue_cad"].sum())
@@ -422,6 +521,10 @@ def export_seasonal(
     control_yield = float(
         merged[merged["treatment"] == "Control"]["season_yield_kg_m2"].mean()
     )
+    # Some farms have no Control plots — fall back to the scope average so the
+    # "vs Control" deltas read as neutral instead of NaN.
+    if not np.isfinite(control_yield):
+        control_yield = avg_yield
     benefit_ratio = round(precision_benefit / max(precision_spend, 1), 2)
 
     by_treatment = (
@@ -433,6 +536,8 @@ def export_seasonal(
     control_revenue = float(
         merged[merged["treatment"] == "Control"]["season_revenue_cad"].mean()
     )
+    if not np.isfinite(control_revenue):
+        control_revenue = float(merged["season_revenue_cad"].mean())
 
     weekly_costs = (
         costs.assign(week=costs["date"].dt.to_period("W").astype(str))
@@ -491,84 +596,19 @@ def export_seasonal(
             }
         )
 
-    # Yield model features per plot averages
-    plot_features = (
-        costs.groupby("plot_id")
-        .agg(
-            daily_fertilizer_cost=("daily_fertilizer_cost", "mean"),
-            daily_energy_cost=("daily_energy_cost", "mean"),
-            daily_water_cost=("daily_water_cost", "mean"),
-            daily_pesticide_cost=("daily_pesticide_cost", "mean"),
-        )
-        .reset_index()
-    )
-    plot_features = plot_features.merge(
-        meta[["plot_id", "plant_density_plants_m2"]], on="plot_id"
-    )
-    precision_rate = costs.groupby("plot_id").agg(
-        precision_actions=("daily_precision_actions_count", "sum"),
-        total_actions=("daily_total_actions_count", "sum"),
-    ).reset_index()
-    precision_rate["precision_action_rate"] = (
-        precision_rate["precision_actions"] / precision_rate["total_actions"].clip(lower=1)
-    )
-    delays = (
-        sensor[sensor["alert_flag"] == 1]
-        .groupby("plot_id")["action_delay_days"]
-        .mean()
-        .reset_index()
-        .rename(columns={"action_delay_days": "avg_action_delay_days"})
-    )
-    model_df = season.merge(plot_features, on="plot_id").merge(
-        precision_rate[["plot_id", "precision_action_rate"]], on="plot_id"
-    ).merge(delays, on="plot_id", how="left")
-    model_df["avg_action_delay_days"] = model_df["avg_action_delay_days"].fillna(0)
+    # Per-plot feature frame for this scope. The model coefficients come from the
+    # fleet-wide fit (passed in), but the simulator's starting point — defaults,
+    # density bounds, current yield — is specific to the selected farm.
+    model_df = build_model_df(season, costs, sensor, meta)
 
-    feature_cols = [
-        "daily_fertilizer_cost",
-        "daily_energy_cost",
-        "daily_water_cost",
-        "daily_pesticide_cost",
-        "plant_density_plants_m2",
-        "precision_action_rate",
-        "avg_action_delay_days",
-    ]
-    # Polynomial + interaction terms layered on top of the linear base. The client
-    # evaluates these via the same dot-product, so coefficients stay portable.
-    # Squared terms capture diminishing returns on input spend; interactions
-    # capture "you need water to make fertilizer work" type effects.
-    yield_terms: list[dict] = [{"type": "linear", "feature": f} for f in feature_cols]
-    yield_terms += [
-        {"type": "poly", "feature": "daily_fertilizer_cost", "power": 2},
-        {"type": "poly", "feature": "daily_energy_cost", "power": 2},
-        {"type": "poly", "feature": "daily_water_cost", "power": 2},
-        {"type": "poly", "feature": "plant_density_plants_m2", "power": 2},
-        {"type": "interact", "features": ["daily_fertilizer_cost", "daily_water_cost"]},
-        {"type": "interact", "features": ["plant_density_plants_m2", "daily_energy_cost"]},
-        {"type": "interact", "features": ["precision_action_rate", "avg_action_delay_days"]},
-    ]
-
-    def _term_vector(df: pd.DataFrame, term: dict) -> np.ndarray:
-        if term["type"] == "linear":
-            return df[term["feature"]].to_numpy(dtype=float)
-        if term["type"] == "poly":
-            return df[term["feature"]].to_numpy(dtype=float) ** term["power"]
-        if term["type"] == "interact":
-            a, b = term["features"]
-            return df[a].to_numpy(dtype=float) * df[b].to_numpy(dtype=float)
-        raise ValueError(f"unknown term type: {term['type']}")
-
-    X = np.column_stack([_term_vector(model_df, t) for t in yield_terms])
-    y = model_df["season_yield_kg_m2"].values
-    gb = GradientBoostingRegressor(n_estimators=80, random_state=42, max_depth=4)
-    gb.fit(model_df[feature_cols].values, y)
-    # Ridge keeps the expanded feature set from overfitting the small plot sample
-    # while preserving the linear export format (intercept + per-term coefficient).
-    lr = Ridge(alpha=1.0)
-    lr.fit(X, y)
+    feature_cols = YIELD_FEATURE_COLS
 
     density_min = float(model_df["plant_density_plants_m2"].min())
     density_max = float(model_df["plant_density_plants_m2"].max())
+    if density_min == density_max:
+        # Single-plot / single-density scope — widen so the slider has a range.
+        density_min = max(0.0, density_min - 1.0)
+        density_max = density_max + 1.0
     defaults = {
         "daily_fertilizer_cost": float(model_df["daily_fertilizer_cost"].mean()),
         "daily_energy_cost": float(model_df["daily_energy_cost"].mean()),
@@ -631,9 +671,9 @@ def export_seasonal(
         "yieldBenchmark": yield_benchmark,
         "yieldModel": {
             "featureNames": feature_cols,
-            "terms": yield_terms,
-            "coefficients": lr.coef_.tolist(),
-            "intercept": float(lr.intercept_),
+            "terms": yield_model["terms"],
+            "coefficients": yield_model["coefficients"],
+            "intercept": yield_model["intercept"],
             "defaults": defaults,
             "bounds": {
                 "daily_fertilizer_cost": [0, 50],
@@ -659,6 +699,7 @@ def export_sustainability(
     meta: pd.DataFrame,
     scouting: pd.DataFrame,
     prices: pd.DataFrame,
+    farm_label: str = "GreenLeaf CEA",
 ) -> dict:
     merged = season.merge(meta, on="plot_id")
     avg_yield = merged["season_yield_kg_m2"].replace(0, np.nan).mean()
@@ -766,7 +807,7 @@ def export_sustainability(
         "weakestScore": subscores[weakest],
         "strongestScore": subscores[strongest],
         "farm": {
-            "farmName": "GreenLeaf CEA",
+            "farmName": farm_label,
             "region": primary_farm["region"],
             "climateZone": primary_farm["climate_zone"],
             "primaryCrop": primary_farm["primary_crop"],
@@ -783,11 +824,38 @@ def export_sustainability(
     }
 
 
-def main() -> None:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    tables = load_tables()
-    meta = build_plot_meta(tables["plots"], tables["farms"], tables["greenhouses"])
+# Tables that carry a plot_id and so get filtered down to a single farm's plots.
+# market_and_input_prices is fleet-wide (no plot_id) and stays unfiltered.
+PLOT_SCOPED_TABLES = [
+    "daily_sensor_readings",
+    "daily_input_costs",
+    "scouting_observations",
+    "season_summary",
+]
 
+
+def filter_tables_for_farm(
+    tables: dict[str, pd.DataFrame], meta: pd.DataFrame, farm_id: str | None
+) -> tuple[dict[str, pd.DataFrame], pd.DataFrame]:
+    """Return (tables, meta) narrowed to a single farm. farm_id=None keeps the
+    full fleet (the aggregate "all farms" scope)."""
+    if farm_id is None:
+        return tables, meta
+    scope_meta = meta[meta["farm_id"] == farm_id]
+    plot_ids = set(scope_meta["plot_id"])
+    scoped = dict(tables)
+    for name in PLOT_SCOPED_TABLES:
+        df = tables[name]
+        scoped[name] = df[df["plot_id"].isin(plot_ids)]
+    return scoped, scope_meta
+
+
+def build_scope_outputs(
+    tables: dict[str, pd.DataFrame],
+    meta: pd.DataFrame,
+    yield_model: dict,
+    farm_label: str,
+) -> dict:
     home = export_home(
         tables["daily_sensor_readings"],
         tables["daily_input_costs"],
@@ -801,10 +869,10 @@ def main() -> None:
         meta,
         tables["scouting_observations"],
         tables["market_and_input_prices"],
+        farm_label=farm_label,
     )
     home["nav"]["sustainabilityScore"] = sustainability["overallScore"]
-
-    outputs = {
+    return {
         "home.json": home,
         "alert_triage.json": export_alert_triage(
             tables["daily_sensor_readings"],
@@ -817,15 +885,66 @@ def main() -> None:
             tables["season_summary"],
             meta,
             tables["market_and_input_prices"],
+            yield_model,
         ),
         "sustainability.json": sustainability,
     }
 
-    for name, payload in outputs.items():
-        path = OUT_DIR / name
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(payload, f, indent=2, default=str)
-        print(f"Wrote {path}")
+
+def main() -> None:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    tables = load_tables()
+    meta = build_plot_meta(tables["plots"], tables["farms"], tables["greenhouses"])
+
+    # Train the yield model once on the full fleet; every scope reuses it.
+    yield_model = fit_yield_model(
+        build_model_df(
+            tables["season_summary"],
+            tables["daily_input_costs"],
+            tables["daily_sensor_readings"],
+            meta,
+        )
+    )
+
+    farms = tables["farms"]
+    # Aggregate first (the default view), then each individual farm in order.
+    scopes: list[tuple[str, str | None, str]] = [("all", None, "GreenLeaf CEA")]
+    for _, fr in farms.iterrows():
+        scopes.append((fr["farm_id"], fr["farm_id"], fr["farm_name"]))
+
+    # Selector index consumed by the frontend FarmProvider.
+    farm_index = [
+        {
+            "id": "all",
+            "name": "All Farms",
+            "region": "Fleet-wide",
+            "primaryCrop": "Mixed crops",
+        }
+    ]
+    for _, fr in farms.iterrows():
+        farm_index.append(
+            {
+                "id": fr["farm_id"],
+                "name": fr["farm_name"],
+                "region": fr["region"],
+                "primaryCrop": fr["primary_crop"],
+            }
+        )
+
+    for scope_id, farm_id, farm_label in scopes:
+        scoped_tables, scoped_meta = filter_tables_for_farm(tables, meta, farm_id)
+        outputs = build_scope_outputs(scoped_tables, scoped_meta, yield_model, farm_label)
+        scope_dir = OUT_DIR / scope_id
+        scope_dir.mkdir(parents=True, exist_ok=True)
+        for name, payload in outputs.items():
+            path = scope_dir / name
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(payload, f, indent=2, default=str)
+        print(f"Wrote {scope_dir} ({farm_label})")
+
+    with open(OUT_DIR / "farms.json", "w", encoding="utf-8") as f:
+        json.dump(farm_index, f, indent=2)
+    print(f"Wrote {OUT_DIR / 'farms.json'}")
 
 
 if __name__ == "__main__":

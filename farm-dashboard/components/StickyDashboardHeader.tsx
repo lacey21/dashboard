@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { StickyKpiChip } from "@/components/StickyKpiChip";
+import { FarmSelector } from "@/components/FarmSelector";
 
 type Banner = {
   criticalPlots: number;
@@ -67,7 +68,9 @@ export function StickyDashboardHeader({
             GreenLeaf CEA
           </h1>
 
-          <p className="min-w-0 flex-1 truncate text-[11px] leading-tight text-sage-50 sm:text-xs">
+          <FarmSelector />
+
+          <p className="hidden min-w-0 flex-1 truncate text-[11px] leading-tight text-sage-50 sm:block sm:text-xs">
             <strong className="font-semibold text-white">{banner.criticalPlots}</strong> critical ·{" "}
             <strong className="font-semibold text-white">{banner.unactionedAlerts}</strong> unactioned · ROI{" "}
             <strong className="font-semibold text-white">{Math.abs(banner.roiVsBaseline)}%</strong> {sign}
