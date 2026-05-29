@@ -119,11 +119,110 @@ def fit_yield_model(model_df: pd.DataFrame) -> dict:
         "intercept": float(lr.intercept_),
     }
 
+# Feature set + term expansion for the yield what-if model. Defined at module
+# level so the model can be trained once on the full fleet and reused for every
+# per-farm scope — small farms (2-3 plots) cannot fit a stable model on their
+# own, so they share the fleet coefficients with farm-specific starting points.
+YIELD_FEATURE_COLS = [
+    "daily_fertilizer_cost",
+    "daily_energy_cost",
+    "daily_water_cost",
+    "daily_pesticide_cost",
+    "plant_density_plants_m2",
+    "precision_action_rate",
+    "avg_action_delay_days",
+]
+# Polynomial + interaction terms layered on top of the linear base. The client
+# evaluates these via the same dot-product, so coefficients stay portable.
+# Squared terms capture diminishing returns on input spend; interactions
+# capture "you need water to make fertilizer work" type effects.
+YIELD_TERMS: list[dict] = [{"type": "linear", "feature": f} for f in YIELD_FEATURE_COLS] + [
+    {"type": "poly", "feature": "daily_fertilizer_cost", "power": 2},
+    {"type": "poly", "feature": "daily_energy_cost", "power": 2},
+    {"type": "poly", "feature": "daily_water_cost", "power": 2},
+    {"type": "poly", "feature": "plant_density_plants_m2", "power": 2},
+    {"type": "interact", "features": ["daily_fertilizer_cost", "daily_water_cost"]},
+    {"type": "interact", "features": ["plant_density_plants_m2", "daily_energy_cost"]},
+    {"type": "interact", "features": ["precision_action_rate", "avg_action_delay_days"]},
+]
 
-def get_oneliner(alert_type: str, action_delay: float, stress_index: float) -> str:
+
+def _term_vector(df: pd.DataFrame, term: dict) -> np.ndarray:
+    if term["type"] == "linear":
+        return df[term["feature"]].to_numpy(dtype=float)
+    if term["type"] == "poly":
+        return df[term["feature"]].to_numpy(dtype=float) ** term["power"]
+    if term["type"] == "interact":
+        a, b = term["features"]
+        return df[a].to_numpy(dtype=float) * df[b].to_numpy(dtype=float)
+    raise ValueError(f"unknown term type: {term['type']}")
+
+
+def build_model_df(
+    season: pd.DataFrame,
+    costs: pd.DataFrame,
+    sensor: pd.DataFrame,
+    meta: pd.DataFrame,
+) -> pd.DataFrame:
+    """Per-plot feature frame used both to train the model and to derive the
+    per-scope simulator defaults/bounds."""
+    plot_features = (
+        costs.groupby("plot_id")
+        .agg(
+            daily_fertilizer_cost=("daily_fertilizer_cost", "mean"),
+            daily_energy_cost=("daily_energy_cost", "mean"),
+            daily_water_cost=("daily_water_cost", "mean"),
+            daily_pesticide_cost=("daily_pesticide_cost", "mean"),
+        )
+        .reset_index()
+    )
+    plot_features = plot_features.merge(
+        meta[["plot_id", "plant_density_plants_m2"]], on="plot_id"
+    )
+    precision_rate = costs.groupby("plot_id").agg(
+        precision_actions=("daily_precision_actions_count", "sum"),
+        total_actions=("daily_total_actions_count", "sum"),
+    ).reset_index()
+    precision_rate["precision_action_rate"] = (
+        precision_rate["precision_actions"] / precision_rate["total_actions"].clip(lower=1)
+    )
+    delays = (
+        sensor[sensor["alert_flag"] == 1]
+        .groupby("plot_id")["action_delay_days"]
+        .mean()
+        .reset_index()
+        .rename(columns={"action_delay_days": "avg_action_delay_days"})
+    )
+    model_df = season.merge(plot_features, on="plot_id").merge(
+        precision_rate[["plot_id", "precision_action_rate"]], on="plot_id"
+    ).merge(delays, on="plot_id", how="left")
+    model_df["avg_action_delay_days"] = model_df["avg_action_delay_days"].fillna(0)
+    return model_df
+
+
+def fit_yield_model(model_df: pd.DataFrame) -> dict:
+    """Train the Ridge yield model once on the full fleet. Ridge keeps the
+    expanded feature set from overfitting the small plot sample while preserving
+    the linear export format (intercept + per-term coefficient)."""
+    X = np.column_stack([_term_vector(model_df, t) for t in YIELD_TERMS])
+    y = model_df["season_yield_kg_m2"].values
+    lr = Ridge(alpha=1.0)
+    lr.fit(X, y)
+    return {
+        "terms": YIELD_TERMS,
+        "coefficients": lr.coef_.tolist(),
+        "intercept": float(lr.intercept_),
+    }
+
+
+def get_oneliner(alert_type: str, action_delay: float, stress_index: float, action_taken: int = 1) -> str:
     alert = alert_type if alert_type and alert_type != "No Alert" else "Stress"
     delay = float(action_delay or 0)
     stress = float(stress_index or 0)
+    if not action_taken:
+        if stress > 0.7:
+            return f"{alert} alert — no crew action recorded. Urgent."
+        return f"{alert} alert active — no crew action recorded."
     if delay > 2 and stress > 0.7:
         return f"{alert} stress — {int(delay)} days without action. Urgent."
     if delay > 0:
@@ -132,10 +231,15 @@ def get_oneliner(alert_type: str, action_delay: float, stress_index: float) -> s
 
 
 def urgency_score(row: pd.Series) -> float:
-    delay = min(max(float(row.get("action_delay_days") or 0), 0), 5) / 5
+    has_alert = float(row.get("alert_flag") or 0)
+    acted = float(row.get("action_taken") or 0)
+    raw_delay = float(row.get("action_delay_days") or 0)
+    # Alert fired but never acted on → treat as max delay so it ranks highest
+    effective_delay = 5.0 if (has_alert and not acted) else raw_delay
+    delay = min(max(effective_delay, 0), 5) / 5
     return (
         float(row.get("plant_stress_index") or 0) * 0.5
-        + float(row.get("alert_flag") or 0) * 0.3
+        + has_alert * 0.3
         + delay * 0.2
     )
 
@@ -192,7 +296,7 @@ def export_home(
     farm_health = round((1 - avg_stress) * 100, 1)
     prior_health = round((1 - prior_stress) * 100, 1)
 
-    critical_plots = int((latest["plant_stress_index"] > STRESS_THRESHOLD).sum())
+    critical_plots = int((latest.apply(urgency_score, axis=1) > 0.7).sum())
     active_alerts = int(latest["alert_flag"].sum())
     prior_alerts = int(prior_week["alert_flag"].sum()) if len(prior_week) else active_alerts
 
@@ -367,7 +471,7 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
         latest_in_week = wk.sort_values("date").groupby("plot_id").tail(1).copy()
         latest_in_week["urgency_score"] = latest_in_week.apply(urgency_score, axis=1)
         latest_in_week["oneliner"] = latest_in_week.apply(
-            lambda r: get_oneliner(r["alert_type"], r["action_delay_days"], r["plant_stress_index"]),
+            lambda r: get_oneliner(r["alert_type"], r["action_delay_days"], r["plant_stress_index"], int(r.get("action_taken") or 0)),
             axis=1,
         )
         latest_in_week["label"] = latest_in_week.apply(plot_label, axis=1)
@@ -440,6 +544,14 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
                     "postActionDelta": round(float(last["post_action_stress_delta_3d"] or 0), 3),
                     "weeklyCost": round(float(cost_wk["daily_total_input_cost"].sum()), 2),
                 },
+                "simulatorValues": {
+                    "action_delay_days": float(last.get("action_delay_days") or 0),
+                    "plant_stress_index": round(float(last.get("plant_stress_index") or 0), 3),
+                    "vpd_kpa": round(float(last.get("vpd_kpa") or 0), 3),
+                    "substrate_moisture": round(float(last.get("substrate_moisture") or 0), 3),
+                    "pest_pressure_index": round(float(last.get("pest_pressure_index") or 0), 3),
+                    "disease_risk_index": round(float(last.get("disease_risk_index") or 0), 3),
+                },
             }
 
     # Alert summary aggregates
@@ -491,6 +603,44 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
                 }
             )
 
+    # Stress outcome ML model — predicts 3-day post-action stress delta
+    stress_features = [
+        "action_delay_days",
+        "plant_stress_index",
+        "vpd_kpa",
+        "substrate_moisture",
+        "pest_pressure_index",
+        "disease_risk_index",
+    ]
+    model_rows = sensor[
+        (sensor["alert_flag"] == 1)
+        & (sensor["action_taken"] == 1)
+        & sensor["post_action_stress_delta_3d"].notna()
+    ].copy()
+    for col in stress_features:
+        model_rows[col] = pd.to_numeric(model_rows[col], errors="coerce").fillna(0)
+    X_s = model_rows[stress_features].values
+    y_s = model_rows["post_action_stress_delta_3d"].values
+    gb_s = GradientBoostingRegressor(n_estimators=80, random_state=42, max_depth=3)
+    gb_s.fit(X_s, y_s)
+    lr_s = LinearRegression()
+    lr_s.fit(X_s, gb_s.predict(X_s))
+    stress_model = {
+        "featureNames": stress_features,
+        "coefficients": lr_s.coef_.tolist(),
+        "intercept": float(lr_s.intercept_),
+        "defaults": {col: round(float(model_rows[col].mean()), 3) for col in stress_features},
+        "bounds": {
+            "action_delay_days": [0, 5],
+            "plant_stress_index": [0.0, 1.0],
+            "vpd_kpa": [round(float(sensor["vpd_kpa"].min()), 2), round(float(sensor["vpd_kpa"].max()), 2)],
+            "substrate_moisture": [0.0, 1.0],
+            "pest_pressure_index": [0.0, 1.0],
+            "disease_risk_index": [0.0, 1.0],
+        },
+        "avgSeasonDelta": round(float(y_s.mean()), 3),
+    }
+
     return {
         "weeks": weeks,
         "defaultWeek": last_week,
@@ -501,6 +651,7 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
         "alertTypeBreakdown": alert_type_breakdown,
         "healthTrend": health_trend,
         "previouslyAtRisk": at_risk,
+        "stressModel": stress_model,
     }
 
 
