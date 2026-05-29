@@ -42,7 +42,7 @@ export async function POST(req: Request) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) {
     return NextResponse.json(
-      { error: "GEMINI_API_KEY is not set. Add it to .env.local to enable AI insights." },
+      { error: "GEMINI_API_KEY is not set. Add it to .env.local to enable GreenLeaf AI insights." },
       { status: 503 },
     );
   }

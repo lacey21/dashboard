@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useData } from "@/hooks/useData";
-import { GeminiInsight } from "@/components/GeminiInsight";
 import { RiskCard } from "@/components/RiskCard";
 import { SustainabilityRadar } from "@/charts/RadarChart";
 import { scoreColor } from "@/constants/colors";
@@ -139,29 +138,8 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
     data.scoreLabel || (data.overallScore >= 75 ? "Strong" : data.overallScore >= 50 ? "Developing" : "At Risk");
 
   const isAggregate = data.aggregationType === "all_farms";
-  
-  const farmPrompt = isAggregate
-    ? `You are an agricultural sustainability advisor for BC greenhouse farms. In 3-4 sentences, provide recommendations for improving sustainability across the BC fleet.
-    
-Fleet aggregated metrics:
-Overall sustainability score: ${data.overallScore}/100 (${scoreLabel})
-Weakest area: ${data.weakestCategory} (${data.weakestScore}/100)
-Strongest area: ${data.strongestCategory} (${data.strongestScore}/100)
-Total carbon emissions: ${(data.carbonEmissionsKgCO2e / 1000).toFixed(1)} tonnes CO₂e
-Number of farms: ${data.numFarms || "multiple"}
-Focus on systemic improvements that benefit all farms.`
-    : `You are an agricultural sustainability advisor. In 3-4 sentences, give this BC greenhouse farm personalized recommendations for improving their sustainability score. Be specific and practical.
 
-Farm: ${data.farm.farmName}, ${data.farm.region}, ${data.farm.climateZone}
-Primary crop: ${data.farm.primaryCrop}
-Overall sustainability score: ${data.overallScore}/100
-Weakest sub-score: ${data.weakestCategory} (${data.weakestScore}/100)
-Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)
-Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg yield`;
-
-  const dynamicSentence = isAggregate
-    ? `Across the ${data.numFarms} farms, the biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). The strongest collective area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`
-    : `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
+  const dynamicSentence = `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
 
   // Filter risks to only show warning and critical
   const filteredRisks = data.risks.filter((r) => r.level !== "healthy");
@@ -232,7 +210,6 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
         {/* ──────────────────────────────────────────────────────────── */}
 
         <p className="mx-auto mt-4 max-w-xl text-sm text-sage-700">{dynamicSentence}</p>
-        <GeminiInsight prompt={farmPrompt} autoRun label="farm recommendations" />
         <button
           type="button"
           className="mt-4 text-sm text-sage-700 underline"
@@ -260,8 +237,6 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
                         ? "How much chemical input this operation relies on relative to the fleet"
                         : "Carbon footprint per kg of yield based on BC grid emission factors"
                 }
-                farm={data.farm}
-                riskName={CATEGORY_LABELS[key]}
               />
             ))}
             <DisasterRiskCard score={data.subscores.naturalDisasterRisk} />
@@ -291,9 +266,6 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
       {filteredRisks.length > 0 && (
         <section id="risk-watchlist" className="mt-12 scroll-mt-28">
           <h2 className="mb-4 font-semibold text-sage-900">Risk watchlist</h2>
-          <p className="mb-6 text-sm text-sage-700">
-            Tap any card for AI-generated actions tailored to your sensor and scouting data.
-          </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {filteredRisks.map((risk) => (
               <RiskCard
@@ -302,24 +274,6 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
                 title={risk.title}
                 level={risk.level}
                 oneliner={risk.oneliner}
-                geminiPrompt={isAggregate
-                  ? `You are an agricultural sustainability advisor for BC greenhouse farms.
-Give exactly 3 specific, actionable recommendations to mitigate ${risk.title} across the fleet.
-Be practical and scalable. Each recommendation is 1-2 sentences.
-
-Fleet context:
-Risk level: ${risk.level}
-Current situation: ${risk.oneliner}
-Consider solutions that can be applied across multiple farms.`
-                  : `You are an agricultural sustainability advisor for a BC greenhouse farm.
-Give exactly 3 specific, actionable recommendations to mitigate ${risk.title}.
-Be practical and specific to their situation. Plain English, no jargon.
-Each recommendation is 1-2 sentences.
-
-Farm: ${data.farm.farmName}, ${data.farm.region}, ${data.farm.climateZone}
-Primary crop: ${data.farm.primaryCrop}
-Risk level: ${risk.level}
-Current situation: ${risk.oneliner}`}
               />
             ))}
           </div>
@@ -335,17 +289,11 @@ function CategoryCard({
   title,
   score,
   caption,
-  farm,
-  riskName,
 }: {
   title: string;
   score: number;
   caption: string;
-  farm: SustainData["farm"];
-  riskName: string;
 }) {
-  const prompt = `You are an agricultural sustainability advisor. Give 2 specific recommendations to improve ${riskName} for ${farm.farmName} (${farm.climateZone}), primary crop ${farm.primaryCrop}. Score: ${score}/100. Plain English.`;
-
   return (
     <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
       <p className="text-sm text-sage-700">{title}</p>
@@ -353,7 +301,6 @@ function CategoryCard({
         {score}
       </p>
       <p className="mt-2 text-xs text-sage-700">{caption}</p>
-      <GeminiInsight prompt={prompt} label={`${title} tips`} />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { GeminiInsight } from "@/components/GeminiInsight";
 import { COLORS } from "@/constants/colors";
 
 type Props = {
@@ -8,7 +7,6 @@ type Props = {
   title: string;
   level: "critical" | "warning" | "healthy";
   oneliner: string;
-  geminiPrompt: string;
 };
 
 const LEVEL_BORDER = {
@@ -17,7 +15,7 @@ const LEVEL_BORDER = {
   healthy: COLORS.healthy,
 };
 
-export function RiskCard({ icon, title, level, oneliner, geminiPrompt }: Props) {
+export function RiskCard({ icon, title, level, oneliner }: Props) {
   return (
     <div
       className="rounded-lg border border-sage-200 bg-white p-4 shadow-sm"
@@ -30,15 +28,6 @@ export function RiskCard({ icon, title, level, oneliner, geminiPrompt }: Props) 
           <p className="mt-1 text-sm text-sage-700">{oneliner}</p>
         </div>
       </div>
-      <GeminiInsight
-        prompt={geminiPrompt}
-        label="AI recommendations"
-        variant="risk"
-        riskLevel={level}
-      />
-      <p className="mt-2 text-xs text-sage-600">
-        AI-generated recommendations based on your farm&apos;s sensor and scouting data.
-      </p>
     </div>
   );
 }

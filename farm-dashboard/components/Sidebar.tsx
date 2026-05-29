@@ -7,6 +7,7 @@ import { USE_CASES } from "@/constants/useCases";
 import { FarmSelector } from "@/components/FarmSelector";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
 import { useFarm, type FarmOption } from "@/contexts/FarmContext";
+import { useChat } from "@/contexts/ChatContext";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -55,6 +56,7 @@ function AggregateStats({ farms }: { farms: FarmOption[] }) {
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
   const { farm, farms, selected } = useFarm();
+  const { openChat } = useChat();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(() => new Set());
   const individualFarms = farms.filter((f) => f.id !== "all");
   const isAggregate = farm === "all";
@@ -82,6 +84,20 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       >
         Overview
       </Link>
+
+      <button
+        type="button"
+        onClick={() => {
+          openChat();
+          onNavigate?.();
+        }}
+        className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm font-semibold text-sage-100 transition hover:bg-sage-600/40 hover:text-white"
+      >
+        <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4 text-sage-300" aria-hidden="true">
+          <path d="M8 1.5l1.4 3.6L13 6.5l-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4L8 1.5z" />
+        </svg>
+        Ask GreenLeaf AI
+      </button>
 
       <p className="mt-2 px-3 text-[10px] font-semibold uppercase tracking-wider text-sage-300">
         Use cases

@@ -41,6 +41,25 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+/* Hide scrollbars app-wide; scrolling still works via wheel, trackpad, and touch */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes modal-backdrop-in {
   from {
     opacity: 0;
