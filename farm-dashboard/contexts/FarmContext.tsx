@@ -13,6 +13,9 @@ export type FarmOption = {
   name: string;
   region: string;
   primaryCrop: string;
+  climateZone?: string;
+  productionSystem?: string;
+  areaM2?: number;
 };
 
 // The aggregate "all farms" view the dashboard opens on by default. Used as a

@@ -1,9 +1,8 @@
 "use client";
 
 import { type ReactNode, useState } from "react";
-import Link from "next/link";
 import { Sidebar } from "@/components/Sidebar";
-import { FarmSelector } from "@/components/FarmSelector";
+import { BrandMark } from "@/components/BrandMark";
 import { UseCaseHeader } from "@/components/UseCaseHeader";
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -12,14 +11,11 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen">
       {/* ── Sidebar (desktop: static column · mobile: slide-over drawer) ── */}
-      <aside className="hidden w-60 shrink-0 bg-sage-700 lg:block">
+      <aside className="relative z-50 hidden w-60 shrink-0 bg-sage-700 lg:block">
         <div className="sticky top-0 flex h-screen flex-col">
-          <Link
-            href="/"
-            className="block border-b border-sage-600 px-4 py-4 text-base font-bold tracking-tight text-white"
-          >
-            GreenLeaf CEA
-          </Link>
+          <div className="border-b border-sage-600 px-4 py-3.5">
+            <BrandMark />
+          </div>
           <Sidebar />
         </div>
       </aside>
@@ -33,8 +29,8 @@ export function AppShell({ children }: { children: ReactNode }) {
             aria-hidden
           />
           <div className="absolute inset-y-0 left-0 flex w-60 flex-col bg-sage-700 shadow-xl">
-            <div className="flex items-center justify-between border-b border-sage-600 px-4 py-4">
-              <span className="text-base font-bold tracking-tight text-white">GreenLeaf CEA</span>
+            <div className="flex items-center justify-between border-b border-sage-600 px-4 py-3.5">
+              <BrandMark link={false} />
               <button
                 type="button"
                 onClick={() => setMobileOpen(false)}
@@ -53,19 +49,16 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Persistent header stack: farm selector bar + (on use-case pages) story nav */}
         <div className="sticky top-0 z-40 shadow-sm">
-          <header className="flex items-center gap-3 border-b border-sage-800 bg-sage-700 px-3 py-2 sm:px-5">
+          <header className="flex items-center gap-3 border-b border-sage-800 bg-sage-700 px-3 py-2 sm:px-5 lg:hidden">
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
               aria-label="Open navigation"
-              className="rounded p-1 text-white hover:bg-sage-600 lg:hidden"
+              className="rounded p-1 text-white hover:bg-sage-600"
             >
               ☰
             </button>
-            <span className="text-sm font-bold tracking-tight text-white lg:hidden">GreenLeaf CEA</span>
-            <div className="ml-auto">
-              <FarmSelector />
-            </div>
+            <BrandMark link={false} compact />
           </header>
           <UseCaseHeader />
         </div>

@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GreenLeaf CEA Dashboard",
   description: "Precision agriculture storytelling dashboard for GreenLeaf CEA",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({

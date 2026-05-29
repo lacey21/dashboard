@@ -1058,10 +1058,8 @@ def main() -> None:
     )
 
     farms = tables["farms"]
-    # Aggregate first (the default view), then each individual farm in order.
-    scopes: list[tuple[str, str | None, str]] = [("all", None, "GreenLeaf CEA")]
-    for _, fr in farms.iterrows():
-        scopes.append((fr["farm_id"], fr["farm_id"], fr["farm_name"]))
+    plots = tables["plots"]
+    area_by_farm = plots.groupby("farm_id")["plot_area_m2"].sum().to_dict()
 
     # Selector index consumed by the frontend FarmProvider.
     farm_index = [
@@ -1079,8 +1077,16 @@ def main() -> None:
                 "name": fr["farm_name"],
                 "region": fr["region"],
                 "primaryCrop": fr["primary_crop"],
+                "climateZone": fr["climate_zone"],
+                "productionSystem": fr["production_system"],
+                "areaM2": round(float(area_by_farm.get(fr["farm_id"], 0))),
             }
         )
+
+    # Aggregate first (the default view), then each individual farm in order.
+    scopes: list[tuple[str, str | None, str]] = [("all", None, "GreenLeaf CEA")]
+    for _, fr in farms.iterrows():
+        scopes.append((fr["farm_id"], fr["farm_id"], fr["farm_name"]))
 
     for scope_id, farm_id, farm_label in scopes:
         scoped_tables, scoped_meta = filter_tables_for_farm(tables, meta, farm_id)
