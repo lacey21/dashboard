@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { USE_CASES } from "@/constants/useCases";
 import { FarmSelector } from "@/components/FarmSelector";
+import { UseCaseIcon } from "@/components/UseCaseIcon";
 import { useFarm, type FarmOption } from "@/contexts/FarmContext";
 
 function isActive(pathname: string, href: string) {
@@ -73,20 +74,17 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         href="/"
         onClick={onNavigate}
         aria-current={isActive(pathname, "/") ? "page" : undefined}
-        className={`flex items-start gap-2.5 rounded-lg px-3 py-2.5 transition ${
+        className={`block rounded-lg px-3 py-2.5 text-sm font-semibold transition ${
           isActive(pathname, "/")
             ? "bg-sage-600 text-white shadow-sm"
             : "text-sage-100 hover:bg-sage-600/40 hover:text-white"
         }`}
       >
-        <span aria-hidden className="text-base leading-tight">
-          📊
-        </span>
-        <span className="text-sm font-semibold">Overview</span>
+        Overview
       </Link>
 
-      <p className="mt-4 px-3 text-[10px] font-semibold uppercase tracking-wider text-sage-300">
-        Use cases of the overview
+      <p className="mt-2 px-3 text-[10px] font-semibold uppercase tracking-wider text-sage-300">
+        Use cases
       </p>
       <div className="ml-4 overflow-visible border-l border-sage-600 pl-2">
         {USE_CASES.map((item, i) => {
@@ -111,7 +109,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
                     {i + 1}
                   </span>
                   <span className="min-w-0 flex items-center gap-1.5 text-sm font-semibold">
-                    <span aria-hidden>{item.icon}</span>
+                    <UseCaseIcon src={item.icon} size={28} />
                     {item.title}
                   </span>
                 </Link>
@@ -166,11 +164,11 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       </div>
 
       <div
-        className="mt-auto border-t border-sage-600 px-1 pb-2 pt-6"
+        className="relative z-10 mt-auto overflow-visible border-t border-sage-600 px-1 pb-2 pt-6"
         aria-label={isAggregate ? "Aggregate fleet profile" : `Current farm: ${selected.name}`}
       >
-        <div className="min-w-0 space-y-3">
-          <div className="min-w-0 space-y-2">
+        <div className="min-w-0 space-y-3 overflow-visible">
+          <div className="relative min-w-0 space-y-2 overflow-visible">
             <FarmSelector />
             <p className="truncate text-xs text-sage-300">
               {isAggregate ? "Aggregate analysis" : selected.id}

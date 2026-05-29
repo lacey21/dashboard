@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useData } from "@/hooks/useData";
 import { KPICard } from "@/components/KPICard";
+import { UseCaseIcon } from "@/components/UseCaseIcon";
 import { USE_CASES } from "@/constants/useCases";
 
 type HomeData = {
@@ -123,7 +124,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <p className="mt-3 flex items-center gap-1.5 text-base font-semibold text-sage-900">
-                    <span aria-hidden>{u.icon}</span>
+                    <UseCaseIcon src={u.icon} size={28} />
                     {u.title}
                   </p>
                   <p className="mt-1 text-sm italic text-sage-700">“{u.question}”</p>

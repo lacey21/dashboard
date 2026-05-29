@@ -18,6 +18,7 @@ export type UseCase = {
   /** The storytelling question this use case answers, framed for its audience. */
   question: string;
   audience: string;
+  /** Icon image under public/images (e.g. /images/alert.png). */
   icon: string;
   /** The main KPIs/figures this section covers, each deep-linkable from the sidebar. */
   figures: UseCaseFigure[];
@@ -30,7 +31,7 @@ export const USE_CASES: UseCase[] = [
     title: "Alert Triage",
     question: "Where do I send my crew this morning?",
     audience: "Operations manager",
-    icon: "🚨",
+    icon: "/images/alert.png",
     figures: [
       { label: "Plots critical", hash: "critical" },
       { label: "High-stress plots", hash: "high-stress" },
@@ -44,7 +45,7 @@ export const USE_CASES: UseCase[] = [
     title: "Seasonal Evaluation",
     question: "Is this system worth financing?",
     audience: "Farm owner + lender",
-    icon: "💰",
+    icon: "/images/finance.png",
     figures: [
       { label: "Total revenue", hash: "total-revenue" },
       { label: "Precision benefit", hash: "precision-benefit" },
@@ -58,7 +59,7 @@ export const USE_CASES: UseCase[] = [
     title: "Sustainability",
     question: "How resilient is this operation?",
     audience: "Long-term planning",
-    icon: "🌱",
+    icon: "/images/sustainability.png",
     figures: [
       { label: "Overall score", hash: "overall-score" },
       { label: "Water efficiency", hash: "water-efficiency" },
