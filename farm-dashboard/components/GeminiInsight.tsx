@@ -182,20 +182,15 @@ export function GeminiInsight({
           type="button"
           onClick={() => generate(prompt)}
           disabled={loading}
-          className="inline-flex items-center gap-2 rounded-lg border border-sage-300 bg-white px-4 py-2 text-sm font-medium text-sage-800 shadow-sm transition hover:bg-sage-50 hover:border-sage-400 disabled:opacity-60"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-sage-600 hover:text-sage-900 disabled:opacity-50 transition-colors"
         >
           {loading ? (
             <>
-              <span className="h-3.5 w-3.5 rounded-full border-2 border-sage-400 border-t-transparent animate-spin" />
+              <span className="h-3 w-3 rounded-full border-2 border-sage-400 border-t-transparent animate-spin" />
               Generating…
             </>
           ) : (
-            <>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M7 1v2M7 11v2M1 7h2M11 7h2M2.93 2.93l1.41 1.41M9.66 9.66l1.41 1.41M2.93 11.07l1.41-1.41M9.66 4.34l1.41-1.41" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-              </svg>
-              Generate {label}
-            </>
+            `Generate ${label}`
           )}
         </button>
       )}
