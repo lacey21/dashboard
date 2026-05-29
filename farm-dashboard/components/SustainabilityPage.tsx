@@ -40,12 +40,14 @@ const CATEGORY_LABELS: Record<string, string> = {
 // ─── Metric pill displayed below the big score ───────────────────────────────
 
 function MetricPill({
+  id,
   label,
   value,
   unit,
   score,
   tooltip,
 }: {
+  id?: string;
   label: string;
   value: string;
   unit: string;
@@ -55,8 +57,9 @@ function MetricPill({
   const color = scoreColor(score);
   return (
     <div
+      id={id}
       title={tooltip}
-      className="flex flex-col items-center gap-1 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
+      className="flex flex-col items-center gap-1 scroll-mt-28 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
     >
       <p className="text-xs font-medium uppercase tracking-wide text-sage-500">{label}</p>
       <p className="text-2xl font-bold leading-none" style={{ color }}>
@@ -72,10 +75,12 @@ function MetricPill({
 // ─── Carbon pill (slightly different — shows raw CO₂e value prominently) ─────
 
 function CarbonPill({
+  id,
   totalKgCO2e,
   kgPerKgYield,
   score,
 }: {
+  id?: string;
   totalKgCO2e: number;
   kgPerKgYield: number;
   score: number;
@@ -83,8 +88,9 @@ function CarbonPill({
   const color = scoreColor(score);
   return (
     <div
+      id={id}
       title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. Emission factor source: Environment and Climate Change Canada.`}
-      className="flex flex-col items-center gap-1 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
+      className="flex flex-col items-center gap-1 scroll-mt-28 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
     >
       <p className="text-xs font-medium uppercase tracking-wide text-sage-500">Carbon emissions</p>
       <p className="text-2xl font-bold leading-none" style={{ color }}>
@@ -141,7 +147,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
       <p className="mt-1 text-sage-700">Here&apos;s how resilient and future-proof this operation is.</p>
 
       {/* ── Big score ────────────────────────────────────────────────── */}
-      <div className="mt-10 text-center">
+      <div id="overall-score" className="mt-10 scroll-mt-28 text-center">
         <button
           type="button"
           onClick={() => setShowBreakdown(!showBreakdown)}
@@ -159,6 +165,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
         {/* ── NEW: four metric pills ───────────────────────────────── */}
         <div className="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
           <MetricPill
+            id="water-efficiency"
             label="Water efficiency"
             score={data.subscores.waterEfficiency}
             value={data.benchmarks.waterPerKg.toFixed(1)}
@@ -166,6 +173,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
             tooltip="Water consumed per kg of yield. Lower L/kg → higher score."
           />
           <MetricPill
+            id="energy-intensity"
             label="Energy intensity"
             score={data.subscores.energyIntensity}
             value={data.benchmarks.energyPerKg.toFixed(2)}
@@ -180,6 +188,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
             tooltip="Pesticide input intensity per m² of growing area. Scored relative to fleet range."
           />
           <CarbonPill
+            id="carbon-emissions"
             totalKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
             kgPerKgYield={data.carbonKgPerKgYield ?? 0}
             score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}

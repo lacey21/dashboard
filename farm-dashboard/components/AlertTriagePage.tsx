@@ -213,6 +213,7 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
       {weeklyStats && (
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
           <StatCard
+            id="critical"
             value={urgentCount}
             label="Plots critical"
             valueColor={urgentCount > 0 ? COLORS.critical : COLORS.healthy}
@@ -224,6 +225,7 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
             isActive={filterMode === "critical"}
           />
           <StatCard
+            id="high-stress"
             value={derivedHighStressEvents}
             label="High-stress plots"
             valueColor={derivedHighStressEvents > prevHighStress ? COLORS.warning : undefined}
@@ -235,6 +237,7 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
             isActive={filterMode === "highStress"}
           />
           <StatCard
+            id="response-rate"
             value={`${derivedResponseRate}%`}
             label="Alerts responded"
             hint="≥80% is good"
@@ -249,6 +252,7 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
             tooltip="Percentage of alerts this week where a crew action was recorded. Below 80% means alerts are being missed or ignored."
           />
           <StatCard
+            id="response-delay"
             value={`${derivedAvgDelay}d`}
             label="Avg response delay"
             hint="target <1d"
@@ -435,6 +439,7 @@ function IconTriangleAlert() {
 }
 
 function StatCard({
+  id,
   value,
   label,
   hint,
@@ -446,6 +451,7 @@ function StatCard({
   onClick,
   isActive,
 }: {
+  id?: string;
   value: string | number;
   label: string;
   hint?: string;
@@ -463,7 +469,8 @@ function StatCard({
 
   return (
     <div
-      className={`group relative flex flex-col rounded-lg border bg-white p-4 shadow-sm transition-all
+      id={id}
+      className={`group relative flex flex-col scroll-mt-28 rounded-lg border bg-white p-4 shadow-sm transition-all
         ${isClickable ? "cursor-pointer hover:shadow-md" : "cursor-help"}
         ${isActive
           ? "border-sage-400 ring-2 ring-sage-300"

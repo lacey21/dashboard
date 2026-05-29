@@ -11,6 +11,8 @@ type Props = {
   onClick?: () => void;
   href?: string;
   compact?: boolean;
+  /** Anchor id, so the card can be deep-linked from the sidebar. */
+  id?: string;
 };
 
 function DeltaArrow({ delta, positive }: { delta: number; positive?: boolean }) {
@@ -33,9 +35,10 @@ export function KPICard({
   onClick,
   href,
   compact = false,
+  id,
 }: Props) {
   const interactive = Boolean(href || onClick);
-  const className = `block rounded-lg border border-sage-200 bg-sage-50/80 text-left ${
+  const className = `block scroll-mt-28 rounded-lg border border-sage-200 bg-sage-50/80 text-left ${
     compact ? "p-2.5 sm:p-3" : "bg-white p-5 shadow-sm"
   } ${interactive ? "cursor-pointer transition hover:border-sage-400 hover:bg-white hover:shadow" : ""}`;
 
@@ -66,7 +69,7 @@ export function KPICard({
 
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link id={id} href={href} className={className}>
         {inner}
       </Link>
     );
@@ -74,11 +77,11 @@ export function KPICard({
 
   if (onClick) {
     return (
-      <button type="button" onClick={onClick} className={className}>
+      <button id={id} type="button" onClick={onClick} className={className}>
         {inner}
       </button>
     );
   }
 
-  return <div className={className}>{inner}</div>;
+  return <div id={id} className={className}>{inner}</div>;
 }
