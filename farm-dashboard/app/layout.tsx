@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FarmProvider } from "@/contexts/FarmContext";
+import { AppShell } from "@/components/AppShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-sage-50 text-sage-900">
-        <FarmProvider>{children}</FarmProvider>
+      <body className="min-h-full bg-sage-50 text-sage-900">
+        <FarmProvider>
+          <AppShell>{children}</AppShell>
+        </FarmProvider>
       </body>
     </html>
   );

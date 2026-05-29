@@ -1,5 +1,9 @@
-import { redirect } from "next/navigation";
+import SustainabilityPage from "@/components/SustainabilityPage";
+
+export const metadata = {
+  title: "Sustainability — GreenLeaf CEA",
+};
 
 export default function Page() {
-  redirect("/");
+  return <SustainabilityPage />;
 }
