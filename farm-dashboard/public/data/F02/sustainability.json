@@ -1,16 +1,16 @@
 {
-  "overallScore": 53.3,
+  "overallScore": 80.6,
   "subscores": {
-    "energyIntensity": 100,
-    "waterEfficiency": 90.4,
-    "chemicalLoad": 17.1,
-    "stressManagement": 50.5,
-    "precisionAdoption": 8.5
+    "energyIntensity": 83.3,
+    "waterEfficiency": 81.4,
+    "chemicalLoad": 74.6,
+    "carbonEmissions": 72.6,
+    "naturalDisasterRisk": 100.0
   },
-  "weakestCategory": "precision Adoption",
-  "strongestCategory": "energyIntensity",
-  "weakestScore": 8.5,
-  "strongestScore": 100,
+  "weakestCategory": "Carbon Emissions",
+  "strongestCategory": "Natural Disaster Risk",
+  "weakestScore": 72.6,
+  "strongestScore": 100.0,
   "farm": {
     "farmName": "BC Harvest 2",
     "region": "Maple Ridge",
@@ -18,177 +18,166 @@
     "primaryCrop": "Pepper"
   },
   "benchmarks": {
-    "energyPerKg": 0.269,
-    "waterPerKg": 0.235
+    "energyPerKg": 1.6,
+    "waterPerKg": 47.46
   },
+  "carbonEmissionsKgCO2e": 59.91,
+  "carbonEmissionsScore": 72.6,
+  "carbonKgPerKgYield": 0.0548,
   "moistureTrend": [
     {
       "week": "2025-02-10/2025-02-16",
-      "substrate_moisture": 0.4681407444488528
+      "substrate_moisture": 0.4681
     },
     {
       "week": "2025-02-17/2025-02-23",
-      "substrate_moisture": 0.4849224260714227
+      "substrate_moisture": 0.4849
     },
     {
       "week": "2025-02-24/2025-03-02",
-      "substrate_moisture": 0.4218498751519665
+      "substrate_moisture": 0.4218
     },
     {
       "week": "2025-03-03/2025-03-09",
-      "substrate_moisture": 0.45897682219636166
+      "substrate_moisture": 0.459
     },
     {
       "week": "2025-03-10/2025-03-16",
-      "substrate_moisture": 0.46184044350766223
+      "substrate_moisture": 0.4618
     },
     {
       "week": "2025-03-17/2025-03-23",
-      "substrate_moisture": 0.4286439146227927
+      "substrate_moisture": 0.4286
     },
     {
       "week": "2025-03-24/2025-03-30",
-      "substrate_moisture": 0.4940455174382461
+      "substrate_moisture": 0.494
     },
     {
       "week": "2025-03-31/2025-04-06",
-      "substrate_moisture": 0.4271260196826722
+      "substrate_moisture": 0.4271
     },
     {
       "week": "2025-04-07/2025-04-13",
-      "substrate_moisture": 0.4410839540252926
+      "substrate_moisture": 0.4411
     },
     {
       "week": "2025-04-14/2025-04-20",
-      "substrate_moisture": 0.4746472237558347
+      "substrate_moisture": 0.4746
     },
     {
       "week": "2025-04-21/2025-04-27",
-      "substrate_moisture": 0.420811010867997
+      "substrate_moisture": 0.4208
     },
     {
       "week": "2025-04-28/2025-05-04",
-      "substrate_moisture": 0.47795436461686613
+      "substrate_moisture": 0.478
     },
     {
       "week": "2025-05-05/2025-05-11",
-      "substrate_moisture": 0.4477101665843034
+      "substrate_moisture": 0.4477
     },
     {
       "week": "2025-05-12/2025-05-18",
-      "substrate_moisture": 0.4365416715653888
+      "substrate_moisture": 0.4365
     },
     {
       "week": "2025-05-19/2025-05-25",
-      "substrate_moisture": 0.49400173319884255
+      "substrate_moisture": 0.494
     },
     {
       "week": "2025-05-26/2025-06-01",
-      "substrate_moisture": 0.41222542070204354
+      "substrate_moisture": 0.4122
     },
     {
       "week": "2025-06-02/2025-06-08",
-      "substrate_moisture": 0.4861655525691842
+      "substrate_moisture": 0.4862
     },
     {
       "week": "2025-06-09/2025-06-15",
-      "substrate_moisture": 0.4564814614540162
+      "substrate_moisture": 0.4565
     },
     {
       "week": "2025-06-16/2025-06-22",
-      "substrate_moisture": 0.43362346971779936
+      "substrate_moisture": 0.4336
     },
     {
       "week": "2025-06-23/2025-06-29",
-      "substrate_moisture": 0.4854105628292607
+      "substrate_moisture": 0.4854
     },
     {
       "week": "2025-06-30/2025-07-06",
-      "substrate_moisture": 0.4171872349402754
+      "substrate_moisture": 0.4172
     },
     {
       "week": "2025-07-07/2025-07-13",
-      "substrate_moisture": 0.4604549358636575
+      "substrate_moisture": 0.4605
     },
     {
       "week": "2025-07-14/2025-07-20",
-      "substrate_moisture": 0.4713630990627063
+      "substrate_moisture": 0.4714
     },
     {
       "week": "2025-07-21/2025-07-27",
-      "substrate_moisture": 0.4179670425165152
+      "substrate_moisture": 0.418
     },
     {
       "week": "2025-07-28/2025-08-03",
-      "substrate_moisture": 0.48794682866720057
+      "substrate_moisture": 0.4879
     },
     {
       "week": "2025-08-04/2025-08-10",
-      "substrate_moisture": 0.4278222771672055
+      "substrate_moisture": 0.4278
     },
     {
       "week": "2025-08-11/2025-08-17",
-      "substrate_moisture": 0.4520030062320942
+      "substrate_moisture": 0.452
     },
     {
       "week": "2025-08-18/2025-08-24",
-      "substrate_moisture": 0.47638695293046746
+      "substrate_moisture": 0.4764
     },
     {
       "week": "2025-08-25/2025-08-31",
-      "substrate_moisture": 0.4127529117766817
+      "substrate_moisture": 0.4128
     },
     {
       "week": "2025-09-01/2025-09-07",
-      "substrate_moisture": 0.4874549329924777
+      "substrate_moisture": 0.4875
     },
     {
       "week": "2025-09-08/2025-09-14",
-      "substrate_moisture": 0.45754654233680553
+      "substrate_moisture": 0.4575
     }
   ],
   "risks": [
     {
-      "id": "heatwave",
-      "icon": "\ud83c\udf21\ufe0f",
-      "title": "Heatwave Risk",
-      "level": "healthy",
-      "oneliner": "Interior farms logged 0 readings above 32\u00b0C this season"
-    },
-    {
       "id": "pest",
-      "icon": "\ud83d\udc1b",
+      "icon": "🐛",
       "title": "Pest Outbreak",
       "level": "warning",
       "oneliner": "Pest pressure index averaging 0.43 across plots"
     },
     {
-      "id": "disease",
-      "icon": "\ud83e\udda0",
-      "title": "Disease Spread",
-      "level": "healthy",
-      "oneliner": "Coastal and Fraser Valley plots show elevated disease risk indices"
-    },
-    {
       "id": "water",
-      "icon": "\ud83d\udca7",
+      "icon": "💧",
       "title": "Water Stress",
-      "level": "warning",
-      "oneliner": "0 plot-days experienced chronic under-irrigation"
+      "level": "critical",
+      "oneliner": "379 plot-day(s) outside target moisture range (0.40–0.55)"
     },
     {
       "id": "costs",
-      "icon": "\ud83d\udcc8",
+      "icon": "📈",
       "title": "Input Cost Volatility",
       "level": "warning",
       "oneliner": "Fertilizer prices swung 44.5% this season"
     }
   ],
   "controlBaseline": {
-    "energyIntensity": 90.0,
-    "waterEfficiency": 81.4,
-    "chemicalLoad": 15.4,
-    "stressManagement": 45.4,
-    "precisionAdoption": 7.6
+    "energyIntensity": 50.0,
+    "waterEfficiency": 50.0,
+    "chemicalLoad": 50.0,
+    "carbonEmissions": 50.0,
+    "naturalDisasterRisk": 50.0
   }
 }

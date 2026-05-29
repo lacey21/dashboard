@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useData } from "@/hooks/useData";
 import { GeminiInsight } from "@/components/GeminiInsight";
 import { RiskCard } from "@/components/RiskCard";
@@ -9,6 +9,7 @@ import { scoreColor } from "@/constants/colors";
 
 type SustainData = {
   overallScore: number;
+  scoreLabel?: string;
   subscores: Record<string, number>;
   weakestCategory: string;
   strongestCategory: string;
@@ -21,6 +22,8 @@ type SustainData = {
   carbonEmissionsScore: number;
   risks: { id: string; icon: string; title: string; level: "critical" | "warning" | "healthy"; oneliner: string }[];
   controlBaseline: Record<string, number>;
+  aggregationType?: "all_farms" | "single_farm";
+  numFarms?: number;
 };
 
 type SeasonalData = {
@@ -79,17 +82,21 @@ function CarbonPill({
   totalKgCO2e,
   kgPerKgYield,
   score,
+  isAggregate,
 }: {
   id?: string;
   totalKgCO2e: number;
   kgPerKgYield: number;
   score: number;
+  isAggregate?: boolean;
 }) {
   const color = scoreColor(score);
   return (
     <div
       id={id}
-      title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. Emission factor source: Environment and Climate Change Canada.`}
+      title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. ${
+        isAggregate ? "Aggregate across all farms." : ""
+      } Emission factor source: Environment and Climate Change Canada.`}
       className="flex flex-col items-center gap-1 scroll-mt-28 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
     >
       <p className="text-xs font-medium uppercase tracking-wide text-sage-500">Carbon emissions</p>
@@ -97,7 +104,9 @@ function CarbonPill({
         {score}
       </p>
       <p className="text-xs text-sage-600">
-        {kgPerKgYield.toFixed(3)}&nbsp;kg CO₂e/kg
+        {isAggregate 
+          ? `${(totalKgCO2e / 1000).toFixed(1)} tonne CO₂e`
+          : `${kgPerKgYield.toFixed(3)} kg CO₂e/kg`}
       </p>
     </div>
   );
@@ -110,6 +119,14 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   const { data: seasonalData } = useData<SeasonalData>("seasonal_evaluation.json");
   const [showBreakdown, setShowBreakdown] = useState(false);
 
+  // Auto-expand breakdown when linking to score-breakdown or all-dimensions-vs-control
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // Remove '#'
+    if (hash === "score-breakdown" || hash === "all-dimensions-vs-control") {
+      setShowBreakdown(true);
+    }
+  }, []);
+
   if (loading || !data) {
     return (
       <p className={embedded ? "py-4 text-sage-700" : "p-8 text-sage-700"}>
@@ -119,10 +136,21 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   }
 
   const scoreLabel =
-    data.overallScore >= 75 ? "Strong" : data.overallScore >= 50 ? "Developing" : "At Risk";
+    data.scoreLabel || (data.overallScore >= 75 ? "Strong" : data.overallScore >= 50 ? "Developing" : "At Risk");
 
-  const farmPrompt = `You are an agricultural sustainability advisor. In 3-4 sentences, give this BC greenhouse farm
-personalized recommendations for improving their sustainability score. Be specific and practical.
+  const isAggregate = data.aggregationType === "all_farms";
+  
+  const farmPrompt = isAggregate
+    ? `You are an agricultural sustainability advisor for BC greenhouse farms. In 3-4 sentences, provide recommendations for improving sustainability across the BC fleet.
+    
+Fleet aggregated metrics:
+Overall sustainability score: ${data.overallScore}/100 (${scoreLabel})
+Weakest area: ${data.weakestCategory} (${data.weakestScore}/100)
+Strongest area: ${data.strongestCategory} (${data.strongestScore}/100)
+Total carbon emissions: ${(data.carbonEmissionsKgCO2e / 1000).toFixed(1)} tonnes CO₂e
+Number of farms: ${data.numFarms || "multiple"}
+Focus on systemic improvements that benefit all farms.`
+    : `You are an agricultural sustainability advisor. In 3-4 sentences, give this BC greenhouse farm personalized recommendations for improving their sustainability score. Be specific and practical.
 
 Farm: ${data.farm.farmName}, ${data.farm.region}, ${data.farm.climateZone}
 Primary crop: ${data.farm.primaryCrop}
@@ -131,7 +159,9 @@ Weakest sub-score: ${data.weakestCategory} (${data.weakestScore}/100)
 Strongest sub-score: ${data.strongestCategory} (${data.strongestScore}/100)
 Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg yield`;
 
-  const dynamicSentence = `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
+  const dynamicSentence = isAggregate
+    ? `Across the ${data.numFarms} farms, the biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). The strongest collective area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`
+    : `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
 
   // Filter risks to only show warning and critical
   const filteredRisks = data.risks.filter((r) => r.level !== "healthy");
@@ -142,9 +172,13 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
   return (
     <Wrapper className={wrapClass}>
       <h2 className={embedded ? "text-xl font-bold text-sage-900" : "text-2xl font-bold text-sage-900"}>
-        Beyond this season&apos;s profit
+        {isAggregate ? "BC Farm Network Sustainability" : "Beyond this season's profit"}
       </h2>
-      <p className="mt-1 text-sage-700">Here&apos;s how resilient and future-proof this operation is.</p>
+      <p className="mt-1 text-sage-700">
+        {isAggregate 
+          ? `Aggregate sustainability metrics across ${data.numFarms} farms.`
+          : "Here's how resilient and future-proof this operation is."}
+      </p>
 
       {/* ── Big score ────────────────────────────────────────────────── */}
       <div id="overall-score" className="mt-10 scroll-mt-28 text-center">
@@ -192,6 +226,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
             totalKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
             kgPerKgYield={data.carbonKgPerKgYield ?? 0}
             score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}
+            isAggregate={isAggregate}
           />
         </div>
         {/* ──────────────────────────────────────────────────────────── */}
@@ -210,7 +245,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
       {/* ── Breakdown ────────────────────────────────────────────────── */}
       {showBreakdown && (
         <>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div id="score-breakdown" className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 scroll-mt-28">
             {(["energyIntensity", "waterEfficiency", "chemicalLoad", "carbonEmissions"] as const).map((key) => (
               <CategoryCard
                 key={key}
@@ -229,25 +264,16 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
                 riskName={CATEGORY_LABELS[key]}
               />
             ))}
+            <DisasterRiskCard score={data.subscores.naturalDisasterRisk} />
+            <CarbonFootprintCard 
+              carbonEmissionsKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
+              carbonKgPerKgYield={data.carbonKgPerKgYield ?? 0}
+              score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}
+              isAggregate={isAggregate}
+            />
           </div>
 
-          <div className="mt-6 space-y-2 text-sm">
-            <div className="flex justify-between rounded border border-sage-100 bg-white px-4 py-3">
-              <span>Natural disaster risk</span>
-              <span className="font-bold">{data.subscores.naturalDisasterRisk}/100</span>
-            </div>
-            <div className="flex justify-between rounded border border-sage-100 bg-white px-4 py-3">
-              <span>
-                Carbon footprint
-                <span className="ml-2 text-xs text-sage-500">
-                  (total: {(data.carbonEmissionsKgCO2e ?? 0).toLocaleString()} kg CO₂e · {(data.carbonKgPerKgYield ?? 0).toFixed(3)} kg CO₂e/kg)
-                </span>
-              </span>
-              <span className="font-bold">{(data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0)}/100</span>
-            </div>
-          </div>
-
-          <section className="mt-10">
+          <section id="all-dimensions-vs-control" className="mt-10 scroll-mt-28">
             <h2 className="mb-4 font-semibold text-sage-900">All dimensions vs control</h2>
             <p className="mb-4 text-sm text-sage-700">
               This radar compares your farm's sustainability metrics against your control plots. ROI measures financial return relative to cost—higher ROI means more profit per dollar spent.
@@ -263,7 +289,7 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
 
       {/* ── Risk watchlist ───────────────────────────────────────────── */}
       {filteredRisks.length > 0 && (
-        <section className="mt-12">
+        <section id="risk-watchlist" className="mt-12 scroll-mt-28">
           <h2 className="mb-4 font-semibold text-sage-900">Risk watchlist</h2>
           <p className="mb-6 text-sm text-sage-700">
             Tap any card for AI-generated actions tailored to your sensor and scouting data.
@@ -276,7 +302,16 @@ Carbon footprint: ${data.carbonKgPerKgYield?.toFixed(3) ?? "N/A"} kg CO₂e/kg y
                 title={risk.title}
                 level={risk.level}
                 oneliner={risk.oneliner}
-                geminiPrompt={`You are an agricultural sustainability advisor for a BC greenhouse farm.
+                geminiPrompt={isAggregate
+                  ? `You are an agricultural sustainability advisor for BC greenhouse farms.
+Give exactly 3 specific, actionable recommendations to mitigate ${risk.title} across the fleet.
+Be practical and scalable. Each recommendation is 1-2 sentences.
+
+Fleet context:
+Risk level: ${risk.level}
+Current situation: ${risk.oneliner}
+Consider solutions that can be applied across multiple farms.`
+                  : `You are an agricultural sustainability advisor for a BC greenhouse farm.
 Give exactly 3 specific, actionable recommendations to mitigate ${risk.title}.
 Be practical and specific to their situation. Plain English, no jargon.
 Each recommendation is 1-2 sentences.
@@ -319,6 +354,48 @@ function CategoryCard({
       </p>
       <p className="mt-2 text-xs text-sage-700">{caption}</p>
       <GeminiInsight prompt={prompt} label={`${title} tips`} />
+    </div>
+  );
+}
+
+// ─── DisasterRiskCard ─────────────────────────────────────────────────────
+
+function DisasterRiskCard({ score }: { score: number }) {
+  return (
+    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
+      <p className="text-sm text-sage-700">Natural disaster risk</p>
+      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
+        {score}
+      </p>
+      <p className="mt-2 text-xs text-sage-700">Resilience to temperature extremes and environmental stressors</p>
+    </div>
+  );
+}
+
+// ─── CarbonFootprintCard ──────────────────────────────────────────────────
+
+function CarbonFootprintCard({
+  carbonEmissionsKgCO2e,
+  carbonKgPerKgYield,
+  score,
+  isAggregate,
+}: {
+  carbonEmissionsKgCO2e: number;
+  carbonKgPerKgYield: number;
+  score: number;
+  isAggregate: boolean;
+}) {
+  return (
+    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
+      <p className="text-sm text-sage-700">Carbon footprint</p>
+      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
+        {score}
+      </p>
+      <p className="mt-2 text-xs text-sage-700">
+        {isAggregate 
+          ? `Total: ${(carbonEmissionsKgCO2e / 1000).toFixed(1)} tonnes CO₂e`
+          : `${carbonKgPerKgYield.toFixed(3)} kg CO₂e/kg yield`}
+      </p>
     </div>
   );
 }
