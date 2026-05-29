@@ -1,19 +1,19 @@
 {
   "aggregationType": "all_farms",
   "numFarms": 8,
-  "generatedAt": "2026-05-29T11:11:18.916133",
-  "overallScore": 46.4,
-  "scoreLabel": "At Risk",
+  "generatedAt": "2026-05-29T12:56:17.478852",
+  "overallScore": 64.2,
+  "scoreLabel": "Healthy",
   "subscores": {
-    "energyIntensity": 48.1,
-    "waterEfficiency": 43.0,
-    "chemicalLoad": 42.8,
-    "carbonEmissions": 25.6,
+    "energyIntensity": 61.3,
+    "waterEfficiency": 57.3,
+    "chemicalLoad": 30.8,
+    "carbonEmissions": 71.7,
     "naturalDisasterRisk": 100.0
   },
-  "weakestCategory": "Carbon Emissions",
-  "strongestCategory": "Natural Disaster Risk",
-  "weakestScore": 25.6,
+  "weakestCategory": "chemicalLoad",
+  "strongestCategory": "naturalDisasterRisk",
+  "weakestScore": 30.8,
   "strongestScore": 100.0,
   "farm": {
     "farmName": "All BC Farms (Aggregate)",
@@ -22,33 +22,33 @@
     "primaryCrop": "Mixed"
   },
   "benchmarks": {
-    "energyPerKg": 2.276,
-    "waterPerKg": 62.806
+    "energyPerKg": 2.022,
+    "waterPerKg": 57.099
   },
-  "carbonEmissionsKgCO2e": 2398.03,
-  "carbonKgPerKgYield": 2.398,
-  "carbonEmissionsScore": 25.6,
+  "carbonEmissionsKgCO2e": 1845.33,
+  "carbonKgPerKgYield": 0.142,
+  "carbonEmissionsScore": 71.7,
   "risks": [
     {
       "id": "water",
-      "icon": "💧",
+      "icon": "\ud83d\udca7",
       "title": "Water Stress",
       "level": "critical",
-      "oneliner": "1352 plot-day(s) outside target moisture range (0.40–0.55)"
+      "oneliner": "Aggregate moisture stress detected"
     },
     {
       "id": "pest",
-      "icon": "🐛",
+      "icon": "\ud83d\udc1b",
       "title": "Pest Outbreak",
       "level": "warning",
-      "oneliner": "Pest pressure index averaging 0.43 across plots"
+      "oneliner": "Pest pressure index elevated"
     },
     {
       "id": "costs",
-      "icon": "📈",
+      "icon": "\ud83d\udcc8",
       "title": "Input Cost Volatility",
       "level": "warning",
-      "oneliner": "Fertilizer prices swung 44.5% this season"
+      "oneliner": "Market price fluctuations"
     }
   ],
   "controlBaseline": {

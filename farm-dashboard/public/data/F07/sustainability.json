@@ -1,15 +1,15 @@
 {
-  "overallScore": 47.9,
+  "overallScore": 51.7,
   "subscores": {
     "energyIntensity": 61.1,
     "waterEfficiency": 51.2,
     "chemicalLoad": 49.2,
-    "carbonEmissions": 0.0,
+    "carbonEmissions": 18.9,
     "naturalDisasterRisk": 100.0
   },
   "weakestCategory": "Carbon Emissions",
   "strongestCategory": "Natural Disaster Risk",
-  "weakestScore": 0.0,
+  "weakestScore": 18.9,
   "strongestScore": 100.0,
   "farm": {
     "farmName": "BC Harvest 7",
@@ -22,7 +22,7 @@
     "waterPerKg": 59.539
   },
   "carbonEmissionsKgCO2e": 91.51,
-  "carbonEmissionsScore": 0.0,
+  "carbonEmissionsScore": 18.9,
   "carbonKgPerKgYield": 0.4053,
   "moistureTrend": [
     {
