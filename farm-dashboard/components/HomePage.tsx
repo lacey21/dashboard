@@ -124,7 +124,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <p className="mt-3 flex items-center gap-1.5 text-base font-semibold text-sage-900">
-                    <UseCaseIcon src={u.icon} size={28} />
+                    <UseCaseIcon src={u.icon} size={28} variant="dark" />
                     {u.title}
                   </p>
                   <p className="mt-1 text-sm italic text-sage-700">“{u.question}”</p>

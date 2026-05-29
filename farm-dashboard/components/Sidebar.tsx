@@ -149,7 +149,18 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
                     <li key={fig.hash}>
                       <Link
                         href={`${item.href}#${fig.hash}`}
-                        onClick={onNavigate}
+                        onClick={(e) => {
+                          if (isActive(pathname, item.href)) {
+                            e.preventDefault();
+                            const target = `#${fig.hash}`;
+                            if (window.location.hash === target) {
+                              window.dispatchEvent(new HashChangeEvent("hashchange"));
+                            } else {
+                              window.location.hash = fig.hash;
+                            }
+                          }
+                          onNavigate?.();
+                        }}
                         className="block rounded px-2 py-1 text-[11px] leading-tight text-sage-300 transition hover:bg-sage-600/40 hover:text-white"
                       >
                         {fig.label}
