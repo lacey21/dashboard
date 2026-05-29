@@ -66,7 +66,7 @@ export function LoanCalculator({
   }, [amount, rate, years, harvestAligned, monthlyRevenue, precisionBenefitPerSeason]);
 
   return (
-    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
+    <div>
       <p className="text-sm text-sage-700">
         Precision agriculture loans work best when repayments align with your harvest.
         Here&apos;s how a loan could fit your revenue cycle.
