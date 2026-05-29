@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useData } from "@/hooks/useData";
+import { useFarm } from "@/contexts/FarmContext";
 import { PlotRow } from "@/components/PlotRow";
 import type { PlotRowData } from "@/components/PlotRow";
 import { PlotDrawer } from "@/components/PlotDrawer";
@@ -37,18 +38,26 @@ type FilterMode = "all" | "critical" | "highStress" | "noResponse";
 
 export default function AlertTriagePage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<AlertData>("alert_triage.json");
+  const { farm: globalFarm, farms: globalFarms, setFarm: setGlobalFarm } = useFarm();
   const [week, setWeek] = useState<string | null>(null);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [filterMode, setFilterMode] = useState<FilterMode>("all");
   const [harvestFilter, setHarvestFilter] = useState<string>("all");
 
+  // Sync global farm selector → local harvest filter
+  useEffect(() => {
+    if (globalFarm === "all") {
+      setHarvestFilter("all");
+    } else {
+      const match = globalFarms.find((f) => f.id === globalFarm);
+      if (match) setHarvestFilter(match.name);
+    }
+  }, [globalFarm, globalFarms]);
+
   const activeWeek = week ?? data?.defaultWeek ?? "";
   const allWeekPlots = data?.plotRankings[activeWeek] ?? [];
   const detail = selectedKey ? data?.plotDetails[selectedKey] : null;
-
-  // Derive sorted harvest list for the current week
-  const harvests = Array.from(new Set(allWeekPlots.map((p) => p.farm_name))).sort();
 
   // Harvest-filtered pool — everything downstream uses this
   const plots = harvestFilter === "all"
@@ -112,7 +121,6 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     setWeek(w);
     setShowAll(false);
     setFilterMode("all");
-    setHarvestFilter("all");
   };
 
   const toggleFilter = (mode: FilterMode) => {
@@ -189,17 +197,8 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
         <p className="mt-0.5 text-sage-600">Here&apos;s where to send them first.</p>
       </div>
 
-      {/* Controls row — always right-aligned */}
+      {/* Controls row — week picker only; farm is controlled by the global selector */}
       <div className="mt-3 flex items-center justify-end gap-2">
-        <SelectPicker
-          value={harvestFilter}
-          onChange={(v) => { setHarvestFilter(v); setFilterMode("all"); setShowAll(false); }}
-        >
-          <option value="all">All farms</option>
-          {harvests.map((h) => (
-            <option key={h} value={h}>{h}</option>
-          ))}
-        </SelectPicker>
         <SelectPicker
           value={activeWeek}
           onChange={(v) => handleWeekChange(v)}
