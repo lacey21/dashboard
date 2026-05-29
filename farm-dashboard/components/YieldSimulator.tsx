@@ -58,9 +58,8 @@ export function YieldSimulator({ model }: { model: YieldModel }) {
   const projectedRevenue = projected * model.avgMarketPricePerKg * 100; // scaled display
 
   return (
-    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
-      <h3 className="text-lg font-semibold text-sage-900">Yield simulator</h3>
-      <p className="mt-1 text-sm text-sage-700">
+    <div>
+      <p className="text-sm text-sage-700">
         Move the sliders to see how different spending and management decisions would have
         changed your yield. Trained on GreenLeaf&apos;s experimental data.
       </p>

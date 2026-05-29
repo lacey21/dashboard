@@ -23,6 +23,7 @@ import { SpendReturnBar } from "@/charts/SpendReturnBar";
 import { ScatterPlot } from "@/charts/ScatterPlot";
 import { YieldSimulator } from "@/components/YieldSimulator";
 import { LoanCalculator } from "@/components/LoanCalculator";
+import { Collapsible } from "@/components/Collapsible";
 import { COLORS } from "@/constants/colors";
 
 type SeasonData = {
@@ -105,10 +106,13 @@ Tone: confident, factual, plain English. Not salesy.`;
         />
       </div>
 
-      <p className="mt-4 rounded-lg border border-sage-200 bg-white p-4 text-sm text-sage-900 shadow-sm">
-        For every $1 spent on precision actions, GreenLeaf returned ${f.benefitPerDollar} in measurable
-        benefit.
-      </p>
+      <div className="mt-4 rounded-lg border-l-4 border-sage-600 bg-sage-50 px-4 py-3">
+        <p className="text-xs font-medium uppercase tracking-wide text-sage-600">Bottom line</p>
+        <p className="mt-0.5 text-base font-semibold text-sage-900">
+          For every $1 spent on precision actions, GreenLeaf returned ${f.benefitPerDollar} in measurable
+          benefit.
+        </p>
+      </div>
 
       <section className="mt-10">
         <h2 className="font-semibold text-sage-900">Spend vs return by treatment</h2>
@@ -163,14 +167,28 @@ Tone: confident, factual, plain English. Not salesy.`;
       </section>
 
       <section className="mt-10">
-        <YieldSimulator model={data.yieldModel} />
+        <Collapsible
+          title="Yield simulator"
+          summary="What-if: see how spending and management changes would move your yield."
+          openLabel="Open simulator"
+        >
+          <YieldSimulator model={data.yieldModel} />
+        </Collapsible>
       </section>
 
       <section className="mt-10">
-        <LoanCalculator
-          monthlyRevenue={data.monthlyRevenueCurve}
-          precisionBenefitPerSeason={data.precisionBenefitPerSeason}
-        />
+        <Collapsible
+          title="Loan repayment planner"
+          summary={`See how a loan could fit your harvest cycle — pays for itself in about ${Math.ceil(
+            100000 / Math.max(data.precisionBenefitPerSeason, 1),
+          )} seasons.`}
+          openLabel="Open planner"
+        >
+          <LoanCalculator
+            monthlyRevenue={data.monthlyRevenueCurve}
+            precisionBenefitPerSeason={data.precisionBenefitPerSeason}
+          />
+        </Collapsible>
       </section>
 
       <section className="mt-10">
