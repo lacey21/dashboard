@@ -36,6 +36,30 @@ type AlertData = {
 
 type FilterMode = "all" | "critical" | "highStress" | "noResponse";
 
+/** Sidebar deep links (useCases figures) → plot list filters */
+const HASH_TO_FILTER: Record<string, FilterMode> = {
+  critical: "critical",
+  "high-stress": "highStress",
+};
+
+function syncAlertTriageFromHash(
+  setFilterMode: (mode: FilterMode) => void,
+  setShowAll: (show: boolean) => void,
+) {
+  const id = window.location.hash.replace(/^#/, "");
+  if (!id) return;
+
+  const filter = HASH_TO_FILTER[id];
+  if (filter) {
+    setFilterMode(filter);
+    setShowAll(false);
+  }
+
+  requestAnimationFrame(() => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 export default function AlertTriagePage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<AlertData>("alert_triage.json");
   const { farm: globalFarm, farms: globalFarms, setFarm: setGlobalFarm } = useFarm();
@@ -54,6 +78,16 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
       if (match) setHarvestFilter(match.name);
     }
   }, [globalFarm, globalFarms]);
+
+  // Sidebar deep links (#critical, #high-stress, etc.)
+  useEffect(() => {
+    if (!data) return;
+
+    const onHashChange = () => syncAlertTriageFromHash(setFilterMode, setShowAll);
+    onHashChange();
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [data]);
 
   const activeWeek = week ?? data?.defaultWeek ?? "";
   const allWeekPlots = data?.plotRankings[activeWeek] ?? [];
