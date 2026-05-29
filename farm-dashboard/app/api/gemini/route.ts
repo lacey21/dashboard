@@ -1,79 +1,90 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
-// Tried in order — first one that succeeds wins.
-// Names verified against /api/gemini-check — update if models are added/removed.
+const OLLAMA_BASE = "http://127.0.0.1:11434";
+
+// Tried in order — first model that responds wins.
 const MODEL_FALLBACK_CHAIN = [
-  "gemini-2.5-flash",
-  "gemini-2.0-flash",
-  "gemini-2.0-flash-lite",
-  "gemini-flash-latest",
-  "gemini-flash-lite-latest",
+  "llama3.2",
+  "llama3.2:1b",
+  "gemma3:4b",
+  "mistral",
+  "phi4-mini",
 ];
 
-// Errors that are worth retrying with a different model
 function isRetryable(msg: string): boolean {
   return (
     msg.includes("404") ||
     msg.includes("not found") ||
-    msg.includes("429") ||
-    msg.includes("quota") ||
-    msg.includes("RESOURCE_EXHAUSTED") ||
+    msg.includes("model") ||
     msg.includes("503") ||
-    msg.includes("overloaded")
+    msg.includes("ECONNREFUSED") ||
+    msg.includes("fetch failed")
   );
 }
 
-function friendlyError(raw: string, triedModels: string[]): string {
-  const tried = triedModels.join(", ");
-  if (raw.includes("429") || raw.includes("quota") || raw.includes("RESOURCE_EXHAUSTED")) {
-    return `All models hit quota limits (tried: ${tried}). Enable billing at console.cloud.google.com or wait for the daily limit to reset.`;
-  }
-  if (raw.includes("404") || raw.includes("not found")) {
-    return `No available models responded (tried: ${tried}). Check ai.google.dev for current model names.`;
-  }
-  if (raw.includes("403") || raw.includes("API_KEY")) {
-    return "Invalid or missing Gemini API key. Check GEMINI_API_KEY in .env.local.";
-  }
-  return `Generation failed after trying ${triedModels.length} model(s) (${tried}): ${raw}`;
-}
-
 export async function POST(req: Request) {
-  const key = process.env.GEMINI_API_KEY;
-  if (!key) {
+  const { prompt } = await req.json();
+
+  // Check Ollama is reachable before trying models
+  try {
+    await fetch(`${OLLAMA_BASE}/api/tags`, { signal: AbortSignal.timeout(2000) });
+  } catch {
     return NextResponse.json(
-      { error: "GEMINI_API_KEY is not set. Add it to .env.local to enable GreenLeaf AI insights." },
+      { error: "Ollama is not running. Start it with: ollama serve" },
       { status: 503 },
     );
   }
 
-  const { prompt } = await req.json();
-  const genai = new GoogleGenerativeAI(key);
+  const systemPrompt = `You are a precision agriculture advisor for a CEA operation.
+Reply with bullet points only. Be specific with numbers from the data provided.
+Maximum 6 bullets. No preamble, no sign-off.`;
 
   const triedModels: string[] = [];
-  let lastError = "Unknown error";
+  let lastError = "No models available";
 
-  for (const modelName of MODEL_FALLBACK_CHAIN) {
-    triedModels.push(modelName);
+  for (const model of MODEL_FALLBACK_CHAIN) {
+    triedModels.push(model);
     try {
-      const model = genai.getGenerativeModel({ model: modelName });
-      const result = await model.generateContent(prompt);
-      const text = result.response.text();
-      // Return which model actually answered (useful for debugging)
-      return NextResponse.json({ text, model: modelName });
-    } catch (e) {
-      lastError = e instanceof Error ? e.message : String(e);
-      console.warn(`[gemini] ${modelName} failed: ${lastError.slice(0, 120)}`);
-      if (!isRetryable(lastError)) {
-        // Non-retryable (e.g. bad API key, malformed request) — stop immediately
+      const res = await fetch(`${OLLAMA_BASE}/api/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model,
+          prompt: `${systemPrompt}\n\n${prompt}`,
+          stream: false,
+        }),
+        signal: AbortSignal.timeout(60000),
+      });
+
+      if (!res.ok) {
+        lastError = `${model}: HTTP ${res.status}`;
+        console.warn(`[ollama] ${lastError}`);
+        continue;
+      }
+
+      const data = await res.json() as { response?: string; error?: string };
+
+      if (data.error) {
+        lastError = `${model}: ${data.error}`;
+        console.warn(`[ollama] ${lastError}`);
+        if (isRetryable(data.error)) continue;
         break;
       }
-      // Retryable — try the next model
+
+      return NextResponse.json({ text: data.response, model });
+    } catch (e) {
+      lastError = e instanceof Error ? e.message : String(e);
+      console.warn(`[ollama] ${model} failed: ${lastError.slice(0, 100)}`);
+      if (isRetryable(lastError)) continue;
+      break;
     }
   }
 
   return NextResponse.json(
-    { error: friendlyError(lastError, triedModels) },
+    {
+      error: `Could not get a response from Ollama (tried: ${triedModels.join(", ")}). ` +
+        `Run "ollama pull llama3.2" to install a model, then restart the dev server.`,
+    },
     { status: 500 },
   );
 }
