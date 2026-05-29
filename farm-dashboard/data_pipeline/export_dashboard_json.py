@@ -26,10 +26,14 @@ YIELD_BENCHMARKS = {
 }
 
 
-def get_oneliner(alert_type: str, action_delay: float, stress_index: float) -> str:
+def get_oneliner(alert_type: str, action_delay: float, stress_index: float, action_taken: int = 1) -> str:
     alert = alert_type if alert_type and alert_type != "No Alert" else "Stress"
     delay = float(action_delay or 0)
     stress = float(stress_index or 0)
+    if not action_taken:
+        if stress > 0.7:
+            return f"{alert} alert — no crew action recorded. Urgent."
+        return f"{alert} alert active — no crew action recorded."
     if delay > 2 and stress > 0.7:
         return f"{alert} stress — {int(delay)} days without action. Urgent."
     if delay > 0:
@@ -269,7 +273,7 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
         latest_in_week = wk.sort_values("date").groupby("plot_id").tail(1).copy()
         latest_in_week["urgency_score"] = latest_in_week.apply(urgency_score, axis=1)
         latest_in_week["oneliner"] = latest_in_week.apply(
-            lambda r: get_oneliner(r["alert_type"], r["action_delay_days"], r["plant_stress_index"]),
+            lambda r: get_oneliner(r["alert_type"], r["action_delay_days"], r["plant_stress_index"], int(r.get("action_taken") or 0)),
             axis=1,
         )
         latest_in_week["label"] = latest_in_week.apply(plot_label, axis=1)
@@ -342,6 +346,14 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
                     "postActionDelta": round(float(last["post_action_stress_delta_3d"] or 0), 3),
                     "weeklyCost": round(float(cost_wk["daily_total_input_cost"].sum()), 2),
                 },
+                "simulatorValues": {
+                    "action_delay_days": float(last.get("action_delay_days") or 0),
+                    "plant_stress_index": round(float(last.get("plant_stress_index") or 0), 3),
+                    "vpd_kpa": round(float(last.get("vpd_kpa") or 0), 3),
+                    "substrate_moisture": round(float(last.get("substrate_moisture") or 0), 3),
+                    "pest_pressure_index": round(float(last.get("pest_pressure_index") or 0), 3),
+                    "disease_risk_index": round(float(last.get("disease_risk_index") or 0), 3),
+                },
             }
 
     # Alert summary aggregates
@@ -393,6 +405,44 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
                 }
             )
 
+    # Stress outcome ML model — predicts 3-day post-action stress delta
+    stress_features = [
+        "action_delay_days",
+        "plant_stress_index",
+        "vpd_kpa",
+        "substrate_moisture",
+        "pest_pressure_index",
+        "disease_risk_index",
+    ]
+    model_rows = sensor[
+        (sensor["alert_flag"] == 1)
+        & (sensor["action_taken"] == 1)
+        & sensor["post_action_stress_delta_3d"].notna()
+    ].copy()
+    for col in stress_features:
+        model_rows[col] = pd.to_numeric(model_rows[col], errors="coerce").fillna(0)
+    X_s = model_rows[stress_features].values
+    y_s = model_rows["post_action_stress_delta_3d"].values
+    gb_s = GradientBoostingRegressor(n_estimators=80, random_state=42, max_depth=3)
+    gb_s.fit(X_s, y_s)
+    lr_s = LinearRegression()
+    lr_s.fit(X_s, gb_s.predict(X_s))
+    stress_model = {
+        "featureNames": stress_features,
+        "coefficients": lr_s.coef_.tolist(),
+        "intercept": float(lr_s.intercept_),
+        "defaults": {col: round(float(model_rows[col].mean()), 3) for col in stress_features},
+        "bounds": {
+            "action_delay_days": [0, 5],
+            "plant_stress_index": [0.0, 1.0],
+            "vpd_kpa": [round(float(sensor["vpd_kpa"].min()), 2), round(float(sensor["vpd_kpa"].max()), 2)],
+            "substrate_moisture": [0.0, 1.0],
+            "pest_pressure_index": [0.0, 1.0],
+            "disease_risk_index": [0.0, 1.0],
+        },
+        "avgSeasonDelta": round(float(y_s.mean()), 3),
+    }
+
     return {
         "weeks": weeks,
         "defaultWeek": last_week,
@@ -403,6 +453,7 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
         "alertTypeBreakdown": alert_type_breakdown,
         "healthTrend": health_trend,
         "previouslyAtRisk": at_risk,
+        "stressModel": stress_model,
     }
 
 
