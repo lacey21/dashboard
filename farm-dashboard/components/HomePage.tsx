@@ -48,7 +48,7 @@ export default function HomePage() {
         {
           id: "alerts",
           title: "Where do I send my crew this morning?",
-          audience: "Operations manager on Monday morning",
+          audience: "Operations manager this morning",
           stat: `${data.nav.alertTriageUrgent} plots need immediate attention`,
           content: <AlertTriagePage embedded />,
         },
