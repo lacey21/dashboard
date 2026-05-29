@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useData } from "@/hooks/useData";
 import { RiskCard } from "@/components/RiskCard";
 import { SustainabilityRadar } from "@/charts/RadarChart";
@@ -8,6 +8,7 @@ import { scoreColor } from "@/constants/colors";
 
 type SustainData = {
   overallScore: number;
+  scoreLabel?: string;
   subscores: Record<string, number>;
   weakestCategory: string;
   strongestCategory: string;
@@ -20,6 +21,8 @@ type SustainData = {
   carbonEmissionsScore: number;
   risks: { id: string; icon: string; title: string; level: "critical" | "warning" | "healthy"; oneliner: string }[];
   controlBaseline: Record<string, number>;
+  aggregationType?: "all_farms" | "single_farm";
+  numFarms?: number;
 };
 
 type SeasonalData = {
@@ -78,17 +81,21 @@ function CarbonPill({
   totalKgCO2e,
   kgPerKgYield,
   score,
+  isAggregate,
 }: {
   id?: string;
   totalKgCO2e: number;
   kgPerKgYield: number;
   score: number;
+  isAggregate?: boolean;
 }) {
   const color = scoreColor(score);
   return (
     <div
       id={id}
-      title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. Emission factor source: Environment and Climate Change Canada.`}
+      title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. ${
+        isAggregate ? "Aggregate across all farms." : ""
+      } Emission factor source: Environment and Climate Change Canada.`}
       className="flex flex-col items-center gap-1 scroll-mt-28 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
     >
       <p className="text-xs font-medium uppercase tracking-wide text-sage-500">Carbon emissions</p>
@@ -96,7 +103,9 @@ function CarbonPill({
         {score}
       </p>
       <p className="text-xs text-sage-600">
-        {kgPerKgYield.toFixed(3)}&nbsp;kg CO₂e/kg
+        {isAggregate 
+          ? `${(totalKgCO2e / 1000).toFixed(1)} tonne CO₂e`
+          : `${kgPerKgYield.toFixed(3)} kg CO₂e/kg`}
       </p>
     </div>
   );
@@ -109,6 +118,14 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   const { data: seasonalData } = useData<SeasonalData>("seasonal_evaluation.json");
   const [showBreakdown, setShowBreakdown] = useState(false);
 
+  // Auto-expand breakdown when linking to score-breakdown or all-dimensions-vs-control
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // Remove '#'
+    if (hash === "score-breakdown" || hash === "all-dimensions-vs-control") {
+      setShowBreakdown(true);
+    }
+  }, []);
+
   if (loading || !data) {
     return (
       <p className={embedded ? "py-4 text-sage-700" : "p-8 text-sage-700"}>
@@ -118,7 +135,9 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   }
 
   const scoreLabel =
-    data.overallScore >= 75 ? "Strong" : data.overallScore >= 50 ? "Developing" : "At Risk";
+    data.scoreLabel || (data.overallScore >= 75 ? "Strong" : data.overallScore >= 50 ? "Developing" : "At Risk");
+
+  const isAggregate = data.aggregationType === "all_farms";
 
   const dynamicSentence = `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
 
@@ -131,9 +150,13 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   return (
     <Wrapper className={wrapClass}>
       <h2 className={embedded ? "text-xl font-bold text-sage-900" : "text-2xl font-bold text-sage-900"}>
-        Beyond this season&apos;s profit
+        {isAggregate ? "BC Farm Network Sustainability" : "Beyond this season's profit"}
       </h2>
-      <p className="mt-1 text-sage-700">Here&apos;s how resilient and future-proof this operation is.</p>
+      <p className="mt-1 text-sage-700">
+        {isAggregate 
+          ? `Aggregate sustainability metrics across ${data.numFarms} farms.`
+          : "Here's how resilient and future-proof this operation is."}
+      </p>
 
       {/* ── Big score ────────────────────────────────────────────────── */}
       <div id="overall-score" className="mt-10 scroll-mt-28 text-center">
@@ -181,6 +204,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
             totalKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
             kgPerKgYield={data.carbonKgPerKgYield ?? 0}
             score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}
+            isAggregate={isAggregate}
           />
         </div>
         {/* ──────────────────────────────────────────────────────────── */}
@@ -198,7 +222,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
       {/* ── Breakdown ────────────────────────────────────────────────── */}
       {showBreakdown && (
         <>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div id="score-breakdown" className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 scroll-mt-28">
             {(["energyIntensity", "waterEfficiency", "chemicalLoad", "carbonEmissions"] as const).map((key) => (
               <CategoryCard
                 key={key}
@@ -215,25 +239,16 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
                 }
               />
             ))}
+            <DisasterRiskCard score={data.subscores.naturalDisasterRisk} />
+            <CarbonFootprintCard 
+              carbonEmissionsKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
+              carbonKgPerKgYield={data.carbonKgPerKgYield ?? 0}
+              score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}
+              isAggregate={isAggregate}
+            />
           </div>
 
-          <div className="mt-6 space-y-2 text-sm">
-            <div className="flex justify-between rounded border border-sage-100 bg-white px-4 py-3">
-              <span>Natural disaster risk</span>
-              <span className="font-bold">{data.subscores.naturalDisasterRisk}/100</span>
-            </div>
-            <div className="flex justify-between rounded border border-sage-100 bg-white px-4 py-3">
-              <span>
-                Carbon footprint
-                <span className="ml-2 text-xs text-sage-500">
-                  (total: {(data.carbonEmissionsKgCO2e ?? 0).toLocaleString()} kg CO₂e · {(data.carbonKgPerKgYield ?? 0).toFixed(3)} kg CO₂e/kg)
-                </span>
-              </span>
-              <span className="font-bold">{(data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0)}/100</span>
-            </div>
-          </div>
-
-          <section className="mt-10">
+          <section id="all-dimensions-vs-control" className="mt-10 scroll-mt-28">
             <h2 className="mb-4 font-semibold text-sage-900">All dimensions vs control</h2>
             <p className="mb-4 text-sm text-sage-700">
               This radar compares your farm's sustainability metrics against your control plots. ROI measures financial return relative to cost—higher ROI means more profit per dollar spent.
@@ -249,7 +264,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
 
       {/* ── Risk watchlist ───────────────────────────────────────────── */}
       {filteredRisks.length > 0 && (
-        <section className="mt-12">
+        <section id="risk-watchlist" className="mt-12 scroll-mt-28">
           <h2 className="mb-4 font-semibold text-sage-900">Risk watchlist</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {filteredRisks.map((risk) => (
@@ -286,6 +301,48 @@ function CategoryCard({
         {score}
       </p>
       <p className="mt-2 text-xs text-sage-700">{caption}</p>
+    </div>
+  );
+}
+
+// ─── DisasterRiskCard ─────────────────────────────────────────────────────
+
+function DisasterRiskCard({ score }: { score: number }) {
+  return (
+    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
+      <p className="text-sm text-sage-700">Natural disaster risk</p>
+      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
+        {score}
+      </p>
+      <p className="mt-2 text-xs text-sage-700">Resilience to temperature extremes and environmental stressors</p>
+    </div>
+  );
+}
+
+// ─── CarbonFootprintCard ──────────────────────────────────────────────────
+
+function CarbonFootprintCard({
+  carbonEmissionsKgCO2e,
+  carbonKgPerKgYield,
+  score,
+  isAggregate,
+}: {
+  carbonEmissionsKgCO2e: number;
+  carbonKgPerKgYield: number;
+  score: number;
+  isAggregate: boolean;
+}) {
+  return (
+    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
+      <p className="text-sm text-sage-700">Carbon footprint</p>
+      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
+        {score}
+      </p>
+      <p className="mt-2 text-xs text-sage-700">
+        {isAggregate 
+          ? `Total: ${(carbonEmissionsKgCO2e / 1000).toFixed(1)} tonnes CO₂e`
+          : `${carbonKgPerKgYield.toFixed(3)} kg CO₂e/kg yield`}
+      </p>
     </div>
   );
 }

@@ -62,9 +62,9 @@ export const USE_CASES: UseCase[] = [
     icon: "/images/sustainability.png",
     figures: [
       { label: "Overall score", hash: "overall-score" },
-      { label: "Water efficiency", hash: "water-efficiency" },
-      { label: "Energy intensity", hash: "energy-intensity" },
-      { label: "Carbon emissions", hash: "carbon-emissions" },
+      { label: "Score breakdown", hash: "score-breakdown" },
+      { label: "All dimensions vs control", hash: "all-dimensions-vs-control" },
+      { label: "Risk watchlist", hash: "risk-watchlist" },
     ],
   },
 ];
