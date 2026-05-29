@@ -9,48 +9,72 @@
     "id": "F01",
     "name": "BC Harvest 1",
     "region": "Chilliwack",
-    "primaryCrop": "Tomato"
+    "primaryCrop": "Tomato",
+    "climateZone": "Coastal",
+    "productionSystem": "Mixed",
+    "areaM2": 496
   },
   {
     "id": "F02",
     "name": "BC Harvest 2",
     "region": "Maple Ridge",
-    "primaryCrop": "Pepper"
+    "primaryCrop": "Pepper",
+    "climateZone": "Interior",
+    "productionSystem": "Greenhouse",
+    "areaM2": 162
   },
   {
     "id": "F03",
     "name": "BC Harvest 3",
     "region": "Langley",
-    "primaryCrop": "Strawberry"
+    "primaryCrop": "Strawberry",
+    "climateZone": "Interior",
+    "productionSystem": "Mixed",
+    "areaM2": 57
   },
   {
     "id": "F04",
     "name": "BC Harvest 4",
     "region": "Maple Ridge",
-    "primaryCrop": "Cucumber"
+    "primaryCrop": "Cucumber",
+    "climateZone": "Fraser Valley",
+    "productionSystem": "Mixed",
+    "areaM2": 200
   },
   {
     "id": "F05",
     "name": "BC Harvest 5",
     "region": "Abbotsford",
-    "primaryCrop": "Strawberry"
+    "primaryCrop": "Strawberry",
+    "climateZone": "Fraser Valley",
+    "productionSystem": "Greenhouse",
+    "areaM2": 238
   },
   {
     "id": "F06",
     "name": "BC Harvest 6",
     "region": "Maple Ridge",
-    "primaryCrop": "Strawberry"
+    "primaryCrop": "Strawberry",
+    "climateZone": "Interior",
+    "productionSystem": "Greenhouse",
+    "areaM2": 235
   },
   {
     "id": "F07",
     "name": "BC Harvest 7",
     "region": "Abbotsford",
-    "primaryCrop": "Strawberry"
+    "primaryCrop": "Strawberry",
+    "climateZone": "Interior",
+    "productionSystem": "Mixed",
+    "areaM2": 42
   },
   {
     "id": "F08",
     "name": "BC Harvest 8",
     "region": "Langley",
-    "primaryCrop": "Strawberry"
+    "primaryCrop": "Strawberry",
+    "climateZone": "Coastal",
+    "productionSystem": "Mixed",
+    "areaM2": 538
   }
 ]

@@ -78,6 +78,7 @@ Tone: confident, factual, plain English. Not salesy.`;
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <KPICard
+          id="total-revenue"
           label="Total revenue this season"
           value={`$${f.totalRevenue.toLocaleString()}`}
           delta={Math.round(((f.totalRevenue - f.totalCost) / f.totalCost) * 100)}
@@ -91,6 +92,7 @@ Tone: confident, factual, plain English. Not salesy.`;
           deltaLabel="% of total spend"
         />
         <KPICard
+          id="precision-benefit"
           label="Precision benefit"
           value={`$${f.precisionBenefit.toLocaleString()}`}
           delta={Math.round((f.precisionBenefit / Math.max(f.precisionSpend, 1)) * 100)}
@@ -114,7 +116,7 @@ Tone: confident, factual, plain English. Not salesy.`;
         </p>
       </div>
 
-      <section className="mt-10">
+      <section id="spend-return" className="mt-10 scroll-mt-28">
         <h2 className="font-semibold text-sage-900">Spend vs return by treatment</h2>
         <SpendReturnBar data={data.spendReturnByTreatment} controlBaseline={data.controlRevenueBaseline} />
         <p className="text-sm text-sage-700">
@@ -148,7 +150,7 @@ Tone: confident, factual, plain English. Not salesy.`;
         <ScatterPlot data={data.scatterPlots} />
       </section>
 
-      <section className="mt-10">
+      <section id="yield-benchmark" className="mt-10 scroll-mt-28">
         <h2 className="font-semibold text-sage-900">Yield benchmark by crop</h2>
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={data.yieldBenchmark}>
