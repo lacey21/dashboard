@@ -25,20 +25,12 @@ type Props = {
   banner: Banner;
   kpis: Kpis;
   kpiProgress: number;
-  onFarmHealthClick: () => void;
-  onAlertsClick: () => void;
-  onSeasonClick: () => void;
-  onSustainabilityClick: () => void;
 };
 
 export function StickyDashboardHeader({
   banner,
   kpis,
   kpiProgress: p,
-  onFarmHealthClick,
-  onAlertsClick,
-  onSeasonClick,
-  onSustainabilityClick,
 }: Props) {
   const headerRef = useRef<HTMLElement>(null);
   const sign = banner.roiVsBaseline >= 0 ? "above" : "below";
@@ -86,14 +78,10 @@ export function StickyDashboardHeader({
             }}
             aria-hidden={p < 0.1}
           >
-            <StickyKpiChip label="Health" value={kpis.farmHealthScore} onClick={onFarmHealthClick} />
-            <StickyKpiChip label="Alerts" value={kpis.activeAlerts} onClick={onAlertsClick} />
-            <StickyKpiChip label="ROI" value={`${kpis.seasonRoiPct}%`} onClick={onSeasonClick} />
-            <StickyKpiChip
-              label="Precision"
-              value={`${kpis.precisionActionRate}%`}
-              onClick={onSustainabilityClick}
-            />
+            <StickyKpiChip label="Health" value={kpis.farmHealthScore} />
+            <StickyKpiChip label="Alerts" value={kpis.activeAlerts} />
+            <StickyKpiChip label="ROI" value={`${kpis.seasonRoiPct}%`} />
+            <StickyKpiChip label="Precision" value={`${kpis.precisionActionRate}%`} />
           </div>
         </div>
       </div>

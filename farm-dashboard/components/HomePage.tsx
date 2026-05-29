@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useData } from "@/hooks/useData";
 import { useKpiScrollProgress } from "@/hooks/useKpiScrollProgress";
 import { KPICard } from "@/components/KPICard";
-import { FarmHealthDrawer } from "@/components/FarmHealthDrawer";
 import { HeaderPlaceholder } from "@/components/HeaderPlaceholder";
 import { StickyDashboardHeader } from "@/components/StickyDashboardHeader";
 import { UseCaseSlideshow } from "@/components/UseCaseSlideshow";
@@ -24,7 +23,6 @@ type HomeData = {
     precisionActionRate: number;
     precisionActionRateDelta: number;
   };
-  farmHealthDrawer: Parameters<typeof FarmHealthDrawer>[0]["data"];
   nav: {
     alertTriageUrgent: number;
     seasonalPrecisionBenefit: number;
@@ -39,7 +37,6 @@ type SustainData = {
 export default function HomePage() {
   const { data, loading, error } = useData<HomeData>("home.json");
   const { data: susData } = useData<SustainData>("sustainability.json");
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const [slideIndex, setSlideIndex] = useState(0);
   const [kpiSectionRef, kpiProgress] = useKpiScrollProgress(40);
 
@@ -78,10 +75,6 @@ export default function HomePage() {
           banner={data.banner}
           kpis={data.kpis}
           kpiProgress={kpiProgress}
-          onFarmHealthClick={() => setDrawerOpen(true)}
-          onAlertsClick={() => setSlideIndex(0)}
-          onSeasonClick={() => setSlideIndex(1)}
-          onSustainabilityClick={() => setSlideIndex(2)}
         />
       )}
 
@@ -102,7 +95,6 @@ export default function HomePage() {
               delta={data.kpis.farmHealthDelta}
               deltaLabel="vs last week"
               deltaPositive={data.kpis.farmHealthDelta >= 0}
-              onClick={() => setDrawerOpen(true)}
             />
             <KPICard
               label="Active alerts today"
@@ -110,7 +102,6 @@ export default function HomePage() {
               delta={data.kpis.activeAlertsDelta}
               deltaLabel="vs 7 days ago"
               deltaPositive={data.kpis.activeAlertsDelta <= 0}
-              onClick={() => setSlideIndex(0)}
             />
             <KPICard
               label="Season ROI (avg across plots)"
@@ -118,7 +109,6 @@ export default function HomePage() {
               delta={data.kpis.seasonRoiDelta}
               deltaLabel="vs control baseline"
               deltaPositive={data.kpis.seasonRoiDelta >= 0}
-              onClick={() => setSlideIndex(1)}
             />
             <KPICard
               label="Precision action rate"
@@ -126,7 +116,6 @@ export default function HomePage() {
               delta={data.kpis.precisionActionRateDelta}
               deltaLabel="vs season average"
               deltaPositive
-              onClick={() => setSlideIndex(2)}
             />
           </div>
 
@@ -138,9 +127,6 @@ export default function HomePage() {
         </div>
       )}
 
-      {drawerOpen && data && (
-        <FarmHealthDrawer data={data.farmHealthDrawer} onClose={() => setDrawerOpen(false)} />
-      )}
     </main>
   );
 }
