@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { StressTimeline } from "@/charts/StressTimeline";
 import { CostBreakdown } from "@/charts/CostBreakdown";
-import { GeminiInsight } from "@/components/GeminiInsight";
 import { StressOutcomeSimulator, type StressModel } from "@/components/StressOutcomeSimulator";
 import { COLORS } from "@/constants/colors";
 
@@ -28,7 +27,6 @@ type PlotDetail = {
     routine: number;
     total: number;
   };
-  geminiContext: Record<string, string | number>;
   simulatorValues?: Record<string, number>;
 };
 
@@ -38,7 +36,7 @@ type Props = {
   model?: StressModel;
 };
 
-const TABS = ["This plot", "Simulator", "Get advice"] as const;
+const TABS = ["This plot", "Simulator"] as const;
 type TabName = (typeof TABS)[number];
 
 export function PlotDrawer({ detail, onClose, model }: Props) {
@@ -53,49 +51,6 @@ export function PlotDrawer({ detail, onClose, model }: Props) {
       detail.timeline.reduce((s, d) => s + d.plant_stress_index, 0) /
       Math.max(detail.timeline.length, 1),
   };
-
-  // Build the richest possible prompt so Gemini produces specific, actionable advice
-  const cats = [
-    { name: "labor", val: detail.costs.labor },
-    { name: "fertilizer", val: detail.costs.fertilizer },
-    { name: "pesticide", val: detail.costs.pesticide },
-    { name: "energy", val: detail.costs.energy },
-    { name: "water", val: detail.costs.water },
-  ].sort((a, b) => b.val - a.val);
-  const topCat = cats[0];
-  const precisionPct = detail.costs.total > 0
-    ? Math.round((detail.costs.precision / detail.costs.total) * 100)
-    : 0;
-  const latestAlert = detail.alertLog[0];
-  const responseRatio = stats.alertDays > 0
-    ? `${stats.actions}/${stats.alertDays} alerts responded`
-    : "no alerts this period";
-
-  const prompt = `You are a precision agriculture advisor for a CEA (controlled-environment agriculture) operation. Give concrete, prioritised advice in plain language. Use bullet points. Be specific with the numbers provided — do not hedge.
-
-== Plot ==
-Crop: ${detail.geminiContext.crop} | Farm: ${detail.geminiContext.farmName} | Climate zone: ${detail.geminiContext.climateZone}
-
-== Current condition ==
-Stress index: ${detail.geminiContext.stressIndex} (critical threshold: 0.6)
-Active alert: ${detail.geminiContext.alertType}
-Days since alert with no crew action: ${detail.geminiContext.actionDelayDays}
-Stress trajectory after last intervention: ${detail.geminiContext.postActionDelta} (negative = improving)
-${latestAlert ? `Latest recommended action: "${latestAlert.recommended_action}"` : ""}
-
-== Season summary ==
-Alert response: ${responseRatio}
-Avg stress this season: ${(stats.avgStress * 100).toFixed(0)}%
-
-== This week's costs ==
-Total: $${detail.geminiContext.weeklyCost} | Precision (alert-driven): ${precisionPct}% | Routine: ${100 - precisionPct}%
-Largest cost driver: ${topCat?.name ?? "n/a"} ($${topCat?.val.toFixed(0) ?? 0})
-${precisionPct >= 25 ? "⚠ Precision spend is elevated above the ~15% baseline." : ""}
-
-== Questions to answer ==
-1. What should the farmer do TODAY — in order of priority?
-2. What is the most likely root cause of the current alert?
-3. Is there a cost concern, and how can it be addressed?`;
 
   return (
     <>
@@ -214,35 +169,6 @@ ${precisionPct >= 25 ? "⚠ Precision spend is elevated above the ~15% baseline.
                 Simulator model not available for this plot.
               </p>
             )
-          )}
-
-          {/* ── Get advice tab ── */}
-          {tab === "Get advice" && (
-            <div>
-              {/* Context pills — what Gemini is looking at */}
-              <div className="mb-4 flex flex-wrap gap-2">
-                {[
-                  { label: "Stress", value: `${(Number(detail.geminiContext.stressIndex) * 100).toFixed(0)}%` },
-                  { label: "Alert", value: String(detail.geminiContext.alertType) },
-                  { label: "Delay", value: `${detail.geminiContext.actionDelayDays}d` },
-                  { label: "Spend", value: `$${detail.geminiContext.weeklyCost}` },
-                ].map(({ label, value }) => (
-                  <span
-                    key={label}
-                    className="rounded-full border border-sage-200 bg-sage-50 px-3 py-1 text-xs text-sage-700"
-                  >
-                    <span className="text-sage-400">{label}: </span>
-                    <span className="font-semibold text-sage-800">{value}</span>
-                  </span>
-                ))}
-              </div>
-
-              <GeminiInsight
-                prompt={prompt}
-                label="remediation suggestions"
-                autoRun
-              />
-            </div>
           )}
         </div>
       </aside>

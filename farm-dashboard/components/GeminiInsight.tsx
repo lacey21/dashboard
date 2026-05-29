@@ -7,6 +7,11 @@ import { COLORS } from "@/constants/colors";
 type Props = {
   prompt: string;
   label?: string;
+  /** Header shown above the generated text. Defaults to "AI-generated · based on your farm data". */
+  headerLabel?: string;
+  showRegenerate?: boolean;
+  /** When set, shown instead of the default error UI if generation fails. */
+  errorFallback?: string;
   autoRun?: boolean;
   variant?: "default" | "risk";
   riskLevel?: "critical" | "warning" | "healthy";
@@ -155,6 +160,9 @@ function LoadingDots() {
 export function GeminiInsight({
   prompt,
   label = "AI Insight",
+  headerLabel = "AI-generated · based on your farm data",
+  showRegenerate = true,
+  errorFallback,
   autoRun = false,
   variant = "default",
   riskLevel = "warning",
@@ -199,12 +207,16 @@ export function GeminiInsight({
       {autoRun && loading && <LoadingDots />}
 
       {/* Error */}
-      {error && (
+      {error && errorFallback ? (
+        <div className={`rounded-lg border p-4 ${bg}`}>
+          <p className="text-sm text-sage-600">{errorFallback}</p>
+        </div>
+      ) : error ? (
         <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-sm text-red-700">
           <p className="font-medium">Could not generate advice</p>
           <p className="mt-0.5 text-xs text-red-500">{error}</p>
         </div>
-      )}
+      ) : null}
 
       {/* Result */}
       {result && (
@@ -216,17 +228,19 @@ export function GeminiInsight({
                 <path d="M4.5 6.5h4M6.5 4.5v4" stroke={COLORS.sageDark} strokeWidth="1.2" strokeLinecap="round" />
               </svg>
               <span className="text-xs font-semibold" style={{ color: COLORS.sageDark }}>
-                AI-generated · based on your farm data
+                {headerLabel}
               </span>
             </div>
-            <button
-              type="button"
-              onClick={() => { setResult(null); generate(prompt); }}
-              disabled={loading}
-              className="text-xs text-sage-400 hover:text-sage-700 underline decoration-sage-200 disabled:opacity-50"
-            >
-              Regenerate
-            </button>
+            {showRegenerate && (
+              <button
+                type="button"
+                onClick={() => { setResult(null); generate(prompt); }}
+                disabled={loading}
+                className="text-xs text-sage-400 hover:text-sage-700 underline decoration-sage-200 disabled:opacity-50"
+              >
+                Regenerate
+              </button>
+            )}
           </div>
           <RenderMarkdown text={result} />
         </div>

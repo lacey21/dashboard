@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useData } from "@/hooks/useData";
+import { useFarm } from "@/contexts/FarmContext";
 import { KPICard } from "@/components/KPICard";
+import { GeminiInsight } from "@/components/GeminiInsight";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
 import { USE_CASES } from "@/constants/useCases";
 
@@ -32,6 +34,7 @@ type SustainData = {
 export default function HomePage() {
   const { data, loading, error } = useData<HomeData>("home.json");
   const { data: susData } = useData<SustainData>("sustainability.json");
+  const { selected } = useFarm();
 
   // Live headline stat per use case, keyed by the shared use-case id.
   const stats: Record<string, string> = data
@@ -41,6 +44,20 @@ export default function HomePage() {
         sustainability: `Sustainability score: ${susData?.overallScore ?? "—"}/100`,
       }
     : {};
+
+  const overviewPrompt =
+    data &&
+    `You are an agricultural operations advisor. In 3-4 sentences, give a plain-English executive summary of this farm's current situation. Cover daily operations, season finances, and long-term resilience at a high level. Be specific using the numbers provided and highlight what needs attention first. Plain English, no jargon.
+
+Farm: ${selected.name}, ${selected.region}${selected.primaryCrop ? `, primary crop ${selected.primaryCrop}` : ""}
+Critical plots: ${data.banner.criticalPlots}
+Unactioned alerts: ${data.banner.unactionedAlerts}
+ROI vs baseline: ${data.banner.roiVsBaseline >= 0 ? "+" : ""}${data.banner.roiVsBaseline}%
+Farm health score: ${data.kpis.farmHealthScore}/100 (${data.kpis.farmHealthDelta >= 0 ? "+" : ""}${data.kpis.farmHealthDelta} vs last week)
+Active alerts today: ${data.kpis.activeAlerts}
+Season ROI: ${data.kpis.seasonRoiPct}% (${data.kpis.seasonRoiDelta >= 0 ? "+" : ""}${data.kpis.seasonRoiDelta}% vs baseline)
+Precision action rate: ${data.kpis.precisionActionRate}%
+Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -53,7 +70,7 @@ export default function HomePage() {
       {data && !error && (
         <>
           <header className="mb-6">
-            <h1 className="text-2xl font-bold text-sage-900">Operation overview</h1>
+            <h1 className="text-2xl font-bold text-sage-900">Operation Overview</h1>
             <p className="mt-1 text-sm text-sage-700">
               <strong className="font-semibold text-sage-900">{data.banner.criticalPlots}</strong> critical
               plots · <strong className="font-semibold text-sage-900">{data.banner.unactionedAlerts}</strong>{" "}
@@ -99,14 +116,26 @@ export default function HomePage() {
             />
           </div>
 
+          {overviewPrompt && (
+            <section className="mt-8">
+              <GeminiInsight
+                prompt={overviewPrompt}
+                autoRun
+                label="overview summary"
+                headerLabel="AI overview"
+                showRegenerate={false}
+                errorFallback="AI overview not available"
+              />
+            </section>
+          )}
+
           {/* ── The three use cases this overview powers ── */}
           <section className="mt-10">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-sage-700">
-              Three use cases of this overview
+              Use cases
             </h2>
             <p className="mt-1 text-sm text-sage-600">
-              The numbers above come to life in three decisions — follow them in order, or jump to the one
-              you need.
+              Drill into alerts, season performance, or sustainability scores.
             </p>
             <div className="mt-4 grid gap-4 md:grid-cols-3">
               {USE_CASES.map((u, i) => (

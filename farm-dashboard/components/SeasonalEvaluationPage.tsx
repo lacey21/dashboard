@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Area,
   AreaChart,
@@ -17,7 +16,6 @@ import {
   YAxis,
 } from "recharts";
 import { useData } from "@/hooks/useData";
-import { useGemini } from "@/hooks/useGemini";
 import { KPICard } from "@/components/KPICard";
 import { SpendReturnBar } from "@/charts/SpendReturnBar";
 import { ScatterPlot } from "@/charts/ScatterPlot";
@@ -49,20 +47,12 @@ type SeasonData = {
 
 export default function SeasonalEvaluationPage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<SeasonData>("seasonal_evaluation.json");
-  const { result, loading: genLoading, generate } = useGemini();
-  const [copied, setCopied] = useState(false);
 
   if (loading || !data) {
     return <p className={embedded ? "py-4 text-sage-700" : "p-8 text-sage-700"}>Loading season review…</p>;
   }
 
   const f = data.financials;
-  const lenderPrompt = `Write a short, professional 3-paragraph summary a farmer could bring to a bank meeting.
-Paragraph 1: What the precision system does and why it was implemented.
-Paragraph 2: The financial results this season — use these numbers exactly: total revenue $${f.totalRevenue},
-precision spend $${f.precisionSpend}, precision benefit $${f.precisionBenefit}, avg ROI ${f.meanRoiPct}%.
-Paragraph 3: Why continued or expanded investment is justified.
-Tone: confident, factual, plain English. Not salesy.`;
 
   const Wrapper = embedded ? "div" : "main";
   const wrapClass = embedded ? "" : "mx-auto max-w-7xl px-6 py-8";
@@ -191,32 +181,6 @@ Tone: confident, factual, plain English. Not salesy.`;
             precisionBenefitPerSeason={data.precisionBenefitPerSeason}
           />
         </Collapsible>
-      </section>
-
-      <section className="mt-10">
-        <button
-          type="button"
-          onClick={() => generate(lenderPrompt)}
-          className="rounded-lg bg-sage-700 px-4 py-2 text-sm font-medium text-white hover:bg-sage-800"
-        >
-          {genLoading ? "Generating…" : "Generate RBC Summary"}
-        </button>
-        {result && (
-          <div className="mt-4 rounded-lg border border-sage-200 bg-white p-4 shadow-sm">
-            <p className="mb-2 text-xs font-medium text-sage-700">AI-generated · for lender meeting</p>
-            <div className="whitespace-pre-wrap text-sm text-sage-900">{result}</div>
-            <button
-              type="button"
-              className="mt-3 text-sm underline"
-              onClick={() => {
-                navigator.clipboard.writeText(result);
-                setCopied(true);
-              }}
-            >
-              {copied ? "Copied!" : "Copy to clipboard"}
-            </button>
-          </div>
-        )}
       </section>
     </Wrapper>
   );
