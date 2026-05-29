@@ -119,6 +119,101 @@ def fit_yield_model(model_df: pd.DataFrame) -> dict:
         "intercept": float(lr.intercept_),
     }
 
+# Feature set + term expansion for the yield what-if model. Defined at module
+# level so the model can be trained once on the full fleet and reused for every
+# per-farm scope — small farms (2-3 plots) cannot fit a stable model on their
+# own, so they share the fleet coefficients with farm-specific starting points.
+YIELD_FEATURE_COLS = [
+    "daily_fertilizer_cost",
+    "daily_energy_cost",
+    "daily_water_cost",
+    "daily_pesticide_cost",
+    "plant_density_plants_m2",
+    "precision_action_rate",
+    "avg_action_delay_days",
+]
+# Polynomial + interaction terms layered on top of the linear base. The client
+# evaluates these via the same dot-product, so coefficients stay portable.
+# Squared terms capture diminishing returns on input spend; interactions
+# capture "you need water to make fertilizer work" type effects.
+YIELD_TERMS: list[dict] = [{"type": "linear", "feature": f} for f in YIELD_FEATURE_COLS] + [
+    {"type": "poly", "feature": "daily_fertilizer_cost", "power": 2},
+    {"type": "poly", "feature": "daily_energy_cost", "power": 2},
+    {"type": "poly", "feature": "daily_water_cost", "power": 2},
+    {"type": "poly", "feature": "plant_density_plants_m2", "power": 2},
+    {"type": "interact", "features": ["daily_fertilizer_cost", "daily_water_cost"]},
+    {"type": "interact", "features": ["plant_density_plants_m2", "daily_energy_cost"]},
+    {"type": "interact", "features": ["precision_action_rate", "avg_action_delay_days"]},
+]
+
+
+def _term_vector(df: pd.DataFrame, term: dict) -> np.ndarray:
+    if term["type"] == "linear":
+        return df[term["feature"]].to_numpy(dtype=float)
+    if term["type"] == "poly":
+        return df[term["feature"]].to_numpy(dtype=float) ** term["power"]
+    if term["type"] == "interact":
+        a, b = term["features"]
+        return df[a].to_numpy(dtype=float) * df[b].to_numpy(dtype=float)
+    raise ValueError(f"unknown term type: {term['type']}")
+
+
+def build_model_df(
+    season: pd.DataFrame,
+    costs: pd.DataFrame,
+    sensor: pd.DataFrame,
+    meta: pd.DataFrame,
+) -> pd.DataFrame:
+    """Per-plot feature frame used both to train the model and to derive the
+    per-scope simulator defaults/bounds."""
+    plot_features = (
+        costs.groupby("plot_id")
+        .agg(
+            daily_fertilizer_cost=("daily_fertilizer_cost", "mean"),
+            daily_energy_cost=("daily_energy_cost", "mean"),
+            daily_water_cost=("daily_water_cost", "mean"),
+            daily_pesticide_cost=("daily_pesticide_cost", "mean"),
+        )
+        .reset_index()
+    )
+    plot_features = plot_features.merge(
+        meta[["plot_id", "plant_density_plants_m2"]], on="plot_id"
+    )
+    precision_rate = costs.groupby("plot_id").agg(
+        precision_actions=("daily_precision_actions_count", "sum"),
+        total_actions=("daily_total_actions_count", "sum"),
+    ).reset_index()
+    precision_rate["precision_action_rate"] = (
+        precision_rate["precision_actions"] / precision_rate["total_actions"].clip(lower=1)
+    )
+    delays = (
+        sensor[sensor["alert_flag"] == 1]
+        .groupby("plot_id")["action_delay_days"]
+        .mean()
+        .reset_index()
+        .rename(columns={"action_delay_days": "avg_action_delay_days"})
+    )
+    model_df = season.merge(plot_features, on="plot_id").merge(
+        precision_rate[["plot_id", "precision_action_rate"]], on="plot_id"
+    ).merge(delays, on="plot_id", how="left")
+    model_df["avg_action_delay_days"] = model_df["avg_action_delay_days"].fillna(0)
+    return model_df
+
+
+def fit_yield_model(model_df: pd.DataFrame) -> dict:
+    """Train the Ridge yield model once on the full fleet. Ridge keeps the
+    expanded feature set from overfitting the small plot sample while preserving
+    the linear export format (intercept + per-term coefficient)."""
+    X = np.column_stack([_term_vector(model_df, t) for t in YIELD_TERMS])
+    y = model_df["season_yield_kg_m2"].values
+    lr = Ridge(alpha=1.0)
+    lr.fit(X, y)
+    return {
+        "terms": YIELD_TERMS,
+        "coefficients": lr.coef_.tolist(),
+        "intercept": float(lr.intercept_),
+    }
+
 
 def get_oneliner(alert_type: str, action_delay: float, stress_index: float, action_taken: int = 1) -> str:
     alert = alert_type if alert_type and alert_type != "No Alert" else "Stress"
