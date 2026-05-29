@@ -38,7 +38,7 @@ type Props = {
   model?: StressModel;
 };
 
-const TABS = ["This plot", "Costs", "Get advice"] as const;
+const TABS = ["This plot", "Simulator", "Get advice"] as const;
 type TabName = (typeof TABS)[number];
 
 export function PlotDrawer({ detail, onClose, model }: Props) {
@@ -54,14 +54,48 @@ export function PlotDrawer({ detail, onClose, model }: Props) {
       Math.max(detail.timeline.length, 1),
   };
 
-  const prompt = `You are a plain-spoken agricultural advisor. In 2-3 sentences, explain what is
-happening with this plot and what the farmer should do today. Be specific with numbers.
+  // Build the richest possible prompt so Gemini produces specific, actionable advice
+  const cats = [
+    { name: "labor", val: detail.costs.labor },
+    { name: "fertilizer", val: detail.costs.fertilizer },
+    { name: "pesticide", val: detail.costs.pesticide },
+    { name: "energy", val: detail.costs.energy },
+    { name: "water", val: detail.costs.water },
+  ].sort((a, b) => b.val - a.val);
+  const topCat = cats[0];
+  const precisionPct = detail.costs.total > 0
+    ? Math.round((detail.costs.precision / detail.costs.total) * 100)
+    : 0;
+  const latestAlert = detail.alertLog[0];
+  const responseRatio = stats.alertDays > 0
+    ? `${stats.actions}/${stats.alertDays} alerts responded`
+    : "no alerts this period";
 
-Plot: ${detail.geminiContext.crop}, ${detail.geminiContext.farmName}, ${detail.geminiContext.climateZone}
-Current stress: ${detail.geminiContext.stressIndex} (above 0.6 is high)
-Alert: ${detail.geminiContext.alertType}, ${detail.geminiContext.actionDelayDays} days without action
-Stress change after last action: ${detail.geminiContext.postActionDelta}
-This week's spend: $${detail.geminiContext.weeklyCost}`;
+  const prompt = `You are a precision agriculture advisor for a CEA (controlled-environment agriculture) operation. Give concrete, prioritised advice in plain language. Use bullet points. Be specific with the numbers provided — do not hedge.
+
+== Plot ==
+Crop: ${detail.geminiContext.crop} | Farm: ${detail.geminiContext.farmName} | Climate zone: ${detail.geminiContext.climateZone}
+
+== Current condition ==
+Stress index: ${detail.geminiContext.stressIndex} (critical threshold: 0.6)
+Active alert: ${detail.geminiContext.alertType}
+Days since alert with no crew action: ${detail.geminiContext.actionDelayDays}
+Stress trajectory after last intervention: ${detail.geminiContext.postActionDelta} (negative = improving)
+${latestAlert ? `Latest recommended action: "${latestAlert.recommended_action}"` : ""}
+
+== Season summary ==
+Alert response: ${responseRatio}
+Avg stress this season: ${(stats.avgStress * 100).toFixed(0)}%
+
+== This week's costs ==
+Total: $${detail.geminiContext.weeklyCost} | Precision (alert-driven): ${precisionPct}% | Routine: ${100 - precisionPct}%
+Largest cost driver: ${topCat?.name ?? "n/a"} ($${topCat?.val.toFixed(0) ?? 0})
+${precisionPct >= 25 ? "⚠ Precision spend is elevated above the ~15% baseline." : ""}
+
+== Questions to answer ==
+1. What should the farmer do TODAY — in order of priority?
+2. What is the most likely root cause of the current alert?
+3. Is there a cost concern, and how can it be addressed?`;
 
   return (
     <>
@@ -100,6 +134,7 @@ This week's spend: $${detail.geminiContext.weeklyCost}`;
         {/* Content */}
         <div className="flex-1 overflow-y-auto bg-white p-5">
 
+          {/* ── This plot tab ── */}
           {tab === "This plot" && (
             <>
               {/* Stress timeline */}
@@ -160,19 +195,54 @@ This week's spend: $${detail.geminiContext.weeklyCost}`;
                 </div>
               )}
 
-              {/* Stress outcome simulator */}
-              {model && (
-                <div className="mt-6">
-                  <StressOutcomeSimulator model={model} initialValues={detail.simulatorValues} />
-                </div>
-              )}
+              {/* Cost breakdown — lives in "This plot" for full context */}
+              <div className="mt-6 border-t border-sage-100 pt-5">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-wide text-sage-500">
+                  This week&apos;s costs
+                </p>
+                <CostBreakdown costs={detail.costs} />
+              </div>
             </>
           )}
 
-          {tab === "Costs" && <CostBreakdown costs={detail.costs} />}
+          {/* ── Simulator tab ── */}
+          {tab === "Simulator" && (
+            model ? (
+              <StressOutcomeSimulator model={model} initialValues={detail.simulatorValues} />
+            ) : (
+              <p className="py-6 text-center text-sm text-sage-500">
+                Simulator model not available for this plot.
+              </p>
+            )
+          )}
 
+          {/* ── Get advice tab ── */}
           {tab === "Get advice" && (
-            <GeminiInsight prompt={prompt} label="remediation suggestions" />
+            <div>
+              {/* Context pills — what Gemini is looking at */}
+              <div className="mb-4 flex flex-wrap gap-2">
+                {[
+                  { label: "Stress", value: `${(Number(detail.geminiContext.stressIndex) * 100).toFixed(0)}%` },
+                  { label: "Alert", value: String(detail.geminiContext.alertType) },
+                  { label: "Delay", value: `${detail.geminiContext.actionDelayDays}d` },
+                  { label: "Spend", value: `$${detail.geminiContext.weeklyCost}` },
+                ].map(({ label, value }) => (
+                  <span
+                    key={label}
+                    className="rounded-full border border-sage-200 bg-sage-50 px-3 py-1 text-xs text-sage-700"
+                  >
+                    <span className="text-sage-400">{label}: </span>
+                    <span className="font-semibold text-sage-800">{value}</span>
+                  </span>
+                ))}
+              </div>
+
+              <GeminiInsight
+                prompt={prompt}
+                label="remediation suggestions"
+                autoRun
+              />
+            </div>
           )}
         </div>
       </aside>

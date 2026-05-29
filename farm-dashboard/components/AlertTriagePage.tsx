@@ -41,24 +41,56 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [filterMode, setFilterMode] = useState<FilterMode>("all");
+  const [harvestFilter, setHarvestFilter] = useState<string>("all");
 
   const activeWeek = week ?? data?.defaultWeek ?? "";
-  const stats = data?.weeklyStats[activeWeek];
-  const plots = data?.plotRankings[activeWeek] ?? [];
+  const allWeekPlots = data?.plotRankings[activeWeek] ?? [];
   const detail = selectedKey ? data?.plotDetails[selectedKey] : null;
 
+  // Derive sorted harvest list for the current week
+  const harvests = Array.from(new Set(allWeekPlots.map((p) => p.farm_name))).sort();
+
+  // Harvest-filtered pool — everything downstream uses this
+  const plots = harvestFilter === "all"
+    ? allWeekPlots
+    : allWeekPlots.filter((p) => p.farm_name === harvestFilter);
+
+  // Counts from the harvest-filtered pool
   const urgentCount = plots.filter((p) => p.urgency_score > 0.7).length;
   const highStressPlotCount = plots.filter((p) => p.plant_stress_index > 0.6).length;
   const noResponseCount = plots.filter((p) => p.alert_flag === 1 && p.action_taken === 0).length;
 
+  // Derive KPI stats from filtered pool (so cards stay accurate per harvest)
+  const alertPlots = plots.filter((p) => p.alert_flag === 1);
+  const respondedPlots = alertPlots.filter((p) => p.action_taken === 1);
+  const derivedResponseRate = alertPlots.length > 0
+    ? Math.round((respondedPlots.length / alertPlots.length) * 1000) / 10
+    : 0;
+  const derivedAvgDelay = respondedPlots.length > 0
+    ? Math.round((respondedPlots.reduce((s, p) => s + (p.action_delay_days ?? 0), 0) / respondedPlots.length) * 100) / 100
+    : 0;
+  const derivedHighStressEvents = plots.filter((p) => p.plant_stress_index > 0.6).length;
+
+  // Deltas from previous week (operation-wide — kept for trend context)
+  const weeklyStats = data?.weeklyStats[activeWeek];
   const activeWeekIdx = data ? data.weeks.indexOf(activeWeek) : -1;
   const prevWeekKey = activeWeekIdx > 0 ? data!.weeks[activeWeekIdx - 1] : null;
-  const prevPlots = prevWeekKey ? (data?.plotRankings[prevWeekKey] ?? []) : plots;
-  const prevUrgentCount = prevPlots.filter((p) => p.urgency_score > 0.7).length;
+  const prevPlots = prevWeekKey ? (data?.plotRankings[prevWeekKey] ?? []) : allWeekPlots;
+  const prevPool = harvestFilter === "all" ? prevPlots : prevPlots.filter((p) => p.farm_name === harvestFilter);
+  const prevUrgentCount = prevPool.filter((p) => p.urgency_score > 0.7).length;
+  const prevHighStress = prevPool.filter((p) => p.plant_stress_index > 0.6).length;
+  const prevAlerts = prevPool.filter((p) => p.alert_flag === 1);
+  const prevResponded = prevAlerts.filter((p) => p.action_taken === 1);
+  const prevResponseRate = prevAlerts.length > 0
+    ? Math.round((prevResponded.length / prevAlerts.length) * 1000) / 10
+    : derivedResponseRate;
+  const prevAvgDelay = prevResponded.length > 0
+    ? Math.round((prevResponded.reduce((s, p) => s + (p.action_delay_days ?? 0), 0) / prevResponded.length) * 100) / 100
+    : derivedAvgDelay;
 
   const dayName = new Date().toLocaleDateString("en-US", { weekday: "long" });
 
-  // Apply active filter
+  // Urgency filter applied on top of harvest filter
   const filteredPlots = (() => {
     switch (filterMode) {
       case "critical":
@@ -80,6 +112,7 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     setWeek(w);
     setShowAll(false);
     setFilterMode("all");
+    setHarvestFilter("all");
   };
 
   const toggleFilter = (mode: FilterMode) => {
@@ -127,16 +160,17 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
       );
     }
     // Default
+    const scope = harvestFilter !== "all" ? ` in ${harvestFilter}` : "";
     return urgentCount > 0 ? (
       <p className="text-sm text-sage-900">
         <span className="font-semibold" style={{ color: COLORS.critical }}>
-          {urgentCount} plot{urgentCount !== 1 ? "s" : ""} need immediate attention.
+          {urgentCount} plot{urgentCount !== 1 ? "s" : ""}{scope} need immediate attention.
         </span>{" "}
         Sorted by urgency — start at the top. Tap any row for timeline, alerts, and stress simulator.
       </p>
     ) : (
       <p className="text-sm text-sage-900">
-        <span className="font-medium">No critical plots this week.</span>{" "}
+        <span className="font-medium">No critical plots{scope} this week.</span>{" "}
         <span className="text-sage-600">
           {plots.filter((p) => p.urgency_score >= 0.4).length} plots are on watch.
           Focus on any marked <span className="font-medium text-red-700">⏱ no response</span> — those have gone the longest without action.
@@ -147,31 +181,41 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
 
   return (
     <Wrapper className={wrapClass}>
-      {/* Header row */}
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h2 className={embedded ? "text-xl font-bold text-sage-900" : "text-2xl font-bold text-sage-900"}>
-            It&apos;s {dayName}. You have limited crew.
-          </h2>
-          <p className="mt-0.5 text-sage-600">Here&apos;s where to send them first.</p>
-        </div>
-        <select
-          className="rounded border border-sage-300 bg-white px-3 py-2 text-sm text-sage-900"
+      {/* Header */}
+      <div>
+        <h2 className={embedded ? "text-xl font-bold text-sage-900" : "text-2xl font-bold text-sage-900"}>
+          It&apos;s {dayName}. You have limited crew.
+        </h2>
+        <p className="mt-0.5 text-sage-600">Here&apos;s where to send them first.</p>
+      </div>
+
+      {/* Controls row — always right-aligned */}
+      <div className="mt-3 flex items-center justify-end gap-2">
+        <SelectPicker
+          value={harvestFilter}
+          onChange={(v) => { setHarvestFilter(v); setFilterMode("all"); setShowAll(false); }}
+        >
+          <option value="all">All farms</option>
+          {harvests.map((h) => (
+            <option key={h} value={h}>{h}</option>
+          ))}
+        </SelectPicker>
+        <SelectPicker
           value={activeWeek}
-          onChange={(e) => handleWeekChange(e.target.value)}
+          onChange={(v) => handleWeekChange(v)}
         >
           {data.weeks.map((w) => (
             <option key={w} value={w}>Week {w}</option>
           ))}
-        </select>
+        </SelectPicker>
       </div>
 
-      {/* Compact KPI banner */}
-      {stats && (
-        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-lg border border-sage-200 bg-white px-5 py-3 text-sm shadow-sm">
-          <Stat
+      {/* KPI cards */}
+      {weeklyStats && (
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <StatCard
             value={urgentCount}
-            label="plots critical"
+            label="Plots critical"
             valueColor={urgentCount > 0 ? COLORS.critical : COLORS.healthy}
             delta={urgentCount - prevUrgentCount}
             invertDelta
@@ -180,48 +224,45 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
             onClick={urgentCount > 0 ? () => toggleFilter("critical") : undefined}
             isActive={filterMode === "critical"}
           />
-          <Divider />
-          <Stat
-            value={stats.highStressEvents}
-            label="high-stress events"
-            valueColor={stats.highStressDelta > 0 ? COLORS.warning : undefined}
-            delta={stats.highStressDelta}
+          <StatCard
+            value={derivedHighStressEvents}
+            label="High-stress plots"
+            valueColor={derivedHighStressEvents > prevHighStress ? COLORS.warning : undefined}
+            delta={derivedHighStressEvents - prevHighStress}
             invertDelta
-            tooltip={`Plot-days this week where the stress index crossed 60% — the danger threshold. ${stats.highStressDelta > 0 ? `Up ${stats.highStressDelta} vs last week.` : stats.highStressDelta < 0 ? `Down ${Math.abs(stats.highStressDelta)} vs last week — improving.` : "Unchanged vs last week."} Hover rows below to see which plots are affected.`}
+            tooltip="Plots currently above the 60% stress threshold. Click to sort by stress level."
             tooltipPlots={plots.filter((p) => p.plant_stress_index > 0.6).slice(0, 4)}
             onClick={highStressPlotCount > 0 ? () => toggleFilter("highStress") : undefined}
             isActive={filterMode === "highStress"}
           />
-          <Divider />
-          <Stat
-            value={`${stats.responseRate}%`}
-            label="responded"
+          <StatCard
+            value={`${derivedResponseRate}%`}
+            label="Alerts responded"
             hint="≥80% is good"
             valueColor={
-              stats.responseRate < 60
+              derivedResponseRate < 60
                 ? COLORS.critical
-                : stats.responseRate < 80
+                : derivedResponseRate < 80
                   ? COLORS.warning
                   : COLORS.healthy
             }
-            delta={stats.responseRateDelta}
-            tooltip="Percentage of alert days this week where a crew action was recorded. Below 80% means alerts are being missed or ignored. A dropping response rate often predicts yield loss later in the season."
+            delta={Math.round((derivedResponseRate - prevResponseRate) * 10) / 10}
+            tooltip="Percentage of alerts this week where a crew action was recorded. Below 80% means alerts are being missed or ignored."
           />
-          <Divider />
-          <Stat
-            value={`${stats.avgResponseDays}d`}
-            label="avg delay"
+          <StatCard
+            value={`${derivedAvgDelay}d`}
+            label="Avg response delay"
             hint="target <1d"
             valueColor={
-              stats.avgResponseDays > 2
+              derivedAvgDelay > 2
                 ? COLORS.critical
-                : stats.avgResponseDays > 1
+                : derivedAvgDelay > 1
                   ? COLORS.warning
                   : COLORS.healthy
             }
-            delta={stats.avgResponseDaysDelta}
+            delta={Math.round((derivedAvgDelay - prevAvgDelay) * 100) / 100}
             invertDelta
-            tooltip="Average days between an alert firing and a crew action being taken. Under 1 day keeps stress from compounding. Over 2 days is associated with measurable yield impact — prioritise plots marked 'no response' in the list below."
+            tooltip="Average days between an alert firing and a crew action being taken. Under 1 day keeps stress from compounding. Over 2 days is associated with measurable yield impact."
           />
         </div>
       )}
@@ -233,17 +274,17 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
         </FilterChip>
         {urgentCount > 0 && (
           <FilterChip active={filterMode === "critical"} onClick={() => toggleFilter("critical")} color="red">
-            🔴 Critical ({urgentCount})
+            <IconAlertCircle /> Critical ({urgentCount})
           </FilterChip>
         )}
         {highStressPlotCount > 0 && (
           <FilterChip active={filterMode === "highStress"} onClick={() => toggleFilter("highStress")} color="amber">
-            🌡 High stress ({highStressPlotCount})
+            <IconActivity /> High stress ({highStressPlotCount})
           </FilterChip>
         )}
         {noResponseCount > 0 && (
           <FilterChip active={filterMode === "noResponse"} onClick={() => toggleFilter("noResponse")} color="red">
-            ⚠ No response ({noResponseCount})
+            <IconTriangleAlert /> No response ({noResponseCount})
           </FilterChip>
         )}
         {filterMode !== "all" && (
@@ -299,8 +340,32 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
-function Divider() {
-  return <span className="text-sage-300">·</span>;
+function SelectPicker({
+  value,
+  onChange,
+  children,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="relative">
+      <select
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="appearance-none rounded-lg border border-sage-300 bg-white py-2 pl-3 pr-8 text-sm text-sage-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-sage-400 cursor-pointer"
+      >
+        {children}
+      </select>
+      {/* Custom chevron — replaces the native arrow */}
+      <span className="pointer-events-none absolute inset-y-0 right-2.5 flex items-center text-sage-400">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </span>
+    </div>
+  );
 }
 
 function FilterChip({
@@ -314,7 +379,7 @@ function FilterChip({
   onClick: () => void;
   color?: "red" | "amber";
 }) {
-  const base = "rounded-full border px-3 py-1 text-xs font-medium transition-colors cursor-pointer select-none";
+  const base = "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors cursor-pointer select-none";
   if (active) {
     const activeColor =
       color === "red"
@@ -339,7 +404,38 @@ function FilterChip({
   );
 }
 
-function Stat({
+/** Filled circle with exclamation — used for Critical */
+function IconAlertCircle() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 13 13" aria-hidden="true" className="flex-shrink-0" fill="currentColor">
+      <circle cx="6.5" cy="6.5" r="6.5" />
+      <rect x="5.8" y="3.5" width="1.4" height="3.8" rx="0.7" fill="white" />
+      <circle cx="6.5" cy="9.2" r="0.85" fill="white" />
+    </svg>
+  );
+}
+
+/** Activity pulse with spike — used for High stress */
+function IconActivity() {
+  return (
+    <svg width="14" height="13" viewBox="0 0 14 13" aria-hidden="true" className="flex-shrink-0" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.3">
+      <polyline points="1,7 3.5,7 5,9.5 7,2 9,9.5 10.5,7 13,7" />
+    </svg>
+  );
+}
+
+/** Triangle warning — used for No response */
+function IconTriangleAlert() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 13 13" aria-hidden="true" className="flex-shrink-0" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.3">
+      <path d="M6.5 1.8L11.8 11H1.2L6.5 1.8z" />
+      <line x1="6.5" y1="5.2" x2="6.5" y2="8" />
+      <circle cx="6.5" cy="9.4" r="0.6" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function StatCard({
   value,
   label,
   hint,
@@ -367,38 +463,52 @@ function Stat({
   const isClickable = !!onClick;
 
   return (
-    <span
-      className={`group relative flex flex-col gap-0.5 ${isClickable ? "cursor-pointer" : "cursor-help"} ${isActive ? "rounded px-2 py-0.5 -mx-2 -my-0.5 bg-sage-100 ring-1 ring-sage-300" : ""}`}
+    <div
+      className={`group relative flex flex-col rounded-lg border bg-white p-4 shadow-sm transition-all
+        ${isClickable ? "cursor-pointer hover:shadow-md" : "cursor-help"}
+        ${isActive
+          ? "border-sage-400 ring-2 ring-sage-300"
+          : "border-sage-200 hover:border-sage-300"
+        }`}
       onClick={onClick}
       role={isClickable ? "button" : undefined}
       tabIndex={isClickable ? 0 : undefined}
       onKeyDown={isClickable ? (e) => { if (e.key === "Enter" || e.key === " ") onClick?.(); } : undefined}
     >
-      <span className="flex items-baseline gap-1.5">
-        <strong className="text-base" style={valueColor ? { color: valueColor } : undefined}>{value}</strong>
-        <span className="text-sage-600">{label}</span>
-        {isClickable && !isActive && (
-          <span className="text-sage-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity">↓ filter</span>
-        )}
-        {isActive && (
-          <span className="text-sage-500 text-xs">✕</span>
-        )}
-        {delta !== undefined && delta !== 0 && (
-          <span className="text-xs" style={{ color: deltaColor }}>
-            {delta > 0 ? "▲" : "▼"}{Math.abs(delta)}
-          </span>
-        )}
-      </span>
-      {hint && <span className="text-xs text-sage-400">{hint}</span>}
+      {/* Delta badge — top right */}
+      {delta !== undefined && delta !== 0 && (
+        <span
+          className="absolute top-3 right-3 text-xs font-semibold"
+          style={{ color: deltaColor }}
+        >
+          {delta > 0 ? "▲" : "▼"}{Math.abs(delta)}
+        </span>
+      )}
 
-      {/* Hover tooltip — only when not clickable active */}
+      {/* Value */}
+      <p
+        className="text-3xl font-bold leading-none"
+        style={valueColor ? { color: valueColor } : undefined}
+      >
+        {value}
+      </p>
+
+      {/* Label */}
+      <p className="mt-1.5 text-sm text-sage-600">{label}</p>
+
+      {/* Hint */}
+      {hint && <p className="mt-0.5 text-xs text-sage-400">{hint}</p>}
+
+      {/* Filter affordance */}
+      {isClickable && (
+        <p className={`mt-2 text-xs font-medium transition-opacity ${isActive ? "text-sage-500" : "text-sage-400 opacity-0 group-hover:opacity-100"}`}>
+          {isActive ? "✕ clear filter" : "↓ click to filter"}
+        </p>
+      )}
+
+      {/* Hover tooltip */}
       {tooltip && (
         <div className="pointer-events-none invisible group-hover:visible absolute left-0 top-full mt-2 z-30 w-72 rounded-lg border border-sage-200 bg-white p-3 text-xs text-sage-700 shadow-xl">
-          {isClickable && (
-            <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-sage-400">
-              {isActive ? "Click to clear filter" : "Click to filter list"}
-            </p>
-          )}
           <p className="leading-relaxed">{tooltip}</p>
           {tooltipPlots && tooltipPlots.length > 0 && (
             <div className="mt-2 border-t border-sage-100 pt-2 space-y-1">
@@ -415,6 +525,6 @@ function Stat({
           )}
         </div>
       )}
-    </span>
+    </div>
   );
 }

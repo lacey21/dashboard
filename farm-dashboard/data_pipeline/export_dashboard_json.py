@@ -42,10 +42,15 @@ def get_oneliner(alert_type: str, action_delay: float, stress_index: float, acti
 
 
 def urgency_score(row: pd.Series) -> float:
-    delay = min(max(float(row.get("action_delay_days") or 0), 0), 5) / 5
+    has_alert = float(row.get("alert_flag") or 0)
+    acted = float(row.get("action_taken") or 0)
+    raw_delay = float(row.get("action_delay_days") or 0)
+    # Alert fired but never acted on → treat as max delay so it ranks highest
+    effective_delay = 5.0 if (has_alert and not acted) else raw_delay
+    delay = min(max(effective_delay, 0), 5) / 5
     return (
         float(row.get("plant_stress_index") or 0) * 0.5
-        + float(row.get("alert_flag") or 0) * 0.3
+        + has_alert * 0.3
         + delay * 0.2
     )
 
@@ -102,7 +107,7 @@ def export_home(
     farm_health = round((1 - avg_stress) * 100, 1)
     prior_health = round((1 - prior_stress) * 100, 1)
 
-    critical_plots = int((latest["plant_stress_index"] > STRESS_THRESHOLD).sum())
+    critical_plots = int((latest.apply(urgency_score, axis=1) > 0.7).sum())
     active_alerts = int(latest["alert_flag"].sum())
     prior_alerts = int(prior_week["alert_flag"].sum()) if len(prior_week) else active_alerts
 

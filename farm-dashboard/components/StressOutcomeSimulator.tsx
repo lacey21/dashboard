@@ -1,6 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  ResponsiveContainer,
+  ReferenceLine,
+  ReferenceDot,
+  Tooltip,
+  ReferenceArea,
+} from "recharts";
 import { COLORS } from "@/constants/colors";
 
 export type StressModel = {
@@ -49,6 +61,29 @@ function OutcomePanel({ delta, label }: { delta: number; label: string }) {
   );
 }
 
+// Custom tooltip for the delay chart
+function DelayTooltip({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: { value: number }[];
+  label?: number;
+}) {
+  if (!active || !payload?.length) return null;
+  const val = payload[0].value;
+  const isGood = val < 0;
+  return (
+    <div className="rounded border border-sage-200 bg-white px-2.5 py-2 text-xs shadow-md">
+      <p className="text-sage-500 mb-0.5">{label}d delay</p>
+      <p className="font-semibold" style={{ color: isGood ? COLORS.healthy : COLORS.critical }}>
+        Δ {val >= 0 ? "+" : ""}{val.toFixed(3)}
+      </p>
+    </div>
+  );
+}
+
 export function StressOutcomeSimulator({
   model,
   initialValues,
@@ -75,6 +110,28 @@ export function StressOutcomeSimulator({
   const delay = values["action_delay_days"] ?? 0;
   const costOfWaiting = actDelayed - actNow;
 
+  // Build the delay-sensitivity curve (0 → 5 days, 21 points)
+  const chartData = useMemo(() => {
+    return Array.from({ length: 21 }, (_, i) => {
+      const d = parseFloat(((i / 20) * 5).toFixed(2));
+      return {
+        delay: d,
+        delta: parseFloat(predict({ ...values, action_delay_days: d }, model).toFixed(4)),
+      };
+    });
+  }, [values, model]);
+
+  const yValues = chartData.map((d) => d.delta);
+  const yMin = Math.min(...yValues);
+  const yMax = Math.max(...yValues);
+  const yPad = Math.max((yMax - yMin) * 0.15, 0.01);
+  const yDomainMin = yMin - yPad;
+  const yDomainMax = yMax + yPad;
+
+  // Current position on the curve
+  const curDot = chartData.find((d) => d.delay === parseFloat(delay.toFixed(2)));
+  const curDelta = curDot?.delta ?? actDelayed;
+
   return (
     <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
       <h3 className="text-lg font-semibold text-sage-900">Stress outcome simulator</h3>
@@ -83,6 +140,104 @@ export function StressOutcomeSimulator({
         Negative values mean stress improves. Trained on GreenLeaf&apos;s experimental data.
       </p>
 
+      {/* ── Delay sensitivity chart ── */}
+      <div className="mt-5">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-sage-500">
+          Cost of waiting — projected Δ stress vs response delay
+        </p>
+        <div className="text-xs text-sage-400 mb-3 flex gap-4">
+          <span>
+            <span className="inline-block w-2.5 h-2.5 rounded-sm mr-1" style={{ backgroundColor: "#dcfce7" }} />
+            stress improves
+          </span>
+          <span>
+            <span className="inline-block w-2.5 h-2.5 rounded-sm mr-1" style={{ backgroundColor: "#fee2e2" }} />
+            stress worsens
+          </span>
+        </div>
+        <ResponsiveContainer width="100%" height={180}>
+          <LineChart
+            data={chartData}
+            margin={{ top: 6, right: 12, bottom: 4, left: 0 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e8ede9" vertical={false} />
+
+            {/* Good zone (below zero) */}
+            {yDomainMin < 0 && (
+              <ReferenceArea
+                y1={yDomainMin}
+                y2={Math.min(0, yDomainMax)}
+                fill="#dcfce7"
+                fillOpacity={0.5}
+              />
+            )}
+            {/* Bad zone (above zero) */}
+            {yDomainMax > 0 && (
+              <ReferenceArea
+                y1={Math.max(0, yDomainMin)}
+                y2={yDomainMax}
+                fill="#fee2e2"
+                fillOpacity={0.4}
+              />
+            )}
+
+            <XAxis
+              dataKey="delay"
+              type="number"
+              domain={[0, 5]}
+              tickCount={6}
+              tickFormatter={(v: number) => `${v}d`}
+              tick={{ fontSize: 11, fill: "#8fa892" }}
+              axisLine={{ stroke: "#d1d9d2" }}
+              tickLine={false}
+            />
+            <YAxis
+              domain={[yDomainMin, yDomainMax]}
+              tickFormatter={(v: number) => v.toFixed(2)}
+              tick={{ fontSize: 11, fill: "#8fa892" }}
+              axisLine={false}
+              tickLine={false}
+              width={42}
+            />
+
+            {/* Zero line */}
+            <ReferenceLine y={0} stroke="#6B8F71" strokeWidth={1} strokeDasharray="5 3" />
+
+            {/* Current delay marker */}
+            <ReferenceLine
+              x={delay}
+              stroke="#B8953A"
+              strokeWidth={1.5}
+              strokeDasharray="4 3"
+              label={{ value: `${delay.toFixed(0)}d`, position: "top", fontSize: 10, fill: "#B8953A" }}
+            />
+
+            <Line
+              dataKey="delta"
+              stroke={COLORS.precision}
+              strokeWidth={2.5}
+              dot={false}
+              activeDot={{ r: 4, stroke: "white", strokeWidth: 2 }}
+            />
+
+            {/* Dot at current delay position */}
+            {curDot && (
+              <ReferenceDot
+                x={curDot.delay}
+                y={curDot.delta}
+                r={6}
+                fill={curDelta < 0 ? COLORS.healthy : COLORS.critical}
+                stroke="white"
+                strokeWidth={2}
+              />
+            )}
+
+            <Tooltip content={<DelayTooltip />} />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* ── Sliders ── */}
       <div className="mt-6 space-y-5">
         {model.featureNames.map((key) => {
           const [min, max] = model.bounds[key] as [number, number];
@@ -112,6 +267,7 @@ export function StressOutcomeSimulator({
         })}
       </div>
 
+      {/* ── Side-by-side outcome panels ── */}
       <div className="mt-6 grid grid-cols-2 gap-4">
         <OutcomePanel delta={actNow} label="Act today (delay = 0 days)" />
         <OutcomePanel

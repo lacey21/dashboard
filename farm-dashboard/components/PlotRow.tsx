@@ -13,6 +13,8 @@ export type PlotRowData = {
   action_taken?: number;
   alert_flag?: number;
   alert_type?: string;
+  farm_name?: string;
+  crop?: string;
 };
 
 type Props = {
