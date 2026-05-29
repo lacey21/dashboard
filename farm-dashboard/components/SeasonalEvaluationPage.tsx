@@ -45,6 +45,41 @@ type SeasonData = {
   precisionBenefitPerSeason: number;
 };
 
+const COST_OVER_TIME_COLORS = {
+  precision: "#2563EB",
+  routine: COLORS.sage,
+};
+
+const WEEK_RANGE = /^(\d{4}-\d{2}-\d{2})\/(\d{4}-\d{2}-\d{2})$/;
+
+function parseCostWeek(week: string): { start: Date; end: Date | null } {
+  const match = week.match(WEEK_RANGE);
+  if (match) {
+    return {
+      start: new Date(`${match[1]}T12:00:00`),
+      end: new Date(`${match[2]}T12:00:00`),
+    };
+  }
+  const start = new Date(`${week}T12:00:00`);
+  return { start, end: null };
+}
+
+function formatCostWeekAxis(week: string): string {
+  const { start } = parseCostWeek(week);
+  if (Number.isNaN(start.getTime())) return week;
+  return start.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+function formatCostWeekTooltip(week: string): string {
+  const { start, end } = parseCostWeek(week);
+  if (Number.isNaN(start.getTime())) return week;
+  const short: Intl.DateTimeFormatOptions = { month: "short", day: "numeric" };
+  if (end && !Number.isNaN(end.getTime())) {
+    return `${start.toLocaleDateString("en-US", short)} – ${end.toLocaleDateString("en-US", short)}, ${start.getFullYear()}`;
+  }
+  return start.toLocaleDateString("en-US", { ...short, year: "numeric" });
+}
+
 export default function SeasonalEvaluationPage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<SeasonData>("seasonal_evaluation.json");
 
@@ -117,15 +152,21 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
       <section className="mt-10">
         <h2 className="font-semibold text-sage-900">Precision vs routine cost over time</h2>
         <ResponsiveContainer width="100%" height={300}>
-          <ComposedChart data={data.costOverTime}>
+          <ComposedChart data={data.costOverTime} margin={{ top: 8, right: 8, left: 0, bottom: 4 }}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="week" tick={{ fontSize: 10 }} />
+            <XAxis
+              dataKey="week"
+              tick={{ fontSize: 10 }}
+              tickFormatter={formatCostWeekAxis}
+              minTickGap={48}
+              interval="preserveStartEnd"
+            />
             <YAxis yAxisId="left" tick={{ fontSize: 10 }} />
             <YAxis yAxisId="right" orientation="right" domain={[0, 1]} tick={{ fontSize: 10 }} />
-            <Tooltip />
+            <Tooltip labelFormatter={(label) => formatCostWeekTooltip(String(label))} />
             <Legend />
-            <Area yAxisId="left" type="monotone" dataKey="precision" stackId="1" fill={COLORS.precision} stroke={COLORS.precision} name="Precision $" />
-            <Area yAxisId="left" type="monotone" dataKey="routine" stackId="1" fill={COLORS.routine} stroke={COLORS.routine} name="Routine $" />
+            <Area yAxisId="left" type="monotone" dataKey="precision" stackId="1" fill={COST_OVER_TIME_COLORS.precision} stroke={COST_OVER_TIME_COLORS.precision} name="Precision $" />
+            <Area yAxisId="left" type="monotone" dataKey="routine" stackId="1" fill={COST_OVER_TIME_COLORS.routine} stroke={COST_OVER_TIME_COLORS.routine} name="Routine $" />
             <Line yAxisId="right" type="monotone" dataKey="plant_stress_index" stroke={COLORS.critical} name="Avg stress" />
           </ComposedChart>
         </ResponsiveContainer>
