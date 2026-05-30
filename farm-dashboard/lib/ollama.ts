@@ -42,7 +42,7 @@ type OllamaMessage = { role: "system" | "user" | "assistant"; content: string };
 
 export async function ollamaGenerate(
   prompt: string,
-  options?: { timeoutMs?: number; numPredict?: number },
+  options?: { timeoutMs?: number; numPredict?: number; keepAlive?: string },
 ): Promise<{ ok: true; text: string; model: string } | { ok: false; error: string }> {
   const timeoutMs = options?.timeoutMs ?? 60_000;
   const tried: string[] = [];
@@ -58,6 +58,8 @@ export async function ollamaGenerate(
           model,
           prompt,
           stream: false,
+          // Keep the model resident so the next call skips the multi-second reload.
+          keep_alive: options?.keepAlive ?? "30m",
           ...(options?.numPredict != null ? { options: { num_predict: options.numPredict } } : {}),
         }),
         signal: AbortSignal.timeout(timeoutMs),
@@ -96,7 +98,7 @@ export async function ollamaGenerate(
 
 export async function ollamaChat(
   messages: OllamaMessage[],
-  options?: { timeoutMs?: number; jsonFormat?: boolean },
+  options?: { timeoutMs?: number; jsonFormat?: boolean; numPredict?: number; keepAlive?: string },
 ): Promise<{ ok: true; text: string; model: string } | { ok: false; error: string }> {
   const timeoutMs = options?.timeoutMs ?? 120_000;
   const tried: string[] = [];
@@ -112,8 +114,13 @@ export async function ollamaChat(
           model,
           messages,
           stream: false,
+          // Keep the model resident so follow-up turns skip the multi-second reload.
+          keep_alive: options?.keepAlive ?? "30m",
           ...(options?.jsonFormat ? { format: "json" } : {}),
-          options: { temperature: 0.3 },
+          options: {
+            temperature: 0.3,
+            ...(options?.numPredict != null ? { num_predict: options.numPredict } : {}),
+          },
         }),
         signal: AbortSignal.timeout(timeoutMs),
       });

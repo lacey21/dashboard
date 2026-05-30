@@ -61,7 +61,7 @@ export const USE_CASES: UseCase[] = [
       { label: "Total revenue", hash: "total-revenue" },
       { label: "Precision benefit", hash: "precision-benefit" },
       { label: "Spend vs return", hash: "spend-return" },
-      { label: "Yield benchmark", hash: "yield-benchmark" },
+      { label: "Yield vs Canadian norm", hash: "yield-benchmark" },
     ],
   },
   {

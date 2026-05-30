@@ -2,11 +2,7 @@
 
 import {
   Area,
-  AreaChart,
-  Bar,
-  BarChart,
   CartesianGrid,
-  Cell,
   ComposedChart,
   Legend,
   Line,
@@ -19,6 +15,7 @@ import { useData } from "@/hooks/useData";
 import { KPICard } from "@/components/KPICard";
 import { SpendReturnBar } from "@/charts/SpendReturnBar";
 import { ScatterPlot } from "@/charts/ScatterPlot";
+import { YieldBenchmarkChart, type YieldBenchmarkRow } from "@/charts/YieldBenchmarkChart";
 import { YieldSimulator } from "@/components/YieldSimulator";
 import { LoanCalculator } from "@/components/LoanCalculator";
 import { Collapsible } from "@/components/Collapsible";
@@ -40,7 +37,7 @@ type SeasonData = {
   controlRevenueBaseline: number;
   costOverTime: { week: string; precision: number; routine: number; plant_stress_index: number }[];
   scatterPlots: { plot_id: string; treatment: string; totalCost: number; avgStress: number; yield: number }[];
-  yieldBenchmark: { crop: string; avgYield: number; benchmark: number; aboveBenchmark: boolean }[];
+  yieldBenchmark: YieldBenchmarkRow[];
   yieldModel: Parameters<typeof YieldSimulator>[0]["model"];
   monthlyRevenueCurve: { month: number; revenue: number }[];
   precisionBenefitPerSeason: number;
@@ -143,61 +140,58 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
       </div>
 
       <section id="spend-return" className="mt-10 scroll-mt-28">
-        <h2 className="font-semibold text-sage-900">Spend vs return by treatment</h2>
+        <h2 className="mb-3 font-semibold text-sage-900">Spend vs return by treatment</h2>
         <SpendReturnBar data={data.spendReturnByTreatment} controlBaseline={data.controlRevenueBaseline} />
-        <p className="text-sm text-sage-700">
+        <p className="-mt-3 text-sm leading-snug text-sage-700">
           Treatments above the baseline line outperformed routine management.
         </p>
       </section>
 
       <section className="mt-10">
-        <h2 className="font-semibold text-sage-900">Precision vs routine cost over time</h2>
-        <ResponsiveContainer width="100%" height={300}>
-          <ComposedChart data={data.costOverTime} margin={{ top: 8, right: 8, left: 0, bottom: 4 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis
-              dataKey="week"
-              tick={{ fontSize: 10 }}
-              tickFormatter={formatCostWeekAxis}
-              minTickGap={48}
-              interval="preserveStartEnd"
-            />
-            <YAxis yAxisId="left" tick={{ fontSize: 10 }} />
-            <YAxis yAxisId="right" orientation="right" domain={[0, 1]} tick={{ fontSize: 10 }} />
-            <Tooltip labelFormatter={(label) => formatCostWeekTooltip(String(label))} />
-            <Legend />
-            <Area yAxisId="left" type="monotone" dataKey="precision" stackId="1" fill={COST_OVER_TIME_COLORS.precision} stroke={COST_OVER_TIME_COLORS.precision} name="Precision $" />
-            <Area yAxisId="left" type="monotone" dataKey="routine" stackId="1" fill={COST_OVER_TIME_COLORS.routine} stroke={COST_OVER_TIME_COLORS.routine} name="Routine $" />
-            <Line yAxisId="right" type="monotone" dataKey="plant_stress_index" stroke={COLORS.critical} name="Avg stress" />
-          </ComposedChart>
-        </ResponsiveContainer>
-        <p className="mt-2 text-sm text-gray-600">
-          Weeks with higher precision spend are followed by stress reduction — or they aren&apos;t. Both
-          patterns are visible here.
-        </p>
+        <Collapsible
+          title="Precision vs routine cost over time"
+          summary="Weekly precision and routine spend stacked with average plant stress."
+          openLabel="Show chart"
+        >
+          <ResponsiveContainer width="100%" height={300}>
+            <ComposedChart data={data.costOverTime} margin={{ top: 8, right: 8, left: 0, bottom: 4 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                dataKey="week"
+                tick={{ fontSize: 10 }}
+                tickFormatter={formatCostWeekAxis}
+                minTickGap={48}
+                interval="preserveStartEnd"
+              />
+              <YAxis yAxisId="left" tick={{ fontSize: 10 }} />
+              <YAxis yAxisId="right" orientation="right" domain={[0, 1]} tick={{ fontSize: 10 }} />
+              <Tooltip labelFormatter={(label) => formatCostWeekTooltip(String(label))} />
+              <Legend />
+              <Area yAxisId="left" type="monotone" dataKey="precision" stackId="1" fill={COST_OVER_TIME_COLORS.precision} stroke={COST_OVER_TIME_COLORS.precision} name="Precision $" />
+              <Area yAxisId="left" type="monotone" dataKey="routine" stackId="1" fill={COST_OVER_TIME_COLORS.routine} stroke={COST_OVER_TIME_COLORS.routine} name="Routine $" />
+              <Line yAxisId="right" type="monotone" dataKey="plant_stress_index" stroke={COLORS.critical} name="Avg stress" />
+            </ComposedChart>
+          </ResponsiveContainer>
+          <p className="mt-2 text-sm text-gray-600">
+            Weeks with higher precision spend are followed by stress reduction — or they aren&apos;t. Both
+            patterns are visible here.
+          </p>
+        </Collapsible>
       </section>
 
       <section className="mt-10">
-        <h2 className="font-semibold text-sage-900">Stress vs spend</h2>
-        <ScatterPlot data={data.scatterPlots} />
+        <Collapsible
+          title="Stress vs spend"
+          summary="Plot-level season cost, stress, and yield by treatment."
+          openLabel="Show chart"
+        >
+          <ScatterPlot data={data.scatterPlots} />
+        </Collapsible>
       </section>
 
       <section id="yield-benchmark" className="mt-10 scroll-mt-28">
-        <h2 className="font-semibold text-sage-900">Yield benchmark by crop</h2>
-        <ResponsiveContainer width="100%" height={280}>
-          <BarChart data={data.yieldBenchmark}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="crop" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="avgYield" name="GreenLeaf avg">
-              {data.yieldBenchmark.map((entry) => (
-                <Cell key={entry.crop} fill={entry.aboveBenchmark ? COLORS.healthy : COLORS.warning} />
-              ))}
-            </Bar>
-            <Bar dataKey="benchmark" name="BC benchmark" fill={COLORS.routine} opacity={0.5} />
-          </BarChart>
-        </ResponsiveContainer>
+        <h2 className="font-semibold text-sage-900">Yield vs Canadian greenhouse norm by crop</h2>
+        <YieldBenchmarkChart data={data.yieldBenchmark} />
       </section>
 
       <section className="mt-10">

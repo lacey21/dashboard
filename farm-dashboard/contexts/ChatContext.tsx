@@ -4,6 +4,8 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -44,6 +46,23 @@ export function ChatProvider({ children }: { children: ReactNode }) {
   const closeChat = useCallback(() => setOpen(false), []);
   const toggleChat = useCallback(() => setOpen((o) => !o), []);
   const reset = useCallback(() => setMessages([]), []);
+
+  // Pre-warm the local model + prompt cache for the current farm while the user
+  // is reading the suggestions, so their first question returns in seconds rather
+  // than paying the full prompt prefill cold. Fire-and-forget, once per farm.
+  const warmedFarm = useRef<string | null>(null);
+  useEffect(() => {
+    if (!open || warmedFarm.current === farm) return;
+    warmedFarm.current = farm;
+    fetch("/api/ollama/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ farm, warm: true }),
+    }).catch(() => {
+      // Best-effort: if warming fails the question still works, just slower.
+      warmedFarm.current = null;
+    });
+  }, [open, farm]);
 
   const send = useCallback(
     async (question: string) => {

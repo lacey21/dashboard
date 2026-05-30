@@ -376,8 +376,9 @@
     {
       "crop": "Cucumber",
       "avgYield": 7.95,
-      "benchmark": 75,
-      "aboveBenchmark": false
+      "typicalBenchmark": 67.5,
+      "aspirationalBenchmark": 97.5,
+      "status": "check_units"
     }
   ],
   "yieldModel": {

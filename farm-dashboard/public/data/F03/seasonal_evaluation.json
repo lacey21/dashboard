@@ -271,8 +271,9 @@
     {
       "crop": "Strawberry",
       "avgYield": 4.95,
-      "benchmark": 8,
-      "aboveBenchmark": false
+      "typicalBenchmark": 10.0,
+      "aspirationalBenchmark": 13.5,
+      "status": "check_units"
     }
   ],
   "yieldModel": {

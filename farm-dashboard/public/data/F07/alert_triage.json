@@ -297,7 +297,7 @@
         "plant_stress_index": 0.4634781852466437,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -313,7 +313,7 @@
         "plant_stress_index": 0.3505661371575683,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -331,7 +331,7 @@
         "plant_stress_index": 0.4576381779484422,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -347,12 +347,28 @@
         "plant_stress_index": 0.3662504446770962,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
     ],
     "2025-W09": [
+      {
+        "plot_id": "P0095",
+        "label": "Plot P0095 \u2014 Strawberry, BC Harvest 7",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 7",
+        "greenhouse_id": "GH006",
+        "region": "Abbotsford",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7750363796045687,
+        "plant_stress_index": 0.5500727592091375,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      },
       {
         "plot_id": "P0105",
         "label": "Plot P0105 \u2014 Strawberry, BC Harvest 7",
@@ -368,22 +384,6 @@
         "oneliner": "High Pest Pressure alert active. Action taken same day.",
         "alert_flag": 1,
         "action_taken": 1
-      },
-      {
-        "plot_id": "P0095",
-        "label": "Plot P0095 \u2014 Strawberry, BC Harvest 7",
-        "crop": "Strawberry",
-        "farm_name": "BC Harvest 7",
-        "greenhouse_id": "GH006",
-        "region": "Abbotsford",
-        "climate_zone": "Interior",
-        "urgency_score": 0.5750363796045688,
-        "plant_stress_index": 0.5500727592091375,
-        "alert_type": "High Pest Pressure",
-        "action_delay_days": 0,
-        "oneliner": "High Pest Pressure alert active. Action taken same day.",
-        "alert_flag": 1,
-        "action_taken": 0
       }
     ],
     "2025-W10": [
@@ -399,7 +399,7 @@
         "plant_stress_index": 0.4897234416409467,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -415,7 +415,7 @@
         "plant_stress_index": 0.4766369458764077,
         "alert_type": "High Canopy Temp",
         "action_delay_days": 0,
-        "oneliner": "High Canopy Temp alert active. Action taken same day.",
+        "oneliner": "High Canopy Temp alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -483,7 +483,7 @@
         "plant_stress_index": 0.492908272,
         "alert_type": "High VPD",
         "action_delay_days": 0,
-        "oneliner": "High VPD alert active. Action taken same day.",
+        "oneliner": "High VPD alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -585,7 +585,7 @@
         "plant_stress_index": 0.5148076927881863,
         "alert_type": "High Canopy Temp",
         "action_delay_days": 0,
-        "oneliner": "High Canopy Temp alert active. Action taken same day.",
+        "oneliner": "High Canopy Temp alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -599,11 +599,11 @@
         "greenhouse_id": "GH006",
         "region": "Abbotsford",
         "climate_zone": "Interior",
-        "urgency_score": 0.6153191310816173,
+        "urgency_score": 0.8153191310816172,
         "plant_stress_index": 0.6306382621632345,
         "alert_type": "High Pest Pressure",
         "action_delay_days": 0,
-        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
         "alert_flag": 1,
         "action_taken": 0
       },
@@ -619,7 +619,7 @@
         "plant_stress_index": 0.507218465,
         "alert_type": "High Canopy Temp",
         "action_delay_days": 0,
-        "oneliner": "High Canopy Temp alert active. Action taken same day.",
+        "oneliner": "High Canopy Temp alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -667,11 +667,11 @@
         "greenhouse_id": "GH006",
         "region": "Abbotsford",
         "climate_zone": "Interior",
-        "urgency_score": 0.6249829234294217,
+        "urgency_score": 0.8249829234294217,
         "plant_stress_index": 0.6499658468588435,
         "alert_type": "High Pest Pressure",
         "action_delay_days": 0,
-        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
         "alert_flag": 1,
         "action_taken": 0
       },
@@ -687,7 +687,7 @@
         "plant_stress_index": 0.5357123090768893,
         "alert_type": "High VPD",
         "action_delay_days": 0,
-        "oneliner": "High VPD alert active. Action taken same day.",
+        "oneliner": "High VPD alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -739,7 +739,7 @@
         "plant_stress_index": 0.4904518886458696,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -755,7 +755,7 @@
         "plant_stress_index": 0.4395118339505044,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -773,7 +773,7 @@
         "plant_stress_index": 0.5295171421427498,
         "alert_type": "High VPD",
         "action_delay_days": 0,
-        "oneliner": "High VPD alert active. Action taken same day.",
+        "oneliner": "High VPD alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -789,7 +789,7 @@
         "plant_stress_index": 0.4383572294709486,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -807,7 +807,7 @@
         "plant_stress_index": 0.4752919805934441,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -823,7 +823,7 @@
         "plant_stress_index": 0.4127779005879146,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -841,7 +841,7 @@
         "plant_stress_index": 0.5012570892746784,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -857,7 +857,7 @@
         "plant_stress_index": 0.3193167499225293,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -871,11 +871,11 @@
         "greenhouse_id": "GH006",
         "region": "Abbotsford",
         "climate_zone": "Interior",
-        "urgency_score": 0.5924931733377619,
+        "urgency_score": 0.7924931733377618,
         "plant_stress_index": 0.5849863466755237,
         "alert_type": "High Pest Pressure",
         "action_delay_days": 0,
-        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
         "alert_flag": 1,
         "action_taken": 0
       },
@@ -891,7 +891,7 @@
         "plant_stress_index": 0.5057389240097734,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -909,7 +909,7 @@
         "plant_stress_index": 0.4717581090899663,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -925,7 +925,7 @@
         "plant_stress_index": 0.3598238711476642,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -943,7 +943,7 @@
         "plant_stress_index": 0.4107651028068427,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -959,7 +959,7 @@
         "plant_stress_index": 0.4027504555572915,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -993,7 +993,7 @@
         "plant_stress_index": 0.4788552819450369,
         "alert_type": "Low Moisture",
         "action_delay_days": 0,
-        "oneliner": "Low Moisture alert active. Action taken same day.",
+        "oneliner": "Low Moisture alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1011,7 +1011,7 @@
         "plant_stress_index": 0.4709796127387572,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1027,7 +1027,7 @@
         "plant_stress_index": 0.3650559105303613,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1041,11 +1041,11 @@
         "greenhouse_id": "GH006",
         "region": "Abbotsford",
         "climate_zone": "Interior",
-        "urgency_score": 0.638541974597807,
+        "urgency_score": 0.8385419745978071,
         "plant_stress_index": 0.6770839491956141,
         "alert_type": "High Pest Pressure",
         "action_delay_days": 0,
-        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
         "alert_flag": 1,
         "action_taken": 0
       },
@@ -1061,7 +1061,7 @@
         "plant_stress_index": 0.3806664487693296,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1079,7 +1079,7 @@
         "plant_stress_index": 0.3847049686566253,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1095,7 +1095,7 @@
         "plant_stress_index": 0.3681215957262743,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1113,7 +1113,7 @@
         "plant_stress_index": 0.4950874017321625,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1129,7 +1129,7 @@
         "plant_stress_index": 0.3271325767743084,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1147,7 +1147,7 @@
         "plant_stress_index": 0.4566021975637754,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1163,7 +1163,7 @@
         "plant_stress_index": 0.4056642135814635,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1181,7 +1181,7 @@
         "plant_stress_index": 0.4339080852788138,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1197,7 +1197,7 @@
         "plant_stress_index": 0.3824536497540314,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1231,7 +1231,7 @@
         "plant_stress_index": 0.3682369713608169,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1245,11 +1245,11 @@
         "greenhouse_id": "GH006",
         "region": "Abbotsford",
         "climate_zone": "Interior",
-        "urgency_score": 0.5947833122136912,
+        "urgency_score": 0.7947833122136911,
         "plant_stress_index": 0.5895666244273824,
         "alert_type": "High Pest Pressure",
         "action_delay_days": 0,
-        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
         "alert_flag": 1,
         "action_taken": 0
       },
@@ -1265,7 +1265,7 @@
         "plant_stress_index": 0.3790668194019447,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1283,7 +1283,7 @@
         "plant_stress_index": 0.499287421,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1299,7 +1299,7 @@
         "plant_stress_index": 0.3463052231278553,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1317,7 +1317,7 @@
         "plant_stress_index": 0.4990937695965784,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       },
@@ -1333,7 +1333,7 @@
         "plant_stress_index": 0.357253302,
         "alert_type": "No Alert",
         "action_delay_days": 0,
-        "oneliner": "Stress alert active. Action taken same day.",
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
         "alert_flag": 0,
         "action_taken": 0
       }
@@ -1378,6 +1378,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.463,
+        "vpd_kpa": 1.434,
+        "substrate_moisture": 0.55,
+        "pest_pressure_index": 0.371,
+        "disease_risk_index": 0.122
       }
     },
     "P0095|2025-W07": {
@@ -1418,6 +1426,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.351,
+        "vpd_kpa": 1.395,
+        "substrate_moisture": 0.489,
+        "pest_pressure_index": 0.404,
+        "disease_risk_index": 0.151
       }
     },
     "P0105|2025-W08": {
@@ -1488,6 +1504,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.458,
+        "vpd_kpa": 1.305,
+        "substrate_moisture": 0.535,
+        "pest_pressure_index": 0.395,
+        "disease_risk_index": 0.135
       }
     },
     "P0095|2025-W08": {
@@ -1558,6 +1582,101 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.366,
+        "vpd_kpa": 1.531,
+        "substrate_moisture": 0.473,
+        "pest_pressure_index": 0.39,
+        "disease_risk_index": 0.134
+      }
+    },
+    "P0095|2025-W09": {
+      "plot_id": "P0095",
+      "week": "2025-W09",
+      "header": "Plot P0095 \u2014 Strawberry, BC Harvest 7. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-24",
+          "plant_stress_index": 0.3981416723635769,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-25",
+          "plant_stress_index": 0.4852601665794407,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-26",
+          "plant_stress_index": 0.3933984005829821,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-27",
+          "plant_stress_index": 0.5297955997526715,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-28",
+          "plant_stress_index": 0.4300376323516038,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-01",
+          "plant_stress_index": 0.5201546927842683,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-02",
+          "plant_stress_index": 0.5500727592091375,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 11.05001209703389,
+        "fertilizer": 44.05137403873351,
+        "labor": 34.88326540534818,
+        "pesticide": 56.37819378738533,
+        "water": 1.71,
+        "precision": 49.40626168084947,
+        "routine": 98.66658364765146,
+        "total": 148.07284532850093
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 7",
+        "climateZone": "Interior",
+        "stressIndex": 0.55,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 148.07
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.55,
+        "vpd_kpa": 1.365,
+        "substrate_moisture": 0.492,
+        "pest_pressure_index": 0.447,
+        "disease_risk_index": 0.143
       }
     },
     "P0105|2025-W09": {
@@ -1669,85 +1788,14 @@
         "actionDelayDays": 0,
         "postActionDelta": -0.113,
         "weeklyCost": 236.96
-      }
-    },
-    "P0095|2025-W09": {
-      "plot_id": "P0095",
-      "week": "2025-W09",
-      "header": "Plot P0095 \u2014 Strawberry, BC Harvest 7. Moderate stress \u2014 check timeline.",
-      "timeline": [
-        {
-          "date": "2025-02-24",
-          "plant_stress_index": 0.3981416723635769,
-          "alert_flag": 0,
-          "action_taken": 0
-        },
-        {
-          "date": "2025-02-25",
-          "plant_stress_index": 0.4852601665794407,
-          "alert_flag": 0,
-          "action_taken": 0
-        },
-        {
-          "date": "2025-02-26",
-          "plant_stress_index": 0.3933984005829821,
-          "alert_flag": 0,
-          "action_taken": 0
-        },
-        {
-          "date": "2025-02-27",
-          "plant_stress_index": 0.5297955997526715,
-          "alert_flag": 0,
-          "action_taken": 1
-        },
-        {
-          "date": "2025-02-28",
-          "plant_stress_index": 0.4300376323516038,
-          "alert_flag": 0,
-          "action_taken": 0
-        },
-        {
-          "date": "2025-03-01",
-          "plant_stress_index": 0.5201546927842683,
-          "alert_flag": 0,
-          "action_taken": 0
-        },
-        {
-          "date": "2025-03-02",
-          "plant_stress_index": 0.5500727592091375,
-          "alert_flag": 1,
-          "action_taken": 0
-        }
-      ],
-      "alertLog": [
-        {
-          "date": "2025-03-02",
-          "alert_type": "High Pest Pressure",
-          "recommended_action": "No Action",
-          "action_taken": 0,
-          "action_delay_days": 0,
-          "post_action_stress_delta_3d": 0.0
-        }
-      ],
-      "costs": {
-        "energy": 11.05001209703389,
-        "fertilizer": 44.05137403873351,
-        "labor": 34.88326540534818,
-        "pesticide": 56.37819378738533,
-        "water": 1.71,
-        "precision": 49.40626168084947,
-        "routine": 98.66658364765146,
-        "total": 148.07284532850093
       },
-      "aiContext": {
-        "crop": "Strawberry",
-        "farmName": "BC Harvest 7",
-        "climateZone": "Interior",
-        "stressIndex": 0.55,
-        "alertType": "High Pest Pressure",
-        "actionDelayDays": 0,
-        "postActionDelta": 0.0,
-        "weeklyCost": 148.07
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.809,
+        "vpd_kpa": 1.621,
+        "substrate_moisture": 0.354,
+        "pest_pressure_index": 0.426,
+        "disease_risk_index": 0.127
       }
     },
     "P0105|2025-W10": {
@@ -1851,6 +1899,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 321.83
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.49,
+        "vpd_kpa": 1.537,
+        "substrate_moisture": 0.485,
+        "pest_pressure_index": 0.45,
+        "disease_risk_index": 0.126
       }
     },
     "P0095|2025-W10": {
@@ -1930,6 +1986,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 36.79
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.477,
+        "vpd_kpa": 1.351,
+        "substrate_moisture": 0.496,
+        "pest_pressure_index": 0.426,
+        "disease_risk_index": 0.136
       }
     },
     "P0105|2025-W11": {
@@ -2057,6 +2121,14 @@
         "actionDelayDays": 1,
         "postActionDelta": -0.017,
         "weeklyCost": 335.83
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.577,
+        "vpd_kpa": 1.49,
+        "substrate_moisture": 0.403,
+        "pest_pressure_index": 0.449,
+        "disease_risk_index": 0.139
       }
     },
     "P0095|2025-W11": {
@@ -2144,6 +2216,14 @@
         "actionDelayDays": 1,
         "postActionDelta": -0.059,
         "weeklyCost": 69.57
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.569,
+        "vpd_kpa": 1.807,
+        "substrate_moisture": 0.47,
+        "pest_pressure_index": 0.457,
+        "disease_risk_index": 0.134
       }
     },
     "P0105|2025-W12": {
@@ -2263,6 +2343,14 @@
         "actionDelayDays": 0,
         "postActionDelta": -0.055,
         "weeklyCost": 245.79
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.685,
+        "vpd_kpa": 1.718,
+        "substrate_moisture": 0.425,
+        "pest_pressure_index": 0.48,
+        "disease_risk_index": 0.157
       }
     },
     "P0095|2025-W12": {
@@ -2350,6 +2438,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 114.38
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.493,
+        "vpd_kpa": 1.631,
+        "substrate_moisture": 0.52,
+        "pest_pressure_index": 0.461,
+        "disease_risk_index": 0.145
       }
     },
     "P0105|2025-W13": {
@@ -2477,6 +2573,14 @@
         "actionDelayDays": 1,
         "postActionDelta": -0.037,
         "weeklyCost": 325.26
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.638,
+        "vpd_kpa": 1.748,
+        "substrate_moisture": 0.502,
+        "pest_pressure_index": 0.489,
+        "disease_risk_index": 0.143
       }
     },
     "P0095|2025-W13": {
@@ -2572,6 +2676,14 @@
         "actionDelayDays": 2,
         "postActionDelta": 0.1,
         "weeklyCost": 141.42
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.507,
+        "vpd_kpa": 1.888,
+        "substrate_moisture": 0.514,
+        "pest_pressure_index": 0.488,
+        "disease_risk_index": 0.129
       }
     },
     "P0105|2025-W14": {
@@ -2691,6 +2803,14 @@
         "actionDelayDays": 1,
         "postActionDelta": -0.065,
         "weeklyCost": 381.67
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.84,
+        "vpd_kpa": 1.43,
+        "substrate_moisture": 0.407,
+        "pest_pressure_index": 0.49,
+        "disease_risk_index": 0.152
       }
     },
     "P0095|2025-W14": {
@@ -2818,6 +2938,14 @@
         "actionDelayDays": 0,
         "postActionDelta": -0.036,
         "weeklyCost": 311.45
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.812,
+        "vpd_kpa": 1.81,
+        "substrate_moisture": 0.453,
+        "pest_pressure_index": 0.51,
+        "disease_risk_index": 0.13
       }
     },
     "P0105|2025-W15": {
@@ -2945,6 +3073,14 @@
         "actionDelayDays": 0,
         "postActionDelta": -0.087,
         "weeklyCost": 300.87
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.592,
+        "vpd_kpa": 1.831,
+        "substrate_moisture": 0.491,
+        "pest_pressure_index": 0.489,
+        "disease_risk_index": 0.13
       }
     },
     "P0095|2025-W15": {
@@ -3024,6 +3160,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 305.84
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.515,
+        "vpd_kpa": 1.406,
+        "substrate_moisture": 0.54,
+        "pest_pressure_index": 0.5,
+        "disease_risk_index": 0.121
       }
     },
     "P0105|2025-W16": {
@@ -3135,6 +3279,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 174.17
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.631,
+        "vpd_kpa": 1.576,
+        "substrate_moisture": 0.44,
+        "pest_pressure_index": 0.47,
+        "disease_risk_index": 0.15
       }
     },
     "P0095|2025-W16": {
@@ -3222,6 +3374,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 80.9
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.507,
+        "vpd_kpa": 1.481,
+        "substrate_moisture": 0.438,
+        "pest_pressure_index": 0.474,
+        "disease_risk_index": 0.158
       }
     },
     "P0105|2025-W17": {
@@ -3341,6 +3501,14 @@
         "actionDelayDays": 0,
         "postActionDelta": -0.025,
         "weeklyCost": 259.44
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.688,
+        "vpd_kpa": 1.758,
+        "substrate_moisture": 0.44,
+        "pest_pressure_index": 0.481,
+        "disease_risk_index": 0.146
       }
     },
     "P0095|2025-W17": {
@@ -3436,6 +3604,14 @@
         "actionDelayDays": 1,
         "postActionDelta": -0.025,
         "weeklyCost": 158.11
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.56,
+        "vpd_kpa": 1.607,
+        "substrate_moisture": 0.439,
+        "pest_pressure_index": 0.486,
+        "disease_risk_index": 0.155
       }
     },
     "P0105|2025-W18": {
@@ -3547,6 +3723,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 211.88
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.65,
+        "vpd_kpa": 1.444,
+        "substrate_moisture": 0.413,
+        "pest_pressure_index": 0.486,
+        "disease_risk_index": 0.135
       }
     },
     "P0095|2025-W18": {
@@ -3626,6 +3810,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 39.68
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.536,
+        "vpd_kpa": 1.655,
+        "substrate_moisture": 0.499,
+        "pest_pressure_index": 0.486,
+        "disease_risk_index": 0.139
       }
     },
     "P0105|2025-W19": {
@@ -3737,6 +3929,14 @@
         "actionDelayDays": 0,
         "postActionDelta": -0.075,
         "weeklyCost": 319.51
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.771,
+        "vpd_kpa": 1.644,
+        "substrate_moisture": 0.354,
+        "pest_pressure_index": 0.43,
+        "disease_risk_index": 0.131
       }
     },
     "P0095|2025-W19": {
@@ -3832,6 +4032,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.016,
         "weeklyCost": 258.92
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.682,
+        "vpd_kpa": 1.542,
+        "substrate_moisture": 0.429,
+        "pest_pressure_index": 0.451,
+        "disease_risk_index": 0.15
       }
     },
     "P0105|2025-W20": {
@@ -3919,6 +4127,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 207.29
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.49,
+        "vpd_kpa": 1.407,
+        "substrate_moisture": 0.423,
+        "pest_pressure_index": 0.401,
+        "disease_risk_index": 0.152
       }
     },
     "P0095|2025-W20": {
@@ -4014,6 +4230,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 194.77
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.44,
+        "vpd_kpa": 1.424,
+        "substrate_moisture": 0.467,
+        "pest_pressure_index": 0.443,
+        "disease_risk_index": 0.157
       }
     },
     "P0095|2025-W21": {
@@ -4084,6 +4308,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.53,
+        "vpd_kpa": 1.768,
+        "substrate_moisture": 0.523,
+        "pest_pressure_index": 0.406,
+        "disease_risk_index": 0.123
       }
     },
     "P0105|2025-W21": {
@@ -4163,6 +4395,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 31.28
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.438,
+        "vpd_kpa": 1.362,
+        "substrate_moisture": 0.508,
+        "pest_pressure_index": 0.372,
+        "disease_risk_index": 0.139
       }
     },
     "P0105|2025-W22": {
@@ -4266,6 +4506,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 149.36
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.475,
+        "vpd_kpa": 1.512,
+        "substrate_moisture": 0.431,
+        "pest_pressure_index": 0.377,
+        "disease_risk_index": 0.149
       }
     },
     "P0095|2025-W22": {
@@ -4336,6 +4584,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.413,
+        "vpd_kpa": 1.548,
+        "substrate_moisture": 0.405,
+        "pest_pressure_index": 0.397,
+        "disease_risk_index": 0.121
       }
     },
     "P0105|2025-W23": {
@@ -4415,6 +4671,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 47.94
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.501,
+        "vpd_kpa": 1.5,
+        "substrate_moisture": 0.562,
+        "pest_pressure_index": 0.445,
+        "disease_risk_index": 0.145
       }
     },
     "P0095|2025-W23": {
@@ -4485,6 +4749,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.319,
+        "vpd_kpa": 1.278,
+        "substrate_moisture": 0.493,
+        "pest_pressure_index": 0.39,
+        "disease_risk_index": 0.136
       }
     },
     "P0105|2025-W24": {
@@ -4580,6 +4852,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 111.18
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.585,
+        "vpd_kpa": 1.464,
+        "substrate_moisture": 0.406,
+        "pest_pressure_index": 0.375,
+        "disease_risk_index": 0.13
       }
     },
     "P0095|2025-W24": {
@@ -4650,6 +4930,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.506,
+        "vpd_kpa": 1.531,
+        "substrate_moisture": 0.419,
+        "pest_pressure_index": 0.408,
+        "disease_risk_index": 0.138
       }
     },
     "P0105|2025-W25": {
@@ -4753,6 +5041,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 176.44
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.472,
+        "vpd_kpa": 1.396,
+        "substrate_moisture": 0.49,
+        "pest_pressure_index": 0.426,
+        "disease_risk_index": 0.144
       }
     },
     "P0095|2025-W25": {
@@ -4840,6 +5136,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 184.04
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.36,
+        "vpd_kpa": 1.257,
+        "substrate_moisture": 0.536,
+        "pest_pressure_index": 0.439,
+        "disease_risk_index": 0.136
       }
     },
     "P0105|2025-W26": {
@@ -4910,6 +5214,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.411,
+        "vpd_kpa": 1.195,
+        "substrate_moisture": 0.509,
+        "pest_pressure_index": 0.357,
+        "disease_risk_index": 0.144
       }
     },
     "P0095|2025-W26": {
@@ -4980,6 +5292,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 100.85
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.403,
+        "vpd_kpa": 1.523,
+        "substrate_moisture": 0.507,
+        "pest_pressure_index": 0.375,
+        "disease_risk_index": 0.147
       }
     },
     "P0105|2025-W27": {
@@ -5075,6 +5395,14 @@
         "actionDelayDays": 2,
         "postActionDelta": -0.055,
         "weeklyCost": 100.46
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.598,
+        "vpd_kpa": 1.127,
+        "substrate_moisture": 0.343,
+        "pest_pressure_index": 0.371,
+        "disease_risk_index": 0.156
       }
     },
     "P0095|2025-W27": {
@@ -5145,6 +5473,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.479,
+        "vpd_kpa": 1.253,
+        "substrate_moisture": 0.399,
+        "pest_pressure_index": 0.391,
+        "disease_risk_index": 0.136
       }
     },
     "P0105|2025-W28": {
@@ -5224,6 +5560,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 53.24
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.471,
+        "vpd_kpa": 1.362,
+        "substrate_moisture": 0.494,
+        "pest_pressure_index": 0.439,
+        "disease_risk_index": 0.161
       }
     },
     "P0095|2025-W28": {
@@ -5294,6 +5638,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.365,
+        "vpd_kpa": 0.917,
+        "substrate_moisture": 0.409,
+        "pest_pressure_index": 0.428,
+        "disease_risk_index": 0.139
       }
     },
     "P0105|2025-W29": {
@@ -5373,6 +5725,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 38.89
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.677,
+        "vpd_kpa": 1.314,
+        "substrate_moisture": 0.342,
+        "pest_pressure_index": 0.421,
+        "disease_risk_index": 0.15
       }
     },
     "P0095|2025-W29": {
@@ -5443,6 +5803,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 54.67
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.381,
+        "vpd_kpa": 0.909,
+        "substrate_moisture": 0.433,
+        "pest_pressure_index": 0.424,
+        "disease_risk_index": 0.164
       }
     },
     "P0105|2025-W30": {
@@ -5554,6 +5922,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 230.55
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.385,
+        "vpd_kpa": 1.156,
+        "substrate_moisture": 0.507,
+        "pest_pressure_index": 0.376,
+        "disease_risk_index": 0.138
       }
     },
     "P0095|2025-W30": {
@@ -5641,6 +6017,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 57.73
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.368,
+        "vpd_kpa": 1.043,
+        "substrate_moisture": 0.523,
+        "pest_pressure_index": 0.488,
+        "disease_risk_index": 0.173
       }
     },
     "P0105|2025-W31": {
@@ -5711,6 +6095,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 225.23
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.495,
+        "vpd_kpa": 1.525,
+        "substrate_moisture": 0.464,
+        "pest_pressure_index": 0.431,
+        "disease_risk_index": 0.156
       }
     },
     "P0095|2025-W31": {
@@ -5781,6 +6173,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.327,
+        "vpd_kpa": 0.877,
+        "substrate_moisture": 0.456,
+        "pest_pressure_index": 0.382,
+        "disease_risk_index": 0.144
       }
     },
     "P0105|2025-W32": {
@@ -5860,6 +6260,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 36.79
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.457,
+        "vpd_kpa": 1.114,
+        "substrate_moisture": 0.431,
+        "pest_pressure_index": 0.426,
+        "disease_risk_index": 0.158
       }
     },
     "P0095|2025-W32": {
@@ -5930,6 +6338,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 253.63
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.406,
+        "vpd_kpa": 1.391,
+        "substrate_moisture": 0.446,
+        "pest_pressure_index": 0.396,
+        "disease_risk_index": 0.123
       }
     },
     "P0105|2025-W33": {
@@ -6009,6 +6425,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 197.87
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.434,
+        "vpd_kpa": 1.09,
+        "substrate_moisture": 0.466,
+        "pest_pressure_index": 0.381,
+        "disease_risk_index": 0.156
       }
     },
     "P0095|2025-W33": {
@@ -6079,6 +6503,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 124.8
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.382,
+        "vpd_kpa": 1.499,
+        "substrate_moisture": 0.503,
+        "pest_pressure_index": 0.421,
+        "disease_risk_index": 0.13
       }
     },
     "P0105|2025-W34": {
@@ -6158,6 +6590,14 @@
         "actionDelayDays": 2,
         "postActionDelta": 0.023,
         "weeklyCost": 132.8
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.648,
+        "vpd_kpa": 1.661,
+        "substrate_moisture": 0.422,
+        "pest_pressure_index": 0.401,
+        "disease_risk_index": 0.13
       }
     },
     "P0095|2025-W34": {
@@ -6228,6 +6668,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.368,
+        "vpd_kpa": 1.187,
+        "substrate_moisture": 0.436,
+        "pest_pressure_index": 0.384,
+        "disease_risk_index": 0.127
       }
     },
     "P0105|2025-W35": {
@@ -6339,6 +6787,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 164.65
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.59,
+        "vpd_kpa": 1.128,
+        "substrate_moisture": 0.39,
+        "pest_pressure_index": 0.381,
+        "disease_risk_index": 0.128
       }
     },
     "P0095|2025-W35": {
@@ -6426,6 +6882,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 56.22
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.379,
+        "vpd_kpa": 1.263,
+        "substrate_moisture": 0.427,
+        "pest_pressure_index": 0.414,
+        "disease_risk_index": 0.155
       }
     },
     "P0105|2025-W36": {
@@ -6496,6 +6960,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.499,
+        "vpd_kpa": 1.331,
+        "substrate_moisture": 0.465,
+        "pest_pressure_index": 0.401,
+        "disease_risk_index": 0.156
       }
     },
     "P0095|2025-W36": {
@@ -6566,6 +7038,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.346,
+        "vpd_kpa": 1.138,
+        "substrate_moisture": 0.588,
+        "pest_pressure_index": 0.376,
+        "disease_risk_index": 0.147
       }
     },
     "P0105|2025-W37": {
@@ -6641,6 +7121,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 79.64
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.499,
+        "vpd_kpa": 1.484,
+        "substrate_moisture": 0.424,
+        "pest_pressure_index": 0.376,
+        "disease_risk_index": 0.148
       }
     },
     "P0095|2025-W37": {
@@ -6699,6 +7187,14 @@
         "actionDelayDays": 0,
         "postActionDelta": 0.0,
         "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.357,
+        "vpd_kpa": 1.032,
+        "substrate_moisture": 0.419,
+        "pest_pressure_index": 0.358,
+        "disease_risk_index": 0.157
       }
     }
   },
@@ -6957,5 +7453,59 @@
       "thisWeekStress": 0.357,
       "actionTaken": false
     }
-  ]
+  ],
+  "stressModel": {
+    "featureNames": [
+      "action_delay_days",
+      "plant_stress_index",
+      "vpd_kpa",
+      "substrate_moisture",
+      "pest_pressure_index",
+      "disease_risk_index"
+    ],
+    "coefficients": [
+      0.015466648171639029,
+      -0.034841733433115335,
+      0.006281319229293425,
+      0.035666224023720126,
+      0.011479510787916262,
+      0.13117958284436504
+    ],
+    "intercept": -0.07788028382376812,
+    "defaults": {
+      "action_delay_days": 0.711,
+      "plant_stress_index": 0.652,
+      "vpd_kpa": 1.599,
+      "substrate_moisture": 0.43,
+      "pest_pressure_index": 0.454,
+      "disease_risk_index": 0.141
+    },
+    "bounds": {
+      "action_delay_days": [
+        0,
+        5
+      ],
+      "plant_stress_index": [
+        0.0,
+        1.0
+      ],
+      "vpd_kpa": [
+        0.61,
+        2.04
+      ],
+      "substrate_moisture": [
+        0.0,
+        1.0
+      ],
+      "pest_pressure_index": [
+        0.0,
+        1.0
+      ],
+      "disease_risk_index": [
+        0.0,
+        1.0
+      ]
+    },
+    "avgSeasonDelta": -0.04
+  }
 }

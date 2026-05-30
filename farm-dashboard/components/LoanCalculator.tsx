@@ -154,7 +154,7 @@ export function LoanCalculator({
           <Tooltip />
           <Legend />
           <Bar dataKey="revenue" name="Revenue" fill={COLORS.healthy} />
-          <Bar dataKey="payment" name="Repayment" fill={COLORS.precision} />
+          <Bar dataKey="payment" name="Repayment" fill="#2563EB" />
         </BarChart>
       </ResponsiveContainer>
 

@@ -1232,26 +1232,30 @@
     {
       "crop": "Cucumber",
       "avgYield": 7.95,
-      "benchmark": 75,
-      "aboveBenchmark": false
+      "typicalBenchmark": 67.5,
+      "aspirationalBenchmark": 97.5,
+      "status": "check_units"
     },
     {
       "crop": "Pepper",
       "avgYield": 6.84,
-      "benchmark": 18,
-      "aboveBenchmark": false
+      "typicalBenchmark": 25.0,
+      "aspirationalBenchmark": 29.0,
+      "status": "check_units"
     },
     {
       "crop": "Strawberry",
       "avgYield": 5.16,
-      "benchmark": 8,
-      "aboveBenchmark": false
+      "typicalBenchmark": 10.0,
+      "aspirationalBenchmark": 13.5,
+      "status": "check_units"
     },
     {
       "crop": "Tomato",
       "avgYield": 9.43,
-      "benchmark": 65,
-      "aboveBenchmark": false
+      "typicalBenchmark": 57.5,
+      "aspirationalBenchmark": 67.5,
+      "status": "check_units"
     }
   ],
   "yieldModel": {

@@ -504,8 +504,9 @@
     {
       "crop": "Tomato",
       "avgYield": 9.43,
-      "benchmark": 65,
-      "aboveBenchmark": false
+      "typicalBenchmark": 57.5,
+      "aspirationalBenchmark": 67.5,
+      "status": "check_units"
     }
   ],
   "yieldModel": {
