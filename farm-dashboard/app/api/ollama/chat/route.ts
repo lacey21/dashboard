@@ -162,8 +162,28 @@ function compactSustainability(s: Json | null): Json | null {
   };
 }
 
+type ScopeNode = {
+  id: string;
+  name?: string;
+  level?: string;
+  region?: string;
+  primaryCrop?: string;
+  children?: ScopeNode[];
+};
+
+/** Depth-first search for a scope (farm / greenhouse / plot) in the tree. */
+function findScope(nodes: ScopeNode[], id: string): ScopeNode | null {
+  for (const node of nodes) {
+    if (node.id === id) return node;
+    const hit = node.children ? findScope(node.children, id) : null;
+    if (hit) return hit;
+  }
+  return null;
+}
+
 async function buildContext(farm: string) {
-  const [farmsRaw, home, alert, seasonal, sustainability] = await Promise.all([
+  const [scopesRaw, farmsRaw, home, alert, seasonal, sustainability] = await Promise.all([
+    readJson("", "scopes.json").catch(() => null),
     readJson("", "farms.json").catch(() => null),
     readJson(farm, "home.json"),
     readJson(farm, "alert_triage.json"),
@@ -172,7 +192,11 @@ async function buildContext(farm: string) {
   ]);
 
   const farms = Array.isArray(farmsRaw) ? (farmsRaw as { id: string; name?: string }[]) : [];
-  const meta = farms.find((f) => f.id === farm) ?? { id: farm };
+  const tree = Array.isArray(scopesRaw) ? (scopesRaw as ScopeNode[]) : [];
+  // Resolve from the full hierarchy first (covers greenhouses & plots), then the
+  // flat farm list, then a bare id fallback.
+  const meta =
+    findScope(tree, farm) ?? farms.find((f) => f.id === farm) ?? { id: farm };
 
   return {
     scope: {

@@ -63,22 +63,24 @@ function syncAlertTriageFromHash(
 
 export default function AlertTriagePage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<AlertData>("alert_triage.json");
-  const { farm: globalFarm, farms: globalFarms, setFarm: setGlobalFarm } = useFarm();
+  const { farm: globalFarm, farms: globalFarms } = useFarm();
   const [week, setWeek] = useState<string | null>(null);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [filterMode, setFilterMode] = useState<FilterMode>("all");
   const [harvestFilter, setHarvestFilter] = useState<string>("all");
 
-  // Sync global farm selector → local harvest filter
-  useEffect(() => {
-    if (globalFarm === "all") {
-      setHarvestFilter("all");
-    } else {
-      const match = globalFarms.find((f) => f.id === globalFarm);
-      if (match) setHarvestFilter(match.name);
-    }
-  }, [globalFarm, globalFarms]);
+  // Sync global scope selector → local harvest filter during render (React's
+  // "adjust state when a prop changes" pattern). Greenhouse/plot scopes aren't in
+  // the flat farm list and their data is already scope-filtered, so they fall
+  // back to "all" (show every plot in the loaded, already-narrowed data).
+  const scopeSyncKey = `${globalFarm}|${globalFarms.length}`;
+  const [syncedScope, setSyncedScope] = useState(scopeSyncKey);
+  if (syncedScope !== scopeSyncKey) {
+    setSyncedScope(scopeSyncKey);
+    const match = globalFarms.find((f) => f.id === globalFarm);
+    setHarvestFilter(match && globalFarm !== "all" ? match.name : "all");
+  }
 
   // Sidebar deep links (#critical, #high-stress, etc.)
   useEffect(() => {

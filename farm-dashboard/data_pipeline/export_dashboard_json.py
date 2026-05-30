@@ -6,6 +6,7 @@ Reads cleaned CSVs from ../../data/clean and writes to ../public/data/
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -230,6 +231,72 @@ def fit_yield_model(model_df: pd.DataFrame) -> dict:
     }
 
 
+STRESS_MODEL_FEATURES = [
+    "action_delay_days",
+    "plant_stress_index",
+    "vpd_kpa",
+    "substrate_moisture",
+    "pest_pressure_index",
+    "disease_risk_index",
+]
+# Below this many acted-on alert events a scope can't fit a stable stress model,
+# so it falls back to the fleet-wide model (mirrors the shared yield model).
+STRESS_MODEL_MIN_ROWS = 8
+
+
+def fit_stress_model(sensor: pd.DataFrame) -> dict | None:
+    """Fit the 3-day post-action stress-delta model for one scope. Returns None
+    when the scope has too few acted-on alert events; callers then reuse the
+    fleet-wide model so single-plot / one-greenhouse scopes never train on noise."""
+    model_rows = sensor[
+        (sensor["alert_flag"] == 1)
+        & (sensor["action_taken"] == 1)
+        & sensor["post_action_stress_delta_3d"].notna()
+    ].copy()
+    if len(model_rows) < STRESS_MODEL_MIN_ROWS:
+        return None
+    for col in STRESS_MODEL_FEATURES:
+        model_rows[col] = pd.to_numeric(model_rows[col], errors="coerce").fillna(0)
+    X_s = model_rows[STRESS_MODEL_FEATURES].values
+    y_s = model_rows["post_action_stress_delta_3d"].values
+    gb_s = GradientBoostingRegressor(n_estimators=80, random_state=42, max_depth=3)
+    gb_s.fit(X_s, y_s)
+    lr_s = LinearRegression()
+    lr_s.fit(X_s, gb_s.predict(X_s))
+    return {
+        "featureNames": STRESS_MODEL_FEATURES,
+        "coefficients": lr_s.coef_.tolist(),
+        "intercept": float(lr_s.intercept_),
+        "defaults": {col: round(float(model_rows[col].mean()), 3) for col in STRESS_MODEL_FEATURES},
+        "bounds": {
+            "action_delay_days": [0, 5],
+            "plant_stress_index": [0.0, 1.0],
+            "vpd_kpa": [round(float(sensor["vpd_kpa"].min()), 2), round(float(sensor["vpd_kpa"].max()), 2)],
+            "substrate_moisture": [0.0, 1.0],
+            "pest_pressure_index": [0.0, 1.0],
+            "disease_risk_index": [0.0, 1.0],
+        },
+        "avgSeasonDelta": round(float(y_s.mean()), 3),
+    }
+
+
+def sanitize(obj):
+    """Recursively coerce non-finite floats (NaN / inf) to 0 and numpy scalars to
+    plain Python types. Tiny single-plot scopes can produce NaN (e.g. a plot with
+    no scouting rows); this guarantees every scope serialises to valid JSON that
+    the browser's res.json() can parse."""
+    if isinstance(obj, (float, np.floating)):
+        f = float(obj)
+        return f if math.isfinite(f) else 0
+    if isinstance(obj, np.integer):
+        return int(obj)
+    if isinstance(obj, dict):
+        return {k: sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [sanitize(v) for v in obj]
+    return obj
+
+
 def get_oneliner(alert_type: str, action_delay: float, stress_index: float, action_taken: int = 1) -> str:
     alert = alert_type if alert_type and alert_type != "No Alert" else "Stress"
     delay = float(action_delay or 0)
@@ -443,7 +510,9 @@ def export_home(
     }
 
 
-def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.DataFrame) -> dict:
+def export_alert_triage(
+    sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.DataFrame, stress_model: dict
+) -> dict:
     sensor = sensor.merge(
         meta[["plot_id", "farm_name", "region", "climate_zone", "treatment"]],
         on="plot_id",
@@ -618,44 +687,8 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
                 }
             )
 
-    # Stress outcome ML model — predicts 3-day post-action stress delta
-    stress_features = [
-        "action_delay_days",
-        "plant_stress_index",
-        "vpd_kpa",
-        "substrate_moisture",
-        "pest_pressure_index",
-        "disease_risk_index",
-    ]
-    model_rows = sensor[
-        (sensor["alert_flag"] == 1)
-        & (sensor["action_taken"] == 1)
-        & sensor["post_action_stress_delta_3d"].notna()
-    ].copy()
-    for col in stress_features:
-        model_rows[col] = pd.to_numeric(model_rows[col], errors="coerce").fillna(0)
-    X_s = model_rows[stress_features].values
-    y_s = model_rows["post_action_stress_delta_3d"].values
-    gb_s = GradientBoostingRegressor(n_estimators=80, random_state=42, max_depth=3)
-    gb_s.fit(X_s, y_s)
-    lr_s = LinearRegression()
-    lr_s.fit(X_s, gb_s.predict(X_s))
-    stress_model = {
-        "featureNames": stress_features,
-        "coefficients": lr_s.coef_.tolist(),
-        "intercept": float(lr_s.intercept_),
-        "defaults": {col: round(float(model_rows[col].mean()), 3) for col in stress_features},
-        "bounds": {
-            "action_delay_days": [0, 5],
-            "plant_stress_index": [0.0, 1.0],
-            "vpd_kpa": [round(float(sensor["vpd_kpa"].min()), 2), round(float(sensor["vpd_kpa"].max()), 2)],
-            "substrate_moisture": [0.0, 1.0],
-            "pest_pressure_index": [0.0, 1.0],
-            "disease_risk_index": [0.0, 1.0],
-        },
-        "avgSeasonDelta": round(float(y_s.mean()), 3),
-    }
-
+    # Stress outcome model is fit once per scope (or shared from the fleet for
+    # data-thin scopes) and passed in — see fit_stress_model / main().
     return {
         "weeks": weeks,
         "defaultWeek": last_week,
@@ -1004,19 +1037,18 @@ PLOT_SCOPED_TABLES = [
 ]
 
 
-def filter_tables_for_farm(
-    tables: dict[str, pd.DataFrame], meta: pd.DataFrame, farm_id: str | None
+def scope_tables(
+    tables: dict[str, pd.DataFrame], meta: pd.DataFrame, plot_ids: list[str]
 ) -> tuple[dict[str, pd.DataFrame], pd.DataFrame]:
-    """Return (tables, meta) narrowed to a single farm. farm_id=None keeps the
-    full fleet (the aggregate "all farms" scope)."""
-    if farm_id is None:
-        return tables, meta
-    scope_meta = meta[meta["farm_id"] == farm_id]
-    plot_ids = set(scope_meta["plot_id"])
+    """Return (tables, meta) narrowed to a set of plots. Works for any scope
+    level — fleet, farm, greenhouse, or a single plot — since every level is just
+    a subset of plot_ids."""
+    plot_set = set(plot_ids)
+    scope_meta = meta[meta["plot_id"].isin(plot_set)]
     scoped = dict(tables)
     for name in PLOT_SCOPED_TABLES:
         df = tables[name]
-        scoped[name] = df[df["plot_id"].isin(plot_ids)]
+        scoped[name] = df[df["plot_id"].isin(plot_set)]
     return scoped, scope_meta
 
 
@@ -1024,6 +1056,7 @@ def build_scope_outputs(
     tables: dict[str, pd.DataFrame],
     meta: pd.DataFrame,
     yield_model: dict,
+    stress_model: dict,
     farm_label: str,
 ) -> dict:
     home = export_home(
@@ -1048,6 +1081,7 @@ def build_scope_outputs(
             tables["daily_sensor_readings"],
             tables["daily_input_costs"],
             meta,
+            stress_model,
         ),
         "seasonal_evaluation.json": export_seasonal(
             tables["daily_sensor_readings"],
@@ -1077,50 +1111,107 @@ def main() -> None:
     )
 
     farms = tables["farms"]
-    plots = tables["plots"]
+    greenhouses = tables["greenhouses"].sort_values("greenhouse_id")
+    plots = tables["plots"].sort_values("plot_id")
     area_by_farm = plots.groupby("farm_id")["plot_area_m2"].sum().to_dict()
 
-    # Selector index consumed by the frontend FarmProvider.
+    # Train the stress model once on the full fleet. Scopes too thin to fit their
+    # own (single plots, one-greenhouse farms) reuse it — same idea as the shared
+    # fleet yield model above.
+    fleet_stress_model = fit_stress_model(tables["daily_sensor_readings"])
+
+    # Flat farm list the Sidebar / aggregate stats still consume unchanged.
     farm_index = [
-        {
-            "id": "all",
-            "name": "All Farms",
-            "region": "Fleet-wide",
-            "primaryCrop": "Mixed crops",
-        }
+        {"id": "all", "name": "All Farms", "region": "Fleet-wide", "primaryCrop": "Mixed crops"}
     ]
+    # Hierarchical scope tree (farms → greenhouses → plots) for the nested selector.
+    scope_tree: list[dict] = [
+        {"id": "all", "name": "All Farms", "level": "all", "region": "Fleet-wide", "primaryCrop": "Mixed crops"}
+    ]
+    # Every scope to export data for, as (scope_id, plot_ids, label). Aggregate
+    # first (the default view), then farm → greenhouse → plot in order.
+    scopes: list[tuple[str, list[str], str]] = [("all", list(plots["plot_id"]), "GreenLeaf CEA")]
+
     for _, fr in farms.iterrows():
+        fid = fr["farm_id"]
+        region = fr["region"]
+        primary_crop = fr["primary_crop"]
         farm_index.append(
             {
-                "id": fr["farm_id"],
+                "id": fid,
                 "name": fr["farm_name"],
-                "region": fr["region"],
-                "primaryCrop": fr["primary_crop"],
+                "region": region,
+                "primaryCrop": primary_crop,
                 "climateZone": fr["climate_zone"],
                 "productionSystem": fr["production_system"],
-                "areaM2": round(float(area_by_farm.get(fr["farm_id"], 0))),
+                "areaM2": round(float(area_by_farm.get(fid, 0))),
             }
         )
 
-    # Aggregate first (the default view), then each individual farm in order.
-    scopes: list[tuple[str, str | None, str]] = [("all", None, "GreenLeaf CEA")]
-    for _, fr in farms.iterrows():
-        scopes.append((fr["farm_id"], fr["farm_id"], fr["farm_name"]))
+        farm_plots = plots[plots["farm_id"] == fid]
+        scopes.append((fid, list(farm_plots["plot_id"]), fr["farm_name"]))
+        farm_node = {
+            "id": fid,
+            "name": fr["farm_name"],
+            "level": "farm",
+            "sublabel": f"{region} · {primary_crop}",
+            "region": region,
+            "primaryCrop": primary_crop,
+            "children": [],
+        }
 
-    for scope_id, farm_id, farm_label in scopes:
-        scoped_tables, scoped_meta = filter_tables_for_farm(tables, meta, farm_id)
-        outputs = build_scope_outputs(scoped_tables, scoped_meta, yield_model, farm_label)
+        for _, g in greenhouses[greenhouses["farm_id"] == fid].iterrows():
+            gid = g["greenhouse_id"]
+            gh_plots = plots[plots["greenhouse_id"] == gid]
+            scopes.append((gid, list(gh_plots["plot_id"]), f"{fr['farm_name']} · {gid}"))
+            gh_node = {
+                "id": gid,
+                "name": gid,
+                "level": "greenhouse",
+                "sublabel": f"{g['structure_type']} · {g['crop']}",
+                "region": region,
+                "primaryCrop": g["crop"],
+                "children": [],
+            }
+
+            for _, p in gh_plots.iterrows():
+                pid = p["plot_id"]
+                scopes.append((pid, [pid], f"{fr['farm_name']} · {gid} · {pid}"))
+                gh_node["children"].append(
+                    {
+                        "id": pid,
+                        "name": pid,
+                        "level": "plot",
+                        "sublabel": f"{p['treatment']} · Block {p['treatment_block']}",
+                        "region": region,
+                        "primaryCrop": p["crop"],
+                    }
+                )
+            farm_node["children"].append(gh_node)
+        scope_tree.append(farm_node)
+
+    for scope_id, plot_ids, farm_label in scopes:
+        scoped_tables, scoped_meta = scope_tables(tables, meta, plot_ids)
+        # Single-plot scopes always borrow the fleet stress model; larger scopes
+        # fit their own and fall back to the fleet when the events are too sparse.
+        if len(plot_ids) == 1:
+            stress_model = fleet_stress_model
+        else:
+            stress_model = fit_stress_model(scoped_tables["daily_sensor_readings"]) or fleet_stress_model
+        outputs = build_scope_outputs(scoped_tables, scoped_meta, yield_model, stress_model, farm_label)
         scope_dir = OUT_DIR / scope_id
         scope_dir.mkdir(parents=True, exist_ok=True)
         for name, payload in outputs.items():
             path = scope_dir / name
             with open(path, "w", encoding="utf-8") as f:
-                json.dump(payload, f, indent=2, default=str)
+                json.dump(sanitize(payload), f, indent=2, default=str)
         print(f"Wrote {scope_dir} ({farm_label})")
 
     with open(OUT_DIR / "farms.json", "w", encoding="utf-8") as f:
         json.dump(farm_index, f, indent=2)
-    print(f"Wrote {OUT_DIR / 'farms.json'}")
+    with open(OUT_DIR / "scopes.json", "w", encoding="utf-8") as f:
+        json.dump(sanitize(scope_tree), f, indent=2, default=str)
+    print(f"Wrote {OUT_DIR / 'farms.json'} and {OUT_DIR / 'scopes.json'}")
 
 
 if __name__ == "__main__":
