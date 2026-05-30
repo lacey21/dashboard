@@ -1,0 +1,4292 @@
+{
+  "weeks": [
+    "2025-W07",
+    "2025-W08",
+    "2025-W09",
+    "2025-W10",
+    "2025-W11",
+    "2025-W12",
+    "2025-W13",
+    "2025-W14",
+    "2025-W15",
+    "2025-W16",
+    "2025-W17",
+    "2025-W18",
+    "2025-W19",
+    "2025-W20",
+    "2025-W21",
+    "2025-W22",
+    "2025-W23",
+    "2025-W24",
+    "2025-W25",
+    "2025-W26",
+    "2025-W27",
+    "2025-W28",
+    "2025-W29",
+    "2025-W30",
+    "2025-W31",
+    "2025-W32",
+    "2025-W33",
+    "2025-W34",
+    "2025-W35",
+    "2025-W36",
+    "2025-W37"
+  ],
+  "defaultWeek": "2025-W37",
+  "weeklyStats": {
+    "2025-W07": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W08": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W09": {
+      "highStressEvents": 2,
+      "highStressDelta": 1,
+      "responseRate": 16.7,
+      "responseRateDelta": -83.3,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -1.0
+    },
+    "2025-W10": {
+      "highStressEvents": 4,
+      "highStressDelta": 2,
+      "responseRate": 66.7,
+      "responseRateDelta": 50.0,
+      "avgResponseDays": 0.33,
+      "avgResponseDaysDelta": 0.33
+    },
+    "2025-W11": {
+      "highStressEvents": 3,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 33.3,
+      "avgResponseDays": 0.75,
+      "avgResponseDaysDelta": 0.42
+    },
+    "2025-W12": {
+      "highStressEvents": 4,
+      "highStressDelta": 1,
+      "responseRate": 80.0,
+      "responseRateDelta": -20.0,
+      "avgResponseDays": 0.6,
+      "avgResponseDaysDelta": -0.15
+    },
+    "2025-W13": {
+      "highStressEvents": 2,
+      "highStressDelta": -2,
+      "responseRate": 100.0,
+      "responseRateDelta": 20.0,
+      "avgResponseDays": 0.4,
+      "avgResponseDaysDelta": -0.2
+    },
+    "2025-W14": {
+      "highStressEvents": 7,
+      "highStressDelta": 5,
+      "responseRate": 71.4,
+      "responseRateDelta": -28.6,
+      "avgResponseDays": 0.57,
+      "avgResponseDaysDelta": 0.17
+    },
+    "2025-W15": {
+      "highStressEvents": 4,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 28.6,
+      "avgResponseDays": 0.4,
+      "avgResponseDaysDelta": -0.17
+    },
+    "2025-W16": {
+      "highStressEvents": 3,
+      "highStressDelta": -1,
+      "responseRate": 85.7,
+      "responseRateDelta": -14.3,
+      "avgResponseDays": 0.57,
+      "avgResponseDaysDelta": 0.17
+    },
+    "2025-W17": {
+      "highStressEvents": 4,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 14.3,
+      "avgResponseDays": 0.71,
+      "avgResponseDaysDelta": 0.14
+    },
+    "2025-W18": {
+      "highStressEvents": 1,
+      "highStressDelta": -3,
+      "responseRate": 75.0,
+      "responseRateDelta": -25.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -0.21
+    },
+    "2025-W19": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 80.0,
+      "responseRateDelta": 5.0,
+      "avgResponseDays": 0.4,
+      "avgResponseDaysDelta": -0.1
+    },
+    "2025-W20": {
+      "highStressEvents": 3,
+      "highStressDelta": 0,
+      "responseRate": 25.0,
+      "responseRateDelta": -55.0,
+      "avgResponseDays": 0.25,
+      "avgResponseDaysDelta": -0.15
+    },
+    "2025-W21": {
+      "highStressEvents": 1,
+      "highStressDelta": -2,
+      "responseRate": 100.0,
+      "responseRateDelta": 75.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.25
+    },
+    "2025-W22": {
+      "highStressEvents": 1,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 1.0
+    },
+    "2025-W23": {
+      "highStressEvents": 0,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W24": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W25": {
+      "highStressEvents": 2,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W26": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W27": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 66.7,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W28": {
+      "highStressEvents": 0,
+      "highStressDelta": -1,
+      "responseRate": 0,
+      "responseRateDelta": -66.7,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W29": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W30": {
+      "highStressEvents": 3,
+      "highStressDelta": 3,
+      "responseRate": 40.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.2,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W31": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 0,
+      "responseRateDelta": -40.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.2
+    },
+    "2025-W32": {
+      "highStressEvents": 2,
+      "highStressDelta": 2,
+      "responseRate": 50.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W33": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 100.0,
+      "responseRateDelta": 50.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W34": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 2.0,
+      "avgResponseDaysDelta": 1.0
+    },
+    "2025-W35": {
+      "highStressEvents": 5,
+      "highStressDelta": 4,
+      "responseRate": 66.7,
+      "responseRateDelta": -33.3,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -1.5
+    },
+    "2025-W36": {
+      "highStressEvents": 1,
+      "highStressDelta": -4,
+      "responseRate": 100.0,
+      "responseRateDelta": 33.3,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W37": {
+      "highStressEvents": 0,
+      "highStressDelta": -1,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0.0
+    }
+  },
+  "plotRankings": {
+    "2025-W07": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.22337811401559104,
+        "plant_stress_index": 0.4467562280311821,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W08": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2317830175394863,
+        "plant_stress_index": 0.4635660350789726,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W09": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.7221949048514487,
+        "plant_stress_index": 0.8443898097028975,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W10": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6044022126488562,
+        "plant_stress_index": 0.6088044252977124,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W11": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2744446796866831,
+        "plant_stress_index": 0.5488893593733662,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W12": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2460438155193232,
+        "plant_stress_index": 0.4920876310386464,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W13": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.5909750628973014,
+        "plant_stress_index": 0.5819501257946029,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W14": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.7032152048122071,
+        "plant_stress_index": 0.8064304096244141,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W15": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.27336906657547727,
+        "plant_stress_index": 0.5467381331509545,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W16": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6836744037541291,
+        "plant_stress_index": 0.6073488075082583,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 2,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 2 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W17": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6213866679606223,
+        "plant_stress_index": 0.6427733359212445,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W18": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2646860675,
+        "plant_stress_index": 0.529372135,
+        "alert_type": "High Canopy Temp",
+        "action_delay_days": 0,
+        "oneliner": "High Canopy Temp alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W19": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.7515359345032957,
+        "plant_stress_index": 0.8230718690065912,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W20": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.25543082429342495,
+        "plant_stress_index": 0.5108616485868499,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W21": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.22449184730607044,
+        "plant_stress_index": 0.4489836946121409,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W22": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6280135196934589,
+        "plant_stress_index": 0.5760270393869177,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W23": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2226592821397701,
+        "plant_stress_index": 0.4453185642795402,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W24": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6783788453191317,
+        "plant_stress_index": 0.6767576906382635,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W25": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.1867320827674977,
+        "plant_stress_index": 0.3734641655349954,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W26": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.21705850282383005,
+        "plant_stress_index": 0.4341170056476601,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W27": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6064936004548962,
+        "plant_stress_index": 0.6129872009097923,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W28": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.24189258676205044,
+        "plant_stress_index": 0.4837851735241009,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W29": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.19458183212654795,
+        "plant_stress_index": 0.3891636642530959,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W30": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2257260311584616,
+        "plant_stress_index": 0.4514520623169232,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W31": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.24013931958336535,
+        "plant_stress_index": 0.4802786391667307,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W32": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2422933775,
+        "plant_stress_index": 0.484586755,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W33": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2056504834242734,
+        "plant_stress_index": 0.4113009668485468,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W34": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.6973502192095664,
+        "plant_stress_index": 0.6347004384191327,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 2,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 2 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W35": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.7931168558184176,
+        "plant_stress_index": 0.5862337116368355,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W36": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2037661592571966,
+        "plant_stress_index": 0.4075323185143932,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W37": [
+      {
+        "plot_id": "P0108",
+        "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+        "crop": "Tomato",
+        "farm_name": "BC Harvest 1",
+        "greenhouse_id": "GH020",
+        "region": "Chilliwack",
+        "climate_zone": "Coastal",
+        "urgency_score": 0.2340846018628028,
+        "plant_stress_index": 0.4681692037256056,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ]
+  },
+  "plotDetails": {
+    "P0108|2025-W07": {
+      "plot_id": "P0108",
+      "week": "2025-W07",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-15",
+          "plant_stress_index": 0.4566042335524007,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-16",
+          "plant_stress_index": 0.4467562280311821,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.447,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.447,
+        "vpd_kpa": 1.481,
+        "substrate_moisture": 0.545,
+        "pest_pressure_index": 0.386,
+        "disease_risk_index": 0.159
+      }
+    },
+    "P0108|2025-W08": {
+      "plot_id": "P0108",
+      "week": "2025-W08",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-17",
+          "plant_stress_index": 0.4451257639669159,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-18",
+          "plant_stress_index": 0.4514040195879183,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-19",
+          "plant_stress_index": 0.6292508743409345,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-20",
+          "plant_stress_index": 0.3970807868811202,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-21",
+          "plant_stress_index": 0.429705544098261,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-22",
+          "plant_stress_index": 0.4384971883791914,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-23",
+          "plant_stress_index": 0.4635660350789726,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.090429732
+        }
+      ],
+      "costs": {
+        "energy": 7.943672074965084,
+        "fertilizer": 0.0,
+        "labor": 27.72534407534756,
+        "pesticide": 0.0,
+        "water": 3.302877074832576,
+        "precision": 0.0,
+        "routine": 38.971893225145216,
+        "total": 38.971893225145216
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.464,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 38.97
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.464,
+        "vpd_kpa": 1.216,
+        "substrate_moisture": 0.41,
+        "pest_pressure_index": 0.417,
+        "disease_risk_index": 0.145
+      }
+    },
+    "P0108|2025-W09": {
+      "plot_id": "P0108",
+      "week": "2025-W09",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-24",
+          "plant_stress_index": 0.5636680192890065,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-25",
+          "plant_stress_index": 0.5995498247291519,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-26",
+          "plant_stress_index": 0.5122243602083554,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-27",
+          "plant_stress_index": 0.5942105291100999,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-28",
+          "plant_stress_index": 0.5984039631698347,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-01",
+          "plant_stress_index": 0.6190788095349584,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-02",
+          "plant_stress_index": 0.8443898097028975,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-02-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-02-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-02-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.034483672
+        }
+      ],
+      "costs": {
+        "energy": 31.10382852306995,
+        "fertilizer": 0.0,
+        "labor": 169.31932224337405,
+        "pesticide": 0.0,
+        "water": 5.156808508763362,
+        "precision": 0.0,
+        "routine": 205.57995927989617,
+        "total": 205.57995927989617
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.844,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.034,
+        "weeklyCost": 205.58
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.844,
+        "vpd_kpa": 1.585,
+        "substrate_moisture": 0.387,
+        "pest_pressure_index": 0.406,
+        "disease_risk_index": 0.126
+      }
+    },
+    "P0108|2025-W10": {
+      "plot_id": "P0108",
+      "week": "2025-W10",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-03",
+          "plant_stress_index": 0.7139688924674847,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-04",
+          "plant_stress_index": 0.5549528885947481,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-05",
+          "plant_stress_index": 0.6102640572303512,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-06",
+          "plant_stress_index": 0.5019066389369035,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-07",
+          "plant_stress_index": 0.5737263319836704,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-08",
+          "plant_stress_index": 0.6035391916441547,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-09",
+          "plant_stress_index": 0.6088044252977124,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.030324582
+        },
+        {
+          "date": "2025-03-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.021826085
+        },
+        {
+          "date": "2025-03-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.012468106
+        },
+        {
+          "date": "2025-03-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.004487634
+        }
+      ],
+      "costs": {
+        "energy": 31.596461335000818,
+        "fertilizer": 0.0,
+        "labor": 200.20678495813274,
+        "pesticide": 0.0,
+        "water": 32.55036714271654,
+        "precision": 0.0,
+        "routine": 264.353613435987,
+        "total": 264.353613435987
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.609,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.004,
+        "weeklyCost": 264.35
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.609,
+        "vpd_kpa": 1.842,
+        "substrate_moisture": 0.534,
+        "pest_pressure_index": 0.428,
+        "disease_risk_index": 0.142
+      }
+    },
+    "P0108|2025-W11": {
+      "plot_id": "P0108",
+      "week": "2025-W11",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-10",
+          "plant_stress_index": 0.4628369686041864,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-11",
+          "plant_stress_index": 0.6300517920791945,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-12",
+          "plant_stress_index": 0.4951373204554553,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-13",
+          "plant_stress_index": 0.6432371581546875,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-14",
+          "plant_stress_index": 0.6225529037005026,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-15",
+          "plant_stress_index": 0.5970450603405927,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-16",
+          "plant_stress_index": 0.5488893593733662,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.034328326
+        },
+        {
+          "date": "2025-03-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.07757966
+        },
+        {
+          "date": "2025-03-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.017187677
+        },
+        {
+          "date": "2025-03-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.043282916
+        }
+      ],
+      "costs": {
+        "energy": 24.072076257629593,
+        "fertilizer": 0.0,
+        "labor": 134.30867643807773,
+        "pesticide": 0.0,
+        "water": 17.791904514578682,
+        "precision": 0.0,
+        "routine": 176.17265720437442,
+        "total": 176.17265720437442
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.549,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 176.17
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.549,
+        "vpd_kpa": 1.551,
+        "substrate_moisture": 0.412,
+        "pest_pressure_index": 0.461,
+        "disease_risk_index": 0.152
+      }
+    },
+    "P0108|2025-W12": {
+      "plot_id": "P0108",
+      "week": "2025-W12",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-17",
+          "plant_stress_index": 0.6429427159215308,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-18",
+          "plant_stress_index": 0.5856208529206292,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-19",
+          "plant_stress_index": 0.6407555753663099,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-20",
+          "plant_stress_index": 0.6609829799651255,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-21",
+          "plant_stress_index": 0.6634175897309069,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-22",
+          "plant_stress_index": 0.5464697577839649,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-23",
+          "plant_stress_index": 0.4920876310386464,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.003804378
+        },
+        {
+          "date": "2025-03-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.015070186
+        },
+        {
+          "date": "2025-03-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.04350185
+        },
+        {
+          "date": "2025-03-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.03309415
+        },
+        {
+          "date": "2025-03-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 21.255595741948532,
+        "fertilizer": 0.0,
+        "labor": 179.90908549769924,
+        "pesticide": 0.0,
+        "water": 26.87872036883872,
+        "precision": 0.0,
+        "routine": 228.04340160773808,
+        "total": 228.04340160773808
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.492,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 228.04
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.492,
+        "vpd_kpa": 1.586,
+        "substrate_moisture": 0.481,
+        "pest_pressure_index": 0.473,
+        "disease_risk_index": 0.158
+      }
+    },
+    "P0108|2025-W13": {
+      "plot_id": "P0108",
+      "week": "2025-W13",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-24",
+          "plant_stress_index": 0.4991893563954404,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-25",
+          "plant_stress_index": 0.634264829,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-26",
+          "plant_stress_index": 0.5964033652281503,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-27",
+          "plant_stress_index": 0.6577792433228985,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-28",
+          "plant_stress_index": 0.4537907969655071,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-29",
+          "plant_stress_index": 0.5575643981440936,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-30",
+          "plant_stress_index": 0.5819501257946029,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.00705352
+        },
+        {
+          "date": "2025-03-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.001718333
+        },
+        {
+          "date": "2025-03-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.138886949
+        },
+        {
+          "date": "2025-03-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.043778468
+        },
+        {
+          "date": "2025-03-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.048179855
+        }
+      ],
+      "costs": {
+        "energy": 25.03694224112797,
+        "fertilizer": 0.0,
+        "labor": 164.34645850918542,
+        "pesticide": 0.0,
+        "water": 28.318399070215595,
+        "precision": 0.0,
+        "routine": 217.70179981913182,
+        "total": 217.70179981913182
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.582,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.048,
+        "weeklyCost": 217.7
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.582,
+        "vpd_kpa": 1.59,
+        "substrate_moisture": 0.464,
+        "pest_pressure_index": 0.495,
+        "disease_risk_index": 0.134
+      }
+    },
+    "P0108|2025-W14": {
+      "plot_id": "P0108",
+      "week": "2025-W14",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-31",
+          "plant_stress_index": 0.6295821418997736,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-01",
+          "plant_stress_index": 0.6656376562099083,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-02",
+          "plant_stress_index": 0.6352746883602293,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-03",
+          "plant_stress_index": 0.6440294053038018,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-04",
+          "plant_stress_index": 0.7357958613853385,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-05",
+          "plant_stress_index": 0.8170831342776911,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-06",
+          "plant_stress_index": 0.8064304096244141,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-31",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-04-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.059860046
+        },
+        {
+          "date": "2025-04-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.001870689
+        },
+        {
+          "date": "2025-04-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-04-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.073980008
+        },
+        {
+          "date": "2025-04-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.039281306
+        },
+        {
+          "date": "2025-04-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0289512763101617
+        }
+      ],
+      "costs": {
+        "energy": 37.57498702727521,
+        "fertilizer": 0.0,
+        "labor": 235.94261585754055,
+        "pesticide": 0.0,
+        "water": 28.54165268099195,
+        "precision": 0.0,
+        "routine": 302.0592555657588,
+        "total": 302.0592555657588
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.806,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.029,
+        "weeklyCost": 302.06
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.806,
+        "vpd_kpa": 1.901,
+        "substrate_moisture": 0.478,
+        "pest_pressure_index": 0.471,
+        "disease_risk_index": 0.157
+      }
+    },
+    "P0108|2025-W15": {
+      "plot_id": "P0108",
+      "week": "2025-W15",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-07",
+          "plant_stress_index": 0.8205616408441291,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-08",
+          "plant_stress_index": 0.740326213,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-09",
+          "plant_stress_index": 0.6662883702353591,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-10",
+          "plant_stress_index": 0.616883118,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-11",
+          "plant_stress_index": 0.493787946,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-12",
+          "plant_stress_index": 0.5946149620350877,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-13",
+          "plant_stress_index": 0.5467381331509545,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.004601054
+        },
+        {
+          "date": "2025-04-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.022020522
+        },
+        {
+          "date": "2025-04-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.009768923
+        },
+        {
+          "date": "2025-04-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.051587201
+        },
+        {
+          "date": "2025-04-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.103453353
+        }
+      ],
+      "costs": {
+        "energy": 21.462823828061378,
+        "fertilizer": 59.62883808269725,
+        "labor": 160.63029493198752,
+        "pesticide": 13.71799528983676,
+        "water": 27.780707022381876,
+        "precision": 37.455011177594514,
+        "routine": 245.76564797801836,
+        "total": 283.2206591556129
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.547,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 283.22
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.547,
+        "vpd_kpa": 1.528,
+        "substrate_moisture": 0.48,
+        "pest_pressure_index": 0.504,
+        "disease_risk_index": 0.149
+      }
+    },
+    "P0108|2025-W16": {
+      "plot_id": "P0108",
+      "week": "2025-W16",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-14",
+          "plant_stress_index": 0.5620256159909511,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-15",
+          "plant_stress_index": 0.5567496439288712,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-16",
+          "plant_stress_index": 0.5623674918518723,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-17",
+          "plant_stress_index": 0.645197381,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-18",
+          "plant_stress_index": 0.675627996,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-19",
+          "plant_stress_index": 0.5590527276784683,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-20",
+          "plant_stress_index": 0.6073488075082583,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.106230447
+        },
+        {
+          "date": "2025-04-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-04-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.054975091
+        },
+        {
+          "date": "2025-04-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.007086705
+        },
+        {
+          "date": "2025-04-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.074981997
+        },
+        {
+          "date": "2025-04-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.101004091
+        },
+        {
+          "date": "2025-04-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.01767352
+        }
+      ],
+      "costs": {
+        "energy": 28.184669716670665,
+        "fertilizer": 93.34421573659114,
+        "labor": 187.4096493051113,
+        "pesticide": 22.98500975429644,
+        "water": 32.92116009528309,
+        "precision": 55.69096024864629,
+        "routine": 309.1537443593063,
+        "total": 364.84470460795256
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.607,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 2,
+        "postActionDelta": 0.018,
+        "weeklyCost": 364.84
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.607,
+        "vpd_kpa": 1.682,
+        "substrate_moisture": 0.368,
+        "pest_pressure_index": 0.486,
+        "disease_risk_index": 0.146
+      }
+    },
+    "P0108|2025-W17": {
+      "plot_id": "P0108",
+      "week": "2025-W17",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-21",
+          "plant_stress_index": 0.6041912875437523,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-22",
+          "plant_stress_index": 0.6202235715012435,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-23",
+          "plant_stress_index": 0.5670739060913799,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-24",
+          "plant_stress_index": 0.6237543305913718,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-25",
+          "plant_stress_index": 0.5970488153731204,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-26",
+          "plant_stress_index": 0.5950647666577934,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-27",
+          "plant_stress_index": 0.6427733359212445,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.027234765
+        },
+        {
+          "date": "2025-04-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.082157527
+        },
+        {
+          "date": "2025-04-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.027856553
+        },
+        {
+          "date": "2025-04-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.055761086
+        },
+        {
+          "date": "2025-04-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.003773403
+        },
+        {
+          "date": "2025-04-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.012669609
+        },
+        {
+          "date": "2025-04-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.069330561
+        }
+      ],
+      "costs": {
+        "energy": 34.621615451027935,
+        "fertilizer": 0.0,
+        "labor": 253.1863775223617,
+        "pesticide": 0.0,
+        "water": 38.01477751334713,
+        "precision": 0.0,
+        "routine": 325.82277048703963,
+        "total": 325.82277048703963
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.643,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.069,
+        "weeklyCost": 325.82
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.643,
+        "vpd_kpa": 1.729,
+        "substrate_moisture": 0.429,
+        "pest_pressure_index": 0.455,
+        "disease_risk_index": 0.13
+      }
+    },
+    "P0108|2025-W18": {
+      "plot_id": "P0108",
+      "week": "2025-W18",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-28",
+          "plant_stress_index": 0.6082582658997948,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-29",
+          "plant_stress_index": 0.5730930753996345,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-30",
+          "plant_stress_index": 0.5900383720674828,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-01",
+          "plant_stress_index": 0.4766645238934436,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-02",
+          "plant_stress_index": 0.574490738,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-03",
+          "plant_stress_index": 0.5270103713499231,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-04",
+          "plant_stress_index": 0.529372135,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.000313791
+        },
+        {
+          "date": "2025-04-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.044916203
+        },
+        {
+          "date": "2025-04-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.062315275
+        },
+        {
+          "date": "2025-05-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 29.80942375884211,
+        "fertilizer": 0.0,
+        "labor": 121.79738542886139,
+        "pesticide": 0.0,
+        "water": 20.43896568388601,
+        "precision": 0.0,
+        "routine": 172.0457748701763,
+        "total": 172.0457748701763
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.529,
+        "alertType": "High Canopy Temp",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 172.05
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.529,
+        "vpd_kpa": 1.265,
+        "substrate_moisture": 0.523,
+        "pest_pressure_index": 0.454,
+        "disease_risk_index": 0.149
+      }
+    },
+    "P0108|2025-W19": {
+      "plot_id": "P0108",
+      "week": "2025-W19",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-05",
+          "plant_stress_index": 0.6071007082135056,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-06",
+          "plant_stress_index": 0.4533613742789021,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-07",
+          "plant_stress_index": 0.4399471636367393,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-08",
+          "plant_stress_index": 0.6445809505428065,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-09",
+          "plant_stress_index": 0.576385283,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-10",
+          "plant_stress_index": 0.5764934568925296,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-11",
+          "plant_stress_index": 0.8230718690065912,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.066290856
+        },
+        {
+          "date": "2025-05-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.170058865
+        },
+        {
+          "date": "2025-05-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0202389771122508
+        },
+        {
+          "date": "2025-05-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.036222896
+        }
+      ],
+      "costs": {
+        "energy": 33.17123138729948,
+        "fertilizer": 87.22406527426797,
+        "labor": 176.11765157659136,
+        "pesticide": 17.51930876190023,
+        "water": 14.446657316001176,
+        "precision": 56.712209895218976,
+        "routine": 271.7667044208413,
+        "total": 328.47891431606024
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.823,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.036,
+        "weeklyCost": 328.48
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.823,
+        "vpd_kpa": 1.984,
+        "substrate_moisture": 0.392,
+        "pest_pressure_index": 0.465,
+        "disease_risk_index": 0.136
+      }
+    },
+    "P0108|2025-W20": {
+      "plot_id": "P0108",
+      "week": "2025-W20",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-12",
+          "plant_stress_index": 0.8377474924374717,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-13",
+          "plant_stress_index": 0.6256914793484639,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-14",
+          "plant_stress_index": 0.5515898042012761,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-15",
+          "plant_stress_index": 0.6056115557502668,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-16",
+          "plant_stress_index": 0.5131767199294123,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-17",
+          "plant_stress_index": 0.527261554,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-18",
+          "plant_stress_index": 0.5108616485868499,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.02989772722257
+        }
+      ],
+      "costs": {
+        "energy": 21.024495617317353,
+        "fertilizer": 0.0,
+        "labor": 103.04662056679348,
+        "pesticide": 0.0,
+        "water": 4.535712872968055,
+        "precision": 0.0,
+        "routine": 128.6068290570789,
+        "total": 128.6068290570789
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.511,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 128.61
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.511,
+        "vpd_kpa": 1.517,
+        "substrate_moisture": 0.464,
+        "pest_pressure_index": 0.434,
+        "disease_risk_index": 0.131
+      }
+    },
+    "P0108|2025-W21": {
+      "plot_id": "P0108",
+      "week": "2025-W21",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-19",
+          "plant_stress_index": 0.4493277095828949,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-20",
+          "plant_stress_index": 0.6085267447601712,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-21",
+          "plant_stress_index": 0.4555547882022165,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-22",
+          "plant_stress_index": 0.5096344340315779,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-23",
+          "plant_stress_index": 0.4542881793888993,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-24",
+          "plant_stress_index": 0.4122706399673165,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-25",
+          "plant_stress_index": 0.4489836946121409,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.026339395
+        }
+      ],
+      "costs": {
+        "energy": 5.325936316040703,
+        "fertilizer": 0.0,
+        "labor": 29.96459528097781,
+        "pesticide": 0.0,
+        "water": 3.941822969662643,
+        "precision": 0.0,
+        "routine": 39.23235456668116,
+        "total": 39.23235456668116
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.449,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 39.23
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.449,
+        "vpd_kpa": 1.29,
+        "substrate_moisture": 0.431,
+        "pest_pressure_index": 0.42,
+        "disease_risk_index": 0.157
+      }
+    },
+    "P0108|2025-W22": {
+      "plot_id": "P0108",
+      "week": "2025-W22",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-26",
+          "plant_stress_index": 0.471253292263789,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-27",
+          "plant_stress_index": 0.4885776390791181,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-28",
+          "plant_stress_index": 0.4525022763807841,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-29",
+          "plant_stress_index": 0.4308469217703836,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-30",
+          "plant_stress_index": 0.6034507453965842,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-31",
+          "plant_stress_index": 0.4598448006236525,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-01",
+          "plant_stress_index": 0.5760270393869177,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.054548765
+        },
+        {
+          "date": "2025-06-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.141839813
+        }
+      ],
+      "costs": {
+        "energy": 6.284643961146527,
+        "fertilizer": 0.0,
+        "labor": 80.99264278943878,
+        "pesticide": 0.0,
+        "water": 9.714580377257494,
+        "precision": 0.0,
+        "routine": 96.9918671278428,
+        "total": 96.9918671278428
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.576,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.142,
+        "weeklyCost": 96.99
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.576,
+        "vpd_kpa": 1.506,
+        "substrate_moisture": 0.391,
+        "pest_pressure_index": 0.426,
+        "disease_risk_index": 0.14
+      }
+    },
+    "P0108|2025-W23": {
+      "plot_id": "P0108",
+      "week": "2025-W23",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-02",
+          "plant_stress_index": 0.404041824,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-03",
+          "plant_stress_index": 0.3524035365480881,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-04",
+          "plant_stress_index": 0.4251150874163436,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-05",
+          "plant_stress_index": 0.4478685737671065,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-06",
+          "plant_stress_index": 0.3982024919347063,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-07",
+          "plant_stress_index": 0.5830038401689455,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-08",
+          "plant_stress_index": 0.4453185642795402,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0167803817308509
+        }
+      ],
+      "costs": {
+        "energy": 4.2991767909066585,
+        "fertilizer": 0.0,
+        "labor": 32.33100556739388,
+        "pesticide": 0.0,
+        "water": 4.247199281774897,
+        "precision": 0.0,
+        "routine": 40.87738164007544,
+        "total": 40.87738164007544
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.445,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 40.88
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.445,
+        "vpd_kpa": 1.335,
+        "substrate_moisture": 0.436,
+        "pest_pressure_index": 0.386,
+        "disease_risk_index": 0.148
+      }
+    },
+    "P0108|2025-W24": {
+      "plot_id": "P0108",
+      "week": "2025-W24",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-09",
+          "plant_stress_index": 0.4010424921324924,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-10",
+          "plant_stress_index": 0.4155194446017065,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-11",
+          "plant_stress_index": 0.3992063397308912,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-12",
+          "plant_stress_index": 0.4050731405692383,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-13",
+          "plant_stress_index": 0.4615048262356387,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-14",
+          "plant_stress_index": 0.4651280565021372,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-15",
+          "plant_stress_index": 0.6767576906382635,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.038678876
+        }
+      ],
+      "costs": {
+        "energy": 3.866985292006082,
+        "fertilizer": 0.0,
+        "labor": 29.92245485087008,
+        "pesticide": 0.0,
+        "water": 7.532756779583929,
+        "precision": 0.0,
+        "routine": 41.322196922460094,
+        "total": 41.322196922460094
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.677,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.039,
+        "weeklyCost": 41.32
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.677,
+        "vpd_kpa": 1.605,
+        "substrate_moisture": 0.449,
+        "pest_pressure_index": 0.389,
+        "disease_risk_index": 0.157
+      }
+    },
+    "P0108|2025-W25": {
+      "plot_id": "P0108",
+      "week": "2025-W25",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-16",
+          "plant_stress_index": 0.7086790157826142,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-17",
+          "plant_stress_index": 0.7667766167978819,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-18",
+          "plant_stress_index": 0.5458410221111565,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-19",
+          "plant_stress_index": 0.4756198729113717,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-20",
+          "plant_stress_index": 0.4672754713997766,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-21",
+          "plant_stress_index": 0.422344838,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-22",
+          "plant_stress_index": 0.3734641655349954,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.079647457
+        },
+        {
+          "date": "2025-06-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.048548724
+        }
+      ],
+      "costs": {
+        "energy": 8.769791051374442,
+        "fertilizer": 0.0,
+        "labor": 61.674112130977946,
+        "pesticide": 0.0,
+        "water": 12.682113274140331,
+        "precision": 0.0,
+        "routine": 83.12601645649272,
+        "total": 83.12601645649272
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.373,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 83.13
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.373,
+        "vpd_kpa": 0.902,
+        "substrate_moisture": 0.462,
+        "pest_pressure_index": 0.392,
+        "disease_risk_index": 0.15
+      }
+    },
+    "P0108|2025-W26": {
+      "plot_id": "P0108",
+      "week": "2025-W26",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-23",
+          "plant_stress_index": 0.444681035,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-24",
+          "plant_stress_index": 0.4420090398788195,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-25",
+          "plant_stress_index": 0.3926857032717272,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-26",
+          "plant_stress_index": 0.4130148761987864,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-27",
+          "plant_stress_index": 0.4281599970085854,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-28",
+          "plant_stress_index": 0.4299452199211679,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-29",
+          "plant_stress_index": 0.4341170056476601,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.434,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.434,
+        "vpd_kpa": 1.123,
+        "substrate_moisture": 0.467,
+        "pest_pressure_index": 0.414,
+        "disease_risk_index": 0.142
+      }
+    },
+    "P0108|2025-W27": {
+      "plot_id": "P0108",
+      "week": "2025-W27",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-30",
+          "plant_stress_index": 0.423385382527304,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-01",
+          "plant_stress_index": 0.5862895875383672,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-02",
+          "plant_stress_index": 0.5742056836293135,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-03",
+          "plant_stress_index": 0.3866063317913222,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-04",
+          "plant_stress_index": 0.4193762803542195,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-05",
+          "plant_stress_index": 0.4829494852412946,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-06",
+          "plant_stress_index": 0.6129872009097923,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.061592553
+        },
+        {
+          "date": "2025-07-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.006887724
+        }
+      ],
+      "costs": {
+        "energy": 17.894298323262255,
+        "fertilizer": 23.85,
+        "labor": 113.83937452220137,
+        "pesticide": 46.58,
+        "water": 17.083276264776526,
+        "precision": 0.0,
+        "routine": 219.24694911362067,
+        "total": 219.24694911362067
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.613,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.007,
+        "weeklyCost": 219.25
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.613,
+        "vpd_kpa": 1.388,
+        "substrate_moisture": 0.358,
+        "pest_pressure_index": 0.375,
+        "disease_risk_index": 0.129
+      }
+    },
+    "P0108|2025-W28": {
+      "plot_id": "P0108",
+      "week": "2025-W28",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-07",
+          "plant_stress_index": 0.4393587955453392,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-08",
+          "plant_stress_index": 0.4648903758917692,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-09",
+          "plant_stress_index": 0.4721981767218318,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-10",
+          "plant_stress_index": 0.4238738341662749,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-11",
+          "plant_stress_index": 0.3950223543707771,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-12",
+          "plant_stress_index": 0.4533554418732147,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-13",
+          "plant_stress_index": 0.4837851735241009,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 7.95,
+        "fertilizer": 49.06,
+        "labor": 52.59,
+        "pesticide": 34.96,
+        "water": 1.63,
+        "precision": 0.0,
+        "routine": 146.19,
+        "total": 146.19
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.484,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 146.19
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.484,
+        "vpd_kpa": 1.32,
+        "substrate_moisture": 0.474,
+        "pest_pressure_index": 0.46,
+        "disease_risk_index": 0.173
+      }
+    },
+    "P0108|2025-W29": {
+      "plot_id": "P0108",
+      "week": "2025-W29",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-14",
+          "plant_stress_index": 0.442529002908986,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-15",
+          "plant_stress_index": 0.4520768583881848,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-16",
+          "plant_stress_index": 0.4607783339002577,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-17",
+          "plant_stress_index": 0.5033178202447488,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-18",
+          "plant_stress_index": 0.4645246689996608,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-19",
+          "plant_stress_index": 0.442682234,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-20",
+          "plant_stress_index": 0.3891636642530959,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.389,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.389,
+        "vpd_kpa": 0.623,
+        "substrate_moisture": 0.433,
+        "pest_pressure_index": 0.415,
+        "disease_risk_index": 0.139
+      }
+    },
+    "P0108|2025-W30": {
+      "plot_id": "P0108",
+      "week": "2025-W30",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-21",
+          "plant_stress_index": 0.5733766615344649,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-22",
+          "plant_stress_index": 0.7859355380157665,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-23",
+          "plant_stress_index": 0.6554604392172246,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-24",
+          "plant_stress_index": 0.5582842835451524,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-25",
+          "plant_stress_index": 0.6009726638306124,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-26",
+          "plant_stress_index": 0.4718379408594877,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-27",
+          "plant_stress_index": 0.4514520623169232,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.03860355
+        },
+        {
+          "date": "2025-07-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.026343945
+        }
+      ],
+      "costs": {
+        "energy": 23.726196665033868,
+        "fertilizer": 0.0,
+        "labor": 149.42719376089158,
+        "pesticide": 0.0,
+        "water": 14.941468088922473,
+        "precision": 0.0,
+        "routine": 188.09485851501765,
+        "total": 188.09485851501765
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.451,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 188.09
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.451,
+        "vpd_kpa": 0.811,
+        "substrate_moisture": 0.452,
+        "pest_pressure_index": 0.475,
+        "disease_risk_index": 0.165
+      }
+    },
+    "P0108|2025-W31": {
+      "plot_id": "P0108",
+      "week": "2025-W31",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-28",
+          "plant_stress_index": 0.409571076,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-29",
+          "plant_stress_index": 0.4839832322507146,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-30",
+          "plant_stress_index": 0.4088756309160441,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-31",
+          "plant_stress_index": 0.426262446,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-01",
+          "plant_stress_index": 0.3850686891282166,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-02",
+          "plant_stress_index": 0.4374608575556096,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-03",
+          "plant_stress_index": 0.4802786391667307,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 25.34,
+        "labor": 58.33,
+        "pesticide": 0.0,
+        "water": 1.7,
+        "precision": 0.0,
+        "routine": 85.37,
+        "total": 85.37
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.48,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 85.37
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.48,
+        "vpd_kpa": 1.298,
+        "substrate_moisture": 0.445,
+        "pest_pressure_index": 0.438,
+        "disease_risk_index": 0.134
+      }
+    },
+    "P0108|2025-W32": {
+      "plot_id": "P0108",
+      "week": "2025-W32",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-04",
+          "plant_stress_index": 0.4526195907051161,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-05",
+          "plant_stress_index": 0.5428639299810891,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-06",
+          "plant_stress_index": 0.4755936174767063,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-07",
+          "plant_stress_index": 0.4778403151269533,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-08",
+          "plant_stress_index": 0.6114630642978434,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-09",
+          "plant_stress_index": 0.6153705737612241,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-10",
+          "plant_stress_index": 0.484586755,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.005231195
+        },
+        {
+          "date": "2025-08-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 12.560372457539792,
+        "fertilizer": 0.0,
+        "labor": 92.83504671589084,
+        "pesticide": 0.0,
+        "water": 8.510896459339197,
+        "precision": 0.0,
+        "routine": 113.90631562855354,
+        "total": 113.90631562855354
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.485,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 113.91
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.485,
+        "vpd_kpa": 1.187,
+        "substrate_moisture": 0.416,
+        "pest_pressure_index": 0.419,
+        "disease_risk_index": 0.171
+      }
+    },
+    "P0108|2025-W33": {
+      "plot_id": "P0108",
+      "week": "2025-W33",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-11",
+          "plant_stress_index": 0.5461548138457855,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-12",
+          "plant_stress_index": 0.5584662851698416,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-13",
+          "plant_stress_index": 0.5844636619585764,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-14",
+          "plant_stress_index": 0.4371902216083201,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-15",
+          "plant_stress_index": 0.4379734312825722,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-16",
+          "plant_stress_index": 0.4248169367698921,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-17",
+          "plant_stress_index": 0.4113009668485468,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.057369229
+        },
+        {
+          "date": "2025-08-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.020614288
+        }
+      ],
+      "costs": {
+        "energy": 6.858056103727936,
+        "fertilizer": 0.0,
+        "labor": 73.37789799980848,
+        "pesticide": 0.0,
+        "water": 13.595998383950473,
+        "precision": 0.0,
+        "routine": 93.83195248708802,
+        "total": 93.83195248708802
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.411,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 93.83
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.411,
+        "vpd_kpa": 1.092,
+        "substrate_moisture": 0.498,
+        "pest_pressure_index": 0.435,
+        "disease_risk_index": 0.143
+      }
+    },
+    "P0108|2025-W34": {
+      "plot_id": "P0108",
+      "week": "2025-W34",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-18",
+          "plant_stress_index": 0.4653607192674626,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-19",
+          "plant_stress_index": 0.4243741365091333,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-20",
+          "plant_stress_index": 0.4495578428386588,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-21",
+          "plant_stress_index": 0.4443774906078197,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-22",
+          "plant_stress_index": 0.449065111557746,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-23",
+          "plant_stress_index": 0.4600846097182369,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-24",
+          "plant_stress_index": 0.6347004384191327,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.01746435
+        }
+      ],
+      "costs": {
+        "energy": 14.047052389948064,
+        "fertilizer": 15.24,
+        "labor": 81.59858800844498,
+        "pesticide": 25.55,
+        "water": 8.09486022035608,
+        "precision": 0.0,
+        "routine": 144.53050061874913,
+        "total": 144.53050061874913
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.635,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 2,
+        "postActionDelta": 0.017,
+        "weeklyCost": 144.53
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.635,
+        "vpd_kpa": 1.422,
+        "substrate_moisture": 0.402,
+        "pest_pressure_index": 0.472,
+        "disease_risk_index": 0.155
+      }
+    },
+    "P0108|2025-W35": {
+      "plot_id": "P0108",
+      "week": "2025-W35",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-25",
+          "plant_stress_index": 0.4587295470050621,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-26",
+          "plant_stress_index": 0.7521056041324644,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-27",
+          "plant_stress_index": 0.6004629016025396,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-28",
+          "plant_stress_index": 0.7830891984932565,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-29",
+          "plant_stress_index": 0.6854338302078664,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-30",
+          "plant_stress_index": 0.6258271719779789,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-31",
+          "plant_stress_index": 0.5862337116368355,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.012182975
+        },
+        {
+          "date": "2025-08-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-08-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0148717074280347
+        },
+        {
+          "date": "2025-08-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.05546154
+        },
+        {
+          "date": "2025-08-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.002008234
+        },
+        {
+          "date": "2025-08-31",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 39.663437728486215,
+        "fertilizer": 56.17,
+        "labor": 235.70825947193475,
+        "pesticide": 0.0,
+        "water": 34.93318259886426,
+        "precision": 0.0,
+        "routine": 366.4748797992852,
+        "total": 366.4748797992852
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.586,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 366.47
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.586,
+        "vpd_kpa": 1.272,
+        "substrate_moisture": 0.378,
+        "pest_pressure_index": 0.393,
+        "disease_risk_index": 0.142
+      }
+    },
+    "P0108|2025-W36": {
+      "plot_id": "P0108",
+      "week": "2025-W36",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-01",
+          "plant_stress_index": 0.6077657148048274,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-09-02",
+          "plant_stress_index": 0.4628923936644739,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-03",
+          "plant_stress_index": 0.3945989320298794,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-04",
+          "plant_stress_index": 0.479171292,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-05",
+          "plant_stress_index": 0.4420736353286283,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-06",
+          "plant_stress_index": 0.4632064392237169,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-07",
+          "plant_stress_index": 0.4075323185143932,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-09-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.021638384
+        }
+      ],
+      "costs": {
+        "energy": 4.895481322677869,
+        "fertilizer": 0.0,
+        "labor": 34.43006441,
+        "pesticide": 0.0,
+        "water": 7.595380066552115,
+        "precision": 0.0,
+        "routine": 46.920925800328384,
+        "total": 46.920925800328384
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.408,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 46.92
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.408,
+        "vpd_kpa": 1.169,
+        "substrate_moisture": 0.528,
+        "pest_pressure_index": 0.376,
+        "disease_risk_index": 0.137
+      }
+    },
+    "P0108|2025-W37": {
+      "plot_id": "P0108",
+      "week": "2025-W37",
+      "header": "Plot P0108 \u2014 Tomato, BC Harvest 1. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-08",
+          "plant_stress_index": 0.402471619261468,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-09",
+          "plant_stress_index": 0.4667121508563442,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-10",
+          "plant_stress_index": 0.5139134854050053,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-11",
+          "plant_stress_index": 0.4664944858740092,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-12",
+          "plant_stress_index": 0.4681692037256056,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Tomato",
+        "farmName": "BC Harvest 1",
+        "climateZone": "Coastal",
+        "stressIndex": 0.468,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.468,
+        "vpd_kpa": 1.367,
+        "substrate_moisture": 0.423,
+        "pest_pressure_index": 0.351,
+        "disease_risk_index": 0.156
+      }
+    }
+  },
+  "responseOverTime": [
+    {
+      "week": "2025-W08",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W09",
+      "response_rate": 16.7
+    },
+    {
+      "week": "2025-W10",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W11",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W12",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W13",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W14",
+      "response_rate": 71.4
+    },
+    {
+      "week": "2025-W15",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W16",
+      "response_rate": 85.7
+    },
+    {
+      "week": "2025-W17",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W18",
+      "response_rate": 75.0
+    },
+    {
+      "week": "2025-W19",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W20",
+      "response_rate": 25.0
+    },
+    {
+      "week": "2025-W21",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W22",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W23",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W24",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W25",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W27",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W30",
+      "response_rate": 40.0
+    },
+    {
+      "week": "2025-W32",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W33",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W34",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W35",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W36",
+      "response_rate": 100.0
+    }
+  ],
+  "alertTypeBreakdown": [
+    {
+      "alert_type": "High Pest Pressure",
+      "count": 93,
+      "acted": 70,
+      "resolution_rate": 75.3
+    }
+  ],
+  "healthTrend": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "avg_stress": 0.4516802307917914
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "avg_stress": 0.4649471731904734
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "avg_stress": 0.6187893308206149
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "avg_stress": 0.5953089180221465
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "avg_stress": 0.5713929375297122
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "avg_stress": 0.604611014675302
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "avg_stress": 0.5687060164072418
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "avg_stress": 0.7048333281515938
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "avg_stress": 0.6398857690379328
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "avg_stress": 0.5954813805654887
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "avg_stress": 0.6071614305257008
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "avg_stress": 0.5541324973728969
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "avg_stress": 0.5887058293672964
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "avg_stress": 0.5959914648933916
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "avg_stress": 0.47694088436360244
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "avg_stress": 0.49750038784303274
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "avg_stress": 0.43656484544496144
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "avg_stress": 0.46060457005862393
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "avg_stress": 0.5371430003625423
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "avg_stress": 0.42637326813239235
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "avg_stress": 0.4979714217130876
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "avg_stress": 0.44749773601332965
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "avg_stress": 0.4507246546707048
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "avg_stress": 0.5853313699028045
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "avg_stress": 0.4330715101453308
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "avg_stress": 0.522905406621276
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "avg_stress": 0.4857666167833621
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "avg_stress": 0.4753600498454557
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "avg_stress": 0.641697423579429
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "avg_stress": 0.46532010365227416
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "avg_stress": 0.4635521890244864
+    }
+  ],
+  "previouslyAtRisk": [
+    {
+      "plot_id": "P0108",
+      "label": "Plot P0108 \u2014 Tomato, BC Harvest 1",
+      "lastWeekStress": 0.408,
+      "thisWeekStress": 0.468,
+      "actionTaken": false
+    }
+  ],
+  "stressModel": {
+    "featureNames": [
+      "action_delay_days",
+      "plant_stress_index",
+      "vpd_kpa",
+      "substrate_moisture",
+      "pest_pressure_index",
+      "disease_risk_index"
+    ],
+    "coefficients": [
+      0.018582185718741706,
+      0.004795891494642045,
+      -0.0020391505608814606,
+      0.004241773724022167,
+      0.004797834115383394,
+      -0.024210540096880857
+    ],
+    "intercept": -0.04746805208487905,
+    "defaults": {
+      "action_delay_days": 0.747,
+      "plant_stress_index": 0.63,
+      "vpd_kpa": 1.579,
+      "substrate_moisture": 0.415,
+      "pest_pressure_index": 0.452,
+      "disease_risk_index": 0.142
+    },
+    "bounds": {
+      "action_delay_days": [
+        0,
+        5
+      ],
+      "plant_stress_index": [
+        0.0,
+        1.0
+      ],
+      "vpd_kpa": [
+        0.52,
+        2.39
+      ],
+      "substrate_moisture": [
+        0.0,
+        1.0
+      ],
+      "pest_pressure_index": [
+        0.0,
+        1.0
+      ],
+      "disease_risk_index": [
+        0.0,
+        1.0
+      ]
+    },
+    "avgSeasonDelta": -0.033
+  }
+}

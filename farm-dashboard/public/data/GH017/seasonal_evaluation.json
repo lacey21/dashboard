@@ -1,0 +1,522 @@
+{
+  "financials": {
+    "totalRevenue": 18512.0,
+    "totalCost": 12360.0,
+    "precisionSpend": 1528.0,
+    "precisionBenefit": 3999.0,
+    "avgYield": 5.24,
+    "controlYield": 4.5,
+    "meanRoiPct": 48.2,
+    "benefitPerDollar": 2.62
+  },
+  "spendReturnByTreatment": [
+    {
+      "treatment": "Control",
+      "avg_cost": 1439.883838845715,
+      "avg_revenue": 2137.2068551172297
+    },
+    {
+      "treatment": "High Light",
+      "avg_cost": 1584.8972851139151,
+      "avg_revenue": 2940.8196092562403
+    },
+    {
+      "treatment": "High N",
+      "avg_cost": 1401.11384078819,
+      "avg_revenue": 1445.04915805368
+    },
+    {
+      "treatment": "Integrated Pest",
+      "avg_cost": 1421.163140060685,
+      "avg_revenue": 2025.91521074277
+    },
+    {
+      "treatment": "Low N",
+      "avg_cost": 1067.89211210216,
+      "avg_revenue": 1491.21541548905
+    },
+    {
+      "treatment": "Shade",
+      "avg_cost": 999.289790564784,
+      "avg_revenue": 1367.80952259669
+    }
+  ],
+  "controlRevenueBaseline": 2137.2068551172297,
+  "costOverTime": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "precision": 0.0,
+      "routine": 45.89852501161364,
+      "total": 45.89852501161364,
+      "plant_stress_index": 0.40405000329016594
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "precision": 0.0,
+      "routine": 51.87936801733029,
+      "total": 51.87936801733029,
+      "plant_stress_index": 0.39238037247243596
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "precision": 0.0,
+      "routine": 1363.0127368087838,
+      "total": 1363.0127368087838,
+      "plant_stress_index": 0.5553787334410125
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "precision": 0.0,
+      "routine": 636.7996763598868,
+      "total": 636.7996763598868,
+      "plant_stress_index": 0.49056698988314257
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "precision": 0.0,
+      "routine": 741.9466210463369,
+      "total": 741.9466210463369,
+      "plant_stress_index": 0.4994159082896371
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "precision": 201.32539649433016,
+      "routine": 1638.0781025589047,
+      "total": 1839.4034990532348,
+      "plant_stress_index": 0.5441278490556778
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "precision": 74.87941388713358,
+      "routine": 1376.5816850426504,
+      "total": 1451.461098929784,
+      "plant_stress_index": 0.5238152590824531
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "precision": 72.10452453725226,
+      "routine": 1951.6797693605213,
+      "total": 2023.7842938977735,
+      "plant_stress_index": 0.6254274961302212
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "precision": 0.0,
+      "routine": 1785.1795670991432,
+      "total": 1785.1795670991432,
+      "plant_stress_index": 0.5767679484017781
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "precision": 140.36343351553685,
+      "routine": 1397.7942229490168,
+      "total": 1538.1576564645536,
+      "plant_stress_index": 0.5327815478047652
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "precision": 323.4469543514395,
+      "routine": 1983.6277730326765,
+      "total": 2307.0747273841157,
+      "plant_stress_index": 0.5452945543975465
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "precision": 0.0,
+      "routine": 728.429795276357,
+      "total": 728.429795276357,
+      "plant_stress_index": 0.5072928074671319
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "precision": 130.03349377562554,
+      "routine": 1071.8111986972085,
+      "total": 1201.8446924735051,
+      "plant_stress_index": 0.5333556917555142
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "precision": 192.64111763698492,
+      "routine": 1470.448598238853,
+      "total": 1663.089715867605,
+      "plant_stress_index": 0.5277557187957618
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "precision": 52.25367390803906,
+      "routine": 746.126343763482,
+      "total": 798.3800176715212,
+      "plant_stress_index": 0.41974998582031603
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "precision": 62.59435588608554,
+      "routine": 655.3669119116698,
+      "total": 717.9612677977555,
+      "plant_stress_index": 0.4507081323131308
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "precision": 0.0,
+      "routine": 752.7463209139282,
+      "total": 752.7463209139282,
+      "plant_stress_index": 0.39819492617209484
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "precision": 0.0,
+      "routine": 763.5740903477464,
+      "total": 763.5740903477464,
+      "plant_stress_index": 0.4180159715549281
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "precision": 74.11659761595362,
+      "routine": 1130.3688651181358,
+      "total": 1204.4854627340894,
+      "plant_stress_index": 0.49899375835114845
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "precision": 0.0,
+      "routine": 321.27,
+      "total": 321.27,
+      "plant_stress_index": 0.37260271190029237
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "precision": 65.10816209397039,
+      "routine": 810.7149694212413,
+      "total": 875.8231315152118,
+      "plant_stress_index": 0.438812843242132
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "precision": 0.0,
+      "routine": 62.63,
+      "total": 62.63,
+      "plant_stress_index": 0.36078597584404265
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "precision": 0.0,
+      "routine": 173.68384212070512,
+      "total": 173.68384212070512,
+      "plant_stress_index": 0.3959155827790897
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "precision": 0.0,
+      "routine": 1301.250860985022,
+      "total": 1301.250860985022,
+      "plant_stress_index": 0.5135115725824932
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "precision": 0.0,
+      "routine": 200.08266407933397,
+      "total": 200.08266407933397,
+      "plant_stress_index": 0.3605754590502965
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "precision": 0.0,
+      "routine": 645.4838146340788,
+      "total": 645.4838146340788,
+      "plant_stress_index": 0.4163219477712589
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "precision": 0.0,
+      "routine": 286.4131872988577,
+      "total": 286.4131872988577,
+      "plant_stress_index": 0.4041702078416004
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "precision": 0.0,
+      "routine": 597.4421417956964,
+      "total": 597.4421417956964,
+      "plant_stress_index": 0.3721836600565074
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "precision": 139.2854735353132,
+      "routine": 1462.4347885247832,
+      "total": 1601.7202620600965,
+      "plant_stress_index": 0.5200563950069486
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "precision": 0.0,
+      "routine": 368.54412851830045,
+      "total": 368.54412851830045,
+      "plant_stress_index": 0.38092916148206873
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "precision": 0.0,
+      "routine": 251.37018646876547,
+      "total": 251.37018646876547,
+      "plant_stress_index": 0.4109988117230107
+    }
+  ],
+  "scatterPlots": [
+    {
+      "plot_id": "P0012",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1701.36352507052,
+      "yield": 4.08444175608863,
+      "avgStress": 0.48867173152375654
+    },
+    {
+      "plot_id": "P0022",
+      "crop": "Strawberry",
+      "treatment": "High N",
+      "totalCost": 1401.11384078819,
+      "yield": 5.89675286493524,
+      "avgStress": 0.4444288533162832
+    },
+    {
+      "plot_id": "P0024",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1212.57647284518,
+      "yield": 6.02608407595902,
+      "avgStress": 0.42845114899581016
+    },
+    {
+      "plot_id": "P0028",
+      "crop": "Strawberry",
+      "treatment": "Integrated Pest",
+      "totalCost": 1629.74980727619,
+      "yield": 5.99441837318317,
+      "avgStress": 0.436300525603876
+    },
+    {
+      "plot_id": "P0044",
+      "crop": "Strawberry",
+      "treatment": "Control",
+      "totalCost": 1178.40415262091,
+      "yield": 4.90611480510236,
+      "avgStress": 0.49764072241367113
+    },
+    {
+      "plot_id": "P0061",
+      "crop": "Strawberry",
+      "treatment": "Low N",
+      "totalCost": 1067.89211210216,
+      "yield": 4.42414951539242,
+      "avgStress": 0.5154125071884108
+    },
+    {
+      "plot_id": "P0067",
+      "crop": "Strawberry",
+      "treatment": "Shade",
+      "totalCost": 999.289790564784,
+      "yield": 4.86339993253448,
+      "avgStress": 0.5644103144368876
+    },
+    {
+      "plot_id": "P0071",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1589.75637440284,
+      "yield": 5.37301753997519,
+      "avgStress": 0.41154618476335936
+    },
+    {
+      "plot_id": "P0079",
+      "crop": "Strawberry",
+      "treatment": "High Light",
+      "totalCost": 1580.03819582499,
+      "yield": 5.57700592737299,
+      "avgStress": 0.40860879374708964
+    }
+  ],
+  "yieldBenchmark": [
+    {
+      "crop": "Strawberry",
+      "avgYield": 5.24,
+      "typicalBenchmark": 10.0,
+      "aspirationalBenchmark": 13.5,
+      "status": "check_units"
+    }
+  ],
+  "yieldModel": {
+    "featureNames": [
+      "daily_fertilizer_cost",
+      "daily_energy_cost",
+      "daily_water_cost",
+      "daily_pesticide_cost",
+      "plant_density_plants_m2",
+      "precision_action_rate",
+      "avg_action_delay_days"
+    ],
+    "terms": [
+      {
+        "type": "linear",
+        "feature": "daily_fertilizer_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "daily_energy_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "daily_water_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "daily_pesticide_cost"
+      },
+      {
+        "type": "linear",
+        "feature": "plant_density_plants_m2"
+      },
+      {
+        "type": "linear",
+        "feature": "precision_action_rate"
+      },
+      {
+        "type": "linear",
+        "feature": "avg_action_delay_days"
+      },
+      {
+        "type": "poly",
+        "feature": "daily_fertilizer_cost",
+        "power": 2
+      },
+      {
+        "type": "poly",
+        "feature": "daily_energy_cost",
+        "power": 2
+      },
+      {
+        "type": "poly",
+        "feature": "daily_water_cost",
+        "power": 2
+      },
+      {
+        "type": "poly",
+        "feature": "plant_density_plants_m2",
+        "power": 2
+      },
+      {
+        "type": "interact",
+        "features": [
+          "daily_fertilizer_cost",
+          "daily_water_cost"
+        ]
+      },
+      {
+        "type": "interact",
+        "features": [
+          "plant_density_plants_m2",
+          "daily_energy_cost"
+        ]
+      },
+      {
+        "type": "interact",
+        "features": [
+          "precision_action_rate",
+          "avg_action_delay_days"
+        ]
+      }
+    ],
+    "coefficients": [
+      -0.7792542478044179,
+      0.462056718052076,
+      0.06365603904666974,
+      -0.4046689133468384,
+      0.2751691265631484,
+      0.323033350114613,
+      -1.6588863835805432,
+      0.1697372963009424,
+      -0.10760341088867278,
+      -0.27851928985443486,
+      -0.007743865511875804,
+      0.18605133543178434,
+      -0.014658615527069912,
+      -0.04339307011091425
+    ],
+    "intercept": 6.628721846230785,
+    "defaults": {
+      "daily_fertilizer_cost": 1.8542759168844247,
+      "daily_energy_cost": 1.3867348373006643,
+      "daily_water_cost": 1.0679871774230605,
+      "daily_pesticide_cost": 1.2197992642360231,
+      "plant_density_plants_m2": 15.067777777777776,
+      "precision_action_rate": 0.10647961117827053,
+      "avg_action_delay_days": 0.4773480002185825
+    },
+    "bounds": {
+      "daily_fertilizer_cost": [
+        0,
+        50
+      ],
+      "daily_energy_cost": [
+        0,
+        100
+      ],
+      "daily_water_cost": [
+        0,
+        30
+      ],
+      "daily_pesticide_cost": [
+        0,
+        40
+      ],
+      "plant_density_plants_m2": [
+        8.65,
+        23.94
+      ],
+      "precision_action_rate": [
+        0,
+        1
+      ],
+      "avg_action_delay_days": [
+        0,
+        5
+      ]
+    },
+    "currentSeasonAvgYield": 5.24,
+    "avgMarketPricePerKg": 4.5
+  },
+  "monthlyRevenueCurve": [
+    {
+      "month": 2,
+      "revenue": 1140.365948761723
+    },
+    {
+      "month": 3,
+      "revenue": 8170.594021648859
+    },
+    {
+      "month": 4,
+      "revenue": 11960.637121818705
+    },
+    {
+      "month": 5,
+      "revenue": 6883.329672844875
+    },
+    {
+      "month": 6,
+      "revenue": 4901.6630913899435
+    },
+    {
+      "month": 7,
+      "revenue": 3412.2717749970484
+    },
+    {
+      "month": 8,
+      "revenue": 4989.080978948408
+    },
+    {
+      "month": 9,
+      "revenue": 928.4511595755205
+    }
+  ],
+  "precisionBenefitPerSeason": 444.0
+}

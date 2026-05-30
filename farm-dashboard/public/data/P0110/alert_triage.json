@@ -1,0 +1,4279 @@
+{
+  "weeks": [
+    "2025-W07",
+    "2025-W08",
+    "2025-W09",
+    "2025-W10",
+    "2025-W11",
+    "2025-W12",
+    "2025-W13",
+    "2025-W14",
+    "2025-W15",
+    "2025-W16",
+    "2025-W17",
+    "2025-W18",
+    "2025-W19",
+    "2025-W20",
+    "2025-W21",
+    "2025-W22",
+    "2025-W23",
+    "2025-W24",
+    "2025-W25",
+    "2025-W26",
+    "2025-W27",
+    "2025-W28",
+    "2025-W29",
+    "2025-W30",
+    "2025-W31",
+    "2025-W32",
+    "2025-W33",
+    "2025-W34",
+    "2025-W35",
+    "2025-W36",
+    "2025-W37"
+  ],
+  "defaultWeek": "2025-W37",
+  "weeklyStats": {
+    "2025-W07": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W08": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W09": {
+      "highStressEvents": 2,
+      "highStressDelta": 1,
+      "responseRate": 66.7,
+      "responseRateDelta": -33.3,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W10": {
+      "highStressEvents": 1,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 33.3,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W11": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.8,
+      "avgResponseDaysDelta": 0.8
+    },
+    "2025-W12": {
+      "highStressEvents": 2,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -0.3
+    },
+    "2025-W13": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W14": {
+      "highStressEvents": 6,
+      "highStressDelta": 6,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.86,
+      "avgResponseDaysDelta": -0.14
+    },
+    "2025-W15": {
+      "highStressEvents": 3,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -0.36
+    },
+    "2025-W16": {
+      "highStressEvents": 3,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.17,
+      "avgResponseDaysDelta": -0.33
+    },
+    "2025-W17": {
+      "highStressEvents": 4,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.29,
+      "avgResponseDaysDelta": 0.12
+    },
+    "2025-W18": {
+      "highStressEvents": 1,
+      "highStressDelta": -3,
+      "responseRate": 66.7,
+      "responseRateDelta": -33.3,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.21
+    },
+    "2025-W19": {
+      "highStressEvents": 1,
+      "highStressDelta": 0,
+      "responseRate": 66.7,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.33,
+      "avgResponseDaysDelta": -0.17
+    },
+    "2025-W20": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 50.0,
+      "responseRateDelta": -16.7,
+      "avgResponseDays": 0.75,
+      "avgResponseDaysDelta": 0.42
+    },
+    "2025-W21": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 50.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.75
+    },
+    "2025-W22": {
+      "highStressEvents": 2,
+      "highStressDelta": 2,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W23": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 0.0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W24": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 100.0,
+      "avgResponseDays": 2.0,
+      "avgResponseDaysDelta": 2.0
+    },
+    "2025-W25": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 50.0,
+      "responseRateDelta": -50.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -2.0
+    },
+    "2025-W26": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 50.0,
+      "avgResponseDays": 2.0,
+      "avgResponseDaysDelta": 2.0
+    },
+    "2025-W27": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": -1.0
+    },
+    "2025-W28": {
+      "highStressEvents": 0,
+      "highStressDelta": -1,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -1.0
+    },
+    "2025-W29": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W30": {
+      "highStressEvents": 2,
+      "highStressDelta": 2,
+      "responseRate": 66.7,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.33,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W31": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 0,
+      "responseRateDelta": -66.7,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.33
+    },
+    "2025-W32": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.33,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W33": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.67
+    },
+    "2025-W34": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -1.0
+    },
+    "2025-W35": {
+      "highStressEvents": 4,
+      "highStressDelta": 4,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W36": {
+      "highStressEvents": 0,
+      "highStressDelta": -4,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W37": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 50.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.0
+    }
+  },
+  "plotRankings": {
+    "2025-W07": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.20745121598589525,
+        "plant_stress_index": 0.4149024319717905,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W08": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.23283612706620505,
+        "plant_stress_index": 0.4656722541324101,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W09": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.8156871484618042,
+        "plant_stress_index": 0.6313742969236087,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W10": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.2078343816001563,
+        "plant_stress_index": 0.4156687632003126,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W11": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.6224215355620774,
+        "plant_stress_index": 0.5648430711241547,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W12": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.31447204531674977,
+        "plant_stress_index": 0.5489440906334995,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 0,
+        "action_taken": 1
+      }
+    ],
+    "2025-W13": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.2075953956368087,
+        "plant_stress_index": 0.4151907912736174,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W14": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.7137991583328246,
+        "plant_stress_index": 0.7475983166656491,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W15": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.6035733469136012,
+        "plant_stress_index": 0.6071466938272024,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W16": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.581323507,
+        "plant_stress_index": 0.562647014,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W17": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.5997730068537616,
+        "plant_stress_index": 0.5995460137075231,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W18": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.5967887003774861,
+        "plant_stress_index": 0.5935774007549722,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W19": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.7840937469021165,
+        "plant_stress_index": 0.5681874938042332,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W20": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.17385369708437645,
+        "plant_stress_index": 0.3477073941687529,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W21": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.5951614827997732,
+        "plant_stress_index": 0.5903229655995464,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W22": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.26422412939048046,
+        "plant_stress_index": 0.5284482587809609,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 0,
+        "action_taken": 1
+      }
+    ],
+    "2025-W23": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.207843983146184,
+        "plant_stress_index": 0.415687966292368,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W24": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.6927019822505549,
+        "plant_stress_index": 0.6254039645011098,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 2,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 2 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W25": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.20228768406815745,
+        "plant_stress_index": 0.4045753681363149,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W26": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.19284732405805255,
+        "plant_stress_index": 0.3856946481161051,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W27": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.272236087,
+        "plant_stress_index": 0.544472174,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 0,
+        "action_taken": 1
+      }
+    ],
+    "2025-W28": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.1848774671970178,
+        "plant_stress_index": 0.3697549343940356,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W29": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.247384505,
+        "plant_stress_index": 0.49476901,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W30": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.2510444774544857,
+        "plant_stress_index": 0.5020889549089714,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W31": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.2035060754790387,
+        "plant_stress_index": 0.4070121509580774,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W32": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.5874541277942602,
+        "plant_stress_index": 0.5749082555885203,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W33": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.21408096605464425,
+        "plant_stress_index": 0.4281619321092885,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W34": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.21252852505564745,
+        "plant_stress_index": 0.4250570501112949,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W35": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.310767917067174,
+        "plant_stress_index": 0.5415358341343479,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 0,
+        "action_taken": 1
+      }
+    ],
+    "2025-W36": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.18470729453377174,
+        "plant_stress_index": 0.3694145890675435,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W37": [
+      {
+        "plot_id": "P0110",
+        "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+        "crop": "Cucumber",
+        "farm_name": "BC Harvest 4",
+        "greenhouse_id": "GH007",
+        "region": "Maple Ridge",
+        "climate_zone": "Fraser Valley",
+        "urgency_score": 0.7967674095123407,
+        "plant_stress_index": 0.5935348190246815,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ]
+  },
+  "plotDetails": {
+    "P0110|2025-W07": {
+      "plot_id": "P0110",
+      "week": "2025-W07",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-15",
+          "plant_stress_index": 0.4668942918007633,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-16",
+          "plant_stress_index": 0.4149024319717905,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.415,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.415,
+        "vpd_kpa": 1.126,
+        "substrate_moisture": 0.456,
+        "pest_pressure_index": 0.357,
+        "disease_risk_index": 0.136
+      }
+    },
+    "P0110|2025-W08": {
+      "plot_id": "P0110",
+      "week": "2025-W08",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-17",
+          "plant_stress_index": 0.4024938887266459,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-18",
+          "plant_stress_index": 0.4317273101841265,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-19",
+          "plant_stress_index": 0.6286100549198816,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-20",
+          "plant_stress_index": 0.421825327016374,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-21",
+          "plant_stress_index": 0.4663302909749115,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-22",
+          "plant_stress_index": 0.5595213426420683,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-23",
+          "plant_stress_index": 0.4656722541324101,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.011737679
+        },
+        {
+          "date": "2025-02-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.001493463
+        }
+      ],
+      "costs": {
+        "energy": 14.788676291698412,
+        "fertilizer": 0.0,
+        "labor": 71.59734502468805,
+        "pesticide": 0.0,
+        "water": 14.950280802484983,
+        "precision": 0.0,
+        "routine": 101.33630211887146,
+        "total": 101.33630211887146
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.466,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 101.34
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.466,
+        "vpd_kpa": 1.496,
+        "substrate_moisture": 0.474,
+        "pest_pressure_index": 0.416,
+        "disease_risk_index": 0.134
+      }
+    },
+    "P0110|2025-W09": {
+      "plot_id": "P0110",
+      "week": "2025-W09",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-24",
+          "plant_stress_index": 0.5840366556872302,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-25",
+          "plant_stress_index": 0.635845608,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-26",
+          "plant_stress_index": 0.4194791839558037,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-27",
+          "plant_stress_index": 0.5679480632162734,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-28",
+          "plant_stress_index": 0.5646865368633751,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-01",
+          "plant_stress_index": 0.5627788984719049,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-02",
+          "plant_stress_index": 0.6313742969236087,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.001632466
+        },
+        {
+          "date": "2025-02-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.092418865
+        },
+        {
+          "date": "2025-02-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.0471964407137731
+        },
+        {
+          "date": "2025-02-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.124185569
+        },
+        {
+          "date": "2025-03-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 26.472832673186012,
+        "fertilizer": 68.91837757,
+        "labor": 214.53207002686383,
+        "pesticide": 36.63992617,
+        "water": 21.34143505078828,
+        "precision": 61.31029159,
+        "routine": 306.5943499063903,
+        "total": 367.9046414936965
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.631,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 367.9
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.631,
+        "vpd_kpa": 1.15,
+        "substrate_moisture": 0.434,
+        "pest_pressure_index": 0.445,
+        "disease_risk_index": 0.154
+      }
+    },
+    "P0110|2025-W10": {
+      "plot_id": "P0110",
+      "week": "2025-W10",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-03",
+          "plant_stress_index": 0.7084387851887947,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-04",
+          "plant_stress_index": 0.5300777618904912,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-05",
+          "plant_stress_index": 0.4432252707114921,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-06",
+          "plant_stress_index": 0.4531899658987797,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-07",
+          "plant_stress_index": 0.540762745,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-08",
+          "plant_stress_index": 0.5989018472358882,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-09",
+          "plant_stress_index": 0.4156687632003126,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.05931741
+        },
+        {
+          "date": "2025-03-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.075201182
+        }
+      ],
+      "costs": {
+        "energy": 10.562094079664949,
+        "fertilizer": 0.0,
+        "labor": 72.9057323180825,
+        "pesticide": 0.0,
+        "water": 10.599714837573789,
+        "precision": 0.0,
+        "routine": 94.06754123532124,
+        "total": 94.06754123532124
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.416,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 94.07
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.416,
+        "vpd_kpa": 1.486,
+        "substrate_moisture": 0.496,
+        "pest_pressure_index": 0.438,
+        "disease_risk_index": 0.12
+      }
+    },
+    "P0110|2025-W11": {
+      "plot_id": "P0110",
+      "week": "2025-W11",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-10",
+          "plant_stress_index": 0.6165485997269208,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-11",
+          "plant_stress_index": 0.5941184025678037,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-12",
+          "plant_stress_index": 0.481654021,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-13",
+          "plant_stress_index": 0.6133834613671778,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-14",
+          "plant_stress_index": 0.6312092954306121,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-15",
+          "plant_stress_index": 0.4556864780994921,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-16",
+          "plant_stress_index": 0.5648430711241547,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.031773108
+        },
+        {
+          "date": "2025-03-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.008245137
+        },
+        {
+          "date": "2025-03-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.023381433
+        },
+        {
+          "date": "2025-03-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.035215456
+        },
+        {
+          "date": "2025-03-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.008506635
+        }
+      ],
+      "costs": {
+        "energy": 32.295823085607516,
+        "fertilizer": 0.0,
+        "labor": 174.25981219949284,
+        "pesticide": 0.0,
+        "water": 26.85604314525894,
+        "precision": 0.0,
+        "routine": 233.41167842945956,
+        "total": 233.41167842945956
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.565,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": 0.009,
+        "weeklyCost": 233.41
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.565,
+        "vpd_kpa": 1.637,
+        "substrate_moisture": 0.474,
+        "pest_pressure_index": 0.451,
+        "disease_risk_index": 0.121
+      }
+    },
+    "P0110|2025-W12": {
+      "plot_id": "P0110",
+      "week": "2025-W12",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-17",
+          "plant_stress_index": 0.7061293749919647,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-18",
+          "plant_stress_index": 0.633057949,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-19",
+          "plant_stress_index": 0.5928396078742871,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-20",
+          "plant_stress_index": 0.5942797675135977,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-21",
+          "plant_stress_index": 0.569114084,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-22",
+          "plant_stress_index": 0.5938955156952032,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-23",
+          "plant_stress_index": 0.5489440906334995,
+          "alert_flag": 0,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.019405577
+        },
+        {
+          "date": "2025-03-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.067918859
+        },
+        {
+          "date": "2025-03-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.053321411
+        },
+        {
+          "date": "2025-03-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.028590606
+        },
+        {
+          "date": "2025-03-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.048300709
+        },
+        {
+          "date": "2025-03-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.080020206
+        }
+      ],
+      "costs": {
+        "energy": 34.15823614556845,
+        "fertilizer": 0.0,
+        "labor": 225.08638888687594,
+        "pesticide": 0.0,
+        "water": 43.232466801671926,
+        "precision": 0.0,
+        "routine": 302.4770918341163,
+        "total": 302.4770918341163
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.549,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": 0.009,
+        "weeklyCost": 302.48
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.549,
+        "vpd_kpa": 1.622,
+        "substrate_moisture": 0.438,
+        "pest_pressure_index": 0.473,
+        "disease_risk_index": 0.125
+      }
+    },
+    "P0110|2025-W13": {
+      "plot_id": "P0110",
+      "week": "2025-W13",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-24",
+          "plant_stress_index": 0.5569657323331889,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-25",
+          "plant_stress_index": 0.5549683405418586,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-26",
+          "plant_stress_index": 0.5996704283501306,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-27",
+          "plant_stress_index": 0.5559954210548961,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-28",
+          "plant_stress_index": 0.5750737434373833,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-29",
+          "plant_stress_index": 0.5480368156862562,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-30",
+          "plant_stress_index": 0.4151907912736174,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.064211001
+        },
+        {
+          "date": "2025-03-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.058684786
+        },
+        {
+          "date": "2025-03-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.101119599
+        },
+        {
+          "date": "2025-03-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.032228344
+        },
+        {
+          "date": "2025-03-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.032999107
+        }
+      ],
+      "costs": {
+        "energy": 23.92850734943494,
+        "fertilizer": 0.0,
+        "labor": 192.91028532324526,
+        "pesticide": 0.0,
+        "water": 36.805860227708045,
+        "precision": 0.0,
+        "routine": 253.64465290420736,
+        "total": 253.64465290420736
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.415,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 253.64
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.415,
+        "vpd_kpa": 1.349,
+        "substrate_moisture": 0.448,
+        "pest_pressure_index": 0.496,
+        "disease_risk_index": 0.126
+      }
+    },
+    "P0110|2025-W14": {
+      "plot_id": "P0110",
+      "week": "2025-W14",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-31",
+          "plant_stress_index": 0.606014591,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-01",
+          "plant_stress_index": 0.5876925060154198,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-02",
+          "plant_stress_index": 0.6493332993274333,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-03",
+          "plant_stress_index": 0.6446714178826592,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-04",
+          "plant_stress_index": 0.7061426497518151,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-05",
+          "plant_stress_index": 0.671427249,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-06",
+          "plant_stress_index": 0.7475983166656491,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-31",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.044471629
+        },
+        {
+          "date": "2025-04-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.045822704
+        },
+        {
+          "date": "2025-04-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.019265193
+        },
+        {
+          "date": "2025-04-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.056668322
+        },
+        {
+          "date": "2025-04-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.098145136
+        },
+        {
+          "date": "2025-04-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.12603827
+        },
+        {
+          "date": "2025-04-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.093854502
+        }
+      ],
+      "costs": {
+        "energy": 40.167188610059135,
+        "fertilizer": 91.74600319601804,
+        "labor": 284.5671601645986,
+        "pesticide": 58.07340554259836,
+        "water": 45.57439956890979,
+        "precision": 83.86368579,
+        "routine": 436.26447129333303,
+        "total": 520.1281570820073
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.748,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.094,
+        "weeklyCost": 520.13
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.748,
+        "vpd_kpa": 1.924,
+        "substrate_moisture": 0.398,
+        "pest_pressure_index": 0.47,
+        "disease_risk_index": 0.131
+      }
+    },
+    "P0110|2025-W15": {
+      "plot_id": "P0110",
+      "week": "2025-W15",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-07",
+          "plant_stress_index": 0.6864218754853457,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-08",
+          "plant_stress_index": 0.6577600017977127,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-09",
+          "plant_stress_index": 0.5372340665314095,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-10",
+          "plant_stress_index": 0.5227044831346238,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-11",
+          "plant_stress_index": 0.556550335,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-12",
+          "plant_stress_index": 0.532647389,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-13",
+          "plant_stress_index": 0.6071466938272024,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.066458526
+        },
+        {
+          "date": "2025-04-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.030347519
+        },
+        {
+          "date": "2025-04-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.135887352
+        },
+        {
+          "date": "2025-04-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.003890809
+        }
+      ],
+      "costs": {
+        "energy": 21.220503735733335,
+        "fertilizer": 0.0,
+        "labor": 155.92652753768547,
+        "pesticide": 0.0,
+        "water": 40.07820060598986,
+        "precision": 0.0,
+        "routine": 217.22523187705707,
+        "total": 217.22523187705707
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.607,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.004,
+        "weeklyCost": 217.23
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.607,
+        "vpd_kpa": 1.898,
+        "substrate_moisture": 0.491,
+        "pest_pressure_index": 0.472,
+        "disease_risk_index": 0.159
+      }
+    },
+    "P0110|2025-W16": {
+      "plot_id": "P0110",
+      "week": "2025-W16",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-14",
+          "plant_stress_index": 0.5928387927937719,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-15",
+          "plant_stress_index": 0.6402964641495511,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-16",
+          "plant_stress_index": 0.6152556157719026,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-17",
+          "plant_stress_index": 0.5593817603710359,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-18",
+          "plant_stress_index": 0.4933431521513335,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-19",
+          "plant_stress_index": 0.6226533325475311,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-20",
+          "plant_stress_index": 0.562647014,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0199136498945678
+        },
+        {
+          "date": "2025-04-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.100777846
+        },
+        {
+          "date": "2025-04-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.07705571
+        },
+        {
+          "date": "2025-04-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.079169354
+        },
+        {
+          "date": "2025-04-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.093790899
+        },
+        {
+          "date": "2025-04-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0222905299490672
+        }
+      ],
+      "costs": {
+        "energy": 31.61150800735775,
+        "fertilizer": 0.0,
+        "labor": 226.85475418324603,
+        "pesticide": 0.0,
+        "water": 36.71755825721313,
+        "precision": 0.0,
+        "routine": 295.183820447977,
+        "total": 295.183820447977
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.563,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.022,
+        "weeklyCost": 295.18
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.563,
+        "vpd_kpa": 1.712,
+        "substrate_moisture": 0.457,
+        "pest_pressure_index": 0.489,
+        "disease_risk_index": 0.15
+      }
+    },
+    "P0110|2025-W17": {
+      "plot_id": "P0110",
+      "week": "2025-W17",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-21",
+          "plant_stress_index": 0.6596951109416085,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-22",
+          "plant_stress_index": 0.6391753499487847,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-23",
+          "plant_stress_index": 0.5993097012934621,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-24",
+          "plant_stress_index": 0.6774196023933088,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-25",
+          "plant_stress_index": 0.6209274326906065,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-26",
+          "plant_stress_index": 0.5937052847781145,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-27",
+          "plant_stress_index": 0.5995460137075231,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.043259101
+        },
+        {
+          "date": "2025-04-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.049925852
+        },
+        {
+          "date": "2025-04-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.018708549351311
+        },
+        {
+          "date": "2025-04-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.045641905
+        },
+        {
+          "date": "2025-04-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.008987864
+        },
+        {
+          "date": "2025-04-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.055031931
+        },
+        {
+          "date": "2025-04-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.099820083
+        }
+      ],
+      "costs": {
+        "energy": 34.91847606115867,
+        "fertilizer": 0.0,
+        "labor": 260.274120956809,
+        "pesticide": 28.9,
+        "water": 41.08351614108359,
+        "precision": 0.0,
+        "routine": 365.1761131622961,
+        "total": 365.1761131622961
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.6,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.1,
+        "weeklyCost": 365.18
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.6,
+        "vpd_kpa": 1.65,
+        "substrate_moisture": 0.391,
+        "pest_pressure_index": 0.47,
+        "disease_risk_index": 0.155
+      }
+    },
+    "P0110|2025-W18": {
+      "plot_id": "P0110",
+      "week": "2025-W18",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-28",
+          "plant_stress_index": 0.6023987271403205,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-29",
+          "plant_stress_index": 0.5704605563507035,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-30",
+          "plant_stress_index": 0.5652357124402871,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-01",
+          "plant_stress_index": 0.483421037,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-02",
+          "plant_stress_index": 0.5543835609005636,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-03",
+          "plant_stress_index": 0.5795711649617574,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-04",
+          "plant_stress_index": 0.5935774007549722,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.069414465
+        },
+        {
+          "date": "2025-04-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.082479034
+        },
+        {
+          "date": "2025-04-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.000320838
+        },
+        {
+          "date": "2025-05-02",
+          "alert_type": "High Canopy Temp",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.034018607
+        }
+      ],
+      "costs": {
+        "energy": 32.19458716772035,
+        "fertilizer": 0.0,
+        "labor": 181.07921350697913,
+        "pesticide": 0.0,
+        "water": 32.92536241309503,
+        "precision": 0.0,
+        "routine": 246.1991630877945,
+        "total": 246.1991630877945
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.594,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.034,
+        "weeklyCost": 246.2
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.594,
+        "vpd_kpa": 1.584,
+        "substrate_moisture": 0.519,
+        "pest_pressure_index": 0.479,
+        "disease_risk_index": 0.154
+      }
+    },
+    "P0110|2025-W19": {
+      "plot_id": "P0110",
+      "week": "2025-W19",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-05",
+          "plant_stress_index": 0.4988130216381397,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-06",
+          "plant_stress_index": 0.4909506377796594,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-07",
+          "plant_stress_index": 0.4463469073045648,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-08",
+          "plant_stress_index": 0.4960173363914222,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-09",
+          "plant_stress_index": 0.5991910671830718,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-10",
+          "plant_stress_index": 0.6857752874885105,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-11",
+          "plant_stress_index": 0.5681874938042332,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.064054936
+        },
+        {
+          "date": "2025-05-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.008549968
+        },
+        {
+          "date": "2025-05-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 10.82876541318139,
+        "fertilizer": 0.0,
+        "labor": 95.26499726365216,
+        "pesticide": 0.0,
+        "water": 17.299219206398746,
+        "precision": 0.0,
+        "routine": 123.39298188362422,
+        "total": 123.39298188362422
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.568,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 123.39
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.568,
+        "vpd_kpa": 1.492,
+        "substrate_moisture": 0.467,
+        "pest_pressure_index": 0.449,
+        "disease_risk_index": 0.13
+      }
+    },
+    "P0110|2025-W20": {
+      "plot_id": "P0110",
+      "week": "2025-W20",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-12",
+          "plant_stress_index": 0.6730907003446547,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-13",
+          "plant_stress_index": 0.6311830269975854,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-14",
+          "plant_stress_index": 0.5322471501504341,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-15",
+          "plant_stress_index": 0.4421792174345952,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-16",
+          "plant_stress_index": 0.6174792796098255,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-17",
+          "plant_stress_index": 0.5561863027314766,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-18",
+          "plant_stress_index": 0.3477073941687529,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.079307731
+        },
+        {
+          "date": "2025-05-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.067682258
+        }
+      ],
+      "costs": {
+        "energy": 13.425444074552633,
+        "fertilizer": 0.0,
+        "labor": 123.44169877922948,
+        "pesticide": 0.0,
+        "water": 17.08209722618693,
+        "precision": 0.0,
+        "routine": 153.94924007973364,
+        "total": 153.94924007973364
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.348,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 153.95
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.348,
+        "vpd_kpa": 1.288,
+        "substrate_moisture": 0.543,
+        "pest_pressure_index": 0.425,
+        "disease_risk_index": 0.151
+      }
+    },
+    "P0110|2025-W21": {
+      "plot_id": "P0110",
+      "week": "2025-W21",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-19",
+          "plant_stress_index": 0.3823281026838061,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-20",
+          "plant_stress_index": 0.5489691095357997,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-21",
+          "plant_stress_index": 0.4443267780714504,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-22",
+          "plant_stress_index": 0.4543752045965812,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-23",
+          "plant_stress_index": 0.4808644206382876,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-24",
+          "plant_stress_index": 0.4816642020585929,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-25",
+          "plant_stress_index": 0.5903229655995464,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.033179636
+        }
+      ],
+      "costs": {
+        "energy": 11.556170854985295,
+        "fertilizer": 86.91999999999999,
+        "labor": 131.01356626865925,
+        "pesticide": 0.0,
+        "water": 12.820841636270817,
+        "precision": 0.0,
+        "routine": 242.31057875991536,
+        "total": 242.31057875991536
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.59,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.033,
+        "weeklyCost": 242.31
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.59,
+        "vpd_kpa": 1.25,
+        "substrate_moisture": 0.401,
+        "pest_pressure_index": 0.402,
+        "disease_risk_index": 0.159
+      }
+    },
+    "P0110|2025-W22": {
+      "plot_id": "P0110",
+      "week": "2025-W22",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-26",
+          "plant_stress_index": 0.5077674327296358,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-27",
+          "plant_stress_index": 0.611943216,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-28",
+          "plant_stress_index": 0.6167290780699514,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-29",
+          "plant_stress_index": 0.5798180863123411,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-30",
+          "plant_stress_index": 0.5570531501110964,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-31",
+          "plant_stress_index": 0.4777891616740252,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-01",
+          "plant_stress_index": 0.5284482587809609,
+          "alert_flag": 0,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.030915769
+        },
+        {
+          "date": "2025-05-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.063049477
+        },
+        {
+          "date": "2025-05-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.071967961
+        },
+        {
+          "date": "2025-05-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.110614482
+        }
+      ],
+      "costs": {
+        "energy": 22.51619178800772,
+        "fertilizer": 0.0,
+        "labor": 150.81848301639656,
+        "pesticide": 0.0,
+        "water": 42.260455762715225,
+        "precision": 0.0,
+        "routine": 215.59513056979785,
+        "total": 215.59513056979785
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.528,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.039,
+        "weeklyCost": 215.6
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.528,
+        "vpd_kpa": 1.627,
+        "substrate_moisture": 0.434,
+        "pest_pressure_index": 0.387,
+        "disease_risk_index": 0.146
+      }
+    },
+    "P0110|2025-W23": {
+      "plot_id": "P0110",
+      "week": "2025-W23",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-02",
+          "plant_stress_index": 0.4159499044086169,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-03",
+          "plant_stress_index": 0.5600869969494535,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-04",
+          "plant_stress_index": 0.3788418420536916,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-05",
+          "plant_stress_index": 0.4285094822445248,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-06",
+          "plant_stress_index": 0.4149365018631349,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-07",
+          "plant_stress_index": 0.422665606,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-08",
+          "plant_stress_index": 0.415687966292368,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 18.53163943144024,
+        "fertilizer": 114.39,
+        "labor": 64.38996109172649,
+        "pesticide": 0.0,
+        "water": 3.42,
+        "precision": 0.0,
+        "routine": 200.73160052316672,
+        "total": 200.73160052316672
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.416,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 200.73
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.416,
+        "vpd_kpa": 1.258,
+        "substrate_moisture": 0.461,
+        "pest_pressure_index": 0.369,
+        "disease_risk_index": 0.152
+      }
+    },
+    "P0110|2025-W24": {
+      "plot_id": "P0110",
+      "week": "2025-W24",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-09",
+          "plant_stress_index": 0.4215341336310412,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-10",
+          "plant_stress_index": 0.4356405568468962,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-11",
+          "plant_stress_index": 0.406812787,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-12",
+          "plant_stress_index": 0.4098651902553573,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-13",
+          "plant_stress_index": 0.4792178264350499,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-14",
+          "plant_stress_index": 0.4329433205814838,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-15",
+          "plant_stress_index": 0.6254039645011098,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.02658225
+        }
+      ],
+      "costs": {
+        "energy": 7.243642085334729,
+        "fertilizer": 0.0,
+        "labor": 36.762801322960726,
+        "pesticide": 0.0,
+        "water": 4.465539042888058,
+        "precision": 0.0,
+        "routine": 48.47198245118352,
+        "total": 48.47198245118352
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.625,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 2,
+        "postActionDelta": 0.027,
+        "weeklyCost": 48.47
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.625,
+        "vpd_kpa": 1.4,
+        "substrate_moisture": 0.397,
+        "pest_pressure_index": 0.353,
+        "disease_risk_index": 0.152
+      }
+    },
+    "P0110|2025-W25": {
+      "plot_id": "P0110",
+      "week": "2025-W25",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-16",
+          "plant_stress_index": 0.5889967433916223,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-17",
+          "plant_stress_index": 0.8046225203002659,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-18",
+          "plant_stress_index": 0.667889068,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-19",
+          "plant_stress_index": 0.6029661630497589,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-20",
+          "plant_stress_index": 0.5097478022699651,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-21",
+          "plant_stress_index": 0.3848013570095417,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-22",
+          "plant_stress_index": 0.4045753681363149,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-06-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-06-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.008571699
+        },
+        {
+          "date": "2025-06-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.052896877
+        }
+      ],
+      "costs": {
+        "energy": 20.51071571296112,
+        "fertilizer": 0.0,
+        "labor": 119.47474054929673,
+        "pesticide": 0.0,
+        "water": 16.0430545534597,
+        "precision": 0.0,
+        "routine": 156.02851081381044,
+        "total": 156.02851081381044
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.405,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 156.03
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.405,
+        "vpd_kpa": 1.015,
+        "substrate_moisture": 0.447,
+        "pest_pressure_index": 0.421,
+        "disease_risk_index": 0.14
+      }
+    },
+    "P0110|2025-W26": {
+      "plot_id": "P0110",
+      "week": "2025-W26",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-23",
+          "plant_stress_index": 0.4643011702368094,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-24",
+          "plant_stress_index": 0.4660417590265914,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-25",
+          "plant_stress_index": 0.5570666357927736,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-26",
+          "plant_stress_index": 0.4073703724988978,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-27",
+          "plant_stress_index": 0.4460453490577956,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-28",
+          "plant_stress_index": 0.3693323752461702,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-29",
+          "plant_stress_index": 0.3856946481161051,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.0172411149903833
+        }
+      ],
+      "costs": {
+        "energy": 7.757773939938202,
+        "fertilizer": 0.0,
+        "labor": 38.01926997231495,
+        "pesticide": 0.0,
+        "water": 6.880865000526557,
+        "precision": 0.0,
+        "routine": 52.65790891,
+        "total": 52.65790891
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.386,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 52.66
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.386,
+        "vpd_kpa": 0.96,
+        "substrate_moisture": 0.474,
+        "pest_pressure_index": 0.363,
+        "disease_risk_index": 0.157
+      }
+    },
+    "P0110|2025-W27": {
+      "plot_id": "P0110",
+      "week": "2025-W27",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-30",
+          "plant_stress_index": 0.4158383730627881,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-01",
+          "plant_stress_index": 0.3984408133433751,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-02",
+          "plant_stress_index": 0.4157476312605311,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-03",
+          "plant_stress_index": 0.5249432128087894,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-04",
+          "plant_stress_index": 0.6381025454410293,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-05",
+          "plant_stress_index": 0.5085698438502302,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-06",
+          "plant_stress_index": 0.544472174,
+          "alert_flag": 0,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.053025555
+        }
+      ],
+      "costs": {
+        "energy": 5.026607190259518,
+        "fertilizer": 0.0,
+        "labor": 46.72845983086909,
+        "pesticide": 0.0,
+        "water": 16.131124376384268,
+        "precision": 0.0,
+        "routine": 67.88619139751287,
+        "total": 67.88619139751287
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.544,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.024,
+        "weeklyCost": 67.89
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.544,
+        "vpd_kpa": 1.308,
+        "substrate_moisture": 0.34,
+        "pest_pressure_index": 0.377,
+        "disease_risk_index": 0.127
+      }
+    },
+    "P0110|2025-W28": {
+      "plot_id": "P0110",
+      "week": "2025-W28",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-07",
+          "plant_stress_index": 0.4106051709141523,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-08",
+          "plant_stress_index": 0.3787566751271206,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-09",
+          "plant_stress_index": 0.3833057239665307,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-10",
+          "plant_stress_index": 0.4357642747956441,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-11",
+          "plant_stress_index": 0.3929676731868587,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-12",
+          "plant_stress_index": 0.4105741022343164,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-13",
+          "plant_stress_index": 0.3697549343940356,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.37,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.37,
+        "vpd_kpa": 0.986,
+        "substrate_moisture": 0.521,
+        "pest_pressure_index": 0.39,
+        "disease_risk_index": 0.155
+      }
+    },
+    "P0110|2025-W29": {
+      "plot_id": "P0110",
+      "week": "2025-W29",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-14",
+          "plant_stress_index": 0.4195420158100018,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-15",
+          "plant_stress_index": 0.3734438532651318,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-16",
+          "plant_stress_index": 0.4466692203826248,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-17",
+          "plant_stress_index": 0.4443273598362729,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-18",
+          "plant_stress_index": 0.3815588115160194,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-19",
+          "plant_stress_index": 0.5242781942397484,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-20",
+          "plant_stress_index": 0.49476901,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.495,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.495,
+        "vpd_kpa": 1.261,
+        "substrate_moisture": 0.421,
+        "pest_pressure_index": 0.487,
+        "disease_risk_index": 0.169
+      }
+    },
+    "P0110|2025-W30": {
+      "plot_id": "P0110",
+      "week": "2025-W30",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-21",
+          "plant_stress_index": 0.5466914555359318,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-22",
+          "plant_stress_index": 0.5779996345274789,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-23",
+          "plant_stress_index": 0.6176870541758024,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-24",
+          "plant_stress_index": 0.6933835890808425,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-25",
+          "plant_stress_index": 0.4762973374017941,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-26",
+          "plant_stress_index": 0.4015354016475817,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-27",
+          "plant_stress_index": 0.5020889549089714,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.045289283
+        },
+        {
+          "date": "2025-07-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.026621659
+        }
+      ],
+      "costs": {
+        "energy": 19.084232925573506,
+        "fertilizer": 55.45,
+        "labor": 70.49032765477361,
+        "pesticide": 0.0,
+        "water": 12.685033094169238,
+        "precision": 0.0,
+        "routine": 157.70959367498565,
+        "total": 157.70959367498565
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.502,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 157.71
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.502,
+        "vpd_kpa": 1.353,
+        "substrate_moisture": 0.463,
+        "pest_pressure_index": 0.442,
+        "disease_risk_index": 0.147
+      }
+    },
+    "P0110|2025-W31": {
+      "plot_id": "P0110",
+      "week": "2025-W31",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-28",
+          "plant_stress_index": 0.4195311815907189,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-29",
+          "plant_stress_index": 0.4067612845506586,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-30",
+          "plant_stress_index": 0.4191978864650619,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-31",
+          "plant_stress_index": 0.4407691785830321,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-01",
+          "plant_stress_index": 0.3506068882624256,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-02",
+          "plant_stress_index": 0.3911638390432269,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-03",
+          "plant_stress_index": 0.4070121509580774,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.407,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.407,
+        "vpd_kpa": 1.057,
+        "substrate_moisture": 0.469,
+        "pest_pressure_index": 0.399,
+        "disease_risk_index": 0.165
+      }
+    },
+    "P0110|2025-W32": {
+      "plot_id": "P0110",
+      "week": "2025-W32",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-04",
+          "plant_stress_index": 0.589778491,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-05",
+          "plant_stress_index": 0.4385973763044887,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-06",
+          "plant_stress_index": 0.3432235641357034,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-07",
+          "plant_stress_index": 0.3980236646552664,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-08",
+          "plant_stress_index": 0.5697889499183802,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-09",
+          "plant_stress_index": 0.4145200150780121,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-10",
+          "plant_stress_index": 0.5749082555885203,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.029859947
+        },
+        {
+          "date": "2025-08-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.022247855
+        },
+        {
+          "date": "2025-08-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.013218411
+        }
+      ],
+      "costs": {
+        "energy": 13.23910053561861,
+        "fertilizer": 0.0,
+        "labor": 104.06329333266416,
+        "pesticide": 0.0,
+        "water": 19.69971358620525,
+        "precision": 0.0,
+        "routine": 137.00210745448803,
+        "total": 137.00210745448803
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.575,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.013,
+        "weeklyCost": 137.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.575,
+        "vpd_kpa": 1.158,
+        "substrate_moisture": 0.349,
+        "pest_pressure_index": 0.407,
+        "disease_risk_index": 0.121
+      }
+    },
+    "P0110|2025-W33": {
+      "plot_id": "P0110",
+      "week": "2025-W33",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-11",
+          "plant_stress_index": 0.5261524271004012,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-12",
+          "plant_stress_index": 0.5439404502335462,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-13",
+          "plant_stress_index": 0.5777684236278169,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-14",
+          "plant_stress_index": 0.4076122144616976,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-15",
+          "plant_stress_index": 0.409846179,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-16",
+          "plant_stress_index": 0.4008657777004741,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-17",
+          "plant_stress_index": 0.4281619321092885,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.087815963
+        }
+      ],
+      "costs": {
+        "energy": 6.769494820541876,
+        "fertilizer": 0.0,
+        "labor": 40.898774196893456,
+        "pesticide": 0.0,
+        "water": 7.324226308603618,
+        "precision": 0.0,
+        "routine": 54.99249532603895,
+        "total": 54.99249532603895
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.428,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 54.99
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.428,
+        "vpd_kpa": 1.19,
+        "substrate_moisture": 0.463,
+        "pest_pressure_index": 0.353,
+        "disease_risk_index": 0.122
+      }
+    },
+    "P0110|2025-W34": {
+      "plot_id": "P0110",
+      "week": "2025-W34",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-18",
+          "plant_stress_index": 0.4402813991818616,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-19",
+          "plant_stress_index": 0.4164699066653382,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-20",
+          "plant_stress_index": 0.4141886816483076,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-21",
+          "plant_stress_index": 0.4412752633739477,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-22",
+          "plant_stress_index": 0.4174685679161819,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-23",
+          "plant_stress_index": 0.5659430646824566,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-24",
+          "plant_stress_index": 0.4250570501112949,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.087596649
+        }
+      ],
+      "costs": {
+        "energy": 14.76466777006786,
+        "fertilizer": 40.79,
+        "labor": 121.06479567,
+        "pesticide": 0.0,
+        "water": 6.802579203936637,
+        "precision": 0.0,
+        "routine": 183.42204264,
+        "total": 183.42204264
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.425,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 183.42
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.425,
+        "vpd_kpa": 1.262,
+        "substrate_moisture": 0.408,
+        "pest_pressure_index": 0.395,
+        "disease_risk_index": 0.126
+      }
+    },
+    "P0110|2025-W35": {
+      "plot_id": "P0110",
+      "week": "2025-W35",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-25",
+          "plant_stress_index": 0.3725882201723283,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-26",
+          "plant_stress_index": 0.6459405286945923,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-27",
+          "plant_stress_index": 0.6029420490873528,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-28",
+          "plant_stress_index": 0.7523385911580632,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-29",
+          "plant_stress_index": 0.6703000805267643,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-30",
+          "plant_stress_index": 0.4379415580846424,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-31",
+          "plant_stress_index": 0.5415358341343479,
+          "alert_flag": 0,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.035802387
+        },
+        {
+          "date": "2025-08-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.082730536
+        },
+        {
+          "date": "2025-08-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.061274581
+        },
+        {
+          "date": "2025-08-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.059985212
+        }
+      ],
+      "costs": {
+        "energy": 28.756678507872067,
+        "fertilizer": 43.53,
+        "labor": 115.96971153344138,
+        "pesticide": 0.0,
+        "water": 30.951941918043804,
+        "precision": 0.0,
+        "routine": 219.20833195983974,
+        "total": 219.20833195983974
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.542,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": 0.027,
+        "weeklyCost": 219.21
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.542,
+        "vpd_kpa": 1.19,
+        "substrate_moisture": 0.354,
+        "pest_pressure_index": 0.381,
+        "disease_risk_index": 0.134
+      }
+    },
+    "P0110|2025-W36": {
+      "plot_id": "P0110",
+      "week": "2025-W36",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-01",
+          "plant_stress_index": 0.4178717180039253,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-02",
+          "plant_stress_index": 0.4389200584788483,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-03",
+          "plant_stress_index": 0.4586552737768318,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-04",
+          "plant_stress_index": 0.4299417862489484,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-05",
+          "plant_stress_index": 0.3814808153860004,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-06",
+          "plant_stress_index": 0.3981603146396378,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-07",
+          "plant_stress_index": 0.3694145890675435,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.369,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.369,
+        "vpd_kpa": 0.998,
+        "substrate_moisture": 0.487,
+        "pest_pressure_index": 0.367,
+        "disease_risk_index": 0.124
+      }
+    },
+    "P0110|2025-W37": {
+      "plot_id": "P0110",
+      "week": "2025-W37",
+      "header": "Plot P0110 \u2014 Cucumber, BC Harvest 4. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-08",
+          "plant_stress_index": 0.5566672197107814,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-09-09",
+          "plant_stress_index": 0.4414471968171121,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-10",
+          "plant_stress_index": 0.3909807097053991,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-11",
+          "plant_stress_index": 0.4166778477266267,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-12",
+          "plant_stress_index": 0.5935348190246815,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-09-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.019298652
+        },
+        {
+          "date": "2025-09-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 13.480955518146313,
+        "fertilizer": 0.0,
+        "labor": 57.45549374280194,
+        "pesticide": 0.0,
+        "water": 8.727097420814655,
+        "precision": 0.0,
+        "routine": 79.66354668176291,
+        "total": 79.66354668176291
+      },
+      "aiContext": {
+        "crop": "Cucumber",
+        "farmName": "BC Harvest 4",
+        "climateZone": "Fraser Valley",
+        "stressIndex": 0.594,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 79.66
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.594,
+        "vpd_kpa": 1.659,
+        "substrate_moisture": 0.407,
+        "pest_pressure_index": 0.359,
+        "disease_risk_index": 0.124
+      }
+    }
+  },
+  "responseOverTime": [
+    {
+      "week": "2025-W08",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W09",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W10",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W11",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W12",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W13",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W14",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W15",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W16",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W17",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W18",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W19",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W20",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W21",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W22",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W23",
+      "response_rate": 0.0
+    },
+    {
+      "week": "2025-W24",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W25",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W26",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W27",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W30",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W32",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W33",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W34",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W35",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W37",
+      "response_rate": 50.0
+    }
+  ],
+  "alertTypeBreakdown": [
+    {
+      "alert_type": "High Canopy Temp",
+      "count": 1,
+      "acted": 0,
+      "resolution_rate": 0.0
+    },
+    {
+      "alert_type": "High Pest Pressure",
+      "count": 89,
+      "acted": 78,
+      "resolution_rate": 87.6
+    }
+  ],
+  "healthTrend": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "avg_stress": 0.4408983618862769
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "avg_stress": 0.482311495513774
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "avg_stress": 0.5665927490168852
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "avg_stress": 0.5271807341608227
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "avg_stress": 0.5653490470451659
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "avg_stress": 0.6054657699583645
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "avg_stress": 0.5437001818110473
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "avg_stress": 0.6589828613775681
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "avg_stress": 0.5857806921108991
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "avg_stress": 0.5837737331121609
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "avg_stress": 0.6271112136790583
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "avg_stress": 0.564149737078372
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "avg_stress": 0.5407545359413717
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "avg_stress": 0.5428675816339035
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "avg_stress": 0.4832643975977235
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "avg_stress": 0.5542211976682873
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "avg_stress": 0.43381118568739857
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "avg_stress": 0.45877396846441976
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "avg_stress": 0.5662284317367813
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "avg_stress": 0.4422646157107347
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "avg_stress": 0.49230208482382043
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "avg_stress": 0.3973897935169512
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "avg_stress": 0.44065549500711415
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "avg_stress": 0.5450976324683433
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "avg_stress": 0.40500605849331445
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "avg_stress": 0.47554861666862447
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "avg_stress": 0.4706210577476035
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "avg_stress": 0.44581199051134124
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "avg_stress": 0.5747981231225845
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "avg_stress": 0.4134920793716765
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "avg_stress": 0.4798615585969202
+    }
+  ],
+  "previouslyAtRisk": [
+    {
+      "plot_id": "P0110",
+      "label": "Plot P0110 \u2014 Cucumber, BC Harvest 4",
+      "lastWeekStress": 0.369,
+      "thisWeekStress": 0.594,
+      "actionTaken": false
+    }
+  ],
+  "stressModel": {
+    "featureNames": [
+      "action_delay_days",
+      "plant_stress_index",
+      "vpd_kpa",
+      "substrate_moisture",
+      "pest_pressure_index",
+      "disease_risk_index"
+    ],
+    "coefficients": [
+      0.018582185718741706,
+      0.004795891494642045,
+      -0.0020391505608814606,
+      0.004241773724022167,
+      0.004797834115383394,
+      -0.024210540096880857
+    ],
+    "intercept": -0.04746805208487905,
+    "defaults": {
+      "action_delay_days": 0.747,
+      "plant_stress_index": 0.63,
+      "vpd_kpa": 1.579,
+      "substrate_moisture": 0.415,
+      "pest_pressure_index": 0.452,
+      "disease_risk_index": 0.142
+    },
+    "bounds": {
+      "action_delay_days": [
+        0,
+        5
+      ],
+      "plant_stress_index": [
+        0.0,
+        1.0
+      ],
+      "vpd_kpa": [
+        0.52,
+        2.39
+      ],
+      "substrate_moisture": [
+        0.0,
+        1.0
+      ],
+      "pest_pressure_index": [
+        0.0,
+        1.0
+      ],
+      "disease_risk_index": [
+        0.0,
+        1.0
+      ]
+    },
+    "avgSeasonDelta": -0.033
+  }
+}

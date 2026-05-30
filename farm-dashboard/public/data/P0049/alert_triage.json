@@ -1,0 +1,4170 @@
+{
+  "weeks": [
+    "2025-W07",
+    "2025-W08",
+    "2025-W09",
+    "2025-W10",
+    "2025-W11",
+    "2025-W12",
+    "2025-W13",
+    "2025-W14",
+    "2025-W15",
+    "2025-W16",
+    "2025-W17",
+    "2025-W18",
+    "2025-W19",
+    "2025-W20",
+    "2025-W21",
+    "2025-W22",
+    "2025-W23",
+    "2025-W24",
+    "2025-W25",
+    "2025-W26",
+    "2025-W27",
+    "2025-W28",
+    "2025-W29",
+    "2025-W30",
+    "2025-W31",
+    "2025-W32",
+    "2025-W33",
+    "2025-W34",
+    "2025-W35",
+    "2025-W36",
+    "2025-W37"
+  ],
+  "defaultWeek": "2025-W37",
+  "weeklyStats": {
+    "2025-W07": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W08": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 0.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W09": {
+      "highStressEvents": 4,
+      "highStressDelta": 3,
+      "responseRate": 75.0,
+      "responseRateDelta": 75.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W10": {
+      "highStressEvents": 2,
+      "highStressDelta": -2,
+      "responseRate": 50.0,
+      "responseRateDelta": -25.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W11": {
+      "highStressEvents": 3,
+      "highStressDelta": 1,
+      "responseRate": 80.0,
+      "responseRateDelta": 30.0,
+      "avgResponseDays": 1.2,
+      "avgResponseDaysDelta": 0.7
+    },
+    "2025-W12": {
+      "highStressEvents": 3,
+      "highStressDelta": 0,
+      "responseRate": 83.3,
+      "responseRateDelta": 3.3,
+      "avgResponseDays": 0.67,
+      "avgResponseDaysDelta": -0.53
+    },
+    "2025-W13": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 16.7,
+      "avgResponseDays": 0.33,
+      "avgResponseDaysDelta": -0.34
+    },
+    "2025-W14": {
+      "highStressEvents": 5,
+      "highStressDelta": 5,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.17
+    },
+    "2025-W15": {
+      "highStressEvents": 5,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.86,
+      "avgResponseDaysDelta": 0.36
+    },
+    "2025-W16": {
+      "highStressEvents": 0,
+      "highStressDelta": -5,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -0.36
+    },
+    "2025-W17": {
+      "highStressEvents": 4,
+      "highStressDelta": 4,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W18": {
+      "highStressEvents": 1,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.67,
+      "avgResponseDaysDelta": 1.17
+    },
+    "2025-W19": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 50.0,
+      "responseRateDelta": -50.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -1.17
+    },
+    "2025-W20": {
+      "highStressEvents": 2,
+      "highStressDelta": -1,
+      "responseRate": 50.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.25,
+      "avgResponseDaysDelta": -0.25
+    },
+    "2025-W21": {
+      "highStressEvents": 1,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 50.0,
+      "avgResponseDays": 0.67,
+      "avgResponseDaysDelta": 0.42
+    },
+    "2025-W22": {
+      "highStressEvents": 0,
+      "highStressDelta": -1,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.67
+    },
+    "2025-W23": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W24": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W25": {
+      "highStressEvents": 3,
+      "highStressDelta": 3,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.75,
+      "avgResponseDaysDelta": -0.25
+    },
+    "2025-W26": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.75
+    },
+    "2025-W27": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 66.7,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.33,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W28": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 33.3,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.33
+    },
+    "2025-W29": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W30": {
+      "highStressEvents": 2,
+      "highStressDelta": 2,
+      "responseRate": 0.0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W31": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W32": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W33": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": 0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0
+    },
+    "2025-W34": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 2.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W35": {
+      "highStressEvents": 3,
+      "highStressDelta": 3,
+      "responseRate": 50.0,
+      "responseRateDelta": -50.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": -1.5
+    },
+    "2025-W36": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 50.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W37": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": 0.0
+    }
+  },
+  "plotRankings": {
+    "2025-W07": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2208012237396468,
+        "plant_stress_index": 0.4416024474792936,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W08": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2685027505,
+        "plant_stress_index": 0.537005501,
+        "alert_type": "High VPD",
+        "action_delay_days": 0,
+        "oneliner": "High VPD alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W09": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.812006269600279,
+        "plant_stress_index": 0.6240125392005582,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W10": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6348819245400221,
+        "plant_stress_index": 0.5897638490800442,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W11": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6551279711509435,
+        "plant_stress_index": 0.6302559423018869,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W12": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6299604787387378,
+        "plant_stress_index": 0.5799209574774755,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W13": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2238947788320802,
+        "plant_stress_index": 0.4477895576641604,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W14": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7075861726772976,
+        "plant_stress_index": 0.7351723453545953,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W15": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6478468998099751,
+        "plant_stress_index": 0.6156937996199501,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W16": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6202179724252156,
+        "plant_stress_index": 0.5604359448504311,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W17": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6034417915474075,
+        "plant_stress_index": 0.6068835830948152,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W18": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2612979970700277,
+        "plant_stress_index": 0.5225959941400554,
+        "alert_type": "High Canopy Temp",
+        "action_delay_days": 0,
+        "oneliner": "High Canopy Temp alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W19": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.8607768121636192,
+        "plant_stress_index": 0.7215536243272386,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert \u2014 no crew action recorded. Urgent.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W20": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.5922710838457659,
+        "plant_stress_index": 0.5845421676915318,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W21": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.5775767924479037,
+        "plant_stress_index": 0.5551535848958075,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W22": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.19056404695370424,
+        "plant_stress_index": 0.3811280939074085,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W23": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.20393943918386326,
+        "plant_stress_index": 0.4078788783677265,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W24": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.252766985,
+        "plant_stress_index": 0.50553397,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W25": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.20004184257136806,
+        "plant_stress_index": 0.4000836851427361,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W26": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.185652622358217,
+        "plant_stress_index": 0.371305244716434,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W27": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2097884475,
+        "plant_stress_index": 0.419576895,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W28": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.18633408596781556,
+        "plant_stress_index": 0.3726681719356311,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W29": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.582580894,
+        "plant_stress_index": 0.565161788,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W30": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.21449651800971414,
+        "plant_stress_index": 0.4289930360194283,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W31": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.20982455607882264,
+        "plant_stress_index": 0.4196491121576453,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W32": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.27114600050661547,
+        "plant_stress_index": 0.5422920010132309,
+        "alert_type": "Low Moisture",
+        "action_delay_days": 0,
+        "oneliner": "Low Moisture alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W33": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.20367350692289785,
+        "plant_stress_index": 0.4073470138457957,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W34": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.20379647702631884,
+        "plant_stress_index": 0.4075929540526377,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W35": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.1973097803787586,
+        "plant_stress_index": 0.3946195607575172,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W36": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.5820735095,
+        "plant_stress_index": 0.564147019,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W37": [
+      {
+        "plot_id": "P0049",
+        "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+        "crop": "Pepper",
+        "farm_name": "BC Harvest 2",
+        "greenhouse_id": "GH001",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.22298503978882014,
+        "plant_stress_index": 0.4459700795776403,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ]
+  },
+  "plotDetails": {
+    "P0049|2025-W07": {
+      "plot_id": "P0049",
+      "week": "2025-W07",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-15",
+          "plant_stress_index": 0.4817910850618186,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-16",
+          "plant_stress_index": 0.4416024474792936,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.442,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.442,
+        "vpd_kpa": 1.547,
+        "substrate_moisture": 0.52,
+        "pest_pressure_index": 0.394,
+        "disease_risk_index": 0.142
+      }
+    },
+    "P0049|2025-W08": {
+      "plot_id": "P0049",
+      "week": "2025-W08",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-17",
+          "plant_stress_index": 0.4330519011308735,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-18",
+          "plant_stress_index": 0.6024928096301928,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-19",
+          "plant_stress_index": 0.4468110770240959,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-20",
+          "plant_stress_index": 0.3935992894543265,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-21",
+          "plant_stress_index": 0.4965890439871662,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-22",
+          "plant_stress_index": 0.4191012482073169,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-23",
+          "plant_stress_index": 0.537005501,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 5.204443763744903,
+        "fertilizer": 0.0,
+        "labor": 32.205333370164944,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 37.40977713390985,
+        "total": 37.40977713390985
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.537,
+        "alertType": "High VPD",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 37.41
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.537,
+        "vpd_kpa": 1.604,
+        "substrate_moisture": 0.479,
+        "pest_pressure_index": 0.408,
+        "disease_risk_index": 0.138
+      }
+    },
+    "P0049|2025-W09": {
+      "plot_id": "P0049",
+      "week": "2025-W09",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-24",
+          "plant_stress_index": 0.448655064873436,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-25",
+          "plant_stress_index": 0.451084562318883,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-26",
+          "plant_stress_index": 0.461642243,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-27",
+          "plant_stress_index": 0.626147129,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-28",
+          "plant_stress_index": 0.7233044400923915,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-01",
+          "plant_stress_index": 0.7451715793483027,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-02",
+          "plant_stress_index": 0.6240125392005582,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0221744925077231
+        },
+        {
+          "date": "2025-02-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.04474329
+        },
+        {
+          "date": "2025-03-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.018859947
+        },
+        {
+          "date": "2025-03-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 18.096871874222565,
+        "fertilizer": 0.0,
+        "labor": 118.61342191477722,
+        "pesticide": 0.0,
+        "water": 25.00103371268605,
+        "precision": 0.0,
+        "routine": 161.7113275016976,
+        "total": 161.7113275016976
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.624,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 161.71
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.624,
+        "vpd_kpa": 1.01,
+        "substrate_moisture": 0.459,
+        "pest_pressure_index": 0.407,
+        "disease_risk_index": 0.146
+      }
+    },
+    "P0049|2025-W10": {
+      "plot_id": "P0049",
+      "week": "2025-W10",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-03",
+          "plant_stress_index": 0.5999513005389655,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-04",
+          "plant_stress_index": 0.6469976569959539,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-05",
+          "plant_stress_index": 0.6104770290167477,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-06",
+          "plant_stress_index": 0.4707926645469372,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-07",
+          "plant_stress_index": 0.4714005338065344,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-08",
+          "plant_stress_index": 0.4637687981114731,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-09",
+          "plant_stress_index": 0.5897638490800442,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.045436506
+        },
+        {
+          "date": "2025-03-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.033959287
+        }
+      ],
+      "costs": {
+        "energy": 19.95714357422254,
+        "fertilizer": 48.79,
+        "labor": 156.94490733822323,
+        "pesticide": 0.0,
+        "water": 12.763689460446914,
+        "precision": 0.0,
+        "routine": 238.45574036971487,
+        "total": 238.45574036971487
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.59,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.034,
+        "weeklyCost": 238.46
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.59,
+        "vpd_kpa": 1.807,
+        "substrate_moisture": 0.512,
+        "pest_pressure_index": 0.46,
+        "disease_risk_index": 0.132
+      }
+    },
+    "P0049|2025-W11": {
+      "plot_id": "P0049",
+      "week": "2025-W11",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-10",
+          "plant_stress_index": 0.6115138566206626,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-11",
+          "plant_stress_index": 0.4361319679064884,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-12",
+          "plant_stress_index": 0.3913564687971838,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-13",
+          "plant_stress_index": 0.5960636268558861,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-14",
+          "plant_stress_index": 0.6197550803085611,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-15",
+          "plant_stress_index": 0.5720974070369679,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-16",
+          "plant_stress_index": 0.6302559423018869,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.101847114
+        },
+        {
+          "date": "2025-03-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.017076529
+        },
+        {
+          "date": "2025-03-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.021356401
+        },
+        {
+          "date": "2025-03-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.041401985
+        }
+      ],
+      "costs": {
+        "energy": 31.16783132431621,
+        "fertilizer": 0.0,
+        "labor": 171.79944187436672,
+        "pesticide": 0.0,
+        "water": 24.934309598062466,
+        "precision": 0.0,
+        "routine": 227.90158279681043,
+        "total": 227.90158279681043
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.63,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.041,
+        "weeklyCost": 227.9
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.63,
+        "vpd_kpa": 1.601,
+        "substrate_moisture": 0.377,
+        "pest_pressure_index": 0.466,
+        "disease_risk_index": 0.141
+      }
+    },
+    "P0049|2025-W12": {
+      "plot_id": "P0049",
+      "week": "2025-W12",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-17",
+          "plant_stress_index": 0.6079465054551526,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-18",
+          "plant_stress_index": 0.6330226681653645,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-19",
+          "plant_stress_index": 0.6394504835141402,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-20",
+          "plant_stress_index": 0.5540344054524224,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-21",
+          "plant_stress_index": 0.5629526681314676,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-22",
+          "plant_stress_index": 0.5438267773847331,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-23",
+          "plant_stress_index": 0.5799209574774755,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0452475227234055
+        },
+        {
+          "date": "2025-03-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.091498643
+        },
+        {
+          "date": "2025-03-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.027543249
+        },
+        {
+          "date": "2025-03-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.081194904
+        },
+        {
+          "date": "2025-03-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0162565225176282
+        }
+      ],
+      "costs": {
+        "energy": 34.530470293135686,
+        "fertilizer": 0.0,
+        "labor": 215.95257636910196,
+        "pesticide": 0.0,
+        "water": 40.68398546946722,
+        "precision": 0.0,
+        "routine": 291.1670321319657,
+        "total": 291.1670321319657
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.58,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": 0.016,
+        "weeklyCost": 291.17
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.58,
+        "vpd_kpa": 1.789,
+        "substrate_moisture": 0.51,
+        "pest_pressure_index": 0.472,
+        "disease_risk_index": 0.158
+      }
+    },
+    "P0049|2025-W13": {
+      "plot_id": "P0049",
+      "week": "2025-W13",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-24",
+          "plant_stress_index": 0.5970464298863878,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-25",
+          "plant_stress_index": 0.5780072949803534,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-26",
+          "plant_stress_index": 0.5921882518203766,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-27",
+          "plant_stress_index": 0.5221556105233273,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-28",
+          "plant_stress_index": 0.5161143097387371,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-29",
+          "plant_stress_index": 0.4976202074977604,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-30",
+          "plant_stress_index": 0.4477895576641604,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.014121272
+        },
+        {
+          "date": "2025-03-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.053031704
+        },
+        {
+          "date": "2025-03-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.073920302
+        }
+      ],
+      "costs": {
+        "energy": 10.482098659027576,
+        "fertilizer": 72.74027284,
+        "labor": 197.675555696012,
+        "pesticide": 71.71953483814738,
+        "water": 41.11772610092809,
+        "precision": 83.15544258795681,
+        "routine": 310.579745547419,
+        "total": 393.73518813537584
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.448,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 393.74
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.448,
+        "vpd_kpa": 1.588,
+        "substrate_moisture": 0.519,
+        "pest_pressure_index": 0.493,
+        "disease_risk_index": 0.132
+      }
+    },
+    "P0049|2025-W14": {
+      "plot_id": "P0049",
+      "week": "2025-W14",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-31",
+          "plant_stress_index": 0.4911178214317463,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-01",
+          "plant_stress_index": 0.620672208,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-02",
+          "plant_stress_index": 0.6720513139630844,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-03",
+          "plant_stress_index": 0.5845961939001729,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-04",
+          "plant_stress_index": 0.7046820288620452,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-05",
+          "plant_stress_index": 0.6441186164966963,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-06",
+          "plant_stress_index": 0.7351723453545953,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.039840176
+        },
+        {
+          "date": "2025-04-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.049239272
+        },
+        {
+          "date": "2025-04-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.100843968
+        },
+        {
+          "date": "2025-04-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.097266503
+        },
+        {
+          "date": "2025-04-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.038174822
+        },
+        {
+          "date": "2025-04-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.003026483
+        }
+      ],
+      "costs": {
+        "energy": 26.92636141125021,
+        "fertilizer": 0.0,
+        "labor": 200.57158987172912,
+        "pesticide": 0.0,
+        "water": 50.88410588877293,
+        "precision": 0.0,
+        "routine": 278.38205717137345,
+        "total": 278.38205717137345
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.735,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.003,
+        "weeklyCost": 278.38
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.735,
+        "vpd_kpa": 1.373,
+        "substrate_moisture": 0.414,
+        "pest_pressure_index": 0.478,
+        "disease_risk_index": 0.124
+      }
+    },
+    "P0049|2025-W15": {
+      "plot_id": "P0049",
+      "week": "2025-W15",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-07",
+          "plant_stress_index": 0.7785178533368612,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-08",
+          "plant_stress_index": 0.6384414257690837,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-09",
+          "plant_stress_index": 0.608267827,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-10",
+          "plant_stress_index": 0.5645950307350285,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-11",
+          "plant_stress_index": 0.5554103509805459,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-12",
+          "plant_stress_index": 0.6052843803169865,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-13",
+          "plant_stress_index": 0.6156937996199501,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.127645792
+        },
+        {
+          "date": "2025-04-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.057852396
+        },
+        {
+          "date": "2025-04-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.039731836
+        },
+        {
+          "date": "2025-04-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.013700368
+        },
+        {
+          "date": "2025-04-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0145855236316249
+        },
+        {
+          "date": "2025-04-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.020961845
+        },
+        {
+          "date": "2025-04-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.092665322
+        }
+      ],
+      "costs": {
+        "energy": 40.118971856897794,
+        "fertilizer": 84.58755293984659,
+        "labor": 272.38475858250825,
+        "pesticide": 24.654061397199666,
+        "water": 45.454289900431924,
+        "precision": 61.67698336111032,
+        "routine": 405.5226513156373,
+        "total": 467.19963467674756
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.616,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.093,
+        "weeklyCost": 467.2
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.616,
+        "vpd_kpa": 1.674,
+        "substrate_moisture": 0.491,
+        "pest_pressure_index": 0.496,
+        "disease_risk_index": 0.127
+      }
+    },
+    "P0049|2025-W16": {
+      "plot_id": "P0049",
+      "week": "2025-W16",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-14",
+          "plant_stress_index": 0.5745011699592965,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-15",
+          "plant_stress_index": 0.5301640291441713,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-16",
+          "plant_stress_index": 0.5945451886998031,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-17",
+          "plant_stress_index": 0.4224123309003957,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-18",
+          "plant_stress_index": 0.5808345275228324,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-19",
+          "plant_stress_index": 0.5369786256688014,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-20",
+          "plant_stress_index": 0.5604359448504311,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.088371184
+        },
+        {
+          "date": "2025-04-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.036706852
+        },
+        {
+          "date": "2025-04-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.05014777
+        },
+        {
+          "date": "2025-04-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.063794721
+        }
+      ],
+      "costs": {
+        "energy": 15.108711267366477,
+        "fertilizer": 0.0,
+        "labor": 167.13001074933044,
+        "pesticide": 0.0,
+        "water": 29.48986384481163,
+        "precision": 0.0,
+        "routine": 211.72858586173484,
+        "total": 211.72858586173484
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.56,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.064,
+        "weeklyCost": 211.73
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.56,
+        "vpd_kpa": 1.656,
+        "substrate_moisture": 0.432,
+        "pest_pressure_index": 0.479,
+        "disease_risk_index": 0.137
+      }
+    },
+    "P0049|2025-W17": {
+      "plot_id": "P0049",
+      "week": "2025-W17",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-21",
+          "plant_stress_index": 0.5916865382692591,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-22",
+          "plant_stress_index": 0.6212103849068338,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-23",
+          "plant_stress_index": 0.5840247562214534,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-24",
+          "plant_stress_index": 0.4580907246748092,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-25",
+          "plant_stress_index": 0.6247510634045498,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-26",
+          "plant_stress_index": 0.6209655847998103,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-27",
+          "plant_stress_index": 0.6068835830948152,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0152707436847424
+        },
+        {
+          "date": "2025-04-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.084094425
+        },
+        {
+          "date": "2025-04-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.018137443
+        },
+        {
+          "date": "2025-04-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.062459379
+        },
+        {
+          "date": "2025-04-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.006025573
+        },
+        {
+          "date": "2025-04-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.022526223
+        }
+      ],
+      "costs": {
+        "energy": 27.633212787900035,
+        "fertilizer": 0.0,
+        "labor": 215.6222936508045,
+        "pesticide": 0.0,
+        "water": 31.963883026575242,
+        "precision": 0.0,
+        "routine": 275.21938946284115,
+        "total": 275.21938946284115
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.607,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.023,
+        "weeklyCost": 275.22
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.607,
+        "vpd_kpa": 1.563,
+        "substrate_moisture": 0.424,
+        "pest_pressure_index": 0.495,
+        "disease_risk_index": 0.13
+      }
+    },
+    "P0049|2025-W18": {
+      "plot_id": "P0049",
+      "week": "2025-W18",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-28",
+          "plant_stress_index": 0.609486819,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-29",
+          "plant_stress_index": 0.561429969,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-30",
+          "plant_stress_index": 0.4421903601317516,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-01",
+          "plant_stress_index": 0.5520839845836654,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-02",
+          "plant_stress_index": 0.5042578977059577,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-03",
+          "plant_stress_index": 0.4693555314288178,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-04",
+          "plant_stress_index": 0.5225959941400554,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.028942347
+        },
+        {
+          "date": "2025-04-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.002283827
+        },
+        {
+          "date": "2025-05-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.086857188
+        }
+      ],
+      "costs": {
+        "energy": 16.463897863288118,
+        "fertilizer": 0.0,
+        "labor": 97.48858140823944,
+        "pesticide": 0.0,
+        "water": 17.578803364156673,
+        "precision": 0.0,
+        "routine": 131.53128263805246,
+        "total": 131.53128263805246
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.523,
+        "alertType": "High Canopy Temp",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 131.53
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.523,
+        "vpd_kpa": 1.353,
+        "substrate_moisture": 0.516,
+        "pest_pressure_index": 0.485,
+        "disease_risk_index": 0.148
+      }
+    },
+    "P0049|2025-W19": {
+      "plot_id": "P0049",
+      "week": "2025-W19",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-05",
+          "plant_stress_index": 0.4256275064946768,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-06",
+          "plant_stress_index": 0.4851894593116855,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-07",
+          "plant_stress_index": 0.59892504,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-08",
+          "plant_stress_index": 0.5147768491063733,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-09",
+          "plant_stress_index": 0.6032186019286851,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-10",
+          "plant_stress_index": 0.6698007857634999,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-11",
+          "plant_stress_index": 0.7215536243272386,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.0125882955365854
+        },
+        {
+          "date": "2025-05-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.143741205
+        },
+        {
+          "date": "2025-05-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 16.787573923118153,
+        "fertilizer": 0.0,
+        "labor": 128.594506517005,
+        "pesticide": 0.0,
+        "water": 17.936157939105946,
+        "precision": 0.0,
+        "routine": 163.3182383792291,
+        "total": 163.3182383792291
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.722,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 163.32
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.722,
+        "vpd_kpa": 1.66,
+        "substrate_moisture": 0.326,
+        "pest_pressure_index": 0.423,
+        "disease_risk_index": 0.131
+      }
+    },
+    "P0049|2025-W20": {
+      "plot_id": "P0049",
+      "week": "2025-W20",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-12",
+          "plant_stress_index": 0.6766154775318712,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-13",
+          "plant_stress_index": 0.6862694898784638,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-14",
+          "plant_stress_index": 0.5295116558536775,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-15",
+          "plant_stress_index": 0.5802376817856518,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-16",
+          "plant_stress_index": 0.4410455812905771,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-17",
+          "plant_stress_index": 0.4734589896182604,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-18",
+          "plant_stress_index": 0.5845421676915318,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.034073869
+        },
+        {
+          "date": "2025-05-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.010830281
+        }
+      ],
+      "costs": {
+        "energy": 24.563243531089505,
+        "fertilizer": 35.48,
+        "labor": 239.80322894177752,
+        "pesticide": 25.18,
+        "water": 10.96869288887424,
+        "precision": 0.0,
+        "routine": 335.9951653617413,
+        "total": 335.9951653617413
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.585,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.011,
+        "weeklyCost": 336.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.585,
+        "vpd_kpa": 1.611,
+        "substrate_moisture": 0.496,
+        "pest_pressure_index": 0.43,
+        "disease_risk_index": 0.135
+      }
+    },
+    "P0049|2025-W21": {
+      "plot_id": "P0049",
+      "week": "2025-W21",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-19",
+          "plant_stress_index": 0.6087880558624312,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-20",
+          "plant_stress_index": 0.4394004026349153,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-21",
+          "plant_stress_index": 0.4253419914554434,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-22",
+          "plant_stress_index": 0.5519053580121674,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-23",
+          "plant_stress_index": 0.5313896063584754,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-24",
+          "plant_stress_index": 0.5183497516501216,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-25",
+          "plant_stress_index": 0.5551535848958075,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.000108188
+        },
+        {
+          "date": "2025-05-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.076936419
+        },
+        {
+          "date": "2025-05-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.037551366
+        }
+      ],
+      "costs": {
+        "energy": 10.811896242193615,
+        "fertilizer": 0.0,
+        "labor": 131.83630441089647,
+        "pesticide": 0.0,
+        "water": 25.4935105746852,
+        "precision": 0.0,
+        "routine": 168.14171122676748,
+        "total": 168.14171122676748
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.555,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.038,
+        "weeklyCost": 168.14
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.555,
+        "vpd_kpa": 1.618,
+        "substrate_moisture": 0.413,
+        "pest_pressure_index": 0.391,
+        "disease_risk_index": 0.124
+      }
+    },
+    "P0049|2025-W22": {
+      "plot_id": "P0049",
+      "week": "2025-W22",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-26",
+          "plant_stress_index": 0.3953613240476691,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-27",
+          "plant_stress_index": 0.4384853137201427,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-28",
+          "plant_stress_index": 0.4613167499717091,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-29",
+          "plant_stress_index": 0.4542922315716969,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-30",
+          "plant_stress_index": 0.5447092080151872,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-31",
+          "plant_stress_index": 0.5483787214873862,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-01",
+          "plant_stress_index": 0.3811280939074085,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.381,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.381,
+        "vpd_kpa": 1.161,
+        "substrate_moisture": 0.446,
+        "pest_pressure_index": 0.395,
+        "disease_risk_index": 0.124
+      }
+    },
+    "P0049|2025-W23": {
+      "plot_id": "P0049",
+      "week": "2025-W23",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-02",
+          "plant_stress_index": 0.4164440122268154,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-03",
+          "plant_stress_index": 0.510045513,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-04",
+          "plant_stress_index": 0.4014289121826658,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-05",
+          "plant_stress_index": 0.4013562284832834,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-06",
+          "plant_stress_index": 0.5154470595273197,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-07",
+          "plant_stress_index": 0.3684816861441921,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-08",
+          "plant_stress_index": 0.4078788783677265,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.408,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.408,
+        "vpd_kpa": 1.532,
+        "substrate_moisture": 0.523,
+        "pest_pressure_index": 0.363,
+        "disease_risk_index": 0.141
+      }
+    },
+    "P0049|2025-W24": {
+      "plot_id": "P0049",
+      "week": "2025-W24",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-09",
+          "plant_stress_index": 0.5931016180967158,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-10",
+          "plant_stress_index": 0.3856253851943531,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-11",
+          "plant_stress_index": 0.3782290746621189,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-12",
+          "plant_stress_index": 0.452216936,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-13",
+          "plant_stress_index": 0.4403930212719776,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-14",
+          "plant_stress_index": 0.3735883272461803,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-15",
+          "plant_stress_index": 0.50553397,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.106277328
+        }
+      ],
+      "costs": {
+        "energy": 10.283227386787502,
+        "fertilizer": 21.87,
+        "labor": 35.121956435051175,
+        "pesticide": 0.0,
+        "water": 5.5111705314863455,
+        "precision": 0.0,
+        "routine": 72.78635435332501,
+        "total": 72.78635435332501
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.506,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 72.79
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.506,
+        "vpd_kpa": 1.334,
+        "substrate_moisture": 0.453,
+        "pest_pressure_index": 0.419,
+        "disease_risk_index": 0.152
+      }
+    },
+    "P0049|2025-W25": {
+      "plot_id": "P0049",
+      "week": "2025-W25",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-16",
+          "plant_stress_index": 0.7188210349455991,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-17",
+          "plant_stress_index": 0.738503362,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-18",
+          "plant_stress_index": 0.6550068111022116,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-19",
+          "plant_stress_index": 0.5718639056716496,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-20",
+          "plant_stress_index": 0.5131022765770953,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-21",
+          "plant_stress_index": 0.5042997790487244,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-22",
+          "plant_stress_index": 0.4000836851427361,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.025528943
+        },
+        {
+          "date": "2025-06-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.032542825
+        },
+        {
+          "date": "2025-06-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.036321487
+        },
+        {
+          "date": "2025-06-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.003987161
+        }
+      ],
+      "costs": {
+        "energy": 15.261742804279882,
+        "fertilizer": 0.0,
+        "labor": 142.4865285963516,
+        "pesticide": 0.0,
+        "water": 28.915003397112294,
+        "precision": 0.0,
+        "routine": 186.66327479774378,
+        "total": 186.66327479774378
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.4,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 186.66
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.4,
+        "vpd_kpa": 1.284,
+        "substrate_moisture": 0.489,
+        "pest_pressure_index": 0.407,
+        "disease_risk_index": 0.142
+      }
+    },
+    "P0049|2025-W26": {
+      "plot_id": "P0049",
+      "week": "2025-W26",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-23",
+          "plant_stress_index": 0.4639808533997945,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-24",
+          "plant_stress_index": 0.3892552983510495,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-25",
+          "plant_stress_index": 0.436159174,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-26",
+          "plant_stress_index": 0.4223479535057962,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-27",
+          "plant_stress_index": 0.4390516761768602,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-28",
+          "plant_stress_index": 0.3782731363582218,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-29",
+          "plant_stress_index": 0.371305244716434,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 3.25,
+        "fertilizer": 27.07,
+        "labor": 66.92,
+        "pesticide": 0.0,
+        "water": 1.12,
+        "precision": 0.0,
+        "routine": 98.36,
+        "total": 98.36
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.371,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 98.36
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.371,
+        "vpd_kpa": 0.987,
+        "substrate_moisture": 0.479,
+        "pest_pressure_index": 0.443,
+        "disease_risk_index": 0.127
+      }
+    },
+    "P0049|2025-W27": {
+      "plot_id": "P0049",
+      "week": "2025-W27",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-30",
+          "plant_stress_index": 0.5566439481863814,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-01",
+          "plant_stress_index": 0.3911608490956423,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-02",
+          "plant_stress_index": 0.4928670863943727,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-03",
+          "plant_stress_index": 0.5754711836421839,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-04",
+          "plant_stress_index": 0.5750709059852307,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-05",
+          "plant_stress_index": 0.4173528550988749,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-06",
+          "plant_stress_index": 0.419576895,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.036051034
+        },
+        {
+          "date": "2025-07-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.04666617
+        },
+        {
+          "date": "2025-07-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 21.831343207836756,
+        "fertilizer": 44.45,
+        "labor": 115.70670998968623,
+        "pesticide": 40.32,
+        "water": 12.783914336582583,
+        "precision": 0.0,
+        "routine": 235.09196753457596,
+        "total": 235.09196753457596
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.42,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 235.09
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.42,
+        "vpd_kpa": 1.235,
+        "substrate_moisture": 0.444,
+        "pest_pressure_index": 0.378,
+        "disease_risk_index": 0.147
+      }
+    },
+    "P0049|2025-W28": {
+      "plot_id": "P0049",
+      "week": "2025-W28",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-07",
+          "plant_stress_index": 0.5965871088976568,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-08",
+          "plant_stress_index": 0.4200317987827003,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-09",
+          "plant_stress_index": 0.525045267,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-10",
+          "plant_stress_index": 0.3860997949226029,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-11",
+          "plant_stress_index": 0.3883294484570091,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-12",
+          "plant_stress_index": 0.3427216341462891,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-13",
+          "plant_stress_index": 0.3726681719356311,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.122447574
+        }
+      ],
+      "costs": {
+        "energy": 10.429505563644833,
+        "fertilizer": 38.45,
+        "labor": 95.11335808216207,
+        "pesticide": 0.0,
+        "water": 8.351168713052925,
+        "precision": 0.0,
+        "routine": 152.34403235920573,
+        "total": 152.34403235920573
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.373,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 152.34
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.373,
+        "vpd_kpa": 1.108,
+        "substrate_moisture": 0.532,
+        "pest_pressure_index": 0.383,
+        "disease_risk_index": 0.13
+      }
+    },
+    "P0049|2025-W29": {
+      "plot_id": "P0049",
+      "week": "2025-W29",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-14",
+          "plant_stress_index": 0.3893871686347441,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-15",
+          "plant_stress_index": 0.4350162563565115,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-16",
+          "plant_stress_index": 0.4411467963283517,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-17",
+          "plant_stress_index": 0.3867717548315026,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-18",
+          "plant_stress_index": 0.4465850574713174,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-19",
+          "plant_stress_index": 0.4537738729050615,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-20",
+          "plant_stress_index": 0.565161788,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.083123015
+        }
+      ],
+      "costs": {
+        "energy": 3.3848707998536067,
+        "fertilizer": 0.0,
+        "labor": 41.98246967243234,
+        "pesticide": 0.0,
+        "water": 6.1656606450692895,
+        "precision": 0.0,
+        "routine": 51.533001117355234,
+        "total": 51.533001117355234
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.565,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.083,
+        "weeklyCost": 51.53
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.565,
+        "vpd_kpa": 1.135,
+        "substrate_moisture": 0.372,
+        "pest_pressure_index": 0.422,
+        "disease_risk_index": 0.159
+      }
+    },
+    "P0049|2025-W30": {
+      "plot_id": "P0049",
+      "week": "2025-W30",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-21",
+          "plant_stress_index": 0.4839528832378716,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-22",
+          "plant_stress_index": 0.7306939150117521,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-23",
+          "plant_stress_index": 0.599667087,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-24",
+          "plant_stress_index": 0.6781251504091419,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-25",
+          "plant_stress_index": 0.4416219683134611,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-26",
+          "plant_stress_index": 0.4995715875574019,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-27",
+          "plant_stress_index": 0.4289930360194283,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 6.752713104080046,
+        "fertilizer": 0.0,
+        "labor": 74.71237779705652,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 81.46509090113658,
+        "total": 81.46509090113658
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.429,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 81.47
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.429,
+        "vpd_kpa": 1.338,
+        "substrate_moisture": 0.468,
+        "pest_pressure_index": 0.409,
+        "disease_risk_index": 0.159
+      }
+    },
+    "P0049|2025-W31": {
+      "plot_id": "P0049",
+      "week": "2025-W31",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-28",
+          "plant_stress_index": 0.5467103338538419,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-29",
+          "plant_stress_index": 0.4077446454374766,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-30",
+          "plant_stress_index": 0.4395352337321326,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-31",
+          "plant_stress_index": 0.3929517905092119,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-01",
+          "plant_stress_index": 0.3902936623241734,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-02",
+          "plant_stress_index": 0.451567707,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-03",
+          "plant_stress_index": 0.4196491121576453,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.42,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.42,
+        "vpd_kpa": 1.135,
+        "substrate_moisture": 0.455,
+        "pest_pressure_index": 0.389,
+        "disease_risk_index": 0.145
+      }
+    },
+    "P0049|2025-W32": {
+      "plot_id": "P0049",
+      "week": "2025-W32",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-04",
+          "plant_stress_index": 0.4685475235302426,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-05",
+          "plant_stress_index": 0.4371590278648593,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-06",
+          "plant_stress_index": 0.4511081181325346,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-07",
+          "plant_stress_index": 0.4108851286729971,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-08",
+          "plant_stress_index": 0.387663644614767,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-09",
+          "plant_stress_index": 0.4503420076686904,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-10",
+          "plant_stress_index": 0.5422920010132309,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.542,
+        "alertType": "Low Moisture",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.542,
+        "vpd_kpa": 0.996,
+        "substrate_moisture": 0.381,
+        "pest_pressure_index": 0.44,
+        "disease_risk_index": 0.171
+      }
+    },
+    "P0049|2025-W33": {
+      "plot_id": "P0049",
+      "week": "2025-W33",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-11",
+          "plant_stress_index": 0.438455747,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-12",
+          "plant_stress_index": 0.4167049262512736,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-13",
+          "plant_stress_index": 0.5309360641061805,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-14",
+          "plant_stress_index": 0.4392250772924433,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-15",
+          "plant_stress_index": 0.3474786492873591,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-16",
+          "plant_stress_index": 0.3900081010718059,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-17",
+          "plant_stress_index": 0.4073470138457957,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.407,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.407,
+        "vpd_kpa": 1.092,
+        "substrate_moisture": 0.529,
+        "pest_pressure_index": 0.426,
+        "disease_risk_index": 0.166
+      }
+    },
+    "P0049|2025-W34": {
+      "plot_id": "P0049",
+      "week": "2025-W34",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-18",
+          "plant_stress_index": 0.581909524,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-19",
+          "plant_stress_index": 0.3856891674851807,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-20",
+          "plant_stress_index": 0.4426077747855799,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-21",
+          "plant_stress_index": 0.4198031384946685,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-22",
+          "plant_stress_index": 0.454365482098416,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-23",
+          "plant_stress_index": 0.4123469882129636,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-24",
+          "plant_stress_index": 0.4075929540526377,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.028133705
+        }
+      ],
+      "costs": {
+        "energy": 4.391750194789964,
+        "fertilizer": 0.0,
+        "labor": 35.328950410950604,
+        "pesticide": 0.0,
+        "water": 4.52655125,
+        "precision": 0.0,
+        "routine": 44.24725185597316,
+        "total": 44.24725185597316
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.408,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 44.25
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.408,
+        "vpd_kpa": 1.183,
+        "substrate_moisture": 0.503,
+        "pest_pressure_index": 0.428,
+        "disease_risk_index": 0.18
+      }
+    },
+    "P0049|2025-W35": {
+      "plot_id": "P0049",
+      "week": "2025-W35",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-25",
+          "plant_stress_index": 0.4190436983907018,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-26",
+          "plant_stress_index": 0.6693463508865822,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-27",
+          "plant_stress_index": 0.5557037306888724,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-28",
+          "plant_stress_index": 0.7156396453565823,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-29",
+          "plant_stress_index": 0.7159563312917943,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-30",
+          "plant_stress_index": 0.5106393021903184,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-31",
+          "plant_stress_index": 0.3946195607575172,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.111024382
+        },
+        {
+          "date": "2025-08-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-08-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-08-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.025835031
+        }
+      ],
+      "costs": {
+        "energy": 22.489782022090314,
+        "fertilizer": 69.11097101,
+        "labor": 152.94899321091543,
+        "pesticide": 59.45860696320452,
+        "water": 4.600516026493576,
+        "precision": 74.52172528661582,
+        "routine": 234.08714394584715,
+        "total": 308.60886923246284
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.395,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 308.61
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.395,
+        "vpd_kpa": 1.389,
+        "substrate_moisture": 0.445,
+        "pest_pressure_index": 0.361,
+        "disease_risk_index": 0.156
+      }
+    },
+    "P0049|2025-W36": {
+      "plot_id": "P0049",
+      "week": "2025-W36",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-01",
+          "plant_stress_index": 0.4321362825945617,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-02",
+          "plant_stress_index": 0.4651924025952136,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-03",
+          "plant_stress_index": 0.4283933141516683,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-04",
+          "plant_stress_index": 0.4583830633440116,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-05",
+          "plant_stress_index": 0.457732327,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-06",
+          "plant_stress_index": 0.384792563134598,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-07",
+          "plant_stress_index": 0.564147019,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-09-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.011693335337374
+        }
+      ],
+      "costs": {
+        "energy": 3.1499328280800056,
+        "fertilizer": 0.0,
+        "labor": 35.35345501629327,
+        "pesticide": 0.0,
+        "water": 7.755593223544684,
+        "precision": 0.0,
+        "routine": 46.25898106791796,
+        "total": 46.25898106791796
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.564,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.012,
+        "weeklyCost": 46.26
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.564,
+        "vpd_kpa": 1.71,
+        "substrate_moisture": 0.422,
+        "pest_pressure_index": 0.364,
+        "disease_risk_index": 0.127
+      }
+    },
+    "P0049|2025-W37": {
+      "plot_id": "P0049",
+      "week": "2025-W37",
+      "header": "Plot P0049 \u2014 Pepper, BC Harvest 2. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-08",
+          "plant_stress_index": 0.4786951652485708,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-09",
+          "plant_stress_index": 0.4327399603713112,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-10",
+          "plant_stress_index": 0.4611827190800525,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-11",
+          "plant_stress_index": 0.4391215584219616,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-12",
+          "plant_stress_index": 0.4459700795776403,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Pepper",
+        "farmName": "BC Harvest 2",
+        "climateZone": "Interior",
+        "stressIndex": 0.446,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.446,
+        "vpd_kpa": 1.505,
+        "substrate_moisture": 0.422,
+        "pest_pressure_index": 0.375,
+        "disease_risk_index": 0.141
+      }
+    }
+  },
+  "responseOverTime": [
+    {
+      "week": "2025-W08",
+      "response_rate": 0.0
+    },
+    {
+      "week": "2025-W09",
+      "response_rate": 75.0
+    },
+    {
+      "week": "2025-W10",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W11",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W12",
+      "response_rate": 83.3
+    },
+    {
+      "week": "2025-W13",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W14",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W15",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W16",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W17",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W18",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W19",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W20",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W21",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W24",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W25",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W27",
+      "response_rate": 66.7
+    },
+    {
+      "week": "2025-W28",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W29",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W30",
+      "response_rate": 0.0
+    },
+    {
+      "week": "2025-W34",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W35",
+      "response_rate": 50.0
+    },
+    {
+      "week": "2025-W36",
+      "response_rate": 100.0
+    }
+  ],
+  "alertTypeBreakdown": [
+    {
+      "alert_type": "High Pest Pressure",
+      "count": 79,
+      "acted": 63,
+      "resolution_rate": 79.7
+    }
+  ],
+  "healthTrend": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "avg_stress": 0.4616967662705561
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "avg_stress": 0.47552155291913883
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "avg_stress": 0.5828596511190816
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "avg_stress": 0.5504502617280937
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "avg_stress": 0.5510249071182338
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "avg_stress": 0.5887363522258223
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "avg_stress": 0.5358459517301576
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "avg_stress": 0.6360586468583344
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "avg_stress": 0.6237443811083508
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "avg_stress": 0.5428388309636759
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "avg_stress": 0.5868018050530759
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "avg_stress": 0.5230572222843212
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "avg_stress": 0.5741559809903085
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "avg_stress": 0.5673830062357191
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "avg_stress": 0.5186183929813374
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "avg_stress": 0.4605245203887428
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "avg_stress": 0.4315831842760004
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "avg_stress": 0.44695547606733516
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "avg_stress": 0.5859544077840023
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "avg_stress": 0.41433904807259375
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "avg_stress": 0.4897348176289551
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "avg_stress": 0.43306903202026986
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "avg_stress": 0.44540609921821267
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "avg_stress": 0.5518036610784367
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "avg_stress": 0.4354932121449259
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "avg_stress": 0.44971392164247453
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "avg_stress": 0.42430793983640835
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "avg_stress": 0.4434735755899209
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "avg_stress": 0.5687069456517669
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "avg_stress": 0.45582528168857905
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "avg_stress": 0.4515418965399073
+    }
+  ],
+  "previouslyAtRisk": [
+    {
+      "plot_id": "P0049",
+      "label": "Plot P0049 \u2014 Pepper, BC Harvest 2",
+      "lastWeekStress": 0.564,
+      "thisWeekStress": 0.446,
+      "actionTaken": false
+    }
+  ],
+  "stressModel": {
+    "featureNames": [
+      "action_delay_days",
+      "plant_stress_index",
+      "vpd_kpa",
+      "substrate_moisture",
+      "pest_pressure_index",
+      "disease_risk_index"
+    ],
+    "coefficients": [
+      0.018582185718741706,
+      0.004795891494642045,
+      -0.0020391505608814606,
+      0.004241773724022167,
+      0.004797834115383394,
+      -0.024210540096880857
+    ],
+    "intercept": -0.04746805208487905,
+    "defaults": {
+      "action_delay_days": 0.747,
+      "plant_stress_index": 0.63,
+      "vpd_kpa": 1.579,
+      "substrate_moisture": 0.415,
+      "pest_pressure_index": 0.452,
+      "disease_risk_index": 0.142
+    },
+    "bounds": {
+      "action_delay_days": [
+        0,
+        5
+      ],
+      "plant_stress_index": [
+        0.0,
+        1.0
+      ],
+      "vpd_kpa": [
+        0.52,
+        2.39
+      ],
+      "substrate_moisture": [
+        0.0,
+        1.0
+      ],
+      "pest_pressure_index": [
+        0.0,
+        1.0
+      ],
+      "disease_risk_index": [
+        0.0,
+        1.0
+      ]
+    },
+    "avgSeasonDelta": -0.033
+  }
+}

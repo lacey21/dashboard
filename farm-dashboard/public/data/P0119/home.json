@@ -1,0 +1,191 @@
+{
+  "banner": {
+    "criticalPlots": 0,
+    "unactionedAlerts": 0,
+    "roiVsBaseline": 0.0
+  },
+  "kpis": {
+    "farmHealthScore": 56.2,
+    "farmHealthDelta": -3.1,
+    "activeAlerts": 0,
+    "activeAlertsDelta": 0,
+    "seasonRoiPct": 49.4,
+    "seasonRoiDelta": 0.0,
+    "precisionActionRate": 2.4,
+    "precisionActionRateDelta": 0
+  },
+  "farmHealthDrawer": {
+    "highStressDaysPct": 14.8,
+    "meanResponseDays": 0.53,
+    "delayDistribution": {
+      "same_day": 37,
+      "one_day": 17,
+      "two_plus": 8
+    },
+    "responseRate": 75.8,
+    "controlResponseRate": 75.8,
+    "precisionVsOutcome": [
+      {
+        "week": "2025-02-10/2025-02-16",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-02-17/2025-02-23",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-02-24/2025-03-02",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.0215377614
+      },
+      {
+        "week": "2025-03-03/2025-03-09",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.047880340738717726
+      },
+      {
+        "week": "2025-03-10/2025-03-16",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.061961561
+      },
+      {
+        "week": "2025-03-17/2025-03-23",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.027344824500000003
+      },
+      {
+        "week": "2025-03-24/2025-03-30",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.02173251733333333
+      },
+      {
+        "week": "2025-03-31/2025-04-06",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.03719323233333333
+      },
+      {
+        "week": "2025-04-07/2025-04-13",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.02547915625
+      },
+      {
+        "week": "2025-04-14/2025-04-20",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.004056787666666666
+      },
+      {
+        "week": "2025-04-21/2025-04-27",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0005747425897610998
+      },
+      {
+        "week": "2025-04-28/2025-05-04",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.064615504
+      },
+      {
+        "week": "2025-05-05/2025-05-11",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.06255588375
+      },
+      {
+        "week": "2025-05-12/2025-05-18",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.046702481079766024
+      },
+      {
+        "week": "2025-05-19/2025-05-25",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.041011465
+      },
+      {
+        "week": "2025-05-26/2025-06-01",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.028620636
+      },
+      {
+        "week": "2025-06-02/2025-06-08",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-06-09/2025-06-15",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-06-16/2025-06-22",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.058132962
+      },
+      {
+        "week": "2025-06-23/2025-06-29",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-06-30/2025-07-06",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.041402464
+      },
+      {
+        "week": "2025-07-07/2025-07-13",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.005514648
+      },
+      {
+        "week": "2025-07-14/2025-07-20",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-07-21/2025-07-27",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.05940220866666667
+      },
+      {
+        "week": "2025-07-28/2025-08-03",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0294928389299495
+      },
+      {
+        "week": "2025-08-04/2025-08-10",
+        "daily_precision_cost": 41.05971364392034,
+        "avg_delta": -0.118516337
+      },
+      {
+        "week": "2025-08-11/2025-08-17",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.060261573
+      },
+      {
+        "week": "2025-08-18/2025-08-24",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-08-25/2025-08-31",
+        "daily_precision_cost": 0.0,
+        "avg_delta": -0.04280486497247229
+      },
+      {
+        "week": "2025-09-01/2025-09-07",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      },
+      {
+        "week": "2025-09-08/2025-09-14",
+        "daily_precision_cost": 0.0,
+        "avg_delta": 0.0
+      }
+    ]
+  },
+  "nav": {
+    "alertTriageUrgent": 0,
+    "seasonalPrecisionBenefit": 310.0,
+    "sustainabilityScore": 63.8
+  },
+  "latestDate": "2025-09-12"
+}

@@ -1,0 +1,1249 @@
+[
+  {
+    "id": "all",
+    "name": "All Farms",
+    "level": "all",
+    "region": "Fleet-wide",
+    "primaryCrop": "Mixed crops"
+  },
+  {
+    "id": "F01",
+    "name": "BC Harvest 1",
+    "level": "farm",
+    "sublabel": "Chilliwack \u00b7 Tomato",
+    "region": "Chilliwack",
+    "primaryCrop": "Tomato",
+    "children": [
+      {
+        "id": "GH002",
+        "name": "GH002",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Tomato",
+        "region": "Chilliwack",
+        "primaryCrop": "Tomato",
+        "children": [
+          {
+            "id": "P0004",
+            "name": "P0004",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block D",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0019",
+            "name": "P0019",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0042",
+            "name": "P0042",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0051",
+            "name": "P0051",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block B",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0070",
+            "name": "P0070",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block D",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0075",
+            "name": "P0075",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0102",
+            "name": "P0102",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          }
+        ]
+      },
+      {
+        "id": "GH004",
+        "name": "GH004",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Tomato",
+        "region": "Chilliwack",
+        "primaryCrop": "Tomato",
+        "children": [
+          {
+            "id": "P0005",
+            "name": "P0005",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0017",
+            "name": "P0017",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0021",
+            "name": "P0021",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block B",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0041",
+            "name": "P0041",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block D",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0054",
+            "name": "P0054",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0056",
+            "name": "P0056",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block B",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0060",
+            "name": "P0060",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0083",
+            "name": "P0083",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block D",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0096",
+            "name": "P0096",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          }
+        ]
+      },
+      {
+        "id": "GH005",
+        "name": "GH005",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Tomato",
+        "region": "Chilliwack",
+        "primaryCrop": "Tomato",
+        "children": [
+          {
+            "id": "P0040",
+            "name": "P0040",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block B",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0045",
+            "name": "P0045",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0074",
+            "name": "P0074",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0114",
+            "name": "P0114",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block B",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          }
+        ]
+      },
+      {
+        "id": "GH020",
+        "name": "GH020",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Tomato",
+        "region": "Chilliwack",
+        "primaryCrop": "Tomato",
+        "children": [
+          {
+            "id": "P0032",
+            "name": "P0032",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0037",
+            "name": "P0037",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0039",
+            "name": "P0039",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0046",
+            "name": "P0046",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0065",
+            "name": "P0065",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block B",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0069",
+            "name": "P0069",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block C",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0092",
+            "name": "P0092",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0108",
+            "name": "P0108",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block A",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          },
+          {
+            "id": "P0117",
+            "name": "P0117",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block D",
+            "region": "Chilliwack",
+            "primaryCrop": "Tomato"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F02",
+    "name": "BC Harvest 2",
+    "level": "farm",
+    "sublabel": "Maple Ridge \u00b7 Pepper",
+    "region": "Maple Ridge",
+    "primaryCrop": "Pepper",
+    "children": [
+      {
+        "id": "GH001",
+        "name": "GH001",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Pepper",
+        "region": "Maple Ridge",
+        "primaryCrop": "Pepper",
+        "children": [
+          {
+            "id": "P0015",
+            "name": "P0015",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          },
+          {
+            "id": "P0025",
+            "name": "P0025",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          },
+          {
+            "id": "P0049",
+            "name": "P0049",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          },
+          {
+            "id": "P0100",
+            "name": "P0100",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          }
+        ]
+      },
+      {
+        "id": "GH014",
+        "name": "GH014",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Pepper",
+        "region": "Maple Ridge",
+        "primaryCrop": "Pepper",
+        "children": [
+          {
+            "id": "P0029",
+            "name": "P0029",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          },
+          {
+            "id": "P0047",
+            "name": "P0047",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          },
+          {
+            "id": "P0073",
+            "name": "P0073",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          }
+        ]
+      },
+      {
+        "id": "GH015",
+        "name": "GH015",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Pepper",
+        "region": "Maple Ridge",
+        "primaryCrop": "Pepper",
+        "children": [
+          {
+            "id": "P0020",
+            "name": "P0020",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          },
+          {
+            "id": "P0104",
+            "name": "P0104",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Pepper"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F03",
+    "name": "BC Harvest 3",
+    "level": "farm",
+    "sublabel": "Langley \u00b7 Strawberry",
+    "region": "Langley",
+    "primaryCrop": "Strawberry",
+    "children": [
+      {
+        "id": "GH010",
+        "name": "GH010",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Langley",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0053",
+            "name": "P0053",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0087",
+            "name": "P0087",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0088",
+            "name": "P0088",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F04",
+    "name": "BC Harvest 4",
+    "level": "farm",
+    "sublabel": "Maple Ridge \u00b7 Cucumber",
+    "region": "Maple Ridge",
+    "primaryCrop": "Cucumber",
+    "children": [
+      {
+        "id": "GH007",
+        "name": "GH007",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Cucumber",
+        "region": "Maple Ridge",
+        "primaryCrop": "Cucumber",
+        "children": [
+          {
+            "id": "P0026",
+            "name": "P0026",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0036",
+            "name": "P0036",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0048",
+            "name": "P0048",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0085",
+            "name": "P0085",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0103",
+            "name": "P0103",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0110",
+            "name": "P0110",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0116",
+            "name": "P0116",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          }
+        ]
+      },
+      {
+        "id": "GH012",
+        "name": "GH012",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Cucumber",
+        "region": "Maple Ridge",
+        "primaryCrop": "Cucumber",
+        "children": [
+          {
+            "id": "P0030",
+            "name": "P0030",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0055",
+            "name": "P0055",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0089",
+            "name": "P0089",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0093",
+            "name": "P0093",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0107",
+            "name": "P0107",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          },
+          {
+            "id": "P0109",
+            "name": "P0109",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Cucumber"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F05",
+    "name": "BC Harvest 5",
+    "level": "farm",
+    "sublabel": "Abbotsford \u00b7 Strawberry",
+    "region": "Abbotsford",
+    "primaryCrop": "Strawberry",
+    "children": [
+      {
+        "id": "GH008",
+        "name": "GH008",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Abbotsford",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0006",
+            "name": "P0006",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block C",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0007",
+            "name": "P0007",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block B",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0013",
+            "name": "P0013",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0033",
+            "name": "P0033",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0058",
+            "name": "P0058",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block D",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      },
+      {
+        "id": "GH011",
+        "name": "GH011",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Abbotsford",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0064",
+            "name": "P0064",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0084",
+            "name": "P0084",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      },
+      {
+        "id": "GH016",
+        "name": "GH016",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Abbotsford",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0023",
+            "name": "P0023",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block D",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0034",
+            "name": "P0034",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0035",
+            "name": "P0035",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0052",
+            "name": "P0052",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block B",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0080",
+            "name": "P0080",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block C",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0099",
+            "name": "P0099",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0106",
+            "name": "P0106",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0111",
+            "name": "P0111",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block C",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F06",
+    "name": "BC Harvest 6",
+    "level": "farm",
+    "sublabel": "Maple Ridge \u00b7 Strawberry",
+    "region": "Maple Ridge",
+    "primaryCrop": "Strawberry",
+    "children": [
+      {
+        "id": "GH009",
+        "name": "GH009",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Maple Ridge",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0008",
+            "name": "P0008",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0011",
+            "name": "P0011",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0043",
+            "name": "P0043",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0078",
+            "name": "P0078",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0094",
+            "name": "P0094",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0112",
+            "name": "P0112",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0120",
+            "name": "P0120",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      },
+      {
+        "id": "GH018",
+        "name": "GH018",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Strawberry",
+        "region": "Maple Ridge",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0009",
+            "name": "P0009",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0038",
+            "name": "P0038",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0050",
+            "name": "P0050",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0057",
+            "name": "P0057",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block B",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0086",
+            "name": "P0086",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0091",
+            "name": "P0091",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block D",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0097",
+            "name": "P0097",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0118",
+            "name": "P0118",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block C",
+            "region": "Maple Ridge",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F07",
+    "name": "BC Harvest 7",
+    "level": "farm",
+    "sublabel": "Abbotsford \u00b7 Strawberry",
+    "region": "Abbotsford",
+    "primaryCrop": "Strawberry",
+    "children": [
+      {
+        "id": "GH006",
+        "name": "GH006",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Abbotsford",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0095",
+            "name": "P0095",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0105",
+            "name": "P0105",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block A",
+            "region": "Abbotsford",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "F08",
+    "name": "BC Harvest 8",
+    "level": "farm",
+    "sublabel": "Langley \u00b7 Strawberry",
+    "region": "Langley",
+    "primaryCrop": "Strawberry",
+    "children": [
+      {
+        "id": "GH003",
+        "name": "GH003",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Langley",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0001",
+            "name": "P0001",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0003",
+            "name": "P0003",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0027",
+            "name": "P0027",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0081",
+            "name": "P0081",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block B",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0082",
+            "name": "P0082",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block B",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      },
+      {
+        "id": "GH013",
+        "name": "GH013",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Strawberry",
+        "region": "Langley",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0002",
+            "name": "P0002",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0010",
+            "name": "P0010",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0018",
+            "name": "P0018",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block B",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0059",
+            "name": "P0059",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0062",
+            "name": "P0062",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0068",
+            "name": "P0068",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0072",
+            "name": "P0072",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block B",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0090",
+            "name": "P0090",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0098",
+            "name": "P0098",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0113",
+            "name": "P0113",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0115",
+            "name": "P0115",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block B",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0119",
+            "name": "P0119",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      },
+      {
+        "id": "GH017",
+        "name": "GH017",
+        "level": "greenhouse",
+        "sublabel": "Glass \u00b7 Strawberry",
+        "region": "Langley",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0012",
+            "name": "P0012",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0022",
+            "name": "P0022",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0024",
+            "name": "P0024",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0028",
+            "name": "P0028",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0044",
+            "name": "P0044",
+            "level": "plot",
+            "sublabel": "Control \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0061",
+            "name": "P0061",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0067",
+            "name": "P0067",
+            "level": "plot",
+            "sublabel": "Shade \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0071",
+            "name": "P0071",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0079",
+            "name": "P0079",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      },
+      {
+        "id": "GH019",
+        "name": "GH019",
+        "level": "greenhouse",
+        "sublabel": "Polyfilm \u00b7 Strawberry",
+        "region": "Langley",
+        "primaryCrop": "Strawberry",
+        "children": [
+          {
+            "id": "P0014",
+            "name": "P0014",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0016",
+            "name": "P0016",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0031",
+            "name": "P0031",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0063",
+            "name": "P0063",
+            "level": "plot",
+            "sublabel": "High Light \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0066",
+            "name": "P0066",
+            "level": "plot",
+            "sublabel": "Reduced Pest \u00b7 Block A",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0076",
+            "name": "P0076",
+            "level": "plot",
+            "sublabel": "Low N \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0077",
+            "name": "P0077",
+            "level": "plot",
+            "sublabel": "High N \u00b7 Block C",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          },
+          {
+            "id": "P0101",
+            "name": "P0101",
+            "level": "plot",
+            "sublabel": "Integrated Pest \u00b7 Block D",
+            "region": "Langley",
+            "primaryCrop": "Strawberry"
+          }
+        ]
+      }
+    ]
+  }
+]

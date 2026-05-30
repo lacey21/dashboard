@@ -1,0 +1,4339 @@
+{
+  "weeks": [
+    "2025-W07",
+    "2025-W08",
+    "2025-W09",
+    "2025-W10",
+    "2025-W11",
+    "2025-W12",
+    "2025-W13",
+    "2025-W14",
+    "2025-W15",
+    "2025-W16",
+    "2025-W17",
+    "2025-W18",
+    "2025-W19",
+    "2025-W20",
+    "2025-W21",
+    "2025-W22",
+    "2025-W23",
+    "2025-W24",
+    "2025-W25",
+    "2025-W26",
+    "2025-W27",
+    "2025-W28",
+    "2025-W29",
+    "2025-W30",
+    "2025-W31",
+    "2025-W32",
+    "2025-W33",
+    "2025-W34",
+    "2025-W35",
+    "2025-W36",
+    "2025-W37"
+  ],
+  "defaultWeek": "2025-W37",
+  "weeklyStats": {
+    "2025-W07": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W08": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0.0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W09": {
+      "highStressEvents": 4,
+      "highStressDelta": 4,
+      "responseRate": 80.0,
+      "responseRateDelta": 80.0,
+      "avgResponseDays": 0.6,
+      "avgResponseDaysDelta": 0.6
+    },
+    "2025-W10": {
+      "highStressEvents": 3,
+      "highStressDelta": -1,
+      "responseRate": 75.0,
+      "responseRateDelta": -5.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.6
+    },
+    "2025-W11": {
+      "highStressEvents": 2,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 25.0,
+      "avgResponseDays": 0.67,
+      "avgResponseDaysDelta": 0.67
+    },
+    "2025-W12": {
+      "highStressEvents": 4,
+      "highStressDelta": 2,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.86,
+      "avgResponseDaysDelta": 0.19
+    },
+    "2025-W13": {
+      "highStressEvents": 3,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.14,
+      "avgResponseDaysDelta": 0.28
+    },
+    "2025-W14": {
+      "highStressEvents": 7,
+      "highStressDelta": 4,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.86,
+      "avgResponseDaysDelta": -0.28
+    },
+    "2025-W15": {
+      "highStressEvents": 5,
+      "highStressDelta": -2,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.14,
+      "avgResponseDaysDelta": -0.72
+    },
+    "2025-W16": {
+      "highStressEvents": 4,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.71,
+      "avgResponseDaysDelta": 0.57
+    },
+    "2025-W17": {
+      "highStressEvents": 3,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.17,
+      "avgResponseDaysDelta": 0.46
+    },
+    "2025-W18": {
+      "highStressEvents": 2,
+      "highStressDelta": -1,
+      "responseRate": 80.0,
+      "responseRateDelta": -20.0,
+      "avgResponseDays": 0.2,
+      "avgResponseDaysDelta": -0.97
+    },
+    "2025-W19": {
+      "highStressEvents": 4,
+      "highStressDelta": 2,
+      "responseRate": 80.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.6,
+      "avgResponseDaysDelta": 0.4
+    },
+    "2025-W20": {
+      "highStressEvents": 3,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 20.0,
+      "avgResponseDays": 1.67,
+      "avgResponseDaysDelta": 1.07
+    },
+    "2025-W21": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -1.67
+    },
+    "2025-W22": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W23": {
+      "highStressEvents": 0,
+      "highStressDelta": -1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W24": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0.0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -1.0
+    },
+    "2025-W25": {
+      "highStressEvents": 3,
+      "highStressDelta": 3,
+      "responseRate": 33.3,
+      "responseRateDelta": 33.3,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W26": {
+      "highStressEvents": 1,
+      "highStressDelta": -2,
+      "responseRate": 100.0,
+      "responseRateDelta": 66.7,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W27": {
+      "highStressEvents": 2,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.67,
+      "avgResponseDaysDelta": 0.17
+    },
+    "2025-W28": {
+      "highStressEvents": 0,
+      "highStressDelta": -2,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.67
+    },
+    "2025-W29": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W30": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 40.0,
+      "responseRateDelta": -60.0,
+      "avgResponseDays": 0.4,
+      "avgResponseDaysDelta": 0.4
+    },
+    "2025-W31": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 60.0,
+      "avgResponseDays": 0.0,
+      "avgResponseDaysDelta": -0.4
+    },
+    "2025-W32": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 0.5,
+      "avgResponseDaysDelta": 0.5
+    },
+    "2025-W33": {
+      "highStressEvents": 0,
+      "highStressDelta": 0,
+      "responseRate": 0,
+      "responseRateDelta": -100.0,
+      "avgResponseDays": 0,
+      "avgResponseDaysDelta": -0.5
+    },
+    "2025-W34": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    },
+    "2025-W35": {
+      "highStressEvents": 3,
+      "highStressDelta": 2,
+      "responseRate": 80.0,
+      "responseRateDelta": -20.0,
+      "avgResponseDays": 0.6,
+      "avgResponseDaysDelta": -0.4
+    },
+    "2025-W36": {
+      "highStressEvents": 0,
+      "highStressDelta": -3,
+      "responseRate": 100.0,
+      "responseRateDelta": 20.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.4
+    },
+    "2025-W37": {
+      "highStressEvents": 1,
+      "highStressDelta": 1,
+      "responseRate": 100.0,
+      "responseRateDelta": 0.0,
+      "avgResponseDays": 1.0,
+      "avgResponseDaysDelta": 0.0
+    }
+  },
+  "plotRankings": {
+    "2025-W07": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.5764103285804846,
+        "plant_stress_index": 0.5528206571609692,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W08": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7988120682317308,
+        "plant_stress_index": 0.5976241364634617,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W09": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7147556688307717,
+        "plant_stress_index": 0.8295113376615435,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W10": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6268677333979531,
+        "plant_stress_index": 0.6537354667959061,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W11": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6864325352338272,
+        "plant_stress_index": 0.6928650704676542,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W12": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6244370935456004,
+        "plant_stress_index": 0.5688741870912007,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W13": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7078301963021318,
+        "plant_stress_index": 0.7356603926042637,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W14": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7818435465,
+        "plant_stress_index": 0.803687093,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 2,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 2 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W15": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6011785039298074,
+        "plant_stress_index": 0.6023570078596149,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W16": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6174654366241471,
+        "plant_stress_index": 0.6349308732482942,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active. Action taken same day.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W17": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.6267543167702359,
+        "plant_stress_index": 0.5735086335404718,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W18": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.22990235738009365,
+        "plant_stress_index": 0.4598047147601873,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W19": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7329728624142484,
+        "plant_stress_index": 0.7059457248284968,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 2,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 2 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W20": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2340171978592004,
+        "plant_stress_index": 0.4680343957184008,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W21": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.25268088319551446,
+        "plant_stress_index": 0.5053617663910289,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W22": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.25747862534943167,
+        "plant_stress_index": 0.5149572506988633,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W23": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2155905715115433,
+        "plant_stress_index": 0.4311811430230866,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W24": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.7884920063163952,
+        "plant_stress_index": 0.5769840126327905,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 0,
+        "oneliner": "High Pest Pressure alert active \u2014 no crew action recorded.",
+        "alert_flag": 1,
+        "action_taken": 0
+      }
+    ],
+    "2025-W25": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2497191723029012,
+        "plant_stress_index": 0.4994383446058024,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W26": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.271303651,
+        "plant_stress_index": 0.542607302,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W27": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2143342991550474,
+        "plant_stress_index": 0.4286685983100948,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W28": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.1856188750341675,
+        "plant_stress_index": 0.371237750068335,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W29": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.19271984251573415,
+        "plant_stress_index": 0.3854396850314683,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W30": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.24870913755542615,
+        "plant_stress_index": 0.4974182751108523,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W31": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.22750788410825956,
+        "plant_stress_index": 0.4550157682165191,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W32": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.24027094913178315,
+        "plant_stress_index": 0.4805418982635663,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W33": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.21854104097144106,
+        "plant_stress_index": 0.4370820819428821,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W34": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.650669525732453,
+        "plant_stress_index": 0.6213390514649059,
+        "alert_type": "High Pest Pressure",
+        "action_delay_days": 1,
+        "oneliner": "High Pest Pressure flagged \u2014 response delayed 1 days.",
+        "alert_flag": 1,
+        "action_taken": 1
+      }
+    ],
+    "2025-W35": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.20211257165627414,
+        "plant_stress_index": 0.4042251433125483,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W36": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2332697269033389,
+        "plant_stress_index": 0.4665394538066778,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ],
+    "2025-W37": [
+      {
+        "plot_id": "P0011",
+        "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+        "crop": "Strawberry",
+        "farm_name": "BC Harvest 6",
+        "greenhouse_id": "GH009",
+        "region": "Maple Ridge",
+        "climate_zone": "Interior",
+        "urgency_score": 0.2293238305,
+        "plant_stress_index": 0.458647661,
+        "alert_type": "No Alert",
+        "action_delay_days": 0,
+        "oneliner": "Stress alert active \u2014 no crew action recorded.",
+        "alert_flag": 0,
+        "action_taken": 0
+      }
+    ]
+  },
+  "plotDetails": {
+    "P0011|2025-W07": {
+      "plot_id": "P0011",
+      "week": "2025-W07",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-15",
+          "plant_stress_index": 0.4648196383832066,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-16",
+          "plant_stress_index": 0.5528206571609692,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.025357816
+        }
+      ],
+      "costs": {
+        "energy": 5.920595652855364,
+        "fertilizer": 0.0,
+        "labor": 45.41461643,
+        "pesticide": 0.0,
+        "water": 6.788179185144948,
+        "precision": 0.0,
+        "routine": 58.12339126493741,
+        "total": 58.12339126493741
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.553,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.025,
+        "weeklyCost": 58.12
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.553,
+        "vpd_kpa": 1.607,
+        "substrate_moisture": 0.518,
+        "pest_pressure_index": 0.355,
+        "disease_risk_index": 0.14
+      }
+    },
+    "P0011|2025-W08": {
+      "plot_id": "P0011",
+      "week": "2025-W08",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-17",
+          "plant_stress_index": 0.458105564153848,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-18",
+          "plant_stress_index": 0.4236523728817751,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-19",
+          "plant_stress_index": 0.4669017886545716,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-20",
+          "plant_stress_index": 0.4334393013669968,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-21",
+          "plant_stress_index": 0.5152508960443839,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-22",
+          "plant_stress_index": 0.4632634327738291,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-23",
+          "plant_stress_index": 0.5976241364634617,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 2.697505431,
+        "fertilizer": 0.0,
+        "labor": 31.124735954707724,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 33.82224138541601,
+        "total": 33.82224138541601
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.598,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 33.82
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.598,
+        "vpd_kpa": 1.607,
+        "substrate_moisture": 0.498,
+        "pest_pressure_index": 0.381,
+        "disease_risk_index": 0.147
+      }
+    },
+    "P0011|2025-W09": {
+      "plot_id": "P0011",
+      "week": "2025-W09",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-02-24",
+          "plant_stress_index": 0.637809669,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-25",
+          "plant_stress_index": 0.5098935808839292,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-26",
+          "plant_stress_index": 0.5161344304712522,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-02-27",
+          "plant_stress_index": 0.6496733279115227,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-02-28",
+          "plant_stress_index": 0.5622135375501947,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-01",
+          "plant_stress_index": 0.8235361797693647,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-02",
+          "plant_stress_index": 0.8295113376615435,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-02-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0264398945871313
+        },
+        {
+          "date": "2025-02-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.033433189
+        },
+        {
+          "date": "2025-02-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.030671166
+        },
+        {
+          "date": "2025-03-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.038198179
+        }
+      ],
+      "costs": {
+        "energy": 32.78879111725803,
+        "fertilizer": 0.0,
+        "labor": 174.71773738339448,
+        "pesticide": 0.0,
+        "water": 27.22616960985693,
+        "precision": 0.0,
+        "routine": 234.73269811018204,
+        "total": 234.73269811018204
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.83,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.038,
+        "weeklyCost": 234.73
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.83,
+        "vpd_kpa": 1.608,
+        "substrate_moisture": 0.353,
+        "pest_pressure_index": 0.437,
+        "disease_risk_index": 0.136
+      }
+    },
+    "P0011|2025-W10": {
+      "plot_id": "P0011",
+      "week": "2025-W10",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-03",
+          "plant_stress_index": 0.6875293006354783,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-04",
+          "plant_stress_index": 0.561524215,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-05",
+          "plant_stress_index": 0.5009526576932707,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-06",
+          "plant_stress_index": 0.712997644,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-07",
+          "plant_stress_index": 0.5386347804955738,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-08",
+          "plant_stress_index": 0.4801113657886225,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-03-09",
+          "plant_stress_index": 0.6537354667959061,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.009324097
+        },
+        {
+          "date": "2025-03-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-03-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.103808625
+        },
+        {
+          "date": "2025-03-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.045819822
+        }
+      ],
+      "costs": {
+        "energy": 16.601614118769263,
+        "fertilizer": 0.0,
+        "labor": 155.94506630264425,
+        "pesticide": 0.0,
+        "water": 27.271152728559496,
+        "precision": 0.0,
+        "routine": 199.8178331502244,
+        "total": 199.8178331502244
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.654,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.046,
+        "weeklyCost": 199.82
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.654,
+        "vpd_kpa": 1.851,
+        "substrate_moisture": 0.453,
+        "pest_pressure_index": 0.434,
+        "disease_risk_index": 0.154
+      }
+    },
+    "P0011|2025-W11": {
+      "plot_id": "P0011",
+      "week": "2025-W11",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-10",
+          "plant_stress_index": 0.587980919,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-11",
+          "plant_stress_index": 0.5196418246120549,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-12",
+          "plant_stress_index": 0.5439336320575836,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-13",
+          "plant_stress_index": 0.548443181,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-14",
+          "plant_stress_index": 0.5404633834328159,
+          "alert_flag": 0,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-15",
+          "plant_stress_index": 0.6590305119282419,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-16",
+          "plant_stress_index": 0.6928650704676542,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.087345491
+        },
+        {
+          "date": "2025-03-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.010784952
+        },
+        {
+          "date": "2025-03-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0534802265536899
+        }
+      ],
+      "costs": {
+        "energy": 22.9541221882692,
+        "fertilizer": 38.33,
+        "labor": 112.18176938263089,
+        "pesticide": 0.0,
+        "water": 33.18396313108397,
+        "precision": 0.0,
+        "routine": 206.64985470198403,
+        "total": 206.64985470198403
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.693,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": 0.053,
+        "weeklyCost": 206.65
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.693,
+        "vpd_kpa": 1.71,
+        "substrate_moisture": 0.399,
+        "pest_pressure_index": 0.468,
+        "disease_risk_index": 0.127
+      }
+    },
+    "P0011|2025-W12": {
+      "plot_id": "P0011",
+      "week": "2025-W12",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-17",
+          "plant_stress_index": 0.6894996667527703,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-18",
+          "plant_stress_index": 0.7005407045535634,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-19",
+          "plant_stress_index": 0.6786794087665531,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-20",
+          "plant_stress_index": 0.628338671,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-21",
+          "plant_stress_index": 0.5941838426735497,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-22",
+          "plant_stress_index": 0.5552151519299474,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-23",
+          "plant_stress_index": 0.5688741870912007,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.026717643
+        },
+        {
+          "date": "2025-03-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0131321420657112
+        },
+        {
+          "date": "2025-03-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.063049236
+        },
+        {
+          "date": "2025-03-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.045583954
+        },
+        {
+          "date": "2025-03-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.052100365
+        },
+        {
+          "date": "2025-03-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.107421158
+        },
+        {
+          "date": "2025-03-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.02648369
+        }
+      ],
+      "costs": {
+        "energy": 35.11714255329219,
+        "fertilizer": 0.0,
+        "labor": 230.96170481090414,
+        "pesticide": 0.0,
+        "water": 46.050081418855456,
+        "precision": 0.0,
+        "routine": 312.1289287823683,
+        "total": 312.1289287823683
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.569,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": 0.026,
+        "weeklyCost": 312.13
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.569,
+        "vpd_kpa": 1.712,
+        "substrate_moisture": 0.502,
+        "pest_pressure_index": 0.504,
+        "disease_risk_index": 0.147
+      }
+    },
+    "P0011|2025-W13": {
+      "plot_id": "P0011",
+      "week": "2025-W13",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-24",
+          "plant_stress_index": 0.573215274,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-25",
+          "plant_stress_index": 0.5843272885857287,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-26",
+          "plant_stress_index": 0.6828238852069162,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-27",
+          "plant_stress_index": 0.5926629921362201,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-28",
+          "plant_stress_index": 0.5812636602675146,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-29",
+          "plant_stress_index": 0.6586175230052393,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-03-30",
+          "plant_stress_index": 0.7356603926042637,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.070665298
+        },
+        {
+          "date": "2025-03-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.057057551
+        },
+        {
+          "date": "2025-03-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.072198867
+        },
+        {
+          "date": "2025-03-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.013174377
+        },
+        {
+          "date": "2025-03-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.065539692
+        },
+        {
+          "date": "2025-03-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.058751154
+        },
+        {
+          "date": "2025-03-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.091434675
+        }
+      ],
+      "costs": {
+        "energy": 40.948332009651146,
+        "fertilizer": 0.0,
+        "labor": 270.815236770073,
+        "pesticide": 0.0,
+        "water": 41.41528196247898,
+        "precision": 0.0,
+        "routine": 353.1788507386151,
+        "total": 353.1788507386151
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.736,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.091,
+        "weeklyCost": 353.18
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.736,
+        "vpd_kpa": 1.963,
+        "substrate_moisture": 0.45,
+        "pest_pressure_index": 0.489,
+        "disease_risk_index": 0.12
+      }
+    },
+    "P0011|2025-W14": {
+      "plot_id": "P0011",
+      "week": "2025-W14",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-03-31",
+          "plant_stress_index": 0.7116810465613167,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-01",
+          "plant_stress_index": 0.6372748094891577,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-02",
+          "plant_stress_index": 0.6226135079106405,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-03",
+          "plant_stress_index": 0.6560819859419168,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-04",
+          "plant_stress_index": 0.7085682851970768,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-05",
+          "plant_stress_index": 0.8076281101082639,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-06",
+          "plant_stress_index": 0.803687093,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-03-31",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.03917792
+        },
+        {
+          "date": "2025-04-01",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.086374311
+        },
+        {
+          "date": "2025-04-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.0345335096484607
+        },
+        {
+          "date": "2025-04-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.013536258
+        },
+        {
+          "date": "2025-04-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.070462773
+        },
+        {
+          "date": "2025-04-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.042097077
+        },
+        {
+          "date": "2025-04-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.024096745
+        }
+      ],
+      "costs": {
+        "energy": 35.259529869668064,
+        "fertilizer": 0.0,
+        "labor": 238.7280553789248,
+        "pesticide": 0.0,
+        "water": 34.80687313244706,
+        "precision": 0.0,
+        "routine": 308.7944583849247,
+        "total": 308.7944583849247
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.804,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 2,
+        "postActionDelta": -0.024,
+        "weeklyCost": 308.79
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.804,
+        "vpd_kpa": 1.872,
+        "substrate_moisture": 0.367,
+        "pest_pressure_index": 0.49,
+        "disease_risk_index": 0.145
+      }
+    },
+    "P0011|2025-W15": {
+      "plot_id": "P0011",
+      "week": "2025-W15",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-07",
+          "plant_stress_index": 0.6762050818111468,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-08",
+          "plant_stress_index": 0.7382330755947253,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-09",
+          "plant_stress_index": 0.6252196185344608,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-10",
+          "plant_stress_index": 0.6785090458878706,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-11",
+          "plant_stress_index": 0.5846184042994942,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-12",
+          "plant_stress_index": 0.5882476919441493,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-13",
+          "plant_stress_index": 0.6023570078596149,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-07",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0195698437749958
+        },
+        {
+          "date": "2025-04-08",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.023121619
+        },
+        {
+          "date": "2025-04-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.018207063
+        },
+        {
+          "date": "2025-04-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.151676699
+        },
+        {
+          "date": "2025-04-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.047671547
+        },
+        {
+          "date": "2025-04-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.058328438
+        },
+        {
+          "date": "2025-04-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.008045163
+        }
+      ],
+      "costs": {
+        "energy": 32.29920082773405,
+        "fertilizer": 0.0,
+        "labor": 254.2528739377251,
+        "pesticide": 0.0,
+        "water": 45.292165525549386,
+        "precision": 0.0,
+        "routine": 331.8442402902267,
+        "total": 331.8442402902267
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.602,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.008,
+        "weeklyCost": 331.84
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.602,
+        "vpd_kpa": 1.651,
+        "substrate_moisture": 0.52,
+        "pest_pressure_index": 0.514,
+        "disease_risk_index": 0.133
+      }
+    },
+    "P0011|2025-W16": {
+      "plot_id": "P0011",
+      "week": "2025-W16",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-14",
+          "plant_stress_index": 0.6189948152615313,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-15",
+          "plant_stress_index": 0.580356543,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-16",
+          "plant_stress_index": 0.592079588,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-17",
+          "plant_stress_index": 0.5620669050365641,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-18",
+          "plant_stress_index": 0.6399560561283271,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-19",
+          "plant_stress_index": 0.6682470075297362,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-20",
+          "plant_stress_index": 0.6349308732482942,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.078883583
+        },
+        {
+          "date": "2025-04-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.017537033
+        },
+        {
+          "date": "2025-04-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.093060779
+        },
+        {
+          "date": "2025-04-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0234440624145148
+        },
+        {
+          "date": "2025-04-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.015228869
+        },
+        {
+          "date": "2025-04-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.075711822
+        },
+        {
+          "date": "2025-04-20",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.043633682
+        }
+      ],
+      "costs": {
+        "energy": 40.32277464648675,
+        "fertilizer": 0.0,
+        "labor": 244.88526782252035,
+        "pesticide": 0.0,
+        "water": 50.785127636365345,
+        "precision": 0.0,
+        "routine": 335.99317010999397,
+        "total": 335.99317010999397
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.635,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": -0.044,
+        "weeklyCost": 335.99
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.635,
+        "vpd_kpa": 1.666,
+        "substrate_moisture": 0.461,
+        "pest_pressure_index": 0.476,
+        "disease_risk_index": 0.153
+      }
+    },
+    "P0011|2025-W17": {
+      "plot_id": "P0011",
+      "week": "2025-W17",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-21",
+          "plant_stress_index": 0.5189315580759533,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-22",
+          "plant_stress_index": 0.587906292,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-23",
+          "plant_stress_index": 0.6825279300029642,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-24",
+          "plant_stress_index": 0.5950200469775708,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-25",
+          "plant_stress_index": 0.6066066200609932,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-26",
+          "plant_stress_index": 0.676735213,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-27",
+          "plant_stress_index": 0.5735086335404718,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.109294621
+        },
+        {
+          "date": "2025-04-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.048398452
+        },
+        {
+          "date": "2025-04-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.023542251
+        },
+        {
+          "date": "2025-04-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.011172985
+        },
+        {
+          "date": "2025-04-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.102652565
+        },
+        {
+          "date": "2025-04-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.040246212
+        }
+      ],
+      "costs": {
+        "energy": 33.100961996219446,
+        "fertilizer": 0.0,
+        "labor": 186.44048865180778,
+        "pesticide": 0.0,
+        "water": 42.483584242145476,
+        "precision": 0.0,
+        "routine": 262.0250348895073,
+        "total": 262.0250348895073
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.574,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.04,
+        "weeklyCost": 262.03
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.574,
+        "vpd_kpa": 1.719,
+        "substrate_moisture": 0.474,
+        "pest_pressure_index": 0.476,
+        "disease_risk_index": 0.126
+      }
+    },
+    "P0011|2025-W18": {
+      "plot_id": "P0011",
+      "week": "2025-W18",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-04-28",
+          "plant_stress_index": 0.5844615365808415,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-04-29",
+          "plant_stress_index": 0.5892752664282453,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-04-30",
+          "plant_stress_index": 0.6278253074027632,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-01",
+          "plant_stress_index": 0.4572046980621989,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-02",
+          "plant_stress_index": 0.5578357992298836,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-03",
+          "plant_stress_index": 0.6928994590185755,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-04",
+          "plant_stress_index": 0.4598047147601873,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-04-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-04-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.00461257
+        },
+        {
+          "date": "2025-04-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.083058133
+        },
+        {
+          "date": "2025-05-02",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Adjust Shade / Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.035832687
+        },
+        {
+          "date": "2025-05-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.04236102
+        }
+      ],
+      "costs": {
+        "energy": 21.124299600955904,
+        "fertilizer": 0.0,
+        "labor": 175.31186090227254,
+        "pesticide": 0.0,
+        "water": 33.998033668685444,
+        "precision": 0.0,
+        "routine": 230.4341941673084,
+        "total": 230.4341941673084
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.46,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 230.43
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.46,
+        "vpd_kpa": 1.461,
+        "substrate_moisture": 0.493,
+        "pest_pressure_index": 0.461,
+        "disease_risk_index": 0.143
+      }
+    },
+    "P0011|2025-W19": {
+      "plot_id": "P0011",
+      "week": "2025-W19",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-05",
+          "plant_stress_index": 0.6047452736421289,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-06",
+          "plant_stress_index": 0.5548179998229258,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-07",
+          "plant_stress_index": 0.532997865,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-08",
+          "plant_stress_index": 0.5174502551875865,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-09",
+          "plant_stress_index": 0.6626720535496923,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-10",
+          "plant_stress_index": 0.7445030425427723,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-11",
+          "plant_stress_index": 0.7059457248284968,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.043575213
+        },
+        {
+          "date": "2025-05-06",
+          "alert_type": "No Alert",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-05-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.054205448
+        },
+        {
+          "date": "2025-05-10",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.051864024
+        },
+        {
+          "date": "2025-05-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": 0.0291983901265875
+        }
+      ],
+      "costs": {
+        "energy": 22.387317672620462,
+        "fertilizer": 34.58,
+        "labor": 178.28724502970243,
+        "pesticide": 0.0,
+        "water": 24.43966189792248,
+        "precision": 0.0,
+        "routine": 259.69422460559565,
+        "total": 259.69422460559565
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.706,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 2,
+        "postActionDelta": 0.029,
+        "weeklyCost": 259.69
+      },
+      "simulatorValues": {
+        "action_delay_days": 2.0,
+        "plant_stress_index": 0.706,
+        "vpd_kpa": 1.238,
+        "substrate_moisture": 0.38,
+        "pest_pressure_index": 0.428,
+        "disease_risk_index": 0.146
+      }
+    },
+    "P0011|2025-W20": {
+      "plot_id": "P0011",
+      "week": "2025-W20",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-12",
+          "plant_stress_index": 0.8341457776348203,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-13",
+          "plant_stress_index": 0.7644639196882453,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-14",
+          "plant_stress_index": 0.7254477770120048,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-15",
+          "plant_stress_index": 0.4408652741074765,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-16",
+          "plant_stress_index": 0.4270545378416001,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-17",
+          "plant_stress_index": 0.5094604094642124,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-18",
+          "plant_stress_index": 0.4680343957184008,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-12",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.058053947
+        },
+        {
+          "date": "2025-05-13",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.033835328
+        },
+        {
+          "date": "2025-05-14",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.023229
+        }
+      ],
+      "costs": {
+        "energy": 14.288431498345126,
+        "fertilizer": 0.0,
+        "labor": 87.01990434684043,
+        "pesticide": 0.0,
+        "water": 20.854417118962267,
+        "precision": 0.0,
+        "routine": 122.16275296186961,
+        "total": 122.16275296186961
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.468,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 122.16
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.468,
+        "vpd_kpa": 1.248,
+        "substrate_moisture": 0.47,
+        "pest_pressure_index": 0.411,
+        "disease_risk_index": 0.153
+      }
+    },
+    "P0011|2025-W21": {
+      "plot_id": "P0011",
+      "week": "2025-W21",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-19",
+          "plant_stress_index": 0.4910943945534031,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-20",
+          "plant_stress_index": 0.5016017535578583,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-21",
+          "plant_stress_index": 0.4807048520678053,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-22",
+          "plant_stress_index": 0.492946551,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-23",
+          "plant_stress_index": 0.435211581,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-24",
+          "plant_stress_index": 0.407309782,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-25",
+          "plant_stress_index": 0.5053617663910289,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.505,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.505,
+        "vpd_kpa": 1.404,
+        "substrate_moisture": 0.434,
+        "pest_pressure_index": 0.379,
+        "disease_risk_index": 0.136
+      }
+    },
+    "P0011|2025-W22": {
+      "plot_id": "P0011",
+      "week": "2025-W22",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-05-26",
+          "plant_stress_index": 0.5270594294305222,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-27",
+          "plant_stress_index": 0.6524269186879869,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-28",
+          "plant_stress_index": 0.5956018882731828,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-05-29",
+          "plant_stress_index": 0.49657821945366,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-30",
+          "plant_stress_index": 0.5287719812259534,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-05-31",
+          "plant_stress_index": 0.4760023741180578,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-01",
+          "plant_stress_index": 0.5149572506988633,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-05-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.010556473
+        },
+        {
+          "date": "2025-05-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.011063742
+        }
+      ],
+      "costs": {
+        "energy": 8.952717187623815,
+        "fertilizer": 0.0,
+        "labor": 72.37983333203772,
+        "pesticide": 0.0,
+        "water": 12.785833551828736,
+        "precision": 0.0,
+        "routine": 94.11838406649026,
+        "total": 94.11838406649026
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.515,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 94.12
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.515,
+        "vpd_kpa": 1.384,
+        "substrate_moisture": 0.41,
+        "pest_pressure_index": 0.389,
+        "disease_risk_index": 0.143
+      }
+    },
+    "P0011|2025-W23": {
+      "plot_id": "P0011",
+      "week": "2025-W23",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-02",
+          "plant_stress_index": 0.5439096021050157,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-03",
+          "plant_stress_index": 0.5915786727396217,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-04",
+          "plant_stress_index": 0.4622377053926788,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-05",
+          "plant_stress_index": 0.4696074128328006,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-06",
+          "plant_stress_index": 0.4348057130839229,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-07",
+          "plant_stress_index": 0.4314327702391981,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-08",
+          "plant_stress_index": 0.4311811430230866,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-03",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.002833541
+        }
+      ],
+      "costs": {
+        "energy": 4.679452015732947,
+        "fertilizer": 0.0,
+        "labor": 39.289125407730126,
+        "pesticide": 0.0,
+        "water": 8.003818429241935,
+        "precision": 0.0,
+        "routine": 51.972395852705006,
+        "total": 51.972395852705006
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.431,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 51.97
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.431,
+        "vpd_kpa": 1.275,
+        "substrate_moisture": 0.501,
+        "pest_pressure_index": 0.352,
+        "disease_risk_index": 0.156
+      }
+    },
+    "P0011|2025-W24": {
+      "plot_id": "P0011",
+      "week": "2025-W24",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-09",
+          "plant_stress_index": 0.4403383563110462,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-10",
+          "plant_stress_index": 0.4595253678848311,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-11",
+          "plant_stress_index": 0.4913181146478163,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-12",
+          "plant_stress_index": 0.4775875302123264,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-13",
+          "plant_stress_index": 0.4965106128389064,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-14",
+          "plant_stress_index": 0.4426004326089378,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-15",
+          "plant_stress_index": 0.5769840126327905,
+          "alert_flag": 1,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-15",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 2.037151331401329,
+        "fertilizer": 0.0,
+        "labor": 21.07648744527101,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 23.11363877667234,
+        "total": 23.11363877667234
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.577,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 23.11
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.577,
+        "vpd_kpa": 1.208,
+        "substrate_moisture": 0.407,
+        "pest_pressure_index": 0.383,
+        "disease_risk_index": 0.125
+      }
+    },
+    "P0011|2025-W25": {
+      "plot_id": "P0011",
+      "week": "2025-W25",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-16",
+          "plant_stress_index": 0.615451056,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-17",
+          "plant_stress_index": 0.7552630795849034,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-18",
+          "plant_stress_index": 0.7268319220476801,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-19",
+          "plant_stress_index": 0.4935368173429182,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-20",
+          "plant_stress_index": 0.4427515789684206,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-21",
+          "plant_stress_index": 0.4663592131357011,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-22",
+          "plant_stress_index": 0.4994383446058024,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-16",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-06-17",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-06-18",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.074947292
+        }
+      ],
+      "costs": {
+        "energy": 13.12319975497261,
+        "fertilizer": 0.0,
+        "labor": 97.48938669832029,
+        "pesticide": 0.0,
+        "water": 4.071991617173126,
+        "precision": 0.0,
+        "routine": 114.68457807073403,
+        "total": 114.68457807073403
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.499,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 114.68
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.499,
+        "vpd_kpa": 1.187,
+        "substrate_moisture": 0.426,
+        "pest_pressure_index": 0.436,
+        "disease_risk_index": 0.163
+      }
+    },
+    "P0011|2025-W26": {
+      "plot_id": "P0011",
+      "week": "2025-W26",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-23",
+          "plant_stress_index": 0.650355671,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-24",
+          "plant_stress_index": 0.4481115048028631,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-25",
+          "plant_stress_index": 0.4411384952095524,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-26",
+          "plant_stress_index": 0.4215973129142048,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-27",
+          "plant_stress_index": 0.5536449665654719,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-06-28",
+          "plant_stress_index": 0.4470607933732815,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-06-29",
+          "plant_stress_index": 0.542607302,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.039532032
+        },
+        {
+          "date": "2025-06-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.034617665
+        }
+      ],
+      "costs": {
+        "energy": 16.931370467293945,
+        "fertilizer": 24.18,
+        "labor": 72.42845194699255,
+        "pesticide": 38.36,
+        "water": 12.186716017794115,
+        "precision": 0.0,
+        "routine": 164.08653843208063,
+        "total": 164.08653843208063
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.543,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 164.09
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.543,
+        "vpd_kpa": 1.373,
+        "substrate_moisture": 0.441,
+        "pest_pressure_index": 0.436,
+        "disease_risk_index": 0.146
+      }
+    },
+    "P0011|2025-W27": {
+      "plot_id": "P0011",
+      "week": "2025-W27",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-06-30",
+          "plant_stress_index": 0.5753887291440868,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-01",
+          "plant_stress_index": 0.4419733269169623,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-02",
+          "plant_stress_index": 0.4849925815024479,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-03",
+          "plant_stress_index": 0.5228855123331195,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-04",
+          "plant_stress_index": 0.6485557001435466,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-05",
+          "plant_stress_index": 0.636959074,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-06",
+          "plant_stress_index": 0.4286685983100948,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-06-30",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.058254628
+        },
+        {
+          "date": "2025-07-04",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.019193329
+        },
+        {
+          "date": "2025-07-05",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.052726427
+        }
+      ],
+      "costs": {
+        "energy": 20.885564561279825,
+        "fertilizer": 12.76,
+        "labor": 143.06373628718853,
+        "pesticide": 0.0,
+        "water": 21.035538107786074,
+        "precision": 0.0,
+        "routine": 197.74483895625443,
+        "total": 197.74483895625443
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.429,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 197.74
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.429,
+        "vpd_kpa": 1.002,
+        "substrate_moisture": 0.42,
+        "pest_pressure_index": 0.395,
+        "disease_risk_index": 0.155
+      }
+    },
+    "P0011|2025-W28": {
+      "plot_id": "P0011",
+      "week": "2025-W28",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-07",
+          "plant_stress_index": 0.463193833935358,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-08",
+          "plant_stress_index": 0.4928476038025542,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-09",
+          "plant_stress_index": 0.5089564095464609,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-10",
+          "plant_stress_index": 0.4889944156181551,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-11",
+          "plant_stress_index": 0.3560498771882601,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-12",
+          "plant_stress_index": 0.4541666582436892,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-13",
+          "plant_stress_index": 0.371237750068335,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.371,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.371,
+        "vpd_kpa": 0.852,
+        "substrate_moisture": 0.481,
+        "pest_pressure_index": 0.379,
+        "disease_risk_index": 0.155
+      }
+    },
+    "P0011|2025-W29": {
+      "plot_id": "P0011",
+      "week": "2025-W29",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-14",
+          "plant_stress_index": 0.4803909531183972,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-15",
+          "plant_stress_index": 0.4493767898370663,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-16",
+          "plant_stress_index": 0.4800203708750641,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-17",
+          "plant_stress_index": 0.428983967,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-18",
+          "plant_stress_index": 0.4412205829131926,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-19",
+          "plant_stress_index": 0.6366119531195263,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-20",
+          "plant_stress_index": 0.3854396850314683,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-19",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.047520201
+        }
+      ],
+      "costs": {
+        "energy": 12.527900921314785,
+        "fertilizer": 51.730000000000004,
+        "labor": 174.22277631120048,
+        "pesticide": 0.0,
+        "water": 10.196816651902441,
+        "precision": 0.0,
+        "routine": 248.67749388,
+        "total": 248.67749388
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.385,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 248.68
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.385,
+        "vpd_kpa": 1.1,
+        "substrate_moisture": 0.519,
+        "pest_pressure_index": 0.418,
+        "disease_risk_index": 0.144
+      }
+    },
+    "P0011|2025-W30": {
+      "plot_id": "P0011",
+      "week": "2025-W30",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-21",
+          "plant_stress_index": 0.683720663,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-22",
+          "plant_stress_index": 0.6242223780771623,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-23",
+          "plant_stress_index": 0.6867063218184413,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-24",
+          "plant_stress_index": 0.5532733347166072,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-25",
+          "plant_stress_index": 0.551431316,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-26",
+          "plant_stress_index": 0.459413961,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-27",
+          "plant_stress_index": 0.4974182751108523,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-21",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.070226305
+        },
+        {
+          "date": "2025-07-22",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-23",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-07-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.011430514
+        },
+        {
+          "date": "2025-07-25",
+          "alert_type": "No Alert",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        }
+      ],
+      "costs": {
+        "energy": 37.15835392561186,
+        "fertilizer": 45.8,
+        "labor": 189.53593740717582,
+        "pesticide": 30.42,
+        "water": 20.522369066845158,
+        "precision": 0.0,
+        "routine": 323.43666039963284,
+        "total": 323.43666039963284
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.497,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 323.44
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.497,
+        "vpd_kpa": 1.13,
+        "substrate_moisture": 0.454,
+        "pest_pressure_index": 0.425,
+        "disease_risk_index": 0.154
+      }
+    },
+    "P0011|2025-W31": {
+      "plot_id": "P0011",
+      "week": "2025-W31",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-07-28",
+          "plant_stress_index": 0.4507376106167809,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-29",
+          "plant_stress_index": 0.5841195951311438,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-07-30",
+          "plant_stress_index": 0.4070770601781061,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-07-31",
+          "plant_stress_index": 0.4232668291662438,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-01",
+          "plant_stress_index": 0.4061187136236484,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-02",
+          "plant_stress_index": 0.4763939216785231,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-03",
+          "plant_stress_index": 0.4550157682165191,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-07-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.075974076
+        }
+      ],
+      "costs": {
+        "energy": 5.825093678036747,
+        "fertilizer": 0.0,
+        "labor": 40.46317366217176,
+        "pesticide": 0.0,
+        "water": 5.058545915530001,
+        "precision": 0.0,
+        "routine": 51.34681326,
+        "total": 51.34681326
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.455,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 51.35
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.455,
+        "vpd_kpa": 1.103,
+        "substrate_moisture": 0.469,
+        "pest_pressure_index": 0.416,
+        "disease_risk_index": 0.14
+      }
+    },
+    "P0011|2025-W32": {
+      "plot_id": "P0011",
+      "week": "2025-W32",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-04",
+          "plant_stress_index": 0.4409340455503495,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-05",
+          "plant_stress_index": 0.4369300520442669,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-06",
+          "plant_stress_index": 0.5689413981921568,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-07",
+          "plant_stress_index": 0.4717448882494202,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-08",
+          "plant_stress_index": 0.4727985874324144,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-09",
+          "plant_stress_index": 0.5901605122447284,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-10",
+          "plant_stress_index": 0.4805418982635663,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.003957121
+        },
+        {
+          "date": "2025-08-09",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.049855064
+        }
+      ],
+      "costs": {
+        "energy": 10.610894060845977,
+        "fertilizer": 0.0,
+        "labor": 66.51795363878611,
+        "pesticide": 0.0,
+        "water": 7.301499896383888,
+        "precision": 0.0,
+        "routine": 84.43034759601596,
+        "total": 84.43034759601596
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.481,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 84.43
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.481,
+        "vpd_kpa": 1.226,
+        "substrate_moisture": 0.474,
+        "pest_pressure_index": 0.378,
+        "disease_risk_index": 0.15
+      }
+    },
+    "P0011|2025-W33": {
+      "plot_id": "P0011",
+      "week": "2025-W33",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-11",
+          "plant_stress_index": 0.4425697353714657,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-12",
+          "plant_stress_index": 0.4630087341957196,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-13",
+          "plant_stress_index": 0.4628467049776965,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-14",
+          "plant_stress_index": 0.4318097140553124,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-15",
+          "plant_stress_index": 0.4207341921478665,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-16",
+          "plant_stress_index": 0.4791997354993106,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-17",
+          "plant_stress_index": 0.4370820819428821,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [],
+      "costs": {
+        "energy": 0.0,
+        "fertilizer": 0.0,
+        "labor": 0.0,
+        "pesticide": 0.0,
+        "water": 0.0,
+        "precision": 0.0,
+        "routine": 0.0,
+        "total": 0.0
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.437,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 0.0
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.437,
+        "vpd_kpa": 1.152,
+        "substrate_moisture": 0.547,
+        "pest_pressure_index": 0.386,
+        "disease_risk_index": 0.144
+      }
+    },
+    "P0011|2025-W34": {
+      "plot_id": "P0011",
+      "week": "2025-W34",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. High stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-18",
+          "plant_stress_index": 0.4447842246319674,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-19",
+          "plant_stress_index": 0.4805128883076148,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-20",
+          "plant_stress_index": 0.4421315181810284,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-21",
+          "plant_stress_index": 0.5068665837337246,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-22",
+          "plant_stress_index": 0.4812277608831672,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-23",
+          "plant_stress_index": 0.4595325984030329,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-24",
+          "plant_stress_index": 0.6213390514649059,
+          "alert_flag": 1,
+          "action_taken": 1
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-24",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.050020186
+        }
+      ],
+      "costs": {
+        "energy": 10.914597782196957,
+        "fertilizer": 0.0,
+        "labor": 86.65180446451089,
+        "pesticide": 38.52,
+        "water": 4.8159565915711156,
+        "precision": 0.0,
+        "routine": 140.90235883827899,
+        "total": 140.90235883827899
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.621,
+        "alertType": "High Pest Pressure",
+        "actionDelayDays": 1,
+        "postActionDelta": -0.05,
+        "weeklyCost": 140.9
+      },
+      "simulatorValues": {
+        "action_delay_days": 1.0,
+        "plant_stress_index": 0.621,
+        "vpd_kpa": 1.409,
+        "substrate_moisture": 0.371,
+        "pest_pressure_index": 0.374,
+        "disease_risk_index": 0.135
+      }
+    },
+    "P0011|2025-W35": {
+      "plot_id": "P0011",
+      "week": "2025-W35",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-08-25",
+          "plant_stress_index": 0.5513452094975567,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-26",
+          "plant_stress_index": 0.7540701682630557,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-27",
+          "plant_stress_index": 0.7298673351572892,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-28",
+          "plant_stress_index": 0.6677672251875312,
+          "alert_flag": 1,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-29",
+          "plant_stress_index": 0.5922732402452009,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-08-30",
+          "plant_stress_index": 0.4627912715759575,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-08-31",
+          "plant_stress_index": 0.4042251433125483,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-08-25",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.0235249300186186
+        },
+        {
+          "date": "2025-08-26",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.005244616
+        },
+        {
+          "date": "2025-08-27",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": -0.036653364
+        },
+        {
+          "date": "2025-08-28",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 0,
+          "action_delay_days": 0,
+          "post_action_stress_delta_3d": 0.0
+        },
+        {
+          "date": "2025-08-29",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "No Action",
+          "action_taken": 1,
+          "action_delay_days": 2,
+          "post_action_stress_delta_3d": -0.049548714
+        }
+      ],
+      "costs": {
+        "energy": 33.24420811943449,
+        "fertilizer": 100.41397658543568,
+        "labor": 147.87188679488918,
+        "pesticide": 51.69931046687378,
+        "water": 26.109407608079984,
+        "precision": 69.62635251933825,
+        "routine": 289.7124370575625,
+        "total": 359.3387895769008
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.404,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 359.34
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.404,
+        "vpd_kpa": 0.93,
+        "substrate_moisture": 0.445,
+        "pest_pressure_index": 0.399,
+        "disease_risk_index": 0.141
+      }
+    },
+    "P0011|2025-W36": {
+      "plot_id": "P0011",
+      "week": "2025-W36",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-01",
+          "plant_stress_index": 0.4567088955024678,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-02",
+          "plant_stress_index": 0.4210746175326145,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-03",
+          "plant_stress_index": 0.4134163993789593,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-04",
+          "plant_stress_index": 0.4200224743686456,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-05",
+          "plant_stress_index": 0.5113675347835823,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-06",
+          "plant_stress_index": 0.5826541196846778,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-09-07",
+          "plant_stress_index": 0.4665394538066778,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-09-06",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Venting",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": 0.005446022
+        }
+      ],
+      "costs": {
+        "energy": 6.329718248936502,
+        "fertilizer": 0.0,
+        "labor": 39.20950005570581,
+        "pesticide": 0.0,
+        "water": 4.613292048691713,
+        "precision": 0.0,
+        "routine": 50.15251035333402,
+        "total": 50.15251035333402
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.467,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 50.15
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.467,
+        "vpd_kpa": 1.561,
+        "substrate_moisture": 0.524,
+        "pest_pressure_index": 0.362,
+        "disease_risk_index": 0.159
+      }
+    },
+    "P0011|2025-W37": {
+      "plot_id": "P0011",
+      "week": "2025-W37",
+      "header": "Plot P0011 \u2014 Strawberry, BC Harvest 6. Moderate stress \u2014 check timeline.",
+      "timeline": [
+        {
+          "date": "2025-09-08",
+          "plant_stress_index": 0.4643287143532095,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-09",
+          "plant_stress_index": 0.4375446096366411,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-10",
+          "plant_stress_index": 0.4901031383727569,
+          "alert_flag": 0,
+          "action_taken": 0
+        },
+        {
+          "date": "2025-09-11",
+          "plant_stress_index": 0.613634156,
+          "alert_flag": 1,
+          "action_taken": 1
+        },
+        {
+          "date": "2025-09-12",
+          "plant_stress_index": 0.458647661,
+          "alert_flag": 0,
+          "action_taken": 0
+        }
+      ],
+      "alertLog": [
+        {
+          "date": "2025-09-11",
+          "alert_type": "High Pest Pressure",
+          "recommended_action": "Increase Irrigation",
+          "action_taken": 1,
+          "action_delay_days": 1,
+          "post_action_stress_delta_3d": -0.036542111
+        }
+      ],
+      "costs": {
+        "energy": 3.870912051215325,
+        "fertilizer": 0.0,
+        "labor": 41.02785045086612,
+        "pesticide": 0.0,
+        "water": 8.311117704564746,
+        "precision": 0.0,
+        "routine": 53.20988020664619,
+        "total": 53.20988020664619
+      },
+      "aiContext": {
+        "crop": "Strawberry",
+        "farmName": "BC Harvest 6",
+        "climateZone": "Interior",
+        "stressIndex": 0.459,
+        "alertType": "No Alert",
+        "actionDelayDays": 0,
+        "postActionDelta": 0.0,
+        "weeklyCost": 53.21
+      },
+      "simulatorValues": {
+        "action_delay_days": 0.0,
+        "plant_stress_index": 0.459,
+        "vpd_kpa": 1.279,
+        "substrate_moisture": 0.43,
+        "pest_pressure_index": 0.371,
+        "disease_risk_index": 0.134
+      }
+    }
+  },
+  "responseOverTime": [
+    {
+      "week": "2025-W07",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W08",
+      "response_rate": 0.0
+    },
+    {
+      "week": "2025-W09",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W10",
+      "response_rate": 75.0
+    },
+    {
+      "week": "2025-W11",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W12",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W13",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W14",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W15",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W16",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W17",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W18",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W19",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W20",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W22",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W23",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W24",
+      "response_rate": 0.0
+    },
+    {
+      "week": "2025-W25",
+      "response_rate": 33.3
+    },
+    {
+      "week": "2025-W26",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W27",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W29",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W30",
+      "response_rate": 40.0
+    },
+    {
+      "week": "2025-W31",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W32",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W34",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W35",
+      "response_rate": 80.0
+    },
+    {
+      "week": "2025-W36",
+      "response_rate": 100.0
+    },
+    {
+      "week": "2025-W37",
+      "response_rate": 100.0
+    }
+  ],
+  "alertTypeBreakdown": [
+    {
+      "alert_type": "High Pest Pressure",
+      "count": 95,
+      "acted": 85,
+      "resolution_rate": 89.5
+    }
+  ],
+  "healthTrend": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "avg_stress": 0.508820147772088
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "avg_stress": 0.47974821319126665
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "avg_stress": 0.6469674376068296
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "avg_stress": 0.5907836329155502
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "avg_stress": 0.5846226460711929
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "avg_stress": 0.6307616618239406
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "avg_stress": 0.6297958594008405
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "avg_stress": 0.7067906911726246
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "avg_stress": 0.6419128465616374
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "avg_stress": 0.6138045411720646
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "avg_stress": 0.6058908990939933
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "avg_stress": 0.5670438259260994
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "avg_stress": 0.6175903163676575
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "avg_stress": 0.5956388702095372
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "avg_stress": 0.4734615257957279
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "avg_stress": 0.5416282945554609
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "avg_stress": 0.48067900277376063
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "avg_stress": 0.48355206101952214
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "avg_stress": 0.5713760016693465
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "avg_stress": 0.500645149409339
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "avg_stress": 0.5342033603357511
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "avg_stress": 0.44792093548611606
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "avg_stress": 0.47172061455638786
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "avg_stress": 0.5794551785318661
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "avg_stress": 0.45753278551585214
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "avg_stress": 0.49457876885384316
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "avg_stress": 0.4481786997414648
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "avg_stress": 0.49091351794363447
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "avg_stress": 0.5946199418913057
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "avg_stress": 0.4673976421510893
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "avg_stress": 0.49285165587252144
+    }
+  ],
+  "previouslyAtRisk": [
+    {
+      "plot_id": "P0011",
+      "label": "Plot P0011 \u2014 Strawberry, BC Harvest 6",
+      "lastWeekStress": 0.467,
+      "thisWeekStress": 0.459,
+      "actionTaken": false
+    }
+  ],
+  "stressModel": {
+    "featureNames": [
+      "action_delay_days",
+      "plant_stress_index",
+      "vpd_kpa",
+      "substrate_moisture",
+      "pest_pressure_index",
+      "disease_risk_index"
+    ],
+    "coefficients": [
+      0.018582185718741706,
+      0.004795891494642045,
+      -0.0020391505608814606,
+      0.004241773724022167,
+      0.004797834115383394,
+      -0.024210540096880857
+    ],
+    "intercept": -0.04746805208487905,
+    "defaults": {
+      "action_delay_days": 0.747,
+      "plant_stress_index": 0.63,
+      "vpd_kpa": 1.579,
+      "substrate_moisture": 0.415,
+      "pest_pressure_index": 0.452,
+      "disease_risk_index": 0.142
+    },
+    "bounds": {
+      "action_delay_days": [
+        0,
+        5
+      ],
+      "plant_stress_index": [
+        0.0,
+        1.0
+      ],
+      "vpd_kpa": [
+        0.52,
+        2.39
+      ],
+      "substrate_moisture": [
+        0.0,
+        1.0
+      ],
+      "pest_pressure_index": [
+        0.0,
+        1.0
+      ],
+      "disease_risk_index": [
+        0.0,
+        1.0
+      ]
+    },
+    "avgSeasonDelta": -0.033
+  }
+}
