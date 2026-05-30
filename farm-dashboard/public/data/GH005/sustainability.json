@@ -150,35 +150,35 @@
   "risks": [
     {
       "id": "heatwave",
-      "icon": "\ud83c\udf21\ufe0f",
+      "icon": "thermometer",
       "title": "Heatwave Risk",
       "level": "healthy",
       "oneliner": "Interior farms logged 0 readings above 32\u00b0C this season"
     },
     {
       "id": "pest",
-      "icon": "\ud83d\udc1b",
+      "icon": "bug",
       "title": "Pest Outbreak",
       "level": "warning",
       "oneliner": "Pest pressure index averaging 0.43 across plots"
     },
     {
       "id": "disease",
-      "icon": "\ud83e\udda0",
+      "icon": "shield-alert",
       "title": "Disease Spread",
       "level": "healthy",
       "oneliner": "Coastal and Fraser Valley plots show elevated disease risk indices"
     },
     {
       "id": "water",
-      "icon": "\ud83d\udca7",
+      "icon": "droplet",
       "title": "Water Stress",
       "level": "warning",
       "oneliner": "0 plot-days experienced chronic under-irrigation"
     },
     {
       "id": "costs",
-      "icon": "\ud83d\udcc8",
+      "icon": "trending-up",
       "title": "Input Cost Volatility",
       "level": "warning",
       "oneliner": "Fertilizer prices swung 44.5% this season"

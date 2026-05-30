@@ -24,6 +24,13 @@
   "carbonEmissionsKgCO2e": 410.65,
   "carbonEmissionsScore": 0.0,
   "carbonKgPerKgYield": 0.2615,
+  "subscoreTrends": {
+    "energyIntensity": -92.7,
+    "waterEfficiency": -58.9,
+    "chemicalLoad": 0.0,
+    "carbonEmissions": -27.0,
+    "naturalDisasterRisk": 0.0
+  },
   "moistureTrend": [
     {
       "week": "2025-02-10/2025-02-16",
@@ -153,21 +160,21 @@
   "risks": [
     {
       "id": "pest",
-      "icon": "🐛",
+      "icon": "bug",
       "title": "Pest Outbreak",
       "level": "warning",
       "oneliner": "Pest pressure index averaging 0.43 across plots"
     },
     {
       "id": "water",
-      "icon": "💧",
+      "icon": "droplet",
       "title": "Water Stress",
       "level": "critical",
       "oneliner": "575 plot-day(s) outside target moisture range (0.40–0.55)"
     },
     {
       "id": "costs",
-      "icon": "📈",
+      "icon": "trending-up",
       "title": "Input Cost Volatility",
       "level": "warning",
       "oneliner": "Fertilizer prices swung 44.5% this season"

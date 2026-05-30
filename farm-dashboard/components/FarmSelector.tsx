@@ -3,8 +3,39 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFarm, type FarmOption } from "@/contexts/FarmContext";
 
+function AllFarmsIcon() {
+  return (
+    <svg
+      aria-hidden
+      width="13"
+      height="13"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="inline-block shrink-0 opacity-80"
+    >
+      {/* grid of 4 plots */}
+      <rect x="3" y="3" width="7" height="7" rx="1" />
+      <rect x="14" y="3" width="7" height="7" rx="1" />
+      <rect x="3" y="14" width="7" height="7" rx="1" />
+      <rect x="14" y="14" width="7" height="7" rx="1" />
+    </svg>
+  );
+}
+
 function triggerLabel(scope: FarmOption) {
-  return scope.id === "all" ? "🌐 All Farms" : scope.name;
+  if (scope.id === "all") {
+    return (
+      <span className="flex items-center gap-1.5">
+        <AllFarmsIcon />
+        All Farms
+      </span>
+    );
+  }
+  return scope.name;
 }
 
 /** Root → node id path (inclusive), so opening the menu can reveal the current
@@ -79,7 +110,10 @@ function ScopeRow({
               : "text-sage-100 hover:bg-sage-600/60 hover:text-white"
           }`}
         >
-          <span className="block truncate">{node.id === "all" ? "🌐 All Farms" : node.name}</span>
+          <span className="flex items-center gap-1.5 truncate">
+            {node.id === "all" && <AllFarmsIcon />}
+            {node.id === "all" ? "All Farms" : node.name}
+          </span>
           {node.sublabel && (
             <span className="block truncate text-[11px] font-normal leading-tight text-sage-300">
               {node.sublabel}
@@ -172,7 +206,7 @@ export function FarmSelector() {
         onClick={() => (open ? setOpen(false) : openMenu())}
         className="relative z-0 flex w-full items-center justify-between gap-2 rounded-md border border-sage-500 bg-sage-600 py-1.5 pl-2 pr-2.5 text-sm font-semibold text-white shadow-sm outline-none focus:ring-2 focus:ring-sage-300"
       >
-        <span className="min-w-0 truncate">{triggerLabel(selected)}</span>
+        <span className="flex min-w-0 items-center gap-1.5 truncate">{triggerLabel(selected)}</span>
         <svg
           aria-hidden
           viewBox="0 0 20 20"

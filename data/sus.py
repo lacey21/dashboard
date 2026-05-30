@@ -339,6 +339,15 @@ def calculate(dfs: dict[str, pd.DataFrame], farm_id: str) -> dict:
     # ── Risks ────────────────────────────────────────────────────────────
     risks = build_risks(dfs, farm_id, subscores)
 
+    # ── Month-over-month trend ────────────────────────────────────────────
+    subscore_trends = compute_subscores_trend(
+        dfs=dfs,
+        farm_id=farm_id,
+        plot_ids=set(plots_df["plot_id"].tolist()),
+        total_area_m2=total_area_m2,
+        total_yield_kg=total_yield_kg,
+    )
+
     # ── Control baseline (Control treatment plots) ───────────────────────
     control_baseline = build_control_baseline(dfs, farm_id)
 
@@ -366,14 +375,138 @@ def calculate(dfs: dict[str, pd.DataFrame], farm_id: str) -> dict:
             "primaryCrop": farm.get("primary_crop", "Unknown"),
         },
         "benchmarks": benchmarks,
-        # --- NEW: carbon emissions fields ---
+        # --- carbon emissions fields ---
         "carbonEmissionsKgCO2e":    round(total_co2e_kg, 2),
         "carbonEmissionsScore":     carbon_score,
         "carbonKgPerKgYield":       round(carbon_per_kg_yield, 4),
-        # ------------------------------------
+        # --- month-over-month trends (current 30d vs previous 30d) ---
+        "subscoreTrends":  subscore_trends,
+        # ---------------------------------------------------------------
         "moistureTrend":   moisture_trend,
         "risks":           risks,
         "controlBaseline": control_baseline,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Month-over-month trend helper
+# ---------------------------------------------------------------------------
+
+def _period_subscores(
+    apps: pd.DataFrame,
+    sensor: pd.DataFrame,
+    total_area_m2: float,
+    period_yield_kg: float,
+) -> dict[str, float]:
+    """Compute the five subscores for a filtered slice of data."""
+
+    def _sum(df: pd.DataFrame, itype: str) -> float:
+        if df.empty:
+            return 0.0
+        mask = df["input_type"].str.lower() == itype
+        return float(df.loc[mask, "quantity"].sum())
+
+    energy_kwh  = _sum(apps, "energy")
+    water_l     = _sum(apps, "water")
+    pest_kg     = _sum(apps, "pesticide") / 1000.0
+
+    ei = score_lower_is_better(
+        energy_kwh / period_yield_kg if period_yield_kg > 0 else float("inf"),
+        1.28, 3.20,
+    )
+    we = score_lower_is_better(
+        water_l / period_yield_kg if period_yield_kg > 0 else float("inf"),
+        40.0, 80.0,
+    )
+    cl = score_lower_is_better(
+        pest_kg / total_area_m2 if total_area_m2 > 0 else 0.0,
+        0.00058, 0.00086,
+    )
+
+    # Carbon: approximate from energy (blended BC grid factor)
+    co2e_per_kg = (energy_kwh * BLENDED_KG_CO2E_PER_KWH) / period_yield_kg if period_yield_kg > 0 else 0.0
+    carbon = score_lower_is_better(co2e_per_kg, 0.019, 0.480)
+
+    # Natural-disaster risk: fraction of extreme-temp readings
+    if not sensor.empty and "air_temp_c" in sensor.columns:
+        extreme = int(((sensor["air_temp_c"] > 32) | (sensor["air_temp_c"] < -5)).sum())
+        risk_pct = (extreme / len(sensor)) * 100
+        disaster = score_lower_is_better(risk_pct, 0.0, 100.0)
+    else:
+        disaster = 100.0
+
+    return {
+        "energyIntensity":     round(ei, 1),
+        "waterEfficiency":     round(we, 1),
+        "chemicalLoad":        round(cl, 1),
+        "carbonEmissions":     round(carbon, 1),
+        "naturalDisasterRisk": round(disaster, 1),
+    }
+
+
+def compute_subscores_trend(
+    dfs: dict[str, pd.DataFrame],
+    farm_id: str,
+    plot_ids: set[str],
+    total_area_m2: float,
+    total_yield_kg: float,
+) -> dict[str, float] | None:
+    """
+    Return {subscore_key: delta} where delta = current_30d_score − prev_30d_score.
+    Positive → improved. Returns None if there is insufficient data.
+    """
+    apps_full   = dfs.get("input_applications", pd.DataFrame())
+    sensor_full = dfs.get("daily_sensor_readings", pd.DataFrame())
+
+    if apps_full.empty or "date" not in apps_full.columns:
+        return None
+
+    # Parse dates once
+    apps_full   = apps_full.copy()
+    apps_full["date"] = pd.to_datetime(apps_full["date"], errors="coerce")
+    apps_farm   = apps_full[apps_full["farm_id"] == farm_id].copy()
+
+    if not sensor_full.empty and "date" in sensor_full.columns:
+        sensor_full = sensor_full.copy()
+        sensor_full["date"] = pd.to_datetime(sensor_full["date"], errors="coerce")
+        sensor_farm = sensor_full[sensor_full["plot_id"].isin(plot_ids)].copy()
+    else:
+        sensor_farm = pd.DataFrame()
+
+    max_date = apps_farm["date"].max()
+    if pd.isna(max_date):
+        return None
+
+    cur_start  = max_date - pd.Timedelta(days=30)
+    prev_start = max_date - pd.Timedelta(days=60)
+    prev_end   = cur_start
+
+    # Season length for yield proration
+    min_date     = apps_farm["date"].min()
+    season_days  = max(1, (max_date - min_date).days)
+
+    def _slice(df: pd.DataFrame, start: pd.Timestamp, end: pd.Timestamp) -> pd.DataFrame:
+        if df.empty:
+            return df
+        return df[(df["date"] >= start) & (df["date"] < end)]
+
+    period_days = 30
+    period_yield = total_yield_kg * (period_days / season_days)
+
+    cur_apps    = _slice(apps_farm,   cur_start, max_date)
+    prev_apps   = _slice(apps_farm,   prev_start, prev_end)
+    cur_sensor  = _slice(sensor_farm, cur_start, max_date)
+    prev_sensor = _slice(sensor_farm, prev_start, prev_end)
+
+    if cur_apps.empty and prev_apps.empty:
+        return None
+
+    cur_scores  = _period_subscores(cur_apps,  cur_sensor,  total_area_m2, period_yield)
+    prev_scores = _period_subscores(prev_apps, prev_sensor, total_area_m2, period_yield)
+
+    return {
+        k: round(cur_scores[k] - prev_scores[k], 1)
+        for k in cur_scores
     }
 
 
@@ -408,7 +541,7 @@ def build_risks(
             if level in ("warning", "critical"):
                 risks.append({
                     "id": "heatwave",
-                    "icon": "🌡️",
+                    "icon": "thermometer",
                     "title": "Heatwave Risk",
                     "level": level,
                     "oneliner": f"{int(hot_days)} reading(s) above 32°C recorded this season",
@@ -421,7 +554,7 @@ def build_risks(
             if level in ("warning", "critical"):
                 risks.append({
                     "id": "pest",
-                    "icon": "🐛",
+                    "icon": "bug",
                     "title": "Pest Outbreak",
                     "level": level,
                     "oneliner": f"Pest pressure index averaging {avg_pest:.2f} across plots",
@@ -434,7 +567,7 @@ def build_risks(
             if level in ("warning", "critical"):
                 risks.append({
                     "id": "disease",
-                    "icon": "🦠",
+                    "icon": "shield-alert",
                     "title": "Disease Spread",
                     "level": level,
                     "oneliner": f"Disease risk index averaging {avg_disease:.2f} across plots",
@@ -451,7 +584,7 @@ def build_risks(
             if level in ("warning", "critical"):
                 risks.append({
                     "id": "water",
-                    "icon": "💧",
+                    "icon": "droplet",
                     "title": "Water Stress",
                     "level": level,
                     "oneliner": f"{int(out_of_range)} plot-day(s) outside target moisture range (0.40–0.55)",
@@ -467,7 +600,7 @@ def build_risks(
             if level in ("warning", "critical"):
                 risks.append({
                     "id": "costs",
-                    "icon": "📈",
+                    "icon": "trending-up",
                     "title": "Input Cost Volatility",
                     "level": level,
                     "oneliner": f"Fertilizer prices swung {swing:.1f}% this season",

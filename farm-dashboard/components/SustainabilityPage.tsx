@@ -11,6 +11,7 @@ type SustainData = {
   overallScore: number;
   scoreLabel?: string;
   subscores: Record<string, number>;
+  subscoreTrends?: Record<string, number>;
   weakestCategory: string;
   strongestCategory: string;
   weakestScore: number;
@@ -299,6 +300,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
                 key={key}
                 title={CATEGORY_LABELS[key]}
                 score={data.subscores[key] ?? 0}
+                trend={data.subscoreTrends?.[key]}
                 caption={
                   key === "energyIntensity"
                     ? "How efficiently this farm converts energy spending into crop output"
@@ -310,7 +312,10 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
                 }
               />
             ))}
-            <DisasterRiskCard score={data.subscores.naturalDisasterRisk} />
+            <DisasterRiskCard
+              score={data.subscores.naturalDisasterRisk}
+              trend={data.subscoreTrends?.naturalDisasterRisk}
+            />
           </div>
 
           <section id="all-dimensions-vs-control" className="mt-10 scroll-mt-28">
@@ -365,27 +370,57 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   );
 }
 
-// ─── CategoryCard (unchanged) ─────────────────────────────────────────────────
+// ─── Trend badge ──────────────────────────────────────────────────────────────
+
+function TrendBadge({ delta }: { delta: number }) {
+  if (Math.abs(delta) < 0.5) return null; // no meaningful change
+  const improved = delta > 0;
+  const color = improved ? "#15803D" : "#B91C1C";
+  const bg    = improved ? "#DCFCE7"  : "#FEE2E2";
+  const sign  = improved ? "+" : "";
+  return (
+    <span
+      className="inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[11px] font-semibold leading-none"
+      style={{ color, backgroundColor: bg }}
+      title={`${sign}${delta.toFixed(1)} pts vs last month`}
+    >
+      <svg
+        width="9" height="9" viewBox="0 0 10 10"
+        fill="currentColor" aria-hidden
+      >
+        {improved
+          ? <path d="M5 1 L9 8 H1 Z" />           /* up triangle */
+          : <path d="M5 9 L9 2 H1 Z" />}           /* down triangle */
+      </svg>
+      {sign}{Math.abs(delta).toFixed(1)}
+    </span>
+  );
+}
+
+// ─── CategoryCard ─────────────────────────────────────────────────────────────
 
 function CategoryCard({
   title,
   score,
+  trend,
   caption,
 }: {
   title: string;
   score: number;
+  trend?: number;
   caption: string;
 }) {
   const color = scoreColor(score);
   const pct = Math.max(0, Math.min(100, score));
   return (
     <div className="flex flex-col rounded-xl border border-sage-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
-      <div className="flex items-baseline justify-between gap-2">
+      <div className="flex items-start justify-between gap-2">
         <p className="text-sm font-medium text-sage-700">{title}</p>
-        <p className="text-3xl font-bold leading-none" style={{ color }}>
-          {score}
-        </p>
+        {trend != null && <TrendBadge delta={trend} />}
       </div>
+      <p className="mt-1 text-3xl font-bold leading-none" style={{ color }}>
+        {score}
+      </p>
       <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-black/5">
         <div
           className="h-full rounded-full transition-all duration-500 ease-out"
@@ -397,19 +432,20 @@ function CategoryCard({
   );
 }
 
-// ─── DisasterRiskCard ─────────────────────────────────────────────────────
+// ─── DisasterRiskCard ─────────────────────────────────────────────────────────
 
-function DisasterRiskCard({ score }: { score: number }) {
+function DisasterRiskCard({ score, trend }: { score: number; trend?: number }) {
   const color = scoreColor(score);
   const pct = Math.max(0, Math.min(100, score));
   return (
     <div className="flex flex-col rounded-xl border border-sage-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
-      <div className="flex items-baseline justify-between gap-2">
+      <div className="flex items-start justify-between gap-2">
         <p className="text-sm font-medium text-sage-700">Natural disaster risk</p>
-        <p className="text-3xl font-bold leading-none" style={{ color }}>
-          {score}
-        </p>
+        {trend != null && <TrendBadge delta={trend} />}
       </div>
+      <p className="mt-1 text-3xl font-bold leading-none" style={{ color }}>
+        {score}
+      </p>
       <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-black/5">
         <div
           className="h-full rounded-full transition-all duration-500 ease-out"
