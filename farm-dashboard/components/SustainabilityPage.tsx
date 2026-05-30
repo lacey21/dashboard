@@ -240,7 +240,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
       {showBreakdown && (
         <>
           <div id="score-breakdown" className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 scroll-mt-28">
-            {(["energyIntensity", "waterEfficiency", "chemicalLoad", "carbonEmissions"] as const).map((key) => (
+            {(["waterEfficiency", "energyIntensity", "chemicalLoad", "carbonEmissions"] as const).map((key) => (
               <CategoryCard
                 key={key}
                 title={CATEGORY_LABELS[key]}
