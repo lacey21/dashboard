@@ -59,7 +59,7 @@ The dashboard should help answer:
 - Precision vs. routine comparison
 - Plant stress and alert response analysis
 - Resource efficiency and sustainability proxy metrics
-- AI-generated plain-language insights using Gemini API
+- AI-generated plain-language insights using Ollama (local LLM)
 - Data preprocessing using Python
 
 ### Out of Scope
@@ -164,7 +164,7 @@ This will help identify:
 
 ### 5. AI-Generated Insights
 
-Using the Gemini API, the dashboard will generate plain-language summaries and recommendations based on selected filters.
+Using Ollama, the dashboard will generate plain-language summaries and recommendations based on selected filters.
 
 Example insights:
 
@@ -208,7 +208,7 @@ The dashboard will be successful if it:
 
 - Tableau or Tableau API for dashboard visualizations
 - Python for data cleaning, joining, and metric calculations
-- Gemini API for AI-generated summaries and recommendations
+- Ollama for AI-generated summaries and recommendations
 
 ### Data Processing Requirements
 
