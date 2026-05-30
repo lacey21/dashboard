@@ -117,14 +117,31 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
   const { data, loading } = useData<SustainData>("sustainability.json");
   const { data: seasonalData } = useData<SeasonalData>("seasonal_evaluation.json");
   const [showBreakdown, setShowBreakdown] = useState(false);
+  const [pendingScrollTarget, setPendingScrollTarget] = useState<string | null>(null);
 
-  // Auto-expand breakdown when linking to score-breakdown or all-dimensions-vs-control
   useEffect(() => {
-    const hash = window.location.hash.slice(1); // Remove '#'
-    if (hash === "score-breakdown" || hash === "all-dimensions-vs-control") {
-      setShowBreakdown(true);
+    function handleHashChange() {
+      const hash = window.location.hash.slice(1);
+      if (hash === "score-breakdown" || hash === "all-dimensions-vs-control") {
+        setShowBreakdown(true);
+        setPendingScrollTarget(hash);
+      }
     }
+
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
+
+  useEffect(() => {
+    if (!showBreakdown || !pendingScrollTarget) return;
+
+    const element = document.getElementById(pendingScrollTarget);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setPendingScrollTarget(null);
+    }
+  }, [showBreakdown, pendingScrollTarget]);
 
   if (loading || !data) {
     return (
