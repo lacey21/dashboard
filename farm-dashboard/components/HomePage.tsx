@@ -5,9 +5,10 @@ import { useData } from "@/hooks/useData";
 import { useFarm } from "@/contexts/FarmContext";
 import { useChat } from "@/contexts/ChatContext";
 import { KPICard } from "@/components/KPICard";
+import { AiIcon } from "@/components/AiIcon";
 import { OllamaInsight } from "@/components/OllamaInsight";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
-import { USE_CASES } from "@/constants/useCases";
+import { USE_CASES, useCaseIconSize } from "@/constants/useCases";
 
 type HomeData = {
   banner: { criticalPlots: number; unactionedAlerts: number; roiVsBaseline: number };
@@ -135,9 +136,7 @@ Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
                   >
                     <span className="flex items-center gap-3">
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage-600 text-white">
-                        <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-                          <path d="M8 1.5l1.4 3.6L13 6.5l-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4L8 1.5z" />
-                        </svg>
+                        <AiIcon className="h-4 w-4" />
                       </span>
                       <span className="min-w-0">
                         <span className="block text-sm font-semibold text-sage-900">Ask GreenLeaf AI</span>
@@ -179,7 +178,7 @@ Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
                     </span>
                   </div>
                   <p className="mt-3 flex items-center gap-1.5 text-base font-semibold text-sage-900">
-                    <UseCaseIcon src={u.icon} size={28} variant="dark" />
+                    <UseCaseIcon src={u.icon} size={useCaseIconSize(28, u.iconScale)} variant="dark" />
                     {u.title}
                   </p>
                   <p className="mt-1 text-sm italic text-sage-700">“{u.question}”</p>

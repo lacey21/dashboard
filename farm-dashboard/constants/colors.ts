@@ -20,6 +20,11 @@ export const COLORS = {
   healthy: "#5A8F65",
   precision: "#6B8F71",
   routine: "#8B9A88",
+
+  /** Muted chart series (sage-adjacent green / slate blue / terracotta red) */
+  chartGreen: "#5A8F65",
+  chartBlue: "#6E8A9A",
+  chartRed: "#C46B5A",
 } as const;
 
 export function urgencyColor(score: number): string {

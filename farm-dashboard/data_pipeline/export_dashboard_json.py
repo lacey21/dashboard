@@ -10,19 +10,34 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import Ridge
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.linear_model import LinearRegression, Ridge
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data" / "clean"
 OUT_DIR = Path(__file__).resolve().parents[1] / "public" / "data"
 
 STRESS_THRESHOLD = 0.6
-YIELD_BENCHMARKS = {
-    "Tomato": 65,
-    "Cucumber": 75,
-    "Pepper": 18,
-    "Strawberry": 8,
+YIELD_BENCHMARK_TIERS = {
+    "Tomato": {"typical": 57.5, "aspirational": 67.5},
+    "Cucumber": {"typical": 67.5, "aspirational": 97.5},
+    "Pepper": {"typical": 25.0, "aspirational": 29.0},
+    "Strawberry": {"typical": 10.0, "aspirational": 13.5},
 }
+YIELD_BENCHMARK_DEFAULT = {"typical": 50.0, "aspirational": 65.0}
+YIELD_UNITS_CHECK_RATIO = 0.3
+YIELD_TYPICAL_TOLERANCE = 0.10
+YIELD_IMPLAUSIBLE_FLOOR = 12.0
+
+
+def yield_benchmark_status(avg: float, typical: float) -> str:
+    if avg < typical * YIELD_UNITS_CHECK_RATIO or avg < YIELD_IMPLAUSIBLE_FLOOR:
+        return "check_units"
+    if avg >= typical * (1 - YIELD_TYPICAL_TOLERANCE):
+        return "on_or_above"
+    if avg >= typical * 0.7:
+        return "below_typical"
+    return "well_below"
 
 # Feature set + term expansion for the yield what-if model. Defined at module
 # level so the model can be trained once on the full fleet and reused for every
@@ -737,13 +752,17 @@ def export_seasonal(
     yield_benchmark = []
     for _, row in yield_by_crop.iterrows():
         crop = row["crop"]
-        bench = YIELD_BENCHMARKS.get(crop, 50)
+        tier = YIELD_BENCHMARK_TIERS.get(crop, YIELD_BENCHMARK_DEFAULT)
+        typical = tier["typical"]
+        aspirational = tier["aspirational"]
+        avg = float(row["avgYield"])
         yield_benchmark.append(
             {
                 "crop": crop,
-                "avgYield": round(float(row["avgYield"]), 2),
-                "benchmark": bench,
-                "aboveBenchmark": row["avgYield"] >= bench,
+                "avgYield": round(avg, 2),
+                "typicalBenchmark": typical,
+                "aspirationalBenchmark": aspirational,
+                "status": yield_benchmark_status(avg, typical),
             }
         )
 

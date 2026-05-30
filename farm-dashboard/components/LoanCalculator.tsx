@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import {
   Bar,
   BarChart,
@@ -14,8 +14,18 @@ import {
   YAxis,
 } from "recharts";
 import { COLORS } from "@/constants/colors";
+import { HoverTip, InfoTip, StatTip } from "@/components/InfoTooltip";
 
 type MonthRev = { month: number; revenue: number };
+
+function ChartHeading({ title, tip }: { title: string; tip: ReactNode }) {
+  return (
+    <div className="mb-1 flex items-center gap-1.5">
+      <p className="text-xs font-medium text-sage-600">{title}</p>
+      <InfoTip title={title}>{tip}</InfoTip>
+    </div>
+  );
+}
 
 export function LoanCalculator({
   monthlyRevenue,
@@ -28,6 +38,7 @@ export function LoanCalculator({
   const [rate, setRate] = useState(5.5);
   const [years, setYears] = useState(3);
   const [harvestAligned, setHarvestAligned] = useState(true);
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
 
   const calc = useMemo(() => {
     const months = years * 12;
@@ -39,10 +50,9 @@ export function LoanCalculator({
         : amount / months;
 
     const totalRev = monthlyRevenue.reduce((s, m) => s + m.revenue, 0);
-    const weights = monthlyRevenue.map((m) => m.revenue / totalRev);
     const maxMonthRev = Math.max(...monthlyRevenue.map((m) => m.revenue));
 
-    const schedule = monthlyRevenue.map((m, i) => {
+    const schedule = monthlyRevenue.map((m) => {
       const payment = harvestAligned
         ? flatPayment * (0.5 + (m.revenue / maxMonthRev) * 0.5) * 12 / months
         : flatPayment / (12 / monthlyRevenue.length);
@@ -74,7 +84,13 @@ export function LoanCalculator({
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <label className="text-sm">
-          Loan amount ($)
+          <span className="flex items-center gap-1.5">
+            Loan amount ($)
+            <InfoTip title="Loan amount">
+              Principal you&apos;re borrowing (e.g. for sensors, automation, or operating
+              credit. Drag the slider to see how payment size and break-even shift.
+            </InfoTip>
+          </span>
           <input
             type="range"
             min={10000}
@@ -82,12 +98,19 @@ export function LoanCalculator({
             step={5000}
             value={amount}
             onChange={(e) => setAmount(Number(e.target.value))}
-            className="mt-1 w-full"
+            className="range-input mt-1 w-full"
           />
           <span className="font-medium">${amount.toLocaleString()}</span>
         </label>
+
         <label className="text-sm">
-          Interest rate (%)
+          <span className="flex items-center gap-1.5">
+            Interest rate (%)
+            <InfoTip title="Interest rate">
+              Annual percentage rate (APR). A higher rate raises both your monthly payment
+              and total interest over the full term.
+            </InfoTip>
+          </span>
           <input
             type="range"
             min={2}
@@ -95,12 +118,19 @@ export function LoanCalculator({
             step={0.25}
             value={rate}
             onChange={(e) => setRate(Number(e.target.value))}
-            className="mt-1 w-full"
+            className="range-input mt-1 w-full"
           />
           <span className="font-medium">{rate}%</span>
         </label>
+
         <label className="text-sm">
-          Term (years)
+          <span className="flex items-center gap-1.5">
+            Term (years)
+            <InfoTip title="Loan term">
+              How long you spread repayments over. Longer terms mean smaller monthly
+              payments but more total interest paid by the end.
+            </InfoTip>
+          </span>
           <select
             value={years}
             onChange={(e) => setYears(Number(e.target.value))}
@@ -113,67 +143,172 @@ export function LoanCalculator({
             ))}
           </select>
         </label>
-        <div className="flex items-end gap-2 text-sm">
-          <button
-            type="button"
-            onClick={() => setHarvestAligned(false)}
-            className={`rounded px-3 py-2 ${!harvestAligned ? "bg-sage-700 text-white" : "bg-sage-100 text-sage-800"}`}
-          >
-            Monthly
-          </button>
-          <button
-            type="button"
-            onClick={() => setHarvestAligned(true)}
-            className={`rounded px-3 py-2 ${harvestAligned ? "bg-sage-700 text-white" : "bg-sage-100 text-sage-800"}`}
-          >
-            Match harvest cycle
-          </button>
+
+        <div className="text-sm">
+          <span className="flex items-center gap-1.5">
+            Repayment schedule
+            <InfoTip title="Repayment schedule">
+              Choose whether payments stay flat each month or flex with your harvest
+              revenue. Hover each option for details.
+            </InfoTip>
+          </span>
+          <div className="mt-1 flex gap-2">
+            <HoverTip
+              className="flex-1"
+              title="Monthly"
+              align="left"
+              tip={
+                <>
+                  Fixed equal payment every month, no matter when revenue peaks. Simple to
+                  budget, but can feel tight during low-cash months between harvests.
+                </>
+              }
+            >
+              <button
+                type="button"
+                onClick={() => setHarvestAligned(false)}
+                className={`w-full rounded px-3 py-2 transition ${
+                  !harvestAligned
+                    ? "bg-sage-700 text-white"
+                    : "bg-sage-100 text-sage-800 hover:bg-sage-200"
+                }`}
+              >
+                Monthly
+              </button>
+            </HoverTip>
+            <HoverTip
+              className="flex-1"
+              title="Match harvest cycle"
+              align="right"
+              tip={
+                <>
+                  Payments scale with your actual monthly revenue: heavier when harvest
+                  cash comes in, lighter in quiet months. Total repaid stays the same;
+                  only the timing follows your season.
+                </>
+              }
+            >
+              <button
+                type="button"
+                onClick={() => setHarvestAligned(true)}
+                className={`w-full rounded px-3 py-2 transition ${
+                  harvestAligned
+                    ? "bg-sage-700 text-white"
+                    : "bg-sage-100 text-sage-800 hover:bg-sage-200"
+                }`}
+              >
+                Match harvest cycle
+              </button>
+            </HoverTip>
+          </div>
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-3 text-center text-sm">
-        <div className="rounded border border-sage-100 bg-sage-50 p-3">
-          <p className="font-bold">${calc.flatPayment.toFixed(0)}/mo</p>
-          <p className="text-sage-600">Payment</p>
-        </div>
-        <div className="rounded border border-sage-100 bg-sage-50 p-3">
-          <p className="font-bold">${calc.totalInterest.toFixed(0)}</p>
-          <p className="text-sage-600">Total interest</p>
-        </div>
-        <div className="rounded border border-sage-100 bg-sage-50 p-3">
-          <p className="font-bold">{calc.breakEvenSeasons} seasons</p>
-          <p className="text-sage-600">Break-even</p>
-        </div>
+      <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
+        <StatTip
+          value={`$${calc.flatPayment.toFixed(0)}/mo`}
+          label="Payment"
+          tip={
+            harvestAligned
+              ? "Average monthly payment. Individual months vary: higher when revenue peaks, lower in off-season."
+              : "Fixed monthly payment based on your amount, rate, and term."
+          }
+        />
+        <StatTip
+          value={`$${calc.totalInterest.toFixed(0)}`}
+          label="Total interest"
+          tip="Extra cost above the principal if you pay on schedule for the full term. Does not include fees or insurance."
+        />
+        <StatTip
+          value={`${calc.breakEvenSeasons} seasons`}
+          label="Break-even"
+          tip={`Seasons until your projected precision benefit (~$${precisionBenefitPerSeason.toLocaleString()}/season) covers the loan principal.`}
+        />
       </div>
 
-      <ResponsiveContainer width="100%" height={220} className="mt-4">
-        <BarChart data={calc.schedule}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="month" tick={{ fontSize: 10 }} />
-          <YAxis tick={{ fontSize: 10 }} />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="revenue" name="Revenue" fill={COLORS.healthy} />
-          <Bar dataKey="payment" name="Repayment" fill={COLORS.precision} />
-        </BarChart>
-      </ResponsiveContainer>
+      <div className="mt-4">
+        <ChartHeading
+          title="Revenue vs repayment by month"
+          tip="Green bars are your farm's monthly revenue; blue bars are loan repayments. In harvest-aligned mode, repayments rise and fall with revenue so cash flow stays easier to manage."
+        />
+        <ResponsiveContainer width="100%" height={220}>
+          <BarChart data={calc.schedule}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="month" tick={{ fontSize: 10 }} />
+            <YAxis tick={{ fontSize: 10 }} />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="revenue" name="Revenue" fill={COLORS.healthy} />
+            <Bar dataKey="payment" name="Repayment" fill="#2563EB" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
 
-      <ResponsiveContainer width="100%" height={180} className="mt-4">
-        <LineChart data={calc.balanceCurve}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="year" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="loanBalance" name="Loan balance" stroke={COLORS.critical} />
-          <Line type="monotone" dataKey="cumulativeBenefit" name="Precision benefit" stroke={COLORS.healthy} />
-        </LineChart>
-      </ResponsiveContainer>
+      <div className="mt-4">
+        <ChartHeading
+          title="Loan balance vs precision benefit"
+          tip="Red line shows remaining loan balance declining over time. Green line stacks your estimated precision-ag benefit season by season. Where they cross is roughly when the investment pays for itself."
+        />
+        <ResponsiveContainer width="100%" height={180}>
+          <LineChart data={calc.balanceCurve}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="year" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey="loanBalance" name="Loan balance" stroke={COLORS.critical} />
+            <Line
+              type="monotone"
+              dataKey="cumulativeBenefit"
+              name="Precision benefit"
+              stroke={COLORS.healthy}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
 
       <p className="mt-2 text-sm text-sage-700">
         At your current precision benefit of ~${precisionBenefitPerSeason.toLocaleString()}
         /season, this loan pays for itself in about {calc.breakEvenSeasons} seasons.
       </p>
+
+      <div className="mt-3 border-t border-sage-100 pt-3">
+        <button
+          type="button"
+          onClick={() => setShowHowItWorks((o) => !o)}
+          aria-expanded={showHowItWorks}
+          className="flex items-center gap-1.5 text-xs font-medium text-sage-600 transition hover:text-sage-900"
+        >
+          <svg
+            className={`h-3.5 w-3.5 transition-transform ${showHowItWorks ? "rotate-90" : ""}`}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+              clipRule="evenodd"
+            />
+          </svg>
+          How this planner works
+        </button>
+        {showHowItWorks && (
+          <div className="mt-2 space-y-2 text-xs leading-relaxed text-sage-600">
+            <p>
+              Payments are estimated from a standard amortizing loan formula using your
+              inputs above. Harvest-aligned mode weights each month&apos;s payment by your
+              farm&apos;s actual revenue curve. It doesn&apos;t change the total owed,
+              only when you pay it.
+            </p>
+            <p>
+              Break-even compares the loan principal to your projected precision-ag benefit
+              from this season&apos;s data. This is a planning tool, not a loan offer. Real
+              terms may include fees, prepayment rules, or collateral requirements.
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

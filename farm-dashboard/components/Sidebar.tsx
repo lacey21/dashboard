@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { USE_CASES } from "@/constants/useCases";
+import { USE_CASES, useCaseIconSize } from "@/constants/useCases";
+import { AiIcon } from "@/components/AiIcon";
 import { FarmSelector } from "@/components/FarmSelector";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
 import { useFarm, type FarmOption } from "@/contexts/FarmContext";
@@ -93,9 +94,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         }}
         className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm font-semibold text-sage-100 transition hover:bg-sage-600/40 hover:text-white"
       >
-        <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4 text-sage-300" aria-hidden="true">
-          <path d="M8 1.5l1.4 3.6L13 6.5l-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4L8 1.5z" />
-        </svg>
+        <AiIcon className="h-4 w-4 text-sage-300" />
         Ask GreenLeaf AI
       </button>
 
@@ -125,7 +124,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
                     {i + 1}
                   </span>
                   <span className="min-w-0 flex items-center gap-1.5 text-sm font-semibold">
-                    <UseCaseIcon src={item.icon} size={28} />
+                    <UseCaseIcon src={item.icon} size={useCaseIconSize(28, item.iconScale)} />
                     {item.title}
                   </span>
                 </Link>

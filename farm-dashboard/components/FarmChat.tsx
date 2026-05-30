@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { useChat, type ChatMessage } from "@/contexts/ChatContext";
 import { useFarm } from "@/contexts/FarmContext";
 import { Markdown } from "@/components/Markdown";
+import { AiIcon } from "@/components/AiIcon";
 import { COLORS } from "@/constants/colors";
 
 const SUGGESTIONS = [
@@ -13,18 +14,6 @@ const SUGGESTIONS = [
   "What's hurting my sustainability score?",
   "How fast is my crew responding to alerts?",
 ];
-
-function SparkleIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <path
-        d="M8 1.5l1.4 3.6L13 6.5l-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4L8 1.5z"
-        fill="currentColor"
-      />
-      <path d="M12.5 10.5l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6.6-1.5z" fill="currentColor" opacity="0.6" />
-    </svg>
-  );
-}
 
 function LinkPill({ link, onNavigate }: { link: { label: string; href: string }; onNavigate?: () => void }) {
   return (
@@ -122,7 +111,7 @@ export function FarmChat({ variant = "inline", onNavigate }: Props) {
       {variant === "inline" && (
         <div className="flex items-center gap-2 border-b border-sage-200 px-4 py-3">
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage-100" style={{ color: COLORS.sageDark }}>
-            <SparkleIcon className="h-4 w-4" />
+            <AiIcon className="h-4 w-4" />
           </span>
           <div className="min-w-0">
             <p className="text-sm font-semibold text-sage-900">Ask GreenLeaf AI</p>
@@ -160,14 +149,14 @@ export function FarmChat({ variant = "inline", onNavigate }: Props) {
 
       {/* Composer */}
       <div className="border-t border-sage-200 p-3">
-        <div className="flex items-end gap-2 rounded-xl border border-sage-200 bg-white px-3 py-2 focus-within:border-sage-400">
+        <div className="flex items-center gap-2 rounded-xl border border-sage-200 bg-white px-3 py-2 focus-within:border-sage-400">
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={onKeyDown}
             rows={1}
             placeholder="Ask about your farm data…"
-            className="max-h-28 flex-1 resize-none bg-transparent text-sm text-sage-900 placeholder:text-sage-400 focus:outline-none"
+            className="max-h-28 min-h-8 flex-1 resize-none bg-transparent py-1.5 text-sm leading-5 text-sage-900 placeholder:text-sage-400 focus:outline-none"
           />
           <button
             type="button"

@@ -87,3 +87,15 @@ html::-webkit-scrollbar {
 .modal-panel {
   animation: modal-panel-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+.range-input {
+  height: 1.25rem;
+  accent-color: var(--sage-600);
+  cursor: pointer;
+}
+
+.range-input:focus-visible {
+  outline: 2px solid var(--sage-400);
+  outline-offset: 2px;
+  border-radius: 9999px;
+}

@@ -14,6 +14,10 @@ export type UseCaseFigure = {
 /** Bump when replacing files under public/images to bust browser cache. */
 export const USE_CASE_ICON_VERSION = "2";
 
+export function useCaseIconSize(base: number, iconScale = 1): number {
+  return Math.round(base * iconScale);
+}
+
 export type UseCase = {
   id: string;
   href: string;
@@ -23,6 +27,8 @@ export type UseCase = {
   audience: string;
   /** Icon image under public/images (e.g. /images/alert.png). */
   icon: string;
+  /** Multiplier on rendered icon size (default 1). */
+  iconScale?: number;
   /** The main KPIs/figures this section covers, each deep-linkable from the sidebar. */
   figures: UseCaseFigure[];
 };
@@ -35,6 +41,7 @@ export const USE_CASES: UseCase[] = [
     question: "Where do I send my crew this morning?",
     audience: "Operations manager",
     icon: `/images/alert.png?v=${USE_CASE_ICON_VERSION}`,
+    iconScale: 0.9,
     figures: [
       { label: "Plots critical", hash: "critical" },
       { label: "High-stress plots", hash: "high-stress" },
@@ -49,11 +56,12 @@ export const USE_CASES: UseCase[] = [
     question: "Is this system worth financing?",
     audience: "Farm owner + lender",
     icon: `/images/finance.png?v=${USE_CASE_ICON_VERSION}`,
+    iconScale: 0.9,
     figures: [
       { label: "Total revenue", hash: "total-revenue" },
       { label: "Precision benefit", hash: "precision-benefit" },
       { label: "Spend vs return", hash: "spend-return" },
-      { label: "Yield benchmark", hash: "yield-benchmark" },
+      { label: "Yield vs Canadian norm", hash: "yield-benchmark" },
     ],
   },
   {

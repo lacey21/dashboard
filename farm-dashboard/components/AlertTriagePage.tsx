@@ -6,6 +6,7 @@ import { useFarm } from "@/contexts/FarmContext";
 import { PlotRow } from "@/components/PlotRow";
 import type { PlotRowData } from "@/components/PlotRow";
 import { PlotDrawer } from "@/components/PlotDrawer";
+import { CrewDispatch } from "@/components/CrewDispatch";
 import { COLORS } from "@/constants/colors";
 import type { StressModel } from "@/components/StressOutcomeSimulator";
 
@@ -221,6 +222,15 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     );
   })();
 
+  // Latest recommended action per plot → feeds the crew dispatch "focus" line.
+  const recommendedActions: Record<string, string> = {};
+  for (const p of plots) {
+    const det = data.plotDetails[`${p.plot_id}|${activeWeek}`];
+    const log = det?.alertLog as { recommended_action?: string }[] | undefined;
+    const rec = log?.[log.length - 1]?.recommended_action;
+    if (rec) recommendedActions[p.plot_id] = rec;
+  }
+
   return (
     <Wrapper className={wrapClass}>
       {/* Header */}
@@ -365,6 +375,9 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
           </button>
         )}
       </div>
+
+      {/* Call to action — turn the ranked list into a morning route */}
+      <CrewDispatch plots={plots} recommendedActions={recommendedActions} dayName={dayName} />
 
       <PlotDrawer
         detail={detail as Parameters<typeof PlotDrawer>[0]["detail"]}

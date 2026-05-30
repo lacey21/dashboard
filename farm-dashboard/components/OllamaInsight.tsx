@@ -2,6 +2,7 @@
 
 import { useEffect, type ReactNode } from "react";
 import { useOllama } from "@/hooks/useOllama";
+import { AiIcon } from "@/components/AiIcon";
 import { Markdown } from "@/components/Markdown";
 import { COLORS } from "@/constants/colors";
 
@@ -99,10 +100,9 @@ export function OllamaInsight({
         <div className={`rounded-lg border p-4 ${bg}`}>
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-                <circle cx="6.5" cy="6.5" r="6" stroke={COLORS.sageDark} strokeWidth="1.2" />
-                <path d="M4.5 6.5h4M6.5 4.5v4" stroke={COLORS.sageDark} strokeWidth="1.2" strokeLinecap="round" />
-              </svg>
+              <span style={{ color: COLORS.sageDark }}>
+                <AiIcon size={13} />
+              </span>
               <span className="text-xs font-semibold" style={{ color: COLORS.sageDark }}>
                 {headerLabel}
               </span>

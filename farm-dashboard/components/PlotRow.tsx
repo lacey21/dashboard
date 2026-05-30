@@ -15,6 +15,8 @@ export type PlotRowData = {
   alert_type?: string;
   farm_name?: string;
   crop?: string;
+  region?: string;
+  greenhouse_id?: string;
 };
 
 type Props = {

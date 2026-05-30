@@ -1,61 +1,194 @@
 {
-  "aggregationType": "all_farms",
-  "numFarms": 8,
-  "generatedAt": "2026-05-29T12:56:17.478852",
-  "overallScore": 64.2,
-  "scoreLabel": "Healthy",
+  "overallScore": 50.6,
   "subscores": {
-    "energyIntensity": 61.3,
-    "waterEfficiency": 57.3,
-    "chemicalLoad": 30.8,
-    "carbonEmissions": 71.7,
-    "naturalDisasterRisk": 100.0
+    "energyIntensity": 100,
+    "waterEfficiency": 91.8,
+    "chemicalLoad": 0,
+    "stressManagement": 52.9,
+    "precisionAdoption": 8.4
   },
-  "weakestCategory": "chemicalLoad",
-  "strongestCategory": "naturalDisasterRisk",
-  "weakestScore": 30.8,
-  "strongestScore": 100.0,
+  "weakestCategory": "chemical Load",
+  "strongestCategory": "energyIntensity",
+  "weakestScore": 0,
+  "strongestScore": 100,
   "farm": {
-    "farmName": "All BC Farms (Aggregate)",
-    "region": "Multi-Region",
-    "climateZone": "Varied",
-    "primaryCrop": "Mixed"
+    "farmName": "GreenLeaf CEA",
+    "region": "Langley",
+    "climateZone": "Coastal",
+    "primaryCrop": "Strawberry"
   },
   "benchmarks": {
-    "energyPerKg": 2.022,
-    "waterPerKg": 57.099
+    "energyPerKg": 0.223,
+    "waterPerKg": 0.214
   },
-  "carbonEmissionsKgCO2e": 1845.33,
-  "carbonKgPerKgYield": 0.142,
-  "carbonEmissionsScore": 71.7,
+  "moistureTrend": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "substrate_moisture": 0.4589358578473504
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "substrate_moisture": 0.48635660607839376
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "substrate_moisture": 0.4171115499292865
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "substrate_moisture": 0.4623089566583586
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "substrate_moisture": 0.4621321876788626
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "substrate_moisture": 0.41708371592900995
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "substrate_moisture": 0.4906005836328973
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "substrate_moisture": 0.4256315402999821
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "substrate_moisture": 0.4484118558949785
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "substrate_moisture": 0.4747815590087985
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "substrate_moisture": 0.41794708604197317
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "substrate_moisture": 0.4811631338445616
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "substrate_moisture": 0.43569447618399376
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "substrate_moisture": 0.4390122311165955
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "substrate_moisture": 0.48395894983949034
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "substrate_moisture": 0.4114134226604149
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "substrate_moisture": 0.4769710736984276
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "substrate_moisture": 0.4520710052777112
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "substrate_moisture": 0.4254552317682612
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "substrate_moisture": 0.48814655713339206
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "substrate_moisture": 0.4160163319329327
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "substrate_moisture": 0.4631154641537324
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "substrate_moisture": 0.4631348511001216
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "substrate_moisture": 0.41882296843893674
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "substrate_moisture": 0.4878227461843122
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "substrate_moisture": 0.4240000667854676
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "substrate_moisture": 0.44887689231579925
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "substrate_moisture": 0.4724701063013102
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "substrate_moisture": 0.4108551841499959
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "substrate_moisture": 0.4845192514923059
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "substrate_moisture": 0.451124637490655
+    }
+  ],
   "risks": [
     {
-      "id": "water",
-      "icon": "\ud83d\udca7",
-      "title": "Water Stress",
-      "level": "critical",
-      "oneliner": "Aggregate moisture stress detected"
+      "id": "heatwave",
+      "icon": "\ud83c\udf21\ufe0f",
+      "title": "Heatwave Risk",
+      "level": "healthy",
+      "oneliner": "Interior farms logged 0 readings above 32\u00b0C this season"
     },
     {
       "id": "pest",
       "icon": "\ud83d\udc1b",
       "title": "Pest Outbreak",
       "level": "warning",
-      "oneliner": "Pest pressure index elevated"
+      "oneliner": "Pest pressure index averaging 0.43 across plots"
+    },
+    {
+      "id": "disease",
+      "icon": "\ud83e\udda0",
+      "title": "Disease Spread",
+      "level": "healthy",
+      "oneliner": "Coastal and Fraser Valley plots show elevated disease risk indices"
+    },
+    {
+      "id": "water",
+      "icon": "\ud83d\udca7",
+      "title": "Water Stress",
+      "level": "warning",
+      "oneliner": "0 plot-days experienced chronic under-irrigation"
     },
     {
       "id": "costs",
       "icon": "\ud83d\udcc8",
       "title": "Input Cost Volatility",
       "level": "warning",
-      "oneliner": "Market price fluctuations"
+      "oneliner": "Fertilizer prices swung 44.5% this season"
     }
   ],
   "controlBaseline": {
-    "energyIntensity": 38.4,
-    "waterEfficiency": 36.1,
-    "chemicalLoad": 40.6,
-    "carbonEmissions": 50.0,
-    "naturalDisasterRisk": 81.2
+    "energyIntensity": 90.0,
+    "waterEfficiency": 82.6,
+    "chemicalLoad": 0.0,
+    "stressManagement": 47.6,
+    "precisionAdoption": 7.6
   }
 }
