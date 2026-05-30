@@ -27,7 +27,7 @@ export const YIELD_LEGEND_SOURCES: Record<string, string> = {
   "Typical Canadian norm":
     "Alberta extension attainable targets and Canada StatCan 2024 implied yields (production ÷ harvested area). Midpoint of typical commercial range per crop.",
   "Aspirational target":
-    "Strong-operator / lender stretch targets: Alberta CDC research yields, BC historical tomato highs (~59 kg/m²), and top commercial cucumber ranges.",
+    "Strong-operator / lender stretch targets per crop (research and top commercial ranges, e.g. Alberta CDC and StatCan-implied ceilings). Values differ by crop; bars show each crop’s aspirational kg/m².",
 };
 
 export type YieldBenchmarkStatus = "check_units" | "on_or_above" | "below_typical" | "well_below";

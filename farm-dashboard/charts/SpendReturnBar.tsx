@@ -24,6 +24,15 @@ function isControlTreatment(treatment: string) {
   return treatment.trim().toLowerCase() === "control";
 }
 
+const TREATMENT_AXIS_LABELS: Record<string, string> = {
+  "High N": "High Nitrogen",
+  "Low N": "Low Nitrogen",
+};
+
+function formatTreatmentAxisLabel(treatment: string): string {
+  return TREATMENT_AXIS_LABELS[treatment] ?? treatment;
+}
+
 /** One word per line when the label spans multiple words; control always gets a second line */
 function treatmentLabelLines(treatment: string): string[] {
   if (isControlTreatment(treatment)) return ["Control", "(baseline)"];
@@ -42,7 +51,7 @@ function TreatmentTick({
 }) {
   const label = payload?.value ?? "";
   const isControl = isControlTreatment(label);
-  const lines = treatmentLabelLines(label);
+  const lines = treatmentLabelLines(formatTreatmentAxisLabel(label));
   const lineHeight = 13;
 
   return (

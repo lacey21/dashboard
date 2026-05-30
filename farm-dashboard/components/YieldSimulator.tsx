@@ -49,6 +49,66 @@ function predict(
   return Math.max(0, y);
 }
 
+function formatSliderValue(key: string, displayVal: number): string {
+  if (key === "precision_action_rate") return `${displayVal.toFixed(0)}%`;
+  if (key.includes("cost")) return `$${displayVal.toFixed(1)}`;
+  return displayVal.toFixed(1);
+}
+
+function formatBound(key: string, val: number): string {
+  if (key === "precision_action_rate") return `${val.toFixed(0)}%`;
+  if (key.includes("cost")) return `$${val.toFixed(0)}`;
+  return val.toFixed(0);
+}
+
+function SliderField({
+  featureKey,
+  values,
+  bounds,
+  onChange,
+}: {
+  featureKey: string;
+  values: Record<string, number>;
+  bounds: Record<string, [number, number]>;
+  onChange: (key: string, v: number) => void;
+}) {
+  const [min, max] = bounds[featureKey];
+  const displayMin = featureKey === "precision_action_rate" ? 0 : min;
+  const displayMax = featureKey === "precision_action_rate" ? 100 : max;
+  const displayVal =
+    featureKey === "precision_action_rate" ? values[featureKey] * 100 : values[featureKey];
+
+  return (
+    <div className="rounded-lg border border-sage-100 bg-sage-50/60 px-3 py-2.5">
+      <div className="flex items-start justify-between gap-2">
+        <span className="text-xs font-medium leading-snug text-sage-700">
+          {LABELS[featureKey] ?? featureKey}
+        </span>
+        <span className="shrink-0 rounded-md border border-sage-200 bg-white px-1.5 py-0.5 text-xs font-semibold tabular-nums text-sage-800">
+          {formatSliderValue(featureKey, displayVal)}
+        </span>
+      </div>
+      <input
+        type="range"
+        min={displayMin}
+        max={displayMax}
+        step={featureKey === "precision_action_rate" ? 1 : 0.5}
+        value={displayVal}
+        onChange={(e) => {
+          const v = Number(e.target.value);
+          onChange(featureKey, featureKey === "precision_action_rate" ? v / 100 : v);
+        }}
+        aria-label={LABELS[featureKey] ?? featureKey}
+        className="range-input mt-2 w-full"
+      />
+      <div className="mt-1 flex justify-between text-[10px] tabular-nums text-sage-400">
+        <span>{formatBound(featureKey, displayMin)}</span>
+        <span>{formatBound(featureKey, displayMax)}</span>
+      </div>
+    </div>
+  );
+}
+
 export function YieldSimulator({ model }: { model: YieldModel }) {
   const [values, setValues] = useState({ ...model.defaults });
 
@@ -57,6 +117,12 @@ export function YieldSimulator({ model }: { model: YieldModel }) {
     ((projected - model.currentSeasonAvgYield) / model.currentSeasonAvgYield) * 100;
   const projectedRevenue = projected * model.avgMarketPricePerKg * 100; // scaled display
 
+  const topKeys = model.featureNames.filter((k) => k.includes("cost"));
+  const sideKeys = model.featureNames.filter((k) => !k.includes("cost"));
+
+  const setFeature = (key: string, v: number) =>
+    setValues((prev) => ({ ...prev, [key]: v }));
+
   return (
     <div>
       <p className="text-sm text-sage-700">
@@ -64,63 +130,63 @@ export function YieldSimulator({ model }: { model: YieldModel }) {
         changed your yield. Trained on GreenLeaf&apos;s experimental data.
       </p>
 
-      <div className="mt-6 space-y-4">
-        {model.featureNames.map((key) => {
-          const [min, max] = model.bounds[key];
-          const displayVal =
-            key === "precision_action_rate" ? values[key] * 100 : values[key];
-          const setVal = (v: number) =>
-            setValues((prev) => ({
-              ...prev,
-              [key]: key === "precision_action_rate" ? v / 100 : v,
-            }));
-          return (
-            <div key={key}>
-              <label className="flex justify-between text-sm text-sage-800">
-                <span>{LABELS[key] ?? key}</span>
-                <span className="font-medium">
-                  {key === "precision_action_rate"
-                    ? `${displayVal.toFixed(0)}%`
-                    : key.includes("cost")
-                      ? `$${displayVal.toFixed(1)}`
-                      : displayVal.toFixed(1)}
-                </span>
-              </label>
-              <input
-                type="range"
-                min={key === "precision_action_rate" ? 0 : min}
-                max={key === "precision_action_rate" ? 100 : max}
-                step={key === "precision_action_rate" ? 1 : 0.5}
-                value={displayVal}
-                onChange={(e) => setVal(Number(e.target.value))}
-                className="mt-1 w-full"
-              />
-            </div>
-          );
-        })}
-      </div>
+      {topKeys.length > 0 && (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {topKeys.map((key) => (
+            <SliderField
+              key={key}
+              featureKey={key}
+              values={values}
+              bounds={model.bounds}
+              onChange={setFeature}
+            />
+          ))}
+        </div>
+      )}
 
-      <div className="mt-6 rounded-lg border border-sage-100 bg-sage-50 p-4 text-center">
-        <p className="text-4xl font-bold" style={{ color: COLORS.healthy }}>
-          {projected.toFixed(1)} kg/m²
-        </p>
-        <p className="mt-1 text-sm text-sage-700">
-          {pctChange >= 0 ? "+" : ""}
-          {pctChange.toFixed(1)}% vs your current season average (
-          {model.currentSeasonAvgYield.toFixed(1)} kg/m²)
-        </p>
-        <p className="mt-1 text-sm text-sage-600">
-          Estimated revenue at this yield: ~${projectedRevenue.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-        </p>
-      </div>
+      <div className="mt-5 lg:grid lg:grid-cols-[minmax(0,1fr)_min(400px,42%)] lg:items-stretch lg:gap-6">
+        <div className="grid gap-3">
+          {sideKeys.map((key) => (
+            <SliderField
+              key={key}
+              featureKey={key}
+              values={values}
+              bounds={model.bounds}
+              onChange={setFeature}
+            />
+          ))}
+        </div>
 
-      <button
-        type="button"
-        className="mt-4 text-sm font-medium text-sage-700 underline decoration-sage-400 hover:text-sage-900"
-        onClick={() => setValues({ ...model.defaults })}
-      >
-        Reset to my actual values
-      </button>
+        <div className="mt-5 flex flex-col lg:mt-0">
+          <div className="flex flex-1 flex-col justify-center rounded-lg border border-sage-200 bg-white px-6 py-8 text-center shadow-sm lg:py-10">
+            <p className="text-xs font-semibold uppercase tracking-wide text-sage-500">
+              Projected yield
+            </p>
+            <p className="mt-4 text-4xl font-bold tabular-nums lg:text-5xl" style={{ color: COLORS.healthy }}>
+              {projected.toFixed(1)} kg/m²
+            </p>
+            <p className="mt-3 text-sm text-sage-700">
+              <span className={pctChange >= 0 ? "font-medium text-emerald-700" : "font-medium text-amber-700"}>
+                {pctChange >= 0 ? "+" : ""}
+                {pctChange.toFixed(1)}%
+              </span>{" "}
+              vs season avg ({model.currentSeasonAvgYield.toFixed(1)} kg/m²)
+            </p>
+            <p className="mt-4 border-t border-sage-100 pt-4 text-sm text-sage-600">
+              Est. revenue ~$
+              {projectedRevenue.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className="mt-4 shrink-0 rounded-md border border-sage-200 bg-white px-3 py-2 text-sm font-medium text-sage-700 transition hover:border-sage-300 hover:bg-sage-50"
+            onClick={() => setValues({ ...model.defaults })}
+          >
+            Reset to my actual values
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

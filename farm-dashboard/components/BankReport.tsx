@@ -6,7 +6,7 @@ import { useFarm } from "@/contexts/FarmContext";
 
 /**
  * Seasonal-evaluation call-to-action: packages the season's financials into a
- * one-page report a farm owner can hand to a lender — downloadable as a
+ * one-page report a farm owner can hand to a lender, downloadable as a
  * standalone HTML file or printed straight to PDF from the browser.
  */
 
@@ -59,7 +59,7 @@ function buildReportHtml(
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>GreenLeaf — Seasonal Financial Summary — ${farm.name}</title>
+<title>GreenLeaf: Seasonal Financial Summary (${farm.name})</title>
 <style>
   :root { --ink:#2D3B2E; --muted:#5C6B5E; --sage:#5A7354; --line:#D8E0D4; --wash:#F4F7F2; }
   * { box-sizing: border-box; }
@@ -101,7 +101,7 @@ function buildReportHtml(
   </header>
 
   <h1>Does the precision system pay for itself?</h1>
-  <p class="subhead">Prepared for lender review — season-to-date operating results.</p>
+  <p class="subhead">Prepared for lender review. Season-to-date operating results.</p>
 
   <div class="kpis">
     ${kpi("Total revenue", usd(f.totalRevenue), "season to date")}
@@ -194,7 +194,7 @@ export function BankReport({
       <CtaCard
         eyebrow="Take action"
         title="Generate your bank-meeting report"
-        description="A clean one-page financial summary for your lender — download or save as PDF."
+        description="A clean one-page financial summary for your lender. Download or save as PDF."
         buttonLabel="Create financial report →"
         onClick={() => setOpen(true)}
         icon={<IconDoc />}
@@ -208,7 +208,7 @@ export function BankReport({
         icon={<IconDoc />}
         footer={
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-xs text-sage-500">Standalone file — opens in any browser, prints to PDF.</span>
+            <span className="text-xs text-sage-500">Standalone file. Opens in any browser, prints to PDF.</span>
             <span className="flex gap-2">
               <button
                 type="button"

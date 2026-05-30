@@ -149,14 +149,14 @@ export function FarmChat({ variant = "inline", onNavigate }: Props) {
 
       {/* Composer */}
       <div className="border-t border-sage-200 p-3">
-        <div className="flex items-end gap-2 rounded-xl border border-sage-200 bg-white px-3 py-2 focus-within:border-sage-400">
+        <div className="flex items-center gap-2 rounded-xl border border-sage-200 bg-white px-3 py-2 focus-within:border-sage-400">
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={onKeyDown}
             rows={1}
             placeholder="Ask about your farm data…"
-            className="max-h-28 flex-1 resize-none bg-transparent text-sm text-sage-900 placeholder:text-sage-400 focus:outline-none"
+            className="max-h-28 min-h-8 flex-1 resize-none bg-transparent py-1.5 text-sm leading-5 text-sage-900 placeholder:text-sage-400 focus:outline-none"
           />
           <button
             type="button"

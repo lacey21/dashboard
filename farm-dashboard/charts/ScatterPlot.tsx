@@ -82,7 +82,7 @@ export function ScatterPlot({ data }: { data: Point[] }) {
         <span className="self-end justify-self-end rounded bg-white/80 px-1.5 py-0.5">Efficient</span>
       </div>
       <p className="mt-3 rounded-lg border-l-4 border-sage-600 bg-sage-50 px-3 py-2 text-sm font-medium text-sage-900">
-        Bottom-left is where you want to be — low stress, low cost. Top-right needs a different strategy.
+        Bottom-left is where you want to be: low stress, low cost. Top-right needs a different strategy.
       </p>
     </div>
   );

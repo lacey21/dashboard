@@ -32,6 +32,13 @@ const SERIES_NAMES = {
   aspirational: "Aspirational target",
 } as const;
 
+/** Left-to-right bar order — Recharts defaults to alphabetical legend sort. */
+const LEGEND_ORDER = [
+  SERIES_NAMES.greenLeaf,
+  SERIES_NAMES.typical,
+  SERIES_NAMES.aspirational,
+] as const;
+
 export type YieldBenchmarkRow = {
   crop: string;
   avgYield: number;
@@ -56,7 +63,7 @@ function statusLabel(status: YieldBenchmarkStatus): string {
     case "well_below":
       return "Well below typical norm";
     case "check_units":
-      return "Check units — yield may not be annual kg/m²";
+      return "Check units. Yield may not be annual kg/m²";
   }
 }
 
@@ -116,9 +123,13 @@ function BenchmarkLegend({
 
   if (!payload?.length) return null;
 
+  const ordered = [...payload].sort(
+    (a, b) => LEGEND_ORDER.indexOf(a.value as (typeof LEGEND_ORDER)[number]) - LEGEND_ORDER.indexOf(b.value as (typeof LEGEND_ORDER)[number]),
+  );
+
   return (
     <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 pt-2 text-xs text-sage-800">
-      {payload.map((entry) => {
+      {ordered.map((entry) => {
         const source = YIELD_LEGEND_SOURCES[entry.value];
         const color = seriesColor(entry.value);
         return (
@@ -176,7 +187,10 @@ export function YieldBenchmarkChart({ data }: { data: YieldBenchmarkRow[] }) {
           }}
         />
         <Tooltip content={<BenchmarkTooltip />} />
-        <Legend content={<BenchmarkLegend />} />
+        <Legend
+          content={<BenchmarkLegend />}
+          itemSorter={(item) => LEGEND_ORDER.indexOf(item.value as (typeof LEGEND_ORDER)[number])}
+        />
         <Bar dataKey="avgYield" name={SERIES_NAMES.greenLeaf} fill={SERIES_COLORS.greenLeaf} />
         <Bar
           dataKey="typicalBenchmark"
