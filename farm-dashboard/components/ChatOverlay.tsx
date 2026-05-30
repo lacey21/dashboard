@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useChat } from "@/contexts/ChatContext";
 import { FarmChat } from "@/components/FarmChat";
+import { AiIcon } from "@/components/AiIcon";
 import { COLORS } from "@/constants/colors";
 
 /** Right-hand slide-over chat panel, opened from the sidebar's "Ask AI" button. */
@@ -44,9 +45,7 @@ export function ChatOverlay() {
         <header className="flex items-center justify-between border-b border-sage-200 bg-white px-4 py-3">
           <div className="flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sage-100" style={{ color: COLORS.sageDark }}>
-              <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-                <path d="M8 1.5l1.4 3.6L13 6.5l-3.6 1.4L8 11.5 6.6 7.9 3 6.5l3.6-1.4L8 1.5z" />
-              </svg>
+              <AiIcon className="h-4 w-4" />
             </span>
             <div>
               <p className="text-sm font-semibold text-sage-900">GreenLeaf AI</p>

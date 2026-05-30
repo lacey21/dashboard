@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { USE_CASES } from "@/constants/useCases";
+import { USE_CASES, useCaseIconSize } from "@/constants/useCases";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
 
 /**
@@ -34,7 +34,7 @@ export function UseCaseHeader() {
           /
         </span>
         <span className="flex min-w-0 items-center gap-1.5 font-medium text-sage-900">
-          <UseCaseIcon src={current.icon} size={22} variant="dark" />
+          <UseCaseIcon src={current.icon} size={useCaseIconSize(22, current.iconScale)} variant="dark" />
           <span className="truncate">{current.title}</span>
         </span>
         <span className="hidden shrink-0 rounded-full bg-sage-100 px-2 py-0.5 text-[11px] font-medium text-sage-600 sm:inline">

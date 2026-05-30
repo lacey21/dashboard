@@ -22,6 +22,7 @@ import { ScatterPlot } from "@/charts/ScatterPlot";
 import { YieldSimulator } from "@/components/YieldSimulator";
 import { LoanCalculator } from "@/components/LoanCalculator";
 import { Collapsible } from "@/components/Collapsible";
+import { BankReport } from "@/components/BankReport";
 import { COLORS } from "@/constants/colors";
 
 type SeasonData = {
@@ -223,6 +224,9 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
           />
         </Collapsible>
       </section>
+
+      {/* Call to action — hand the season's numbers to a lender */}
+      <BankReport financials={f} treatments={data.spendReturnByTreatment} />
     </Wrapper>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { useData } from "@/hooks/useData";
 import { RiskCard } from "@/components/RiskCard";
+import { GrantFinder } from "@/components/GrantFinder";
 import { SustainabilityRadar } from "@/charts/RadarChart";
 import { scoreColor } from "@/constants/colors";
 
@@ -39,6 +40,41 @@ const CATEGORY_LABELS: Record<string, string> = {
   naturalDisasterRisk: "Natural disaster risk",
 };
 
+function formatCategoryForSentence(category: string): string {
+  const label = CATEGORY_LABELS[category] ?? category;
+  return label.toLowerCase();
+}
+
+// ─── KPI hover tooltip ───────────────────────────────────────────────────────
+
+function InfoIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="7" cy="7" r="5.5" />
+      <path strokeLinecap="round" d="M7 6.2V9.8M7 4.4v.1" />
+    </svg>
+  );
+}
+
+function KpiHoverTooltip({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <div
+      role="tooltip"
+      className="pointer-events-none invisible absolute bottom-full left-1/2 z-30 mb-2 w-64 -translate-x-1/2 rounded-xl border border-sage-200 bg-white p-4 text-left shadow-xl group-hover:visible"
+    >
+      <div
+        className="absolute -bottom-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-sage-200 bg-white"
+        aria-hidden
+      />
+      <p className="text-sm font-semibold text-sage-900">{title}</p>
+      <p className="mt-1.5 text-sm leading-relaxed text-sage-600">{children}</p>
+    </div>
+  );
+}
+
+const KPI_CARD_CLASS =
+  "group relative flex min-h-[7.5rem] flex-col items-center justify-center gap-2 scroll-mt-28 rounded-xl border border-sage-200 bg-white px-5 py-5 shadow-sm transition hover:border-sage-300 hover:shadow-md cursor-help";
+
 // ─── Metric pill displayed below the big score ───────────────────────────────
 
 function MetricPill({
@@ -58,18 +94,18 @@ function MetricPill({
 }) {
   const color = scoreColor(score);
   return (
-    <div
-      id={id}
-      title={tooltip}
-      className="flex flex-col items-center gap-1 scroll-mt-28 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
-    >
-      <p className="text-xs font-medium uppercase tracking-wide text-sage-500">{label}</p>
-      <p className="text-2xl font-bold leading-none" style={{ color }}>
+    <div id={id} className={KPI_CARD_CLASS}>
+      <span className="absolute right-2.5 top-2.5 text-sage-300 transition-colors group-hover:text-sage-500">
+        <InfoIcon />
+      </span>
+      <p className="text-sm font-medium uppercase tracking-wide text-sage-500">{label}</p>
+      <p className="text-4xl font-bold leading-none" style={{ color }}>
         {score}
       </p>
-      <p className="text-xs text-sage-600">
+      <p className="text-sm text-sage-600">
         {value}&nbsp;{unit}
       </p>
+      <KpiHoverTooltip title={label}>{tooltip}</KpiHoverTooltip>
     </div>
   );
 }
@@ -90,23 +126,30 @@ function CarbonPill({
   isAggregate?: boolean;
 }) {
   const color = scoreColor(score);
+  const label = "Carbon emissions";
+  const tooltip = (
+    <>
+      Total carbon footprint: <strong className="font-medium text-sage-800">{totalKgCO2e.toLocaleString()} kg CO₂e</strong>.
+      {isAggregate ? " Aggregate across all farms." : " Per-kg yield factor shown below."}
+      {" "}Emission factors from Environment and Climate Change Canada.
+    </>
+  );
+
   return (
-    <div
-      id={id}
-      title={`Total carbon footprint: ${totalKgCO2e.toLocaleString()} kg CO₂e. ${
-        isAggregate ? "Aggregate across all farms." : ""
-      } Emission factor source: Environment and Climate Change Canada.`}
-      className="flex flex-col items-center gap-1 scroll-mt-28 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-sm"
-    >
-      <p className="text-xs font-medium uppercase tracking-wide text-sage-500">Carbon emissions</p>
-      <p className="text-2xl font-bold leading-none" style={{ color }}>
+    <div id={id} className={KPI_CARD_CLASS}>
+      <span className="absolute right-2.5 top-2.5 text-sage-300 transition-colors group-hover:text-sage-500">
+        <InfoIcon />
+      </span>
+      <p className="text-sm font-medium uppercase tracking-wide text-sage-500">{label}</p>
+      <p className="text-4xl font-bold leading-none" style={{ color }}>
         {score}
       </p>
-      <p className="text-xs text-sage-600">
-        {isAggregate 
+      <p className="text-sm text-sage-600">
+        {isAggregate
           ? `${(totalKgCO2e / 1000).toFixed(1)} tonne CO₂e`
           : `${kgPerKgYield.toFixed(3)} kg CO₂e/kg`}
       </p>
+      <KpiHoverTooltip title={label}>{tooltip}</KpiHoverTooltip>
     </div>
   );
 }
@@ -156,7 +199,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
 
   const isAggregate = data.aggregationType === "all_farms";
 
-  const dynamicSentence = `Your biggest opportunity is improving ${data.weakestCategory.toLowerCase()} (${data.weakestScore}/100). Your strongest area is ${data.strongestCategory.toLowerCase()} (${data.strongestScore}/100).`;
+  const dynamicSentence = `Your biggest opportunity is improving ${formatCategoryForSentence(data.weakestCategory)} (${data.weakestScore}/100). Your strongest area is ${formatCategoryForSentence(data.strongestCategory)} (${data.strongestScore}/100).`;
 
   // Filter risks to only show warning and critical
   const filteredRisks = data.risks.filter((r) => r.level !== "healthy");
@@ -170,7 +213,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
         {isAggregate ? "BC Farm Network Sustainability" : "Beyond this season's profit"}
       </h2>
       <p className="mt-1 text-sage-700">
-        {isAggregate 
+        {isAggregate
           ? `Aggregate sustainability metrics across ${data.numFarms} farms.`
           : "Here's how resilient and future-proof this operation is."}
       </p>
@@ -192,7 +235,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
         </button>
 
         {/* ── NEW: four metric pills ───────────────────────────────── */}
-        <div className="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
           <MetricPill
             id="water-efficiency"
             label="Water efficiency"
@@ -229,10 +272,21 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
         <p className="mx-auto mt-4 max-w-xl text-sm text-sage-700">{dynamicSentence}</p>
         <button
           type="button"
-          className="mt-4 text-sm text-sage-700 underline"
+          className="mt-5 inline-flex items-center gap-2 rounded-full border border-sage-300 bg-white px-5 py-2 text-sm font-medium text-sage-800 shadow-sm transition hover:border-sage-400 hover:bg-sage-50 hover:shadow"
           onClick={() => setShowBreakdown(!showBreakdown)}
+          aria-expanded={showBreakdown}
         >
           {showBreakdown ? "Hide breakdown" : "See breakdown"}
+          <svg
+            className={`h-4 w-4 text-sage-500 transition-transform duration-200 ${showBreakdown ? "rotate-180" : ""}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+            aria-hidden
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </button>
       </div>
 
@@ -264,8 +318,8 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
             <p className="mb-4 text-sm text-sage-700">
               This radar compares your farm's sustainability metrics against your control plots. ROI measures financial return relative to cost—higher ROI means more profit per dollar spent.
             </p>
-            <SustainabilityRadar 
-              subscores={data.subscores} 
+            <SustainabilityRadar
+              subscores={data.subscores}
               controlBaseline={data.controlBaseline}
               roi={seasonalData?.financials?.meanRoiPct ?? 0}
             />
@@ -290,6 +344,23 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
           </div>
         </section>
       )}
+
+      {/* Call to action — turn these scores into funding */}
+      <GrantFinder
+        metrics={{
+          farmName: data.farm.farmName,
+          overallScore: data.overallScore,
+          scoreLabel,
+          subscores: data.subscores,
+          benchmarks: data.benchmarks,
+          carbonEmissionsKgCO2e: data.carbonEmissionsKgCO2e ?? 0,
+          carbonKgPerKgYield: data.carbonKgPerKgYield ?? 0,
+          weakestCategory: data.weakestCategory,
+          weakestScore: data.weakestScore,
+          strongestCategory: data.strongestCategory,
+          strongestScore: data.strongestScore,
+        }}
+      />
     </Wrapper>
   );
 }
@@ -305,13 +376,23 @@ function CategoryCard({
   score: number;
   caption: string;
 }) {
+  const color = scoreColor(score);
+  const pct = Math.max(0, Math.min(100, score));
   return (
-    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
-      <p className="text-sm text-sage-700">{title}</p>
-      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
-        {score}
-      </p>
-      <p className="mt-2 text-xs text-sage-700">{caption}</p>
+    <div className="flex flex-col rounded-xl border border-sage-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-sm font-medium text-sage-700">{title}</p>
+        <p className="text-3xl font-bold leading-none" style={{ color }}>
+          {score}
+        </p>
+      </div>
+      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-black/5">
+        <div
+          className="h-full rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${pct}%`, backgroundColor: color }}
+        />
+      </div>
+      <p className="mt-3 text-xs leading-relaxed text-sage-700">{caption}</p>
     </div>
   );
 }
@@ -319,13 +400,23 @@ function CategoryCard({
 // ─── DisasterRiskCard ─────────────────────────────────────────────────────
 
 function DisasterRiskCard({ score }: { score: number }) {
+  const color = scoreColor(score);
+  const pct = Math.max(0, Math.min(100, score));
   return (
-    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
-      <p className="text-sm text-sage-700">Natural disaster risk</p>
-      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
-        {score}
-      </p>
-      <p className="mt-2 text-xs text-sage-700">Resilience to temperature extremes and environmental stressors</p>
+    <div className="flex flex-col rounded-xl border border-sage-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-sm font-medium text-sage-700">Natural disaster risk</p>
+        <p className="text-3xl font-bold leading-none" style={{ color }}>
+          {score}
+        </p>
+      </div>
+      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-black/5">
+        <div
+          className="h-full rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${pct}%`, backgroundColor: color }}
+        />
+      </div>
+      <p className="mt-3 text-xs leading-relaxed text-sage-700">Resilience to temperature extremes and environmental stressors</p>
     </div>
   );
 }
