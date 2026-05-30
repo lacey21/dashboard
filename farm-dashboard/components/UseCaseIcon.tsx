@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 type UseCaseIconProps = {
   src: string;
   size?: number;
@@ -7,14 +5,16 @@ type UseCaseIconProps = {
   variant?: "light" | "dark";
 };
 
+/** Static public icons — plain img avoids Next.js image optimizer cache on file swaps. */
 export function UseCaseIcon({ src, size = 26, variant = "light" }: UseCaseIconProps) {
   return (
-    <Image
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
       src={src}
       alt=""
       width={size}
       height={size}
-      className={`shrink-0 object-contain ${variant === "light" ? "mix-blend-lighten" : "invert"}`}
+      className={`shrink-0 object-contain ${variant === "light" ? "brightness-0 invert" : "brightness-0"}`}
       style={{ width: size, height: size }}
       aria-hidden
     />

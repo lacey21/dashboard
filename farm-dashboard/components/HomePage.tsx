@@ -5,7 +5,7 @@ import { useData } from "@/hooks/useData";
 import { useFarm } from "@/contexts/FarmContext";
 import { useChat } from "@/contexts/ChatContext";
 import { KPICard } from "@/components/KPICard";
-import { GeminiInsight } from "@/components/GeminiInsight";
+import { OllamaInsight } from "@/components/OllamaInsight";
 import { UseCaseIcon } from "@/components/UseCaseIcon";
 import { USE_CASES } from "@/constants/useCases";
 
@@ -120,7 +120,7 @@ Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
 
           {overviewPrompt && (
             <section className="mt-8">
-              <GeminiInsight
+              <OllamaInsight
                 prompt={overviewPrompt}
                 autoRun
                 label="overview summary"
@@ -156,7 +156,7 @@ Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
           )}
 
           {/* ── The three use cases this overview powers ── */}
-          <section className="mt-10">
+          <section className="mt-7">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-sage-700">
               Use cases
             </h2>
