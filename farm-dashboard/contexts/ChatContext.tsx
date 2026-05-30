@@ -55,7 +55,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       setLoading(true);
 
       try {
-        const res = await fetch("/api/gemini/chat", {
+        const res = await fetch("/api/ollama/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

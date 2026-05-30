@@ -11,6 +11,9 @@ export type UseCaseFigure = {
   hash: string;
 };
 
+/** Bump when replacing files under public/images to bust browser cache. */
+export const USE_CASE_ICON_VERSION = "2";
+
 export type UseCase = {
   id: string;
   href: string;
@@ -31,7 +34,7 @@ export const USE_CASES: UseCase[] = [
     title: "Alert Triage",
     question: "Where do I send my crew this morning?",
     audience: "Operations manager",
-    icon: "/images/alert.png",
+    icon: `/images/alert.png?v=${USE_CASE_ICON_VERSION}`,
     figures: [
       { label: "Plots critical", hash: "critical" },
       { label: "High-stress plots", hash: "high-stress" },
@@ -45,7 +48,7 @@ export const USE_CASES: UseCase[] = [
     title: "Seasonal Evaluation",
     question: "Is this system worth financing?",
     audience: "Farm owner + lender",
-    icon: "/images/finance.png",
+    icon: `/images/finance.png?v=${USE_CASE_ICON_VERSION}`,
     figures: [
       { label: "Total revenue", hash: "total-revenue" },
       { label: "Precision benefit", hash: "precision-benefit" },
@@ -59,7 +62,7 @@ export const USE_CASES: UseCase[] = [
     title: "Sustainability",
     question: "How resilient is this operation?",
     audience: "Long-term planning",
-    icon: "/images/sustainability.png",
+    icon: `/images/sustainability.png?v=${USE_CASE_ICON_VERSION}`,
     figures: [
       { label: "Overall score", hash: "overall-score" },
       { label: "Score breakdown", hash: "score-breakdown" },

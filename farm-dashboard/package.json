@@ -10,7 +10,6 @@
     "data:export": "python data_pipeline/export_dashboard_json.py"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",

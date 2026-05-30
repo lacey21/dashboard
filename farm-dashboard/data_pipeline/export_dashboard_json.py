@@ -534,7 +534,7 @@ def export_alert_triage(sensor: pd.DataFrame, costs: pd.DataFrame, meta: pd.Data
                     "routine": float(cost_wk["daily_routine_cost"].sum()),
                     "total": float(cost_wk["daily_total_input_cost"].sum()),
                 },
-                "geminiContext": {
+                "aiContext": {
                     "crop": last["crop"],
                     "farmName": last["farm_name"],
                     "climateZone": last["climate_zone"],
