@@ -45,8 +45,6 @@ export const USE_CASES: UseCase[] = [
     figures: [
       { label: "Plots critical", hash: "critical" },
       { label: "High-stress plots", hash: "high-stress" },
-      { label: "Alerts responded", hash: "response-rate" },
-      { label: "Avg response delay", hash: "response-delay" },
     ],
   },
   {
