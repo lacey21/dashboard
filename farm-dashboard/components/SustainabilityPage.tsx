@@ -239,7 +239,7 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
       {/* ── Breakdown ────────────────────────────────────────────────── */}
       {showBreakdown && (
         <>
-          <div id="score-breakdown" className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 scroll-mt-28">
+          <div id="score-breakdown" className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 scroll-mt-28">
             {(["energyIntensity", "waterEfficiency", "chemicalLoad", "carbonEmissions"] as const).map((key) => (
               <CategoryCard
                 key={key}
@@ -257,12 +257,6 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
               />
             ))}
             <DisasterRiskCard score={data.subscores.naturalDisasterRisk} />
-            <CarbonFootprintCard 
-              carbonEmissionsKgCO2e={data.carbonEmissionsKgCO2e ?? 0}
-              carbonKgPerKgYield={data.carbonKgPerKgYield ?? 0}
-              score={data.subscores.carbonEmissions ?? data.carbonEmissionsScore ?? 0}
-              isAggregate={isAggregate}
-            />
           </div>
 
           <section id="all-dimensions-vs-control" className="mt-10 scroll-mt-28">
@@ -332,34 +326,6 @@ function DisasterRiskCard({ score }: { score: number }) {
         {score}
       </p>
       <p className="mt-2 text-xs text-sage-700">Resilience to temperature extremes and environmental stressors</p>
-    </div>
-  );
-}
-
-// ─── CarbonFootprintCard ──────────────────────────────────────────────────
-
-function CarbonFootprintCard({
-  carbonEmissionsKgCO2e,
-  carbonKgPerKgYield,
-  score,
-  isAggregate,
-}: {
-  carbonEmissionsKgCO2e: number;
-  carbonKgPerKgYield: number;
-  score: number;
-  isAggregate: boolean;
-}) {
-  return (
-    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm">
-      <p className="text-sm text-sage-700">Carbon footprint</p>
-      <p className="text-3xl font-bold" style={{ color: scoreColor(score) }}>
-        {score}
-      </p>
-      <p className="mt-2 text-xs text-sage-700">
-        {isAggregate 
-          ? `Total: ${(carbonEmissionsKgCO2e / 1000).toFixed(1)} tonnes CO₂e`
-          : `${carbonKgPerKgYield.toFixed(3)} kg CO₂e/kg yield`}
-      </p>
     </div>
   );
 }
