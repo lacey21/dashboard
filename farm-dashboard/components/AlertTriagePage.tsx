@@ -134,7 +134,10 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     ? Math.round((prevResponded.reduce((s, p) => s + (p.action_delay_days ?? 0), 0) / prevResponded.length) * 100) / 100
     : derivedAvgDelay;
 
-  const dayName = new Date().toLocaleDateString("en-US", { weekday: "long" });
+  const [dayName, setDayName] = useState("");
+  useEffect(() => {
+    setDayName(new Date().toLocaleDateString("en-US", { weekday: "long" }));
+  }, []);
 
   // Urgency filter applied on top of harvest filter
   const filteredPlots = (() => {
