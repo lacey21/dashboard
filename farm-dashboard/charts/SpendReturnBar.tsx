@@ -45,11 +45,11 @@ function TreatmentTick({
   y = 0,
   payload,
 }: {
-  x?: number;
-  y?: number;
-  payload?: { value: string };
+  x?: number | string;
+  y?: number | string;
+  payload?: { value?: number | string };
 }) {
-  const label = payload?.value ?? "";
+  const label = String(payload?.value ?? "");
   const isControl = isControlTreatment(label);
   const lines = treatmentLabelLines(formatTreatmentAxisLabel(label));
   const lineHeight = 13;
