@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useData } from "@/hooks/useData";
 import { useFarm } from "@/contexts/FarmContext";
 import { useChat } from "@/contexts/ChatContext";
+import { CropFilterBanner } from "@/components/CropFilterBanner";
 import { KPICard } from "@/components/KPICard";
 import { AiIcon } from "@/components/AiIcon";
 import { OllamaInsight } from "@/components/OllamaInsight";
@@ -72,6 +73,11 @@ Sustainability score: ${susData?.overallScore ?? "N/A"}/100`;
 
       {data && !error && (
         <>
+          {/* Crop filter banner */}
+          <div className="mb-4">
+            <CropFilterBanner />
+          </div>
+
           <header className="mb-6">
             <h1 className="text-2xl font-bold text-sage-900">Operation Overview</h1>
             <p className="mt-1 text-sm text-sage-700">

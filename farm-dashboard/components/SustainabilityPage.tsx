@@ -2,6 +2,7 @@
 
 import { useState, useEffect, type ReactNode } from "react";
 import { useData } from "@/hooks/useData";
+import { CropFilterBanner } from "@/components/CropFilterBanner";
 import { RiskCard } from "@/components/RiskCard";
 import { GrantFinder } from "@/components/GrantFinder";
 import { SustainabilityRadar } from "@/charts/RadarChart";
@@ -218,6 +219,11 @@ export default function SustainabilityPage({ embedded = false }: { embedded?: bo
           ? `Aggregate sustainability metrics across ${data.numFarms} farms.`
           : "Here's how resilient and future-proof this operation is."}
       </p>
+
+      {/* Crop filter banner */}
+      <div className="mt-3">
+        <CropFilterBanner />
+      </div>
 
       {/* ── Big score ────────────────────────────────────────────────── */}
       <div id="overall-score" className="mt-10 scroll-mt-28 text-center">

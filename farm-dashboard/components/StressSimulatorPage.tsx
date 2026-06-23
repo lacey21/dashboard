@@ -1,6 +1,7 @@
 "use client";
 
 import { useData } from "@/hooks/useData";
+import { CropFilterBanner } from "@/components/CropFilterBanner";
 import { StressOutcomeSimulator, type StressModel } from "@/components/StressOutcomeSimulator";
 import { COLORS } from "@/constants/colors";
 
@@ -46,6 +47,11 @@ export default function StressSimulatorPage() {
           Use it to model what happens to plant stress over 3 days depending on when your
           crew responds — and under different growing conditions.
         </p>
+      </div>
+
+      {/* Crop filter banner — model is trained on fleet-wide data */}
+      <div className="mb-4">
+        <CropFilterBanner />
       </div>
 
       {/* Context banner — operation-wide benchmarks */}

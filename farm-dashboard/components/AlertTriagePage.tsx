@@ -7,6 +7,7 @@ import { PlotRow } from "@/components/PlotRow";
 import type { PlotRowData } from "@/components/PlotRow";
 import { PlotDrawer } from "@/components/PlotDrawer";
 import { CrewDispatch } from "@/components/CrewDispatch";
+import { CropFilterBanner } from "@/components/CropFilterBanner";
 import { COLORS } from "@/constants/colors";
 import type { StressModel } from "@/components/StressOutcomeSimulator";
 
@@ -63,12 +64,13 @@ function syncAlertTriageFromHash(
 
 export default function AlertTriagePage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<AlertData>("alert_triage.json");
-  const { farm: globalFarm, farms: globalFarms } = useFarm();
+  const { farm: globalFarm, farms: globalFarms, cropFilter } = useFarm();
   const [week, setWeek] = useState<string | null>(null);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [filterMode, setFilterMode] = useState<FilterMode>("all");
   const [harvestFilter, setHarvestFilter] = useState<string>("all");
+  const [sortBy, setSortBy] = useState<"urgency" | "crop">("urgency");
 
   // Sync global scope selector → local harvest filter during render (React's
   // "adjust state when a prop changes" pattern). Greenhouse/plot scopes aren't in
@@ -97,9 +99,14 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
   const detail = selectedKey ? data?.plotDetails[selectedKey] : null;
 
   // Harvest-filtered pool — everything downstream uses this
-  const plots = harvestFilter === "all"
+  const farmFiltered = harvestFilter === "all"
     ? allWeekPlots
     : allWeekPlots.filter((p) => p.farm_name === harvestFilter);
+
+  // Crop filter is either/or with farm — applied on top of harvest filter
+  const plots = cropFilter
+    ? farmFiltered.filter((p) => p.crop === cropFilter)
+    : farmFiltered;
 
   // Counts from the harvest-filtered pool
   const urgentCount = plots.filter((p) => p.urgency_score > 0.7).length;
@@ -117,12 +124,13 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     : 0;
   const derivedHighStressEvents = plots.filter((p) => p.plant_stress_index > 0.6).length;
 
-  // Deltas from previous week (operation-wide — kept for trend context)
+  // Deltas from previous week — match the same scope as current plots
   const weeklyStats = data?.weeklyStats[activeWeek];
   const activeWeekIdx = data ? data.weeks.indexOf(activeWeek) : -1;
   const prevWeekKey = activeWeekIdx > 0 ? data!.weeks[activeWeekIdx - 1] : null;
   const prevPlots = prevWeekKey ? (data?.plotRankings[prevWeekKey] ?? []) : allWeekPlots;
-  const prevPool = harvestFilter === "all" ? prevPlots : prevPlots.filter((p) => p.farm_name === harvestFilter);
+  const prevFarmFiltered = harvestFilter === "all" ? prevPlots : prevPlots.filter((p) => p.farm_name === harvestFilter);
+  const prevPool = cropFilter ? prevFarmFiltered.filter((p) => p.crop === cropFilter) : prevFarmFiltered;
   const prevUrgentCount = prevPool.filter((p) => p.urgency_score > 0.7).length;
   const prevHighStress = prevPool.filter((p) => p.plant_stress_index > 0.6).length;
   const prevAlerts = prevPool.filter((p) => p.alert_flag === 1);
@@ -152,7 +160,14 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     }
   })();
 
-  const visiblePlots = showAll ? filteredPlots : filteredPlots.slice(0, 10);
+  const sortedPlots = sortBy === "crop"
+    ? [...filteredPlots].sort((a, b) => {
+        const cropCmp = (a.crop ?? "").localeCompare(b.crop ?? "");
+        return cropCmp !== 0 ? cropCmp : b.urgency_score - a.urgency_score;
+      })
+    : filteredPlots;
+
+  const visiblePlots = showAll ? sortedPlots : sortedPlots.slice(0, 10);
 
   const handleWeekChange = (w: string) => {
     setWeek(w);
@@ -243,8 +258,15 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
         <p className="mt-0.5 text-sage-600">Here&apos;s where to send them first.</p>
       </div>
 
-      {/* Controls row — week picker only; farm is controlled by the global selector */}
+      {/* Controls row — week picker + sort; farm/crop controlled by global sidebar selector */}
       <div className="mt-3 flex items-center justify-end gap-2">
+        <SelectPicker
+          value={sortBy}
+          onChange={(v) => setSortBy(v as "urgency" | "crop")}
+        >
+          <option value="urgency">Sort: Urgency</option>
+          <option value="crop">Sort: Crop type</option>
+        </SelectPicker>
         <SelectPicker
           value={activeWeek}
           onChange={(v) => handleWeekChange(v)}
@@ -253,6 +275,11 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
             <option key={w} value={w}>Week {w}</option>
           ))}
         </SelectPicker>
+      </div>
+
+      {/* Active crop filter banner */}
+      <div className="mt-2">
+        <CropFilterBanner filteredCount={plots.length} totalCount={farmFiltered.length} />
       </div>
 
       {/* KPI cards */}

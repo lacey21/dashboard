@@ -27,6 +27,18 @@ export type FarmOption = {
   children?: FarmOption[];
 };
 
+/**
+ * Maps a crop filter value → the data folder used by useData.
+ * Single-crop farms reuse their existing per-farm folder.
+ * Strawberry spans 5 farms — use a pre-generated aggregate folder.
+ */
+const CROP_TO_DATA_SCOPE: Record<string, string> = {
+  Tomato:     "F01",
+  Pepper:     "F02",
+  Cucumber:   "F04",
+  Strawberry: "crop-strawberry",
+};
+
 // The aggregate "all farms" view the dashboard opens on by default. Used as a
 // fallback before /data/farms.json loads so the selector is never empty.
 const ALL_FARMS: FarmOption = {
@@ -41,6 +53,15 @@ type FarmContextValue = {
   /** Selected scope id — "all", a farm ("F01"), greenhouse ("GH002") or plot ("P0004"). */
   farm: string;
   setFarm: (id: string) => void;
+  /** Active crop-type filter — mutually exclusive with a specific farm selection. */
+  cropFilter: string | null;
+  setCropFilter: (crop: string | null) => void;
+  /**
+   * The data-fetch scope used by useData. When a crop filter is active this
+   * resolves to the crop's dedicated data folder (e.g. "F01" for Tomato,
+   * "crop-strawberry" for Strawberry). Otherwise it mirrors `farm`.
+   */
+  dataScope: string;
   /** Flat farm-level list (incl. the aggregate entry). Drives the sidebar stats. */
   farms: FarmOption[];
   /** Hierarchical farm → greenhouse → plot tree for the nested scope selector. */
@@ -61,9 +82,21 @@ function indexScopes(nodes: FarmOption[], into: Map<string, FarmOption>) {
 }
 
 export function FarmProvider({ children }: { children: ReactNode }) {
-  const [farm, setFarm] = useState<string>("all");
+  const [farm, setFarmRaw] = useState<string>("all");
+  const [cropFilter, setCropFilterRaw] = useState<string | null>(null);
   const [farms, setFarms] = useState<FarmOption[]>([ALL_FARMS]);
   const [scopeTree, setScopeTree] = useState<FarmOption[]>([ALL_FARMS]);
+
+  // Either/or: selecting a specific farm clears the crop filter;
+  // selecting a crop resets to "all farms".
+  function setFarm(id: string) {
+    setFarmRaw(id);
+    if (id !== "all") setCropFilterRaw(null);
+  }
+  function setCropFilter(crop: string | null) {
+    setCropFilterRaw(crop);
+    if (crop !== null) setFarmRaw("all");
+  }
 
   useEffect(() => {
     fetch("/data/farms.json")
@@ -94,8 +127,12 @@ export function FarmProvider({ children }: { children: ReactNode }) {
 
   const selected = scopeIndex.get(farm) ?? farms[0] ?? ALL_FARMS;
 
+  // When a crop filter is active, route data fetches to the crop-specific folder.
+  // Otherwise fall through to the currently selected farm/scope.
+  const dataScope = cropFilter ? (CROP_TO_DATA_SCOPE[cropFilter] ?? "all") : farm;
+
   return (
-    <FarmContext.Provider value={{ farm, setFarm, farms, scopeTree, selected }}>
+    <FarmContext.Provider value={{ farm, setFarm, cropFilter, setCropFilter, dataScope, farms, scopeTree, selected }}>
       {children}
     </FarmContext.Provider>
   );

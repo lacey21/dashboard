@@ -12,6 +12,8 @@ import {
   YAxis,
 } from "recharts";
 import { useData } from "@/hooks/useData";
+import { useFarm } from "@/contexts/FarmContext";
+import { CropFilterBanner } from "@/components/CropFilterBanner";
 import { KPICard } from "@/components/KPICard";
 import { SpendReturnBar } from "@/charts/SpendReturnBar";
 import { ScatterPlot } from "@/charts/ScatterPlot";
@@ -37,7 +39,7 @@ type SeasonData = {
   spendReturnByTreatment: { treatment: string; avg_cost: number; avg_revenue: number }[];
   controlRevenueBaseline: number;
   costOverTime: { week: string; precision: number; routine: number; plant_stress_index: number }[];
-  scatterPlots: { plot_id: string; treatment: string; totalCost: number; avgStress: number; yield: number }[];
+  scatterPlots: { plot_id: string; crop?: string; treatment: string; totalCost: number; avgStress: number; yield: number }[];
   yieldBenchmark: YieldBenchmarkRow[];
   yieldModel: Parameters<typeof YieldSimulator>[0]["model"];
   monthlyRevenueCurve: { month: number; revenue: number }[];
@@ -158,6 +160,7 @@ function summarizeScatter(
 
 export default function SeasonalEvaluationPage({ embedded = false }: { embedded?: boolean }) {
   const { data, loading } = useData<SeasonData>("seasonal_evaluation.json");
+  const { cropFilter } = useFarm();
 
   if (loading || !data) {
     return <p className={embedded ? "py-4 text-sage-700" : "p-8 text-sage-700"}>Loading season review…</p>;
@@ -165,7 +168,16 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
 
   const f = data.financials;
   const costSummary = summarizeCostOverTime(data.costOverTime);
-  const scatterSummary = summarizeScatter(data.scatterPlots);
+
+  // Apply crop filter to per-plot data; financials/costOverTime are fleet-wide aggregates
+  const filteredScatterPlots = cropFilter
+    ? data.scatterPlots.filter((p) => p.crop === cropFilter)
+    : data.scatterPlots;
+  const filteredBenchmark = cropFilter
+    ? data.yieldBenchmark.filter((r) => r.crop === cropFilter)
+    : data.yieldBenchmark;
+
+  const scatterSummary = summarizeScatter(filteredScatterPlots);
 
   const Wrapper = embedded ? "div" : "main";
   const wrapClass = embedded ? "" : "mx-auto max-w-7xl px-6 py-8";
@@ -179,7 +191,15 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
         Here&apos;s the evidence that your precision system is paying for itself.
       </p>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Crop filter banner — scatter + yield benchmark filter; financials are fleet-wide */}
+      <div className="mt-3">
+        <CropFilterBanner
+          filteredCount={filteredScatterPlots.length}
+          totalCount={data.scatterPlots.length}
+        />
+      </div>
+
+      <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <KPICard
           id="total-revenue"
           label="Total revenue this season"
@@ -280,7 +300,7 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
 
       <section id="yield-benchmark" className="mt-10 scroll-mt-28">
         <h2 className="font-semibold text-sage-900">Yield vs Canadian greenhouse norm by crop</h2>
-        <YieldBenchmarkChart data={data.yieldBenchmark} />
+        <YieldBenchmarkChart data={filteredBenchmark} />
       </section>
 
       <section className="mt-10">
@@ -293,7 +313,7 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
               <PreviewStat
                 label="Plots tracked"
                 value={String(scatterSummary.count)}
-                hint="One season per plot"
+                hint={cropFilter ? `${cropFilter} only` : "One season per plot"}
               />
               <PreviewStat
                 label="Top treatment"
@@ -308,7 +328,7 @@ export default function SeasonalEvaluationPage({ embedded = false }: { embedded?
             </>
           }
         >
-          <ScatterPlot data={data.scatterPlots} />
+          <ScatterPlot data={filteredScatterPlots} />
         </ExpandableChartSection>
       </section>
 

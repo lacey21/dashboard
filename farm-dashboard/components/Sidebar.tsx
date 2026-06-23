@@ -56,7 +56,7 @@ function AggregateStats({ farms }: { farms: FarmOption[] }) {
 
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
-  const { farm, farms, selected } = useFarm();
+  const { farm, farms, selected, cropFilter, setCropFilter } = useFarm();
   const { openChat } = useChat();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(() => new Set());
   const individualFarms = farms.filter((f) => f.id !== "all");
@@ -197,8 +197,36 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           <div className="relative min-w-0 space-y-2 overflow-visible">
             <FarmSelector />
             <p className="truncate text-xs text-sage-300">
-              {isAggregate ? "Aggregate analysis" : selected.id}
+              {cropFilter
+                ? `All farms · ${cropFilter}`
+                : isAggregate ? "Aggregate analysis" : selected.id}
             </p>
+
+            {/* Crop-type filter — either/or with farm selection */}
+            <div className="pt-0.5">
+              <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-sage-400">
+                Filter by crop
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {(["Tomato", "Pepper", "Strawberry", "Cucumber"] as const).map((crop) => {
+                  const active = cropFilter === crop;
+                  return (
+                    <button
+                      key={crop}
+                      type="button"
+                      onClick={() => setCropFilter(active ? null : crop)}
+                      className={`rounded-full px-2.5 py-1 text-[11px] font-semibold transition ${
+                        active
+                          ? "bg-sage-100 text-sage-900"
+                          : "text-sage-400 hover:bg-sage-600/40 hover:text-sage-100"
+                      }`}
+                    >
+                      {crop}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
           <div className="space-y-1.5">
             {isAggregate ? (

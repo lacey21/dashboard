@@ -1,0 +1,193 @@
+{
+  "overallScore": 32.4,
+  "scoreLabel": "Needs Improvement",
+  "subscores": {
+    "energyIntensity": 25.6,
+    "waterEfficiency": 17.0,
+    "chemicalLoad": 40.4,
+    "carbonEmissions": 18.7,
+    "naturalDisasterRisk": 100.0
+  },
+  "subscoreTrends": {
+    "energyIntensity": -63.7,
+    "waterEfficiency": -53.0,
+    "chemicalLoad": 0.0,
+    "carbonEmissions": -25.0,
+    "naturalDisasterRisk": 0.0
+  },
+  "weakestCategory": "waterEfficiency",
+  "weakestScore": 17.0,
+  "strongestCategory": "naturalDisasterRisk",
+  "strongestScore": 100.0,
+  "farm": {
+    "farmName": "Strawberry Farms (F03, F05\u2013F08)",
+    "region": "BC Lower Mainland",
+    "climateZone": "Coastal",
+    "primaryCrop": "Strawberry"
+  },
+  "benchmarks": {
+    "energyPerKg": 2.7076,
+    "waterPerKg": 73.1916
+  },
+  "carbonEmissionsKgCO2e": 1361.41,
+  "carbonKgPerKgYield": 0.2528,
+  "carbonEmissionsScore": 18.7,
+  "risks": [
+    {
+      "id": "pest",
+      "icon": "bug",
+      "title": "Pest Outbreak",
+      "level": "warning",
+      "oneliner": "Pest pressure index averaging 0.43 across plots"
+    },
+    {
+      "id": "water",
+      "icon": "droplet",
+      "title": "Water Stress",
+      "level": "critical",
+      "oneliner": "150 plot-day(s) outside target moisture range (0.40\u20130.55)"
+    },
+    {
+      "id": "costs",
+      "icon": "trending-up",
+      "title": "Input Cost Volatility",
+      "level": "warning",
+      "oneliner": "Fertilizer prices swung 44.5% this season"
+    }
+  ],
+  "controlBaseline": {
+    "energyIntensity": 50.0,
+    "waterEfficiency": 50.0,
+    "chemicalLoad": 50.0,
+    "carbonEmissions": 50.0,
+    "naturalDisasterRisk": 50.0
+  },
+  "moistureTrend": [
+    {
+      "week": "2025-02-10/2025-02-16",
+      "substrate_moisture": 0.4657
+    },
+    {
+      "week": "2025-02-17/2025-02-23",
+      "substrate_moisture": 0.4887
+    },
+    {
+      "week": "2025-02-24/2025-03-02",
+      "substrate_moisture": 0.4153
+    },
+    {
+      "week": "2025-03-03/2025-03-09",
+      "substrate_moisture": 0.4624
+    },
+    {
+      "week": "2025-03-10/2025-03-16",
+      "substrate_moisture": 0.4584
+    },
+    {
+      "week": "2025-03-17/2025-03-23",
+      "substrate_moisture": 0.4222
+    },
+    {
+      "week": "2025-03-24/2025-03-30",
+      "substrate_moisture": 0.4906
+    },
+    {
+      "week": "2025-03-31/2025-04-06",
+      "substrate_moisture": 0.425
+    },
+    {
+      "week": "2025-04-07/2025-04-13",
+      "substrate_moisture": 0.451
+    },
+    {
+      "week": "2025-04-14/2025-04-20",
+      "substrate_moisture": 0.4762
+    },
+    {
+      "week": "2025-04-21/2025-04-27",
+      "substrate_moisture": 0.4188
+    },
+    {
+      "week": "2025-04-28/2025-05-04",
+      "substrate_moisture": 0.4871
+    },
+    {
+      "week": "2025-05-05/2025-05-11",
+      "substrate_moisture": 0.4364
+    },
+    {
+      "week": "2025-05-12/2025-05-18",
+      "substrate_moisture": 0.4338
+    },
+    {
+      "week": "2025-05-19/2025-05-25",
+      "substrate_moisture": 0.4887
+    },
+    {
+      "week": "2025-05-26/2025-06-01",
+      "substrate_moisture": 0.413
+    },
+    {
+      "week": "2025-06-02/2025-06-08",
+      "substrate_moisture": 0.4788
+    },
+    {
+      "week": "2025-06-09/2025-06-15",
+      "substrate_moisture": 0.4513
+    },
+    {
+      "week": "2025-06-16/2025-06-22",
+      "substrate_moisture": 0.4224
+    },
+    {
+      "week": "2025-06-23/2025-06-29",
+      "substrate_moisture": 0.4878
+    },
+    {
+      "week": "2025-06-30/2025-07-06",
+      "substrate_moisture": 0.4136
+    },
+    {
+      "week": "2025-07-07/2025-07-13",
+      "substrate_moisture": 0.4617
+    },
+    {
+      "week": "2025-07-14/2025-07-20",
+      "substrate_moisture": 0.4623
+    },
+    {
+      "week": "2025-07-21/2025-07-27",
+      "substrate_moisture": 0.4197
+    },
+    {
+      "week": "2025-07-28/2025-08-03",
+      "substrate_moisture": 0.4928
+    },
+    {
+      "week": "2025-08-04/2025-08-10",
+      "substrate_moisture": 0.4274
+    },
+    {
+      "week": "2025-08-11/2025-08-17",
+      "substrate_moisture": 0.456
+    },
+    {
+      "week": "2025-08-18/2025-08-24",
+      "substrate_moisture": 0.4743
+    },
+    {
+      "week": "2025-08-25/2025-08-31",
+      "substrate_moisture": 0.4125
+    },
+    {
+      "week": "2025-09-01/2025-09-07",
+      "substrate_moisture": 0.4841
+    },
+    {
+      "week": "2025-09-08/2025-09-14",
+      "substrate_moisture": 0.4462
+    }
+  ],
+  "aggregationType": "all_farms",
+  "numFarms": 5
+}
