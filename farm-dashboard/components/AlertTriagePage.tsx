@@ -44,17 +44,33 @@ const HASH_TO_FILTER: Record<string, FilterMode> = {
   "high-stress": "highStress",
 };
 
+const PLOT_HASH = /^P\d+$/;
+
 function syncAlertTriageFromHash(
+  data: AlertData,
+  activeWeek: string,
   setFilterMode: (mode: FilterMode) => void,
   setShowAll: (show: boolean) => void,
+  setSelectedKey: (key: string | null) => void,
 ) {
   const id = window.location.hash.replace(/^#/, "");
   if (!id) return;
+
+  if (PLOT_HASH.test(id)) {
+    setFilterMode("critical");
+    setShowAll(false);
+    const key = `${id}|${activeWeek}`;
+    if (data.plotDetails[key]) {
+      setSelectedKey(key);
+    }
+    return;
+  }
 
   const filter = HASH_TO_FILTER[id];
   if (filter) {
     setFilterMode(filter);
     setShowAll(false);
+    setSelectedKey(null);
   }
 
   requestAnimationFrame(() => {
@@ -84,15 +100,18 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
     setHarvestFilter(match && globalFarm !== "all" ? match.name : "all");
   }
 
-  // Sidebar deep links (#critical, #high-stress, etc.)
+  // Sidebar deep links (#critical, #high-stress, #P0004 plot drawer, etc.)
   useEffect(() => {
     if (!data) return;
 
-    const onHashChange = () => syncAlertTriageFromHash(setFilterMode, setShowAll);
+    const activeWeek = week ?? data.defaultWeek;
+
+    const onHashChange = () =>
+      syncAlertTriageFromHash(data, activeWeek, setFilterMode, setShowAll, setSelectedKey);
     onHashChange();
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
-  }, [data]);
+  }, [data, week]);
 
   const activeWeek = week ?? data?.defaultWeek ?? "";
   const allWeekPlots = data?.plotRankings[activeWeek] ?? [];
@@ -410,7 +429,13 @@ export default function AlertTriagePage({ embedded = false }: { embedded?: boole
 
       <PlotDrawer
         detail={detail as Parameters<typeof PlotDrawer>[0]["detail"]}
-        onClose={() => setSelectedKey(null)}
+        onClose={() => {
+          setSelectedKey(null);
+          const id = window.location.hash.replace(/^#/, "");
+          if (PLOT_HASH.test(id)) {
+            window.history.replaceState(null, "", window.location.pathname + window.location.search);
+          }
+        }}
         model={data.stressModel}
       />
     </Wrapper>

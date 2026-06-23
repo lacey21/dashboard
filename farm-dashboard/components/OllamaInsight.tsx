@@ -14,6 +14,10 @@ type Props = {
   showRegenerate?: boolean;
   /** When set, shown instead of the default error UI if generation fails. */
   errorFallback?: string;
+  /** Rule-based summary shown when generation fails — styled like a normal insight card. */
+  staticFallback?: string;
+  /** Header for staticFallback (default: "Operations summary · from live data"). */
+  fallbackHeaderLabel?: string;
   /** Optional content rendered at the bottom of the card, below the generated text. */
   footer?: ReactNode;
   autoRun?: boolean;
@@ -42,6 +46,8 @@ export function OllamaInsight({
   headerLabel = "GreenLeaf AI-generated · based on your farm data",
   showRegenerate = true,
   errorFallback,
+  staticFallback,
+  fallbackHeaderLabel = "Operations summary · from live data",
   footer,
   autoRun = false,
   variant = "default",
@@ -84,7 +90,13 @@ export function OllamaInsight({
 
       {autoRun && loading && <LoadingDots />}
 
-      {error && errorFallback ? (
+      {error && staticFallback ? (
+        <div className={`rounded-lg border p-4 ${bg}`}>
+          <p className="mb-2 text-xs font-semibold text-sage-700">{fallbackHeaderLabel}</p>
+          <p className="text-sm leading-relaxed text-sage-800">{staticFallback}</p>
+          {footer && <div className="mt-4">{footer}</div>}
+        </div>
+      ) : error && errorFallback ? (
         <div className={`rounded-lg border p-4 ${bg}`}>
           <p className="text-sm text-sage-600">{errorFallback}</p>
           {footer && <div className="mt-4">{footer}</div>}
