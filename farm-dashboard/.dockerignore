@@ -1,0 +1,25 @@
+node_modules
+.next
+.git
+.gitignore
+
+# Python data pipeline — not needed at runtime
+data_pipeline
+
+# Docs and config that aren't part of the app
+*.md
+*.mjs
+eslint.config.mjs
+postcss.config.mjs
+
+# Env files — injected at runtime via Cloud Run env vars
+.env*
+
+# OS / editor noise
+.DS_Store
+*.swp
+*.swo
+
+# Dev tooling
+coverage
+*.tsbuildinfo

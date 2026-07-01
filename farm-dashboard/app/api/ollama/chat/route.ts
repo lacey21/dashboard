@@ -245,9 +245,10 @@ You are given this scope's current dashboard data as JSON. Rules:
 PAGES YOU MAY LINK TO (use these exact hrefs only):
 ${catalogForPrompt()}
 
-Respond with ONLY a JSON object, no markdown fences, of this exact shape:
-{"answer": "<your answer in light markdown>", "link": {"label": "<short button label, e.g. 'View alert triage'>", "href": "<one href from the list>"} | null}
-Set "link" to null when no page is clearly relevant. Never use an href that is not in the list above.
+Respond with ONLY a valid JSON object — no markdown fences, no extra keys. Use exactly this shape:
+{"answer": "your plain-text response (bold with **word**, italic with *word*)", "link": {"label": "short button text", "href": "/exact-href"} | null}
+Example: {"answer": "Health score is 78. Three plots need attention.", "link": {"label": "View alert triage", "href": "/alert-triage"}}
+Set "link" to null when no page is clearly relevant. Never use an href not in the list above. Never output HTML tags.
 
 DASHBOARD DATA (JSON):
 ${JSON.stringify(context, null, 0)}`;

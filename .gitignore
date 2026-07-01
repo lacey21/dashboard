@@ -12,6 +12,10 @@ __pycache__/
 dist/
 build/
 
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
 # Streamlit
 .streamlit/secrets.toml
 
@@ -26,5 +30,6 @@ Thumbs.db
 
 # Editor
 .idea/
+.vscode/
 *.swp
 *.swo

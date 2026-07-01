@@ -4,11 +4,11 @@ export const OLLAMA_BASE = process.env.OLLAMA_BASE ?? "http://127.0.0.1:11434";
 
 /** Tried in order — first model that responds wins. */
 export const MODEL_FALLBACK_CHAIN = [
-  "llama3.2",
-  "llama3.2:1b",
-  "gemma3:4b",
   "mistral",
+  "gemma3:4b",
+  "llama3.2",
   "phi4-mini",
+  "llama3.2:1b",
 ] as const;
 
 export function isRetryableOllamaError(msg: string): boolean {
